@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Used Car Price Demo</title>
+<style>
+:root{--bg:#f4f6fa;--card:#fff;--text:#1b2230;--muted:#5d6779;--line:#d9dfea;--accent:#1f6feb;--accent-t:#fff;--ok:#12805c}
+[data-theme="dark"]{--bg:#0f141c;--card:#182030;--text:#e8edf6;--muted:#9aa6bb;--line:#2b3548;--accent:#5b9dff;--accent-t:#0b1220;--ok:#4cd3a0}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,"Sarabun","Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px clamp(16px,4vw,40px);background:var(--card);border-bottom:1px solid var(--line)}
+header h1{font-size:1.15rem;margin:0}
+.tools{display:flex;gap:8px}
+.tools button{background:transparent;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:.9rem;cursor:pointer;min-height:40px}
+.tools button:hover{border-color:var(--accent)}
+main{max-width:1000px;margin:0 auto;padding:clamp(16px,3vw,32px);display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:800px){main{grid-template-columns:3fr 2fr;align-items:start}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:clamp(16px,3vw,24px)}
+.card h2{margin:0 0 4px;font-size:1.05rem}
+.sub{color:var(--muted);font-size:.9rem;margin:0 0 16px}
+form{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:520px){form{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:5px;font-size:.88rem;color:var(--muted)}
+input,select{font:inherit;font-size:1rem;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:44px;width:100%}
+input:focus,select:focus,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.full{grid-column:1/-1}
+.go{background:var(--accent);color:var(--accent-t);border:0;border-radius:10px;font:inherit;font-weight:600;padding:12px;min-height:48px;cursor:pointer}
+.result{text-align:center}
+.price{font-size:clamp(2rem,6vw,2.6rem);font-weight:700;color:var(--ok);margin:8px 0}
+.range{color:var(--muted)}
+.empty{color:var(--muted)}
+.note{margin-top:16px;padding:10px 12px;border-radius:8px;background:var(--bg);border:1px dashed var(--line);color:var(--muted);font-size:.82rem;text-align:left}
+.err{color:#d33;font-size:.85rem;min-height:1.2em;grid-column:1/-1;margin:0}
+</style>
+</head>
+<body>
+<header>
+  <h1 data-i="title"></h1>
+  <div class="tools">
+    <button id="langBtn" type="button" aria-label="Language">EN</button>
+    <button id="themeBtn" type="button"></button>
+  </div>
+</header>
+<main>
+  <section class="card">
+    <h2 data-i="formTitle"></h2>
+    <p class="sub" data-i="formSub"></p>
+    <form id="f" novalidate>
+      <label><span data-i="brand"></span><select id="brand"></select></label>
+      <label><span data-i="model"></span><select id="model"></select></label>
+      <label><span data-i="year"></span><input id="year" type="number" inputmode="numeric" min="2000" max="2026" value="2018"></label>
+      <label><span data-i="mileage"></span><input id="mileage" type="number" inputmode="numeric" min="0" max="999999" value="80000"></label>
+      <label><span data-i="trans"></span><select id="trans"><option value="AT" data-i="at"></option><option value="MT" data-i="mt"></option></select></label>
+      <label><span data-i="fuel"></span><select id="fuel"><option value="gas" data-i="gas"></option><option value="diesel" data-i="diesel"></option><option value="hybrid" data-i="hybrid"></option></select></label>
+      <label class="full"><span data-i="cc"></span><input id="cc" type="number" inputmode="numeric" min="600" max="6000" value="1500"></label>
+      <p class="err" id="err" role="alert"></p>
+      <button class="go full" type="submit" data-i="go"></button>
+    </form>
+  </section>
+  <section class="card result" aria-live="polite">
+    <h2 data-i="resTitle"></h2>
+    <div id="out"><p class="empty" data-i="empty"></p></div>
+    <div class="note" data-i="note"></div>
+  </section>
+</main>
+<script>
+const T={
+th:{title:"ทำนายราคารถมือสอง (เดโม่)",formTitle:"ข้อมูลรถ",formSub:"กรอกข้อมูลแล้วกดทำนายราคา",brand:"ยี่ห้อ",model:"รุ่น",year:"ปีรถ (ค.ศ.)",mileage:"เลขไมล์ (กม.)",trans:"เกียร์",at:"อัตโนมัติ",mt:"ธรรมดา",fuel:"เชื้อเพลิง",gas:"เบนซิน",diesel:"ดีเซล",hybrid:"ไฮบริด",cc:"ขนาดเครื่องยนต์ (ซีซี)",go:"ทำนายราคา",resTitle:"ราคาที่ทำนาย",empty:"ยังไม่มีผล กรอกข้อมูลแล้วกดปุ่มทำนายราคา",note:"หมายเหตุ: นี่คือเดโม่ ราคามาจากสูตรจำลอง ไม่ใช่โมเดลจริง จะเปลี่ยนเป็นโมเดลที่เทรนเองภายหลัง",est:"ราคาโดยประมาณ",rng:"ช่วงที่เป็นไปได้",baht:"บาท",bad:"กรุณากรอกข้อมูลให้ถูกต้อง: ปี 2000-2026, เลขไมล์ 0-999,999, ซีซี 600-6,000",dark:"โหมดมืด",light:"โหมดสว่าง"},
+en:{title:"Used Car Price Predictor (Demo)",formTitle:"Car details",formSub:"Fill in the details, then predict the price",brand:"Brand",model:"Model",year:"Year",mileage:"Mileage (km)",trans:"Transmission",at:"Automatic",mt:"Manual",fuel:"Fuel",gas:"Gasoline",diesel:"Diesel",hybrid:"Hybrid",cc:"Engine size (cc)",go:"Predict price",resTitle:"Predicted price",empty:"No result yet. Fill in the form and press Predict.",note:"Note: this is a demo. The price comes from a placeholder formula, not a real model. It will be replaced by our own trained model later.",est:"Estimated price",rng:"Likely range",baht:"THB",bad:"Please enter valid values: year 2000-2026, mileage 0-999,999, cc 600-6,000",dark:"Dark mode",light:"Light mode"}
+};
+// ราคาใหม่โดยประมาณ (บาท) / approximate new price (THB)
+const CARS={Toyota:{Vios:600000,Yaris:580000,"Corolla Altis":900000,Fortuner:1500000,"Hilux Revo":900000},
+Honda:{City:600000,Civic:1000000,Jazz:600000,"CR-V":1400000,"HR-V":1000000},
+Mazda:{Mazda2:600000,Mazda3:900000,"CX-5":1300000},
+Nissan:{Almera:550000,Kicks:800000,Navara:850000},
+Isuzu:{"D-Max":800000},
+Mitsubishi:{Triton:800000,"Pajero Sport":1400000},
+Ford:{Ranger:900000}};
+
+/* ===== จุดเชื่อมโมเดลจริง / MODEL HOOK =====
+   ตอนนี้เป็นสูตรจำลอง เมื่อโมเดลเสร็จ แก้เฉพาะฟังก์ชันนี้
+   (เช่น fetch("/predict",{method:"POST",body:JSON.stringify(x)}) แล้วคืนราคา)
+   x = {brand,model,year,mileage,trans,fuel,cc}  คืน {price}  */
+function predictPrice(x){
+  const base=CARS[x.brand][x.model];
+  const age=Math.max(0,2026-x.year);
+  let p=base*Math.pow(0.88,age);
+  p-=Math.max(0,x.mileage-age*15000)*0.5;
+  if(x.trans==="MT")p*=0.93;
+  if(x.fuel==="diesel")p*=1.04;
+  if(x.fuel==="hybrid")p*=1.08;
+  p*=1+(x.cc-1500)/1500*0.1;
+  p=Math.max(p,base*0.08);
+  return {price:Math.round(p/1000)*1000};
+}
+
+const $=id=>document.getElementById(id);
+let lang=localStorage.lang||(navigator.language.startsWith("th")?"th":"en");
+let theme=localStorage.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+let last=null;
+function fmt(n){return n.toLocaleString(lang==="th"?"th-TH":"en-US")}
+function render(){
+  document.documentElement.lang=lang;
+  document.documentElement.dataset.theme=theme;
+  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=T[lang][e.dataset.i]);
+  $("langBtn").textContent=lang==="th"?"EN":"ไทย";
+  $("themeBtn").textContent=theme==="dark"?T[lang].light:T[lang].dark;
+  document.title=T[lang].title;
+  if(last){const lo=Math.round(last*0.92/1000)*1000,hi=Math.round(last*1.08/1000)*1000;
+    $("out").innerHTML=`<p class="range">${T[lang].est}</p><div class="price">${fmt(last)} ${T[lang].baht}</div><p class="range">${T[lang].rng}: ${fmt(lo)} - ${fmt(hi)} ${T[lang].baht}</p>`;}
+}
+function fillBrands(){
+  $("brand").innerHTML=Object.keys(CARS).map(b=>`<option>${b}</option>`).join("");
+  fillModels();
+}
+function fillModels(){$("model").innerHTML=Object.keys(CARS[$("brand").value]).map(m=>`<option>${m}</option>`).join("")}
+$("brand").onchange=fillModels;
+$("langBtn").onclick=()=>{lang=lang==="th"?"en":"th";localStorage.lang=lang;render()};
+$("themeBtn").onclick=()=>{theme=theme==="dark"?"light":"dark";localStorage.theme=theme;render()};
+$("f").onsubmit=e=>{
+  e.preventDefault();
+  const x={brand:$("brand").value,model:$("model").value,year:+$("year").value,mileage:+$("mileage").value,trans:$("trans").value,fuel:$("fuel").value,cc:+$("cc").value};
+  const ok=x.year>=2000&&x.year<=2026&&x.mileage>=0&&x.mileage<=999999&&x.cc>=600&&x.cc<=6000&&$("year").value&&$("mileage").value&&$("cc").value;
+  if(!ok){$("err").textContent=T[lang].bad;return}
+  $("err").textContent="";
+  last=predictPrice(x).price;render();
+};
+fillBrands();render();
+</script>
+</body>
+</html>
