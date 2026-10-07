@@ -106,7 +106,7 @@ function render(){
     $("out").innerHTML=`<p class="range">${T[lang].est}</p><div class="price">${fmt(last)} ${T[lang].baht}</div><p class="range">${T[lang].rng}: ${fmt(lo)} - ${fmt(hi)} ${T[lang].baht}</p>`;}
 }
 function fillBrands(){
-  $("brand").innerHTML=Object.keys(CARS).map(b=>`<option>${b}</option>`).join("");
+  $("brand").innerHTML=Object.keys(CARS).sort().map(b=>`<option>${b}</option>`).join("");
   fillModels();
 }
 function fillModels(){$("model").innerHTML=Object.keys(CARS[$("brand").value]).map(m=>`<option>${m}</option>`).join("")}
