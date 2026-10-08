@@ -4,143 +4,41 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Used Car Price Demo</title>
-<style>
-:root{--bg:#f8f8f8;--card:#f8f8f8;--text:#2a2d31;--muted:#80868d;--line:#dcdfe3;--accent:#2b93ea;--ok:#2b93ea;--bad:#e5484d;--soft:#eef0f2;--mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,Menlo,"Courier New","Sarabun",monospace}
-[data-theme="dark"]{--bg:#070b10;--card:#070b10;--text:#d6e6f5;--muted:#6f8396;--line:#1b2733;--accent:#3da5ff;--ok:#3da5ff;--bad:#ff6b70;--soft:#0e151d}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--mono);font-size:.92rem;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
-select option{background:var(--bg);color:var(--text)}
-header,main{width:min(760px,100% - 32px);margin-inline:auto}
-header{position:absolute;top:0;left:0;right:0;z-index:5;width:min(1100px,100% - 32px);display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em}
-.brand svg{width:20px;height:20px;color:var(--accent)}
-.brand span+span{margin-left:2px}
-.tag{padding:0 6px;border:1px solid var(--line);color:var(--muted);font-size:.68rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase}
-.tools{display:flex;gap:8px;align-items:center}
-.tools button{display:grid;place-items:center;min-width:40px;height:36px;padding:0 10px;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:0;font:inherit;font-size:.78rem;cursor:pointer;transition:border-color .2s,color .2s}
-.tools button:hover{border-color:var(--accent);color:var(--accent)}
-.tools #themeBtn{padding:0;width:36px}
-.tools svg{width:16px;height:16px}
-.tools #langBtn{position:relative;grid-template-columns:1fr 1fr;width:80px;padding:2px;font-weight:700}
-#langBtn span{position:relative;z-index:1;display:grid;place-items:center;height:100%;color:var(--muted);transition:color .25s}
-#langBtn::before{content:"";position:absolute;top:2px;bottom:2px;left:2px;width:calc(50% - 2px);background:var(--accent);transition:transform .25s ease}
-#langBtn[aria-checked=true]::before{transform:translateX(100%)}
-#langBtn[aria-checked=false] span:first-child,#langBtn[aria-checked=true] span:last-child{color:var(--bg)}
-.tools #langBtn:hover{color:var(--text)}
-
-/* hero: เมฆจุดรูปรถ + วงแหวนแบบ ctOS */
-.hero{--cy:34%;--r:min(42vw,330px);position:relative;overflow:hidden;min-height:max(620px,min(92vh,780px));min-height:max(620px,min(92svh,780px));display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center}
-.hero::before,.hero::after{content:"";position:absolute;inset:0;pointer-events:none}
-.hero::before{background:repeating-conic-gradient(from 0deg at 50% var(--cy),color-mix(in srgb,var(--text) 26%,transparent) 0 .45deg,transparent .45deg 2.2deg);-webkit-mask:radial-gradient(circle at 50% var(--cy),transparent 0,transparent var(--r),#000 var(--r),#000 calc(var(--r) + 22px),transparent calc(var(--r) + 23px));mask:radial-gradient(circle at 50% var(--cy),transparent 0,transparent var(--r),#000 var(--r),#000 calc(var(--r) + 22px),transparent calc(var(--r) + 23px));opacity:.4}
-.hero::after{background:repeating-radial-gradient(circle at 50% var(--cy),transparent 0 15px,color-mix(in srgb,var(--text) 12%,transparent) 15px 16px);-webkit-mask:radial-gradient(circle at 50% var(--cy),transparent 0,transparent calc(var(--r) + 40px),#000 calc(var(--r) + 40px),transparent calc(var(--r) + 260px));mask:radial-gradient(circle at 50% var(--cy),transparent 0,transparent calc(var(--r) + 40px),#000 calc(var(--r) + 40px),transparent calc(var(--r) + 260px));opacity:.6}
-#fx{position:absolute;inset:0;width:100%;height:100%;z-index:1}
-.hero .in{position:relative;z-index:3;text-shadow:0 0 14px var(--bg),0 0 3px var(--bg);width:min(640px,100% - 32px);padding-bottom:clamp(28px,6vh,56px)}
-.hello{margin:0 0 8px;font-size:clamp(1rem,2.6vw,1.25rem);letter-spacing:.02em}
-.hero h1{text-wrap:balance;margin:0 0 14px;font-size:clamp(1.55rem,5vw,2.6rem);line-height:1.2;font-weight:700;letter-spacing:-.02em}
-.lead{margin:0 auto 22px;color:var(--muted);max-width:34em;min-height:3.3em}
-.lead.typing::after{content:"▌";color:var(--accent);animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.btn,.go,.ghost{display:inline-block;font:inherit;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:transparent;border:1px solid var(--accent);border-radius:0;padding:11px 22px;min-height:44px;cursor:pointer;text-decoration:none;transition:background .2s,color .2s}
-.btn::before,.go::before,.ghost::before{content:"< "}
-.btn::after,.go::after,.ghost::after{content:" >"}
-.btn:hover,.go:hover,.ghost:hover{background:var(--accent);color:var(--bg)}
-.go:active{transform:translateY(1px)}
-.ghost{margin-top:18px;font-size:.72rem;padding:7px 14px;min-height:34px;letter-spacing:.1em}
-
-main{padding:24px 0 72px;display:grid;gap:0;grid-template-columns:1fr}
-.card{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:clamp(24px,5vw,40px) 0}
-.card h2{margin:0 0 2px;font-size:1rem;letter-spacing:.06em;text-transform:uppercase}
-.card h3{margin:0 0 14px;font-size:.8rem;text-align:left;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.sub{color:var(--muted);font-size:.85rem;margin:0 0 16px}
-form{display:grid;gap:18px 28px;grid-template-columns:1fr}
-@media(min-width:560px){form{grid-template-columns:1fr 1fr}}
-.grp{grid-column:1/-1;margin:14px 0 -6px;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.grp::before{content:"// "}
-label{display:grid;align-content:start;gap:4px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-input,select{font:inherit;font-size:1rem;letter-spacing:0;text-transform:none;color:var(--text);background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:8px 0;min-height:42px;width:100%;transition:border-color .2s,box-shadow .2s}
-select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:18px;background:linear-gradient(45deg,transparent 50%,var(--muted) 50%) calc(100% - 9px) 55%/5px 5px no-repeat,linear-gradient(135deg,var(--muted) 50%,transparent 50%) calc(100% - 4px) 55%/5px 5px no-repeat}
-input:hover,select:hover{border-bottom-color:var(--muted)}
-input:focus,select:focus{outline:none;border-bottom-color:var(--accent);box-shadow:0 1px 0 var(--accent)}
-button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-input[aria-invalid=true]{border-bottom-color:var(--bad);box-shadow:0 1px 0 var(--bad)}
-input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
-input[type=number]{-moz-appearance:textfield;appearance:textfield}
-.unit{position:relative;display:block}
-.unit input{padding-right:2.6em}
-.unit i{position:absolute;right:0;top:50%;transform:translateY(-50%);font-style:normal;color:var(--muted);font-size:.8rem;pointer-events:none}
-input[type=range]{-webkit-appearance:none;appearance:none;padding:0;min-height:22px;border:0;box-shadow:none;background:transparent;cursor:pointer}
-input[type=range]:focus{box-shadow:none}
-input[type=range]:focus-visible{outline:1px dashed var(--accent);outline-offset:3px}
-input[type=range]::-webkit-slider-runnable-track{height:1px;background:var(--muted)}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;margin-top:-5px;border:0;background:var(--accent);transform:rotate(45deg)}
-input[type=range]::-moz-range-track{height:1px;background:var(--muted)}
-input[type=range]::-moz-range-thumb{width:9px;height:9px;border:0;border-radius:0;background:var(--accent);transform:rotate(45deg)}
-.e{color:var(--bad);font-size:.75rem;letter-spacing:0;text-transform:none;min-height:1em}
-.full{grid-column:1/-1}
-.go{margin-top:6px}
-.chips{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;margin:0 0 6px}
-.chips span{font-size:.75rem;color:var(--muted)}
-.chip{font:inherit;font-size:.82rem;color:var(--muted);background:transparent;border:0;padding:4px 0;cursor:pointer;min-height:30px;transition:color .2s}
-.chip::before{content:"[ "}.chip::after{content:" ]"}
-.chip:hover{color:var(--accent)}
-.result{text-align:center}
-.result h2{text-align:left}
-.price{font-size:clamp(2.2rem,8vw,3.4rem);font-weight:700;letter-spacing:-.04em;color:var(--accent);margin:10px 0;font-variant-numeric:tabular-nums}
-.price{font-feature-settings:"zero"}
-.range{color:var(--muted);margin:0;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
-.empty{color:var(--muted);padding:20px 0}
-.bar{margin:22px 7px 10px;position:relative;height:8px;border-bottom:1px solid var(--muted);background:repeating-linear-gradient(90deg,var(--muted) 0 1px,transparent 1px 12px) bottom/100% 5px no-repeat}
-.bar b{position:absolute;left:50%;top:100%;width:10px;height:10px;margin:-5px 0 0 -5px;transform:rotate(45deg);background:var(--accent)}
-.ends{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:8px}
-.note{margin-top:24px;color:var(--accent);font-style:italic;font-size:.74rem;text-align:center}
-.fade{animation:up .45s ease both}
-@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.sk{height:12px;margin:14px auto;width:60%;background:linear-gradient(90deg,var(--soft) 25%,var(--line) 50%,var(--soft) 75%);background-size:200% 100%;animation:sh 1s linear infinite}
-.sk.big{height:44px;width:80%}
-@keyframes sh{to{background-position:-200% 0}}
-.two{display:grid;gap:32px;grid-template-columns:1fr}
-@media(min-width:700px){.two{grid-template-columns:1fr 1fr}}
-.fr{display:grid;grid-template-columns:7.5em 1fr 6.5em;gap:8px;align-items:center;font-size:.82rem;margin:9px 0;text-align:left}
-.fr .v{text-align:right;font-variant-numeric:tabular-nums}
-.fr .t{position:relative;height:4px;background:var(--soft)}
-.fr .t::before{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--muted)}
-.fr .t i{position:absolute;top:0;bottom:0}
-.up{color:var(--accent)}.dn{color:var(--bad)}
-.fr.tot{border-top:1px solid var(--line);padding-top:10px;font-weight:700}
-.chart{width:100%;height:auto;display:block}
-.chart text{fill:var(--muted);font-size:10px;font-family:var(--mono)}
-.cmp{display:grid;grid-template-columns:7em 1fr 1fr;gap:8px 12px;font-size:.85rem;text-align:left}
-.cmp .h{font-weight:700;color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
-.cmp .k{color:var(--muted)}
-.cmp .p{font-weight:700;font-size:1rem}
-.hint{color:var(--muted);font-size:.82rem}
-.motion{position:absolute;right:clamp(16px,4vw,40px);bottom:20px;z-index:4;width:36px;height:36px;display:grid;place-items:center;padding:0;background:transparent;color:var(--muted);border:1px solid var(--line);cursor:pointer;transition:color .2s,border-color .2s}
-.motion:hover{color:var(--accent);border-color:var(--accent)}
-.motion svg{width:14px;height:14px}
-/* ตัวอักษรไทยไม่ควรถ่างระยะ */
-:lang(th) :is(.grp,label,.range,.btn,.go,.ghost,.card h2,.card h3,.cmp .h,.tag){letter-spacing:0}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{"imports":{
+  "three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js",
+  "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+  "gsap":"https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js",
+  "gsap/ScrollTrigger":"https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js",
+  "lenis":"https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.mjs"
+}}
+</script>
+<script type="module" src="js/app.js"></script>
 </head>
 <body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="cursor" aria-hidden="true" hidden></div>
 <header>
   <div class="brand"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 40l4-14c1-3 3-5 6-5h20c3 0 5 1 7 3l8 9c3 1 7 2 7 7v2H6z"/><circle cx="18" cy="46" r="5"/><circle cx="46" cy="46" r="5"/></svg><span data-i="brandName"></span><span class="tag" data-i="tag"></span></div>
   <div class="tools">
+    <button id="soundBtn" type="button" aria-pressed="false"></button>
     <button id="langBtn" type="button" role="switch" aria-checked="false" aria-label="Language / ภาษา"><span>TH</span><span>EN</span></button>
     <button id="themeBtn" type="button"></button>
   </div>
 </header>
 <section class="hero" id="hero">
-  <canvas id="fx" aria-hidden="true"></canvas>
   <div class="in">
     <p class="hello"><span data-i="hello"></span><span id="hid"></span></p>
     <h1 data-i="title"></h1>
     <p class="lead" id="lead" data-i="heroSub"></p>
     <a class="btn" href="#form" data-i="start"></a>
   </div>
-  <button class="motion" id="motion" type="button"></button>
 </section>
+<button class="motion" id="motion" type="button"></button>
 <main>
   <section class="card" id="form">
     <h2 data-i="formTitle"></h2>
@@ -149,14 +47,13 @@ input[type=range]::-moz-range-thumb{width:9px;height:9px;border:0;border-radius:
     <form id="f" novalidate>
       <p class="grp" data-i="gCar"></p>
       <label><span data-i="brand"></span><select id="brand"></select></label>
-      <label><span data-i="model"></span><input id="model" list="models" autocomplete="off" aria-describedby="e-model"><datalist id="models"></datalist><small class="e" id="e-model"></small></label>
+      <label><span data-i="model"></span><select id="model"></select></label>
+      <p class="grp" data-i="gSpec"></p>
+      <label><span data-i="year"></span><select id="year"></select></label>
+      <label><span data-i="color"></span><select id="color"></select></label>
+      <label class="full"><span data-i="spec"></span><select id="variant" aria-describedby="seen"></select><small class="hint" id="seen"></small></label>
       <p class="grp" data-i="gCond"></p>
-      <label><span data-i="year"></span><input id="year" type="number" inputmode="numeric" min="2000" max="2026" value="2018" aria-describedby="e-year"><input id="yearR" type="range" min="2000" max="2026" step="1" data-al="year"><small class="e" id="e-year"></small></label>
-      <label><span data-i="mileage"></span><span class="unit"><input id="mileage" type="number" inputmode="numeric" min="0" max="999999" value="80000" aria-describedby="e-mileage"><i>km</i></span><input id="mileageR" type="range" min="0" max="400000" step="5000" data-al="mileage"><small class="e" id="e-mileage"></small></label>
-      <p class="grp" data-i="gEng"></p>
-      <label><span data-i="trans"></span><select id="trans"><option value="AT" data-i="at"></option><option value="MT" data-i="mt"></option></select></label>
-      <label><span data-i="fuel"></span><select id="fuel"><option value="gas" data-i="gas"></option><option value="diesel" data-i="diesel"></option><option value="hybrid" data-i="hybrid"></option></select></label>
-      <label class="full"><span data-i="cc"></span><span class="unit"><input id="cc" type="number" inputmode="numeric" min="600" max="6000" value="1500" aria-describedby="e-cc"><i>cc</i></span><small class="e" id="e-cc"></small></label>
+      <label class="full"><span data-i="mileage"></span><span class="unit"><input id="mileage" type="number" inputmode="numeric" min="0" max="999999" value="80000" aria-describedby="e-mileage"><i>km</i></span><input id="mileageR" type="range" min="0" max="400000" step="5000" data-al="mileage"><small class="e" id="e-mileage"></small></label>
       <button class="go full" type="submit" data-i="go"></button>
     </form>
   </section>
@@ -168,280 +65,5 @@ input[type=range]::-moz-range-thumb{width:9px;height:9px;border:0;border-radius:
   <section class="card wide" id="more" hidden><div class="two"><div><h3 data-i="fTitle"></h3><div id="fac"></div></div><div><h3 data-i="cTitle"></h3><div id="chart"></div></div></div></section>
   <section class="card wide" id="cmp" hidden aria-live="polite"><h3 data-i="cmpTitle"></h3><div id="cmpBody"></div><button class="ghost" id="cmpClear" type="button" data-i="clear"></button></section>
 </main>
-<script>
-const T={
-th:{brandName:"CarPrice",tag:"เดโม่",title:"ประเมินราคารถมือสองในไม่กี่วินาที",heroSub:"เลือกยี่ห้อ รุ่น ปี และสภาพรถ แล้วดูราคาโดยประมาณพร้อมช่วงราคาที่เป็นไปได้",formTitle:"ข้อมูลรถ",formSub:"กรอกข้อมูลแล้วกดทำนายราคา",gCar:"รถ",gCond:"สภาพ",gEng:"เครื่องยนต์",brand:"ยี่ห้อ",model:"รุ่น",year:"ปีรถ (ค.ศ.)",mileage:"เลขไมล์",trans:"เกียร์",at:"อัตโนมัติ",mt:"ธรรมดา",fuel:"เชื้อเพลิง",gas:"เบนซิน",diesel:"ดีเซล",hybrid:"ไฮบริด",cc:"ขนาดเครื่องยนต์",go:"ทำนายราคา",resTitle:"ราคาที่ทำนาย",empty:"ยังไม่มีผล กรอกข้อมูลแล้วกดปุ่มทำนายราคา",note:"หมายเหตุ: นี่คือเดโม่ ราคามาจากสูตรจำลอง ไม่ใช่โมเดลจริง จะเปลี่ยนเป็นโมเดลที่เทรนเองภายหลัง",est:"ราคาโดยประมาณ",rng:"ช่วงที่เป็นไปได้",baht:"บาท",eYear:"ปีต้องอยู่ระหว่าง 2000-2026",eMile:"เลขไมล์ต้องอยู่ระหว่าง 0-999,999",eCc:"ซีซีต้องอยู่ระหว่าง 600-6,000",eModel:"ไม่พบรุ่นนี้ในยี่ห้อที่เลือก ลองพิมพ์ค้นหาแล้วเลือกจากรายการ",examples:"ลองตัวอย่าง:",fTitle:"อะไรทำให้ราคาขึ้น/ลง",fBase:"ราคารถใหม่โดยประมาณ",fAge:"อายุรถ",fMile:"เลขไมล์",fTrans:"เกียร์ธรรมดา",fFuel:"เชื้อเพลิง",fCc:"ขนาดเครื่องยนต์",fFloor:"ราคาขั้นต่ำ",fTotal:"ราคาที่ทำนาย",cTitle:"ราคาในอีก 5 ปีข้างหน้า",cNote:"สมมติขับปีละ 15,000 กม.",cAlt:"กราฟราคารถรายปี",pin:"เก็บไว้เทียบ",pinned:"เก็บไว้แล้ว ทำนายอีกคันเพื่อเทียบ",cmpTitle:"เปรียบเทียบ 2 คัน",cmpA:"คัน A",cmpB:"คัน B",cmpWait:"ทำนายราคารถอีกคันเพื่อดูผลเปรียบเทียบ",cmpDiff:"ส่วนต่าง (B − A)",clear:"ล้างการเปรียบเทียบ",car:"รถ",price:"ราคา",dark:"โหมดมืด",light:"โหมดสว่าง",hello:"สวัสดีคนขับ #",start:"เริ่มประเมินราคา",play:"เล่นแอนิเมชัน",pause:"หยุดแอนิเมชัน"},
-en:{brandName:"CarPrice",tag:"Demo",title:"Estimate a used car's price in seconds",heroSub:"Pick the brand, model, year and condition to see an estimated price and a likely range.",formTitle:"Car details",formSub:"Fill in the details, then predict the price",gCar:"Car",gCond:"Condition",gEng:"Engine",brand:"Brand",model:"Model",year:"Year",mileage:"Mileage",trans:"Transmission",at:"Automatic",mt:"Manual",fuel:"Fuel",gas:"Gasoline",diesel:"Diesel",hybrid:"Hybrid",cc:"Engine size",go:"Predict price",resTitle:"Predicted price",empty:"No result yet. Fill in the form and press Predict.",note:"Note: this is a demo. The price comes from a placeholder formula, not a real model. It will be replaced by our own trained model later.",est:"Estimated price",rng:"Likely range",baht:"THB",eYear:"Year must be between 2000 and 2026",eMile:"Mileage must be between 0 and 999,999",eCc:"Engine size must be between 600 and 6,000 cc",eModel:"This model isn't available for the selected brand. Type to search and pick from the list.",examples:"Try an example:",fTitle:"What moves the price",fBase:"Approx. new price",fAge:"Age",fMile:"Mileage",fTrans:"Manual gearbox",fFuel:"Fuel type",fCc:"Engine size",fFloor:"Price floor",fTotal:"Predicted price",cTitle:"Price over the next 5 years",cNote:"Assumes 15,000 km per year",cAlt:"Yearly price chart",pin:"Save for comparison",pinned:"Saved. Predict another car to compare.",cmpTitle:"Compare two cars",cmpA:"Car A",cmpB:"Car B",cmpWait:"Predict another car to see the comparison",cmpDiff:"Difference (B − A)",clear:"Clear comparison",car:"Car",price:"Price",dark:"Dark mode",light:"Light mode",hello:"Hello Driver #",start:"Start estimate",play:"Play animation",pause:"Pause animation"}
-};
-const CARS={"TOYOTA":{"ALPHARD":3712000,"ALTIS":988000,"ARISTO":531000,"AVANZA":929000,"BB":2541000,"C-HR":1211000,"CAMRY":1553000,"COMMUTER":2151000,"COROLLA":870000,"COROLLA ALTIS":974000,"COROLLA CROSS":1211000,"CORONA":401000,"CROWN":3304000,"ESQUIRE":2689000,"ESTIMA":3435000,"FJ CRUISER":14310000,"FORTUNER":1944000,"GR COROLLA":3976000,"GR YARIS":2901000,"GRANVIA":1589000,"HARRIER":2592000,"HIACE":1710000,"HILUX":1347000,"HILUX CHAMP":599000,"HILUX MIGHTY-X":844000,"HILUX REVO":932000,"HILUX SURF":2654000,"HILUX TIGER":878000,"HILUX TIGER D4D":939000,"HILUX TRAVO":1017000,"HILUX TRAVOB CAB 4X4 2.8":760000,"HILUX VIGO":1593000,"HILUX VIGO CHAMP":580000,"HILUX VIGO D4D":1796000,"INNOVA":1249000,"IPSUM":1123000,"KLUGER":1123000,"LAND CRUISER":9148000,"LAND CRUISER PRADO":1170000,"LANDCRUISER PRADO":4636000,"MAJESTY":2868000,"PRIUS":1490000,"RAV 4":1014000,"RAV4":2242000,"SIENTA":1072000,"SOLUNA":401000,"SPORT CRUISER":1143000,"SPORT RIDER":1286000,"TIGER":544000,"VANGUARD":1939000,"VEGO":1626000,"VELLFIRE":4139000,"VELOZ":899000,"VENTURY":1888000,"VIOS":787000,"VITZ":1599000,"VOXY":2301000,"WILL":1218000,"WISH":1082000,"YARIS":773000,"YARIS ATIV":727000,"YARIS CROSS":954000},"HONDA":{"ACCORD":1537000,"BR-V":978000,"BRIO":750000,"CITY":764000,"CIVIC":1285000,"CIVIC FB":1730000,"CR-V":1490000,"CROSSROAD":4113000,"EDIX":2381000,"ELYSION":1939000,"FK":1735000,"FREED":1671000,"HR-V":1172000,"JAZZ":1028000,"LIFE DUNK":2715000,"MOBILIO":1038000,"ODYSSEY":2718000,"STEPWAGON":2200000,"STEPWGN":2200000,"STREAM":871000,"VIGOR":606000,"WR-V":806000},"MAZDA":{"626":374000,"BT-50":745000,"BT-50 PRO":908000,"CX-3":930000,"CX-30":1047000,"CX-5":1270000,"CX-7":1211000,"CX-8":1287000,"CX-9":2443000,"FAMILIA":1004000,"FIGHTER":606000,"MAZDA2":732000,"MAZDA3":1071000,"TRIBUTE":538000},"MERCEDES-BENZ":{"190E":2221000,"220E":667000,"230E":871000,"230S":10206000,"280S":531000,"300E":905000,"300GE":33952000,"500SEL":1531000,"560SEL":3803000,"A-CLASS":1785000,"A170":1157000,"A180":1871000,"A200":1801000,"A250":1451000,"A45":9752000,"B-CLASS":1614000,"B180":1695000,"B200":1678000,"C-CLASS":1770000,"C180":1864000,"C180 KOMPRESSOR":1044000,"C200":2438000,"C200 KOMPRESSOR":1490000,"C220":2614000,"C220D":1877000,"C230":1766000,"C230 KOMPRESSOR":1167000,"C250":2246000,"C300":1864000,"C350":1940000,"C36":7484000,"C43":8777000,"C63 S":14648000,"CLA-CLASS":2045000,"CLA200":1825000,"CLA250":2215000,"CLA35":3656000,"CLS-CLASS":4658000,"CLS220":4152000,"CLS300":4514000,"CLS350":4113000,"CLS53":4931000,"E-CLASS":2099000,"E200":2327000,"E200 KOMPRESSOR":1354000,"E220":3739000,"E230":987000,"E240":1184000,"E250":2633000,"E280":1153000,"E300":2255000,"E350":2174000,"E53":5311000,"E63":6580000,"G350":15670000,"G400":12488000,"G450":13068000,"G63":26672000,"GL350":6909000,"GLA":1866000,"GLA-CLASS":1704000,"GLA200":1893000,"GLA250":1996000,"GLA35":2524000,"GLA45":5255000,"GLB-CLASS":1817000,"GLB200":2114000,"GLC-CLASS":2773000,"GLC220":3152000,"GLC250":2801000,"GLC300":2818000,"GLC350":3614000,"GLC43":4328000,"GLE-CLASS":2525000,"GLE250":4110000,"GLE300":5220000,"GLE350":3886000,"GLE43":5122000,"GLE500":2839000,"GLE53":5653000,"GLS350":7154000,"GLS450":6444000,"MAYBACH S500":15872000,"MAYBACH S580":9549000,"ML250":2510000,"ML63":12859000,"R-CLASS":3673000,"R350":2987000,"S-CLASS":3837000,"S280":1340000,"S300":3573000,"S320":2541000,"S350":5903000,"S400":4400000,"S500":3765000,"S560":4869000,"S580":6444000,"S63":8097000,"SPRINTER":4352000,"V-CLASS":2480000,"V220":3639000,"V250":4453000,"VITO":2785000},"ISUZU":{"ADVENTURE MASTER":1055000,"D-MAX":976000,"DRAGON EYE":987000,"DRAGON POWER":1119000,"GRAND ADVENTURE":674000,"MU-7":1904000,"MU-X":1622000,"TFR":919000,"TROOPER":1021000,"V-CROSS":1857000},"MITSUBISHI":{"AIRTREK":2885000,"ATTRAGE":585000,"COLT":871000,"DELICA":1628000,"DELICA SPACE WAGON":2056000,"EVOLUTION":6079000,"G-WAGON":674000,"GALANT":6055000,"I":2034000,"LANCER":456000,"LANCER EX":1239000,"MIRAGE":553000,"OUTLANDER":999000,"OUTLANDER PHEV":1059000,"PAJERO":1582000,"PAJERO SPORT":1666000,"RVR":1490000,"SPACE WAGON":1102000,"STRADA":898000,"STRADA G WAGON":1116000,"STRADA G-WAGON":1184000,"STRADA GRANDIS":592000,"TRITON":903000,"X-FORCE":953000,"XFORCE HEV":919000,"XPANDER":927000,"XPANDER CROSS":920000},"NISSAN":{"ALMERA":622000,"BIG M":1102000,"BIG-M FRONTIER NAVARA":742000,"CEFIRO":425000,"CUBE":2681000,"ELGRAND":2919000,"FRONTIER":538000,"FRONTIER NAVARA":1218000,"FUGA":6797000,"JUKE":801000,"KICKS":775000,"LIVINA":715000,"MARCH":553000,"NAVARA":726000,"NOTE":683000,"NP 300 NAVARA":900000,"NP300-NAVARA":938000,"NV":296000,"PATROL":12859000,"PULSAR":890000,"ROOX":1416000,"SERENA":1544000,"SKYLINE":12859000,"SUNNY":393000,"SYLPHY":662000,"TEANA":1166000,"TERRA":1343000,"TIIDA":659000,"URVAN":1137000,"X-TRAIL":1163000},"BMW":{"116I":1644000,"118I":1638000,"218I":1404000,"220I":1514000,"2800":5103000,"316I":1804000,"318I":1680000,"320D":2014000,"320I":1656000,"320LI":2131000,"323I":510000,"325I":1422000,"328I":3636000,"330E":2000000,"330I":2373000,"330LI":2299000,"520D":2651000,"520I":2593000,"523I":2238000,"525D":2133000,"525I":1728000,"528I":1957000,"530E":2245000,"530I":2525000,"630D":2899000,"630I":2852000,"730I":1732000,"730IL":1544000,"730LD":3964000,"730LI":3149000,"740D":5499000,"740IL":4008000,"740LE":2555000,"740LI":3583000,"745LE":4953000,"750E":5670000,"ACTIVEHYBRID 5":2530000,"ACTIVEHYBRID 7 L":4689000,"I3":3219000,"M3":8338000,"M340I":4534000,"M5":11180000,"M760E":5733000,"SERIES 1":1640000,"SERIES 2":1599000,"SERIES 3":1720000,"SERIES 5":2151000,"SERIES 6":2814000,"SERIES 7":2849000,"X1":1763000,"X2":2117000,"X3":2711000,"X4":3157000,"X5":3465000,"X6":4861000,"X7":5283000},"FORD":{"ECOSPORT":708000,"ESCAPE":811000,"EVEREST":1515000,"FIESTA":606000,"FOCUS":808000,"RANGER":1074000},"MG":{"EXTENDER":488000,"GS":703000,"HS":792000,"HS PHEV":836000,"MG":722000,"MG3":471000,"MG5":582000,"MG6":428000,"V80":1044000,"VS HEV":732000,"ZS":699000},"SUZUKI":{"APV":1558000,"CARIBIAN":1021000,"CELERIO":396000,"CIAZ":567000,"ERTIGA":829000,"EVERY":3123000,"FRONX":497000,"GRAND VITARA":1311000,"JIMNY":2823000,"LAPIN":2689000,"SPACIA":1399000,"SWIFT":685000,"SX4":1039000,"VITARA":1286000,"WAGON R":1360000,"XL7":794000},"HYUNDAI":{"CRETA":790000,"ELANTRA":778000,"GRAND STAREX":2389000,"H-1":1823000,"PALISADE":1920000,"SANTA FE":1760000,"SONATA":810000,"STARGAZER":747000,"STARIA":1717000,"TUCSON":1371000,"VELOSTER":1386000},"MINI":{"CLUBMAN":2503000,"COOPER":2667000,"COOPER 3 DOOR HATCH":1639000,"COOPER 5 DOOR HATCH":2355000,"COUNTRYMAN":1931000,"HATCH COOPER":2248000,"JOHN COOPER WORK":3157000,"ONE":2783000},"PORSCHE":{"CAYENNE":6827000,"MACAN":5447000,"PANAMERA":8679000},"SUBARU":{"FORESTER":1128000,"IMPREZA":3485000,"LEGACY":2444000,"WRX":4777000,"XV":1039000},"VOLVO":{"144":568000,"244":184000,"850":674000,"940":394000,"960":599000,"C30":2149000,"S40":601000,"S60":1570000,"S80":1312000,"S90":2064000,"V40":1239000,"XC40":1397000,"XC60":1833000,"XC90":2480000},"CHEVROLET":{"3100":6055000,"AVEO":538000,"CAPTIVA":741000,"COLORADO":665000,"CRUZE":674000,"EXPRESS":4695000,"LUMINA":538000,"OPTRA":333000,"SONIC":516000,"TRAILBLAZER":1043000,"VAN":5838000,"ZAFIRA":680000},"AUDI":{"A1":2579000,"A3":946000,"A4":2206000,"A5":2475000,"A6":1354000,"A7":3913000,"A8":3994000,"Q2":1388000,"Q3":1919000,"Q5":2563000,"Q7":2639000,"Q8":5603000,"RS Q3":4840000,"RS Q8":7865000,"RS3":5670000,"RS7":10223000},"LEXUS":{"CT200H":2034000,"ES300":1769000,"ES300H":3652000,"GS250":3999000,"GS300":2715000,"GS300H":4539000,"IS250":2259000,"IS300H":3152000,"LM300H":5476000,"LM350H":6962000,"LM500H":7034000,"LS350":7009000,"LS430":2715000,"LS460":5640000,"LS460L":5368000,"LS600HL":6117000,"LX470":4895000,"NX300H":3639000,"NX350H":3260000,"RX200T":4045000,"RX270":3151000,"RX300":4579000,"RX350":3501000,"UX250H":2465000},"KIA":{"CARNIVAL":1833000,"GRAND CARNIVAL":1706000,"PICANTO":478000,"RIO":832000,"SORENTO":874000},"LAND ROVER":{"DEFENDER":7444000,"DISCOVERY":4395000,"DISCOVERY 3":7825000,"DISCOVERY 4":7447000,"DISCOVERY SPORT":4305000,"FREELANDER":1803000,"RANGE ROVER":7379000,"RANGE ROVER EVOQUE":3467000,"RANGE ROVER VELAR":4666000},"VOLKSWAGEN":{"BEETLE":5190000,"CARAVELLE":2318000,"GOLF":1668000,"NEW BEETLE":2436000,"SCIROCCO":4892000,"TIGUAN":3048000,"TOUAREG":2209000},"HAVAL":{"H6":938000,"JOLION":806000},"JAGUAR":{"DAIMLER":6464000,"F-PACE":3444000,"S-TYPE":4423000,"SOVEREIGN":3946000,"X-TYPE":3327000,"XE":2166000,"XF":3088000,"XF-SERIES":3946000,"XJ":6270000,"XJ6":5307000,"XJ8":5375000,"XJR":4423000},"GWM":{"HAVAL H6":852000,"HAVAL JOLION":776000,"TANK 300":1165000,"TANK 500":1729000},"JEEP":{"CHEROKEE":2151000,"GRAND CHEROKEE":1544000,"RENEGADE":2272000,"WRANGLER":6424000},"GWM TANK":{"300":1337000,"500":1704000},"BENTLEY":{"BENTAYGA":15140000,"BROOKLANDS":15581000,"CONTINENTAL":16261000,"EIGHT":46607000,"FLYING SPUR":18930000},"PEUGEOT":{"2008":832000,"3008":1050000,"308":1218000,"408":1012000,"5008":1266000,"504":2381000,"807":2177000,"EXPERT":1429000,"PEUGEOT3008":1166000,"PEUGEOT408":691000},"MASERATI":{"GHIBLI":7561000,"GRECALE":7400000,"LEVANTE":10099000,"QUATTROPORTE":15173000},"BYD":{"SEAL 5":630000,"SEALION 6":794000,"SEALION 7":920000},"PROTON":{"EXORA":593000,"NEO":612000,"PERSONA":367000,"SAGA":1259000,"SUPRIMA S":1182000},"CITROEN":{"C4":1286000,"CX":2007000,"DS3":1207000,"DS3 VTI":1207000},"HUMMER":{"H3":7825000},"ROLLS-ROYCE":{"GHOST":50012000,"SILVER SHADOW":17010000,"SILVER SPUR":31910000},"SSANGYONG":{"STAVIC":1082000},"LAMBORGHINI":{"URUS":29698000},"FIAT":{"1100":878000,"500":6587000},"DAIHATSU":{"MOVE CANBUS":1420000,"TAFT":1497000,"TANTO":5375000},"FOTON":{"AUMARK":585000},"OPEL":{"ASTRA":184000,"CORSA":544000},"THAIRUNG":{"TRANSFORMER":1706000},"AUSTIN":{"MINI":6797000,"WESTMINSTER":8709000},"TR":{"TRANSFORMER LL":2313000},"JAECOO":{"7":908000},"NAZA":{"FORZA":463000},"ALFA ROMEO":{"156":258000},"DODGE":{"C SERIES":7825000},"CHRYSLER":{"300C":8777000},"ROVER":{"MINI":6430000},"INFINITI":{"G35":6586000},"RENAULT":{"R-19":401000},"SKODA":{"SUPERB":2034000},"SAAB":{"9000":674000}};
-/* ===== จุดเชื่อมโมเดลจริง / MODEL HOOK =====
-   ตอนนี้เป็นสูตรจำลอง เมื่อโมเดลเสร็จ แก้เฉพาะฟังก์ชันนี้ (เป็น async ได้ เช่น fetch("/predict",...))
-   x = {brand,model,year,mileage,trans,fuel,cc}
-   คืน {price} ; ถ้าใส่ base (ราคาใหม่) กับ parts [[คีย์,ส่วนต่างบาท],...] เพิ่ม จะแสดงกราฟ "อะไรทำให้ราคาขึ้น/ลง" */
-const NOW=2026;
-function predictPrice(x){
-  const base=CARS[x.brand][x.model];
-  const age=Math.max(0,NOW-x.year);
-  const parts=[];
-  let p=base*Math.pow(0.88,age);
-  parts.push(["fAge",p-base]);
-  const m=Math.max(0,x.mileage-age*15000)*0.5;
-  p-=m;parts.push(["fMile",-m]);
-  const mul=(k,f)=>{const q=p*f;parts.push([k,q-p]);p=q};
-  if(x.trans==="MT")mul("fTrans",0.93);
-  if(x.fuel==="diesel")mul("fFuel",1.04);
-  if(x.fuel==="hybrid")mul("fFuel",1.08);
-  mul("fCc",1+(x.cc-1500)/1500*0.1);
-  if(p<base*0.08){parts.push(["fFloor",base*0.08-p]);p=base*0.08}
-  return {price:Math.round(p/1000)*1000,base,parts};
-}
-const $=id=>document.getElementById(id);
-const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-let lang=localStorage.lang||(navigator.language.startsWith("th")?"th":"en");
-let theme=localStorage.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
-let cur=null,pinned=null,seq=0,keep="",typed=null,tw=0,tt=0;
-// ตัวอย่างสำเร็จรูป: ยี่ห้อ, รุ่น, ปี, ไมล์, เกียร์, เชื้อเพลิง, ซีซี
-const EX=[["TOYOTA","CAMRY",2018,80000,"AT","gas",2500],["HONDA","CIVIC",2020,50000,"AT","gas",1800],["TOYOTA","HILUX REVO",2019,90000,"MT","diesel",2400],["NISSAN","ALMERA",2021,30000,"AT","gas",1200],["MAZDA","CX-5",2019,70000,"AT","diesel",2200]];
-const SVG=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
-const SUN=SVG('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>');
-const MOON=SVG('<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>');
-const r1=n=>Math.round(n/1000)*1000;
-function fmt(n){return n.toLocaleString(lang==="th"?"th-TH":"en-US")}
-const sgn=v=>(v<0?"−":"+")+fmt(r1(Math.abs(v)));
-
-function paint(animate){
-  const t=T[lang],lo=r1(cur.price*0.92),hi=r1(cur.price*1.08);
-  $("out").innerHTML=`<div class="${animate?"fade":""}"><p class="range">${t.est}</p><div class="price"><span id="pv">${fmt(cur.price)}</span> ${t.baht}</div><p class="range">${t.rng}</p><div class="bar"><b></b></div><div class="ends"><span>${fmt(lo)}</span><span>${fmt(hi)}</span></div><button class="ghost" id="pin" type="button">${t.pin}</button></div>`;
-  $("pin").onclick=()=>{pinned=cur;paintCmp()};
-  if(animate&&!reduce){const el=$("pv"),to=cur.price,t0=performance.now();(function s(n){if(!el.isConnected)return;const k=Math.min(1,(n-t0)/600),e=1-Math.pow(1-k,3);el.textContent=fmt(k<1?r1(to*e):to);if(k<1)requestAnimationFrame(s)})(t0)}
-  paintMore();paintCmp();
-}
-function paintMore(){
-  const t=T[lang],ps=(cur.parts||[]).filter(p=>Math.abs(p[1])>=500);
-  $("more").hidden=false;
-  const mx=Math.max(1,...ps.map(p=>Math.abs(p[1])));
-  let h="";
-  if(cur.base)h+=`<div class="fr"><span>${t.fBase}</span><span></span><span class="v">${fmt(r1(cur.base))}</span></div>`;
-  h+=ps.map(([k,v])=>`<div class="fr"><span>${t[k]}</span><span class="t"><i style="${v<0?"right":"left"}:50%;width:${Math.abs(v)/mx*50}%;background:var(--${v<0?"bad":"ok"})"></i></span><span class="v ${v<0?"dn":"up"}">${sgn(v)}</span></div>`).join("");
-  h+=`<div class="fr tot"><span>${t.fTotal}</span><span></span><span class="v">${fmt(cur.price)}</span></div>`;
-  $("fac").innerHTML=cur.parts?h:`<p class="hint">—</p>`;
-  const f=cur.fut,W=360,H=170,PX=34,TOP=24,BOT=30,top=Math.max(...f)*1.05;
-  const X=i=>PX+i*(W-2*PX)/(f.length-1),Y=v=>TOP+(H-TOP-BOT)*(1-v/top);
-  $("chart").innerHTML=`<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${t.cAlt}: ${fmt(f[0])} → ${fmt(f[f.length-1])} ${t.baht}"><line x1="${PX}" x2="${W-PX}" y1="${H-BOT}" y2="${H-BOT}" stroke="var(--line)"/><polyline fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round" points="${f.map((v,i)=>X(i)+","+Y(v)).join(" ")}"/>${f.map((v,i)=>`<line x1="${X(i)}" x2="${X(i)}" y1="${TOP}" y2="${H-BOT}" stroke="var(--line)" stroke-dasharray="2 3"/><rect x="${X(i)-4}" y="${Y(v)-4}" width="8" height="8" transform="rotate(45 ${X(i)} ${Y(v)})" fill="var(--accent)"/><text x="${X(i)}" y="${H-10}" text-anchor="middle">${NOW+i}</text>`).join("")}<text x="${X(0)}" y="${Y(f[0])-10}" text-anchor="middle">${fmt(f[0])}</text><text x="${X(f.length-1)}" y="${Y(f[f.length-1])-10}" text-anchor="middle">${fmt(f[f.length-1])}</text></svg><p class="hint">${t.cNote}</p>`;
-}
-function paintCmp(){
-  const t=T[lang];
-  $("cmp").hidden=!pinned;
-  if(!pinned)return;
-  const B=cur!==pinned?cur:null;
-  const rows=[[t.car,c=>`${c.x.brand} ${c.x.model}`],[t.year,c=>c.x.year],[t.mileage,c=>fmt(c.x.mileage)+" km"],[t.trans,c=>t[c.x.trans==="AT"?"at":"mt"]],[t.fuel,c=>t[c.x.fuel]],[t.cc,c=>fmt(c.x.cc)+" cc"]];
-  let h=`<span></span><span class="h">${t.cmpA}</span><span class="h">${t.cmpB}</span>`;
-  rows.forEach(([k,f])=>h+=`<span class="k">${k}</span><span>${f(pinned)}</span><span>${B?f(B):"—"}</span>`);
-  h+=`<span class="k">${t.price}</span><span class="p">${fmt(pinned.price)}</span><span class="p">${B?fmt(B.price):"—"}</span>`;
-  if(B){const d=B.price-pinned.price,pc=(d/pinned.price*100).toFixed(1);
-    h+=`<span class="k">${t.cmpDiff}</span><span></span><span class="p ${d<0?"dn":"up"}">${sgn(d)} (${d<0?"−":"+"}${Math.abs(pc)}%)</span>`}
-  else h+=`<span class="hint" style="grid-column:1/-1">${t.cmpWait}</span>`;
-  $("cmpBody").innerHTML=`<div class="cmp">${h}</div>`;
-}
-function typeIt(){
-  const el=$("lead"),s=el.textContent;let i=0;
-  clearInterval(tw);clearTimeout(tt);el.classList.add("typing");el.textContent="";
-  tw=setInterval(()=>{el.textContent=s.slice(0,++i);if(i>=s.length){clearInterval(tw);tt=setTimeout(()=>el.classList.remove("typing"),1200)}},16);
-}
-function render(){
-  document.documentElement.lang=lang;
-  document.documentElement.dataset.theme=theme;
-  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=T[lang][e.dataset.i]);
-  document.querySelectorAll("[data-al]").forEach(e=>e.setAttribute("aria-label",T[lang][e.dataset.al]));
-  $("langBtn").setAttribute("aria-checked",lang==="en");
-  $("themeBtn").innerHTML=theme==="dark"?SUN:MOON;
-  $("themeBtn").setAttribute("aria-label",theme==="dark"?T[lang].light:T[lang].dark);
-  document.title=T[lang].brandName+" - "+T[lang].title;
-  if(!reduce&&typed!==lang){typed=lang;typeIt()}
-  readCol();paintMotion();
-  if(document.querySelector("input[aria-invalid=true]"))check(read());
-  if(cur)paint(false);else paintCmp();
-}
-
-function fillModels(){
-  const ms=Object.keys(CARS[$("brand").value]);
-  $("models").replaceChildren(...ms.map(m=>new Option(m)));
-  $("model").value=ms[0];
-  setErr("model","");
-}
-function fillBrands(){
-  $("brand").replaceChildren(...Object.keys(CARS).sort().map(b=>new Option(b)));
-  fillModels();
-  EX.forEach(e=>{
-    const b=document.createElement("button");
-    b.type="button";b.className="chip";b.textContent=e[1]+" "+e[2];
-    b.onclick=()=>{
-      $("brand").value=e[0];fillModels();
-      ["model","year","mileage","trans","fuel","cc"].forEach((k,i)=>$(k).value=e[i+1]);
-      syncR();$("f").requestSubmit();
-    };
-    $("chips").append(b);
-  });
-}
-const syncR=()=>{$("yearR").value=$("year").value;$("mileageR").value=$("mileage").value};
-
-function setErr(id,msg){$("e-"+id).textContent=msg;$(id).setAttribute("aria-invalid",!!msg)}
-function read(){return {brand:$("brand").value,model:$("model").value.trim().toUpperCase(),year:+$("year").value,mileage:+$("mileage").value,trans:$("trans").value,fuel:$("fuel").value,cc:+$("cc").value}}
-function check(x){
-  const t=T[lang],inr=(id,lo,hi)=>$(id).value!==""&&+$(id).value>=lo&&+$(id).value<=hi;
-  const bad={model:CARS[x.brand][x.model]?"":t.eModel,year:inr("year",2000,NOW)?"":t.eYear,mileage:inr("mileage",0,999999)?"":t.eMile,cc:inr("cc",600,6000)?"":t.eCc};
-  Object.entries(bad).forEach(([k,m])=>setErr(k,m));
-  const first=Object.keys(bad).find(k=>bad[k]);
-  if(first)$(first).focus();
-  return !first;
-}
-
-// slider <-> number input, ล้าง error เมื่อพิมพ์
-[["year","yearR"],["mileage","mileageR"]].forEach(([n,r])=>{
-  $(r).oninput=()=>{$(n).value=$(r).value;setErr(n,"")};
-  $(n).oninput=()=>{$(r).value=$(n).value;setErr(n,"")};
-});
-$("cc").oninput=()=>setErr("cc","");
-// ช่องรุ่น: โฟกัสแล้วล้างค่าเพื่อให้เห็นรายการทั้งหมด พิมพ์เพื่อค้นหา
-$("model").onfocus=()=>{keep=$("model").value;$("model").value=""};
-$("model").onblur=()=>{const v=$("model").value.trim().toUpperCase();$("model").value=v||keep;if(v)setErr("model","")};
-$("brand").onchange=fillModels;
-$("cmpClear").onclick=()=>{pinned=null;paintCmp()};
-$("langBtn").onclick=()=>{lang=lang==="th"?"en":"th";localStorage.lang=lang;render()};
-$("themeBtn").onclick=()=>{theme=theme==="dark"?"light":"dark";localStorage.theme=theme;render()};
-$("f").onsubmit=async e=>{
-  e.preventDefault();
-  const x=read();
-  if(!check(x))return;
-  const id=++seq;
-  document.querySelector(".result").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});
-  if(!reduce)$("out").innerHTML='<div class="sk big"></div><div class="sk"></div><div class="sk"></div>';
-  // ราคาปัจจุบัน + อีก 5 ปีข้างหน้า (ขับปีละ 15,000 กม.)
-  const [r,...fut]=await Promise.all([predictPrice(x),...[1,2,3,4,5].map(k=>predictPrice({...x,year:x.year-k,mileage:x.mileage+15000*k})),new Promise(res=>setTimeout(res,reduce?0:350))]);
-  if(id!==seq)return;
-  cur={x,price:r.price,base:r.base,parts:r.parts,fut:[r.price,...fut.slice(0,5).map(f=>f.price)]};
-  paint(true);
-};
-// ===== hero: เมฆจุดรูปรถแบบ ctOS (canvas) =====
-// จุดรวมกันเป็นรถ แล้วค่อยๆ เลื่อนเปลี่ยนรูปทรงวนไปเรื่อยๆ: ซีดาน → SUV → กระบะ → แฮทช์แบ็ก → รถตู้ → สปอร์ต
-// ล้อสร้างเป็นยาง+ซี่ล้อให้เห็นการหมุน ตัวรถสั่นตามช่วงล่าง ถนนกับเส้นความเร็ววิ่งไปทางซ้าย จุดหลบเมาส์
-// หน่วยของรูปทรง: พื้นถนนอยู่ที่ y=51 จุดกลางรถ (32,36) รถหันหน้าไปทางขวา
-const cv=$("fx"),g=cv.getContext("2d");
-// [ตัวรถ, หน้าต่าง, x ล้อหลัง, x ล้อหน้า, รัศมีล้อ]
-const TYPES=[
-  ["M5 44v-6c0-2 1.2-3.2 3-3.5l6-1 6-7c1.2-1.5 2.6-2.5 4.5-2.5h11c1.6 0 3 .7 4 2l5 6.5 9 1.5c3 .5 5 2.5 5 5.5v4.5z","M21.5 32l4-5.5c.6-.8 1.3-1.2 2.3-1.2H30v6.7z M31.5 25.3h3.6c1.2 0 2.2.5 3 1.5l4.4 5.2H31.5z",16,48,5], // ซีดาน
-  ["M4 45V29c0-4 2-8 6-8.5L39 20c2 0 3.2.8 4.2 2.2L48 29.5l8 1.3c2.5.4 4 2.2 4 4.8V45z","M7 29v-4c0-1.6 1-2.8 2.6-2.8H15V29z M17 22.2h9V29h-9z M28 22.2h10c1 0 1.8.4 2.4 1.3L44.5 29H28z",15,49,5.6], // SUV
-  ["M3 44V33h23.5V24c0-1 .8-2 2-2H38c1.4 0 2.6.6 3.4 1.8L46 30.5l9.5 1.4c2.6.4 4.5 2.4 4.5 5V44z","M28.5 30v-5.6c0-.6.4-1 1-1H38c.8 0 1.4.3 1.9 1l4.2 5.6z",13,48,5.4], // กระบะ
-  ["M7 44V34c0-1 .2-2 .6-3L11 25.5c.7-1.3 2-2 3.5-2H32c1.6 0 3 .7 4 2l6.5 7 7.5 1.3c2.6.5 4.5 2.6 4.5 5.2V44z","M10.5 31.5l2.4-5c.5-1 1.3-1.5 2.4-1.5H23v6.5z M25 25h7c1 0 1.9.4 2.6 1.2L39.8 31.5H25z",15,46,4.8], // แฮทช์แบ็ก
-  ["M4 45V23c0-2.5 2-4.5 4.5-4.5H43c1.8 0 3.4.8 4.4 2.3L55 30.5l2 .6c1.8.6 3 2.2 3 4.1V45z","M7 29v-6c0-1 .8-1.8 1.8-1.8H17V29z M19 21.2h10V29H19z M31 21.2h11.5c1 0 1.9.5 2.5 1.3L50.2 29H31z",14,49,5.2], // รถตู้
-  ["M5 44v-5c0-2 1-3.2 2.8-3.6L10 35l10-6c1.4-.8 3-1.3 4.6-1.3H30c1.6 0 3 .6 4 1.8l6 4.8 13.5 1.6c3.4.4 6.5 2.6 6.5 5.6V44z","M18.5 33.5l5.6-3.6c.8-.5 1.7-.8 2.7-.8H30c1 0 1.8.4 2.6 1l4.4 3.4z",15,48,4.9] // สปอร์ต
-];
-const HOLD=3,MORPH=2; // วินาที: ค้างแต่ละแบบ / เวลาเลื่อนเปลี่ยนรูป
-let pts=[],trail=[],nodes=[],geo=null,W=0,H=0,col="#2b93ea",mx=-1e4,my=-1e4,run=false,raf=0,last=0,clock=0,spin=0,still=false; // still = หยุดแอนิเมชัน; เล่นเองเสมอ หยุดได้ด้วยปุ่ม #motion
-const ease=x=>x*x*(3-2*x);
-function readCol(){col=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim()||col;if(still&&geo)frame(0)}
-// Knothe–Rosenblatt: r1 เลือกคอลัมน์ตามสัดส่วนจุด, r2 เลือกตำแหน่งในคอลัมน์
-// ⇒ จุดที่ใช้ r1,r2 เดียวกันอยู่ตำแหน่งใกล้กันในทุกรูปทรง จึงเลื่อนเปลี่ยนรูปได้นุ่มโดยไม่วิ่งไขว้กัน
-function kr(cols){
-  const cum=[];let s=0;
-  for(const c of cols)cum.push(s+=c.length);
-  return (r1,r2)=>{let lo=0,hi=cum.length-1;const k=r1*s;while(lo<hi){const m=lo+hi>>1;if(cum[m]>k)hi=m;else lo=m+1}const c=cols[lo];return [lo*2,c[Math.min(c.length-1,r2*c.length|0)]]};
-}
-function build(){
-  W=cv.clientWidth;H=cv.clientHeight;
-  if(!W||!H)return;
-  const dpr=Math.min(2,devicePixelRatio||1);
-  cv.width=W*dpr;cv.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0);
-  const sc=Math.min(W*0.74,560,H*0.42*52/30)/52,cx0=W/2,cy0=H*0.34;
-  const px=(u,v)=>[cx0+(u-32)*sc,cy0+(v-36)*sc];
-  // วาดแต่ละแบบลง canvas ชั่วคราว (กรอบ x 2-62, y 17-52) แล้วแยกพิกเซลขอบ/เนื้อเป็นคอลัมน์
-  const BW=Math.ceil(60*sc),BH=Math.ceil(35*sc),[bx,by]=px(2,17);
-  const off=document.createElement("canvas");off.width=BW;off.height=BH;
-  const o=off.getContext("2d",{willReadFrequently:true});
-  const S=TYPES.map(([body,win,x1,x2,r])=>{
-    o.setTransform(1,0,0,1,0,0);o.globalCompositeOperation="source-over";o.clearRect(0,0,BW,BH);
-    o.setTransform(sc,0,0,sc,-2*sc,-17*sc);
-    o.fill(new Path2D(body));
-    o.globalCompositeOperation="destination-out";
-    o.fill(new Path2D(win));
-    o.beginPath();o.arc(x1,51-r,r+1.2,0,7);o.moveTo(x2+r+1.2,51-r);o.arc(x2,51-r,r+1.2,0,7);o.fill(); // ซุ้มล้อ
-    const d=o.getImageData(0,0,BW,BH).data,A=(x,y)=>x>=0&&y>=0&&x<BW&&y<BH&&d[(y*BW+x)*4+3]>128;
-    const E=[],F=[];
-    for(let x=0;x<BW;x+=2){const e=[],f=[];for(let y=0;y<BH;y+=2)if(A(x,y))(A(x-4,y)&&A(x+4,y)&&A(x,y-4)&&A(x,y+4)?f:e).push(y);E.push(e);F.push(f)}
-    return [kr(E),kr(F)];
-  });
-  const n=W<600?1300:2600,nw=n*.09|0,scat=!pts.length&&!reduce; // ฉากจุดกระจายมารวมตัว ข้ามไปถ้าเครื่องตั้งลดการเคลื่อนไหว
-  // ox,oy = ระยะเบี่ยงจากตำแหน่งบ้าน ตอนแรกกระจายทั่วจอแล้วค่อยรวมเป็นรถ
-  const add=(q,[hx,hy])=>{q.ox=scat?Math.random()*W-hx:0;q.oy=scat?Math.random()*H-hy:0;q.vx=q.vy=0;q.p=Math.random()*6.283;q.al=.2+Math.random()*.6;pts.push(q)};
-  pts=[];trail=[];
-  // ตัวรถ: 40% อยู่ที่ขอบ 60% เป็นเนื้อ; h = ตำแหน่งบ้านในแต่ละแบบ; d = หน่วงเวลาให้เปลี่ยนรูปจากหน้ารถไปท้ายรถ
-  for(let i=0;i<n-2*nw;i++){
-    const e=i%5<2?0:1,r1=Math.random(),r2=Math.random(),jx=Math.random()*2,jy=Math.random()*2;
-    const h=S.map(s=>{const [x,y]=s[e](r1,r2);return [bx+x+jx,by+y+jy]});
-    add({w:-1,h,d:(1-r1)*.3},h[0]);
-  }
-  // ล้อ: 60% เป็นยาง (หนาแน่นที่ขอบนอก) 40% เป็นซี่ล้อ 5 ซี่; f = สัดส่วนของรัศมีล้อ
-  const WT=TYPES.map(t=>({c:[px(t[2],51-t[4]),px(t[3],51-t[4])],R:t[4]*sc}));
-  for(let w=0;w<2;w++)for(let i=0;i<nw;i++){
-    const sp=i%5<2,f=sp?(1+Math.random()*2.7)/5:(3.7+(1-Math.random()**2)*1.3)/5;
-    const a=sp?(Math.random()*5|0)*1.2566+(Math.random()-.5)*.12:Math.random()*6.283,c=WT[0].c[w];
-    add({w,a,f},[c[0]+Math.cos(a)*f*WT[0].R,c[1]+Math.sin(a)*f*WT[0].R]);
-  }
-  const m=W<600?9:14;
-  if(nodes.length!==m)nodes=Array.from({length:m},(_,i)=>({a:i/m*6.283+Math.random()*.35,r:.9+Math.random()*.25,s:(Math.random()-.5)*.0016}));
-  geo={cx0,cy0,sc,sw:52*sc,v:18*sc,WT,rx:52*sc*0.6,ry:30*sc*0.55,road:px(0,51)[1]+2,rear:px(5,0)[0],top:px(0,22)[1],bot:px(0,41)[1]};
-}
-function frame(t){
-  if(!geo)return;
-  const dt=Math.min(.05,(t-last)/1000||0);last=t;
-  // ในแต่ละรอบ: ค้างแบบ k ไว้ HOLD วิ แล้วเลื่อนเปลี่ยนเป็นแบบ k2 ใน MORPH วิ
-  const N=TYPES.length,ph=clock/(HOLD+MORPH),k=Math.floor(ph)%N,k2=(k+1)%N,u=(ph%1)*(HOLD+MORPH),e=u<HOLD?0:(u-HOLD)/MORPH,ew=ease(e);
-  const A=geo.WT[k],B=geo.WT[k2],R=A.R+(B.R-A.R)*ew;
-  if(!still){clock+=dt;spin+=dt*geo.v/R}
-  const s=clock,bob=Math.sin(s*11)*1.4+Math.sin(s*23)*.6;
-  g.clearRect(0,0,W,H);
-  g.fillStyle=col;
-  for(const q of pts){
-    let hx,hy;
-    if(q.w<0){const a=q.h[k],b=q.h[k2],m=ease(Math.min(1,Math.max(0,e*1.3-q.d)));hx=a[0]+(b[0]-a[0])*m;hy=a[1]+(b[1]-a[1])*m+bob}
-    else{const a=A.c[q.w],b=B.c[q.w],rr=q.f*R;hx=a[0]+(b[0]-a[0])*ew+Math.cos(q.a+spin)*rr;hy=a[1]+(b[1]-a[1])*ew+Math.sin(q.a+spin)*rr}
-    if(!still){
-      const dx=hx+q.ox-mx,dy=hy+q.oy-my,d2=dx*dx+dy*dy;
-      if(d2<6400){const f=(6400-d2)/6400*1.6/Math.sqrt(d2||1);q.vx+=dx*f;q.vy+=dy*f}
-      q.vx+=(Math.sin(s*1.2+q.p)*1.2-q.ox)*.035;
-      q.vy+=(Math.cos(s+q.p)*1.2-q.oy)*.035;
-      q.vx*=.86;q.vy*=.86;q.ox+=q.vx;q.oy+=q.vy;
-    }
-    g.globalAlpha=q.al;g.fillRect(hx+q.ox,hy+q.oy,1.3,1.3);
-  }
-  // ถนน: เส้นประวิ่งไปทางซ้ายเร็วเท่าขอบล้อ จางที่ปลาย
-  const L=geo.sw*.95,sh=(s*geo.v)%32;
-  g.strokeStyle=col;g.lineWidth=1;
-  for(let x=-L-sh;x<L;x+=32){const a=1-Math.abs(x+9)/L;if(a>0){g.globalAlpha=a*.5;g.beginPath();g.moveTo(geo.cx0+x,geo.road);g.lineTo(geo.cx0+x+18,geo.road);g.stroke()}}
-  // เส้นความเร็วหลุดจากท้ายรถ
-  if(!still){
-    if(trail.length<90&&Math.random()<.7)trail.push({x:geo.rear+Math.random()*8*geo.sc,y:geo.top+Math.random()*(geo.bot-geo.top),v:geo.v*(.6+Math.random()*.9),l:1});
-    trail=trail.filter(p=>(p.l-=dt*.9)>0);
-    for(const p of trail){p.x-=p.v*dt;g.globalAlpha=p.l*.45;g.beginPath();g.moveTo(p.x,p.y+bob);g.lineTo(p.x+p.v*.08,p.y+bob);g.stroke()}
-  }
-  const P=nodes.map(nd=>{if(!still)nd.a+=nd.s;return [geo.cx0+Math.cos(nd.a)*geo.rx*nd.r,geo.cy0+Math.sin(nd.a)*geo.ry*nd.r]});
-  g.globalAlpha=.3;g.lineWidth=.7;g.beginPath();
-  P.forEach((p,i)=>{const q=P[(i+1)%P.length],r=P[(i+3)%P.length];g.moveTo(p[0],p[1]);g.lineTo(q[0],q[1]);if(i%3===0){g.moveTo(p[0],p[1]);g.lineTo(r[0],r[1])}});
-  g.stroke();
-  g.globalAlpha=.9;
-  P.forEach(([x,y])=>{g.beginPath();g.moveTo(x,y-5);g.lineTo(x+5,y);g.lineTo(x,y+5);g.lineTo(x-5,y);g.closePath();g.fill()});
-  g.globalAlpha=1;
-  if(run&&!still)raf=requestAnimationFrame(frame);
-}
-new ResizeObserver(()=>{build();if(still)frame(0);else if(run){cancelAnimationFrame(raf);raf=requestAnimationFrame(frame)}}).observe($("hero"));
-new IntersectionObserver(([e])=>{run=e.isIntersecting;cancelAnimationFrame(raf);if(run&&!still&&geo)raf=requestAnimationFrame(frame)}).observe($("hero"));
-$("hero").addEventListener("pointermove",e=>{const r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
-$("hero").addEventListener("pointerleave",()=>{mx=my=-1e4});
-const PLAY=SVG('<path d="M8 5v14l11-7z" fill="currentColor"/>'),PAUSE=SVG('<path d="M9 5v14M15 5v14"/>');
-function paintMotion(){$("motion").innerHTML=still?PLAY:PAUSE;$("motion").setAttribute("aria-label",T[lang][still?"play":"pause"])}
-$("motion").onclick=()=>{still=!still;paintMotion();cancelAnimationFrame(raf);if(!still&&run)raf=requestAnimationFrame(frame)};
-$("hid").textContent=String(1e6+Math.floor(Math.random()*9e6));
-fillBrands();syncR();render();
-</script>
 </body>
 </html>
