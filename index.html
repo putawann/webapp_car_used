@@ -337,7 +337,7 @@ const TYPES=[
   ["M5 44v-5c0-2 1-3.2 2.8-3.6L10 35l10-6c1.4-.8 3-1.3 4.6-1.3H30c1.6 0 3 .6 4 1.8l6 4.8 13.5 1.6c3.4.4 6.5 2.6 6.5 5.6V44z","M18.5 33.5l5.6-3.6c.8-.5 1.7-.8 2.7-.8H30c1 0 1.8.4 2.6 1l4.4 3.4z",15,48,4.9] // สปอร์ต
 ];
 const HOLD=3,MORPH=2; // วินาที: ค้างแต่ละแบบ / เวลาเลื่อนเปลี่ยนรูป
-let pts=[],trail=[],nodes=[],geo=null,W=0,H=0,col="#2b93ea",mx=-1e4,my=-1e4,run=false,raf=0,last=0,clock=0,spin=0,still=reduce; // still = หยุดแอนิเมชัน (ค่าเริ่มต้นตามการตั้งค่าลดการเคลื่อนไหวของเครื่อง)
+let pts=[],trail=[],nodes=[],geo=null,W=0,H=0,col="#2b93ea",mx=-1e4,my=-1e4,run=false,raf=0,last=0,clock=0,spin=0,still=false; // still = หยุดแอนิเมชัน; เล่นเองเสมอ หยุดได้ด้วยปุ่ม #motion
 const ease=x=>x*x*(3-2*x);
 function readCol(){col=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim()||col;if(still&&geo)frame(0)}
 // Knothe–Rosenblatt: r1 เลือกคอลัมน์ตามสัดส่วนจุด, r2 เลือกตำแหน่งในคอลัมน์
@@ -370,7 +370,7 @@ function build(){
     for(let x=0;x<BW;x+=2){const e=[],f=[];for(let y=0;y<BH;y+=2)if(A(x,y))(A(x-4,y)&&A(x+4,y)&&A(x,y-4)&&A(x,y+4)?f:e).push(y);E.push(e);F.push(f)}
     return [kr(E),kr(F)];
   });
-  const n=W<600?1300:2600,nw=n*.09|0,scat=!pts.length&&!still;
+  const n=W<600?1300:2600,nw=n*.09|0,scat=!pts.length&&!reduce; // ฉากจุดกระจายมารวมตัว ข้ามไปถ้าเครื่องตั้งลดการเคลื่อนไหว
   // ox,oy = ระยะเบี่ยงจากตำแหน่งบ้าน ตอนแรกกระจายทั่วจอแล้วค่อยรวมเป็นรถ
   const add=(q,[hx,hy])=>{q.ox=scat?Math.random()*W-hx:0;q.oy=scat?Math.random()*H-hy:0;q.vx=q.vy=0;q.p=Math.random()*6.283;q.al=.2+Math.random()*.6;pts.push(q)};
   pts=[];trail=[];
