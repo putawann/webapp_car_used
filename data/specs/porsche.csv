@@ -1,0 +1,10 @@
+brand,model,years,cc,fuel,gear,body,source,note
+PORSCHE,CAYENNE,2003-2010,3200|3600|4500|4800,gas,AT,SUV,wiki:Porsche_Cayenne,9PA
+PORSCHE,CAYENNE,2011-2017,3600|4800,gas,AT,SUV,wiki:Porsche_Cayenne,92A
+PORSCHE,CAYENNE,2011-2017,3000,diesel|hybrid,AT,SUV,wiki:Porsche_Cayenne,92A diesel/S E-Hybrid
+PORSCHE,CAYENNE,2018-2026,2900|3000|4000,gas,AT,SUV,wiki:Porsche_Cayenne,9YA
+PORSCHE,CAYENNE,2018-2026,3000|4000,hybrid,AT,SUV,wiki:Porsche_Cayenne,9YA E-Hybrid
+PORSCHE,MACAN,2014-2026,2000|2900|3000,gas,AT,SUV,wiki:Porsche_Macan,95B
+PORSCHE,PANAMERA,2009-2016,3600|4800,gas,AT,Sedan,wiki:Porsche_Panamera,970
+PORSCHE,PANAMERA,2011-2016,3000,hybrid,AT,Sedan,wiki:Porsche_Panamera,970 S E-Hybrid
+PORSCHE,PANAMERA,2017-2026,2900|4000,gas|hybrid,AT,Sedan,wiki:Porsche_Panamera,971/976

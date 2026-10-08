@@ -1,0 +1,175 @@
+brand,model,years,cc,fuel,gear,body,source,note
+KIA,CARNIVAL,1998-2005,2500,gas,AT,MPV,wiki:Kia_Carnival,1st gen
+KIA,CARNIVAL,1998-2005,2900,diesel,AT,MPV,wiki:Kia_Carnival,
+KIA,CARNIVAL,2006-2014,2700,gas,AT,MPV,wiki:Kia_Carnival,2nd gen
+KIA,CARNIVAL,2006-2014,2900,diesel,AT,MPV,wiki:Kia_Carnival,
+KIA,CARNIVAL,2020-2025,2200,diesel,AT,MPV,wiki:Kia_Carnival,4th gen
+KIA,CARNIVAL,2025-2026,1600,hybrid,AT,MPV,https://autobuzz.my/2025/10/06/thailand-gets-facelift-kia-carnival-hybrid-ckd-from-malaysia-are-we-next/,ปรับโฉม 2025 ไฮบริดอย่างเดียว
+KIA,GRAND CARNIVAL,2006-2014,2900,diesel,AT,MPV,wiki:Kia_Carnival,
+KIA,GRAND CARNIVAL,2015-2025,2200,diesel,AT,MPV,https://www.wapcar.my/news/first-righthanddrive-2020-kia-grand-carnival-launched-in-thailand-15744,YP/KA4
+KIA,GRAND CARNIVAL,2006-2014,3300,gas,AT,MPV,wiki:Kia_Carnival,
+KIA,PICANTO,2004-2017,1000|1200,gas,AT,Hatchback,wiki:Kia_Picanto,
+KIA,RIO,2011-2017,1400,gas,AT,Hatchback|Sedan,wiki:Kia_Rio,
+KIA,SORENTO,2002-2009,2500,diesel,AT,SUV,wiki:Kia_Sorento,
+KIA,SORENTO,2002-2009,3500,gas,AT,SUV,wiki:Kia_Sorento,
+LAND ROVER,DEFENDER,1990-2016,2400|2500,diesel,MT,SUV,wiki:Land_Rover_Defender,classic
+LAND ROVER,DEFENDER,2020-2026,2000|3000,gas|diesel,AT,SUV,wiki:Land_Rover_Defender_(L663),L663
+LAND ROVER,DEFENDER,2021-2026,2000,hybrid,AT,SUV,wiki:Land_Rover_Defender_(L663),P400e
+LAND ROVER,DISCOVERY,1989-2004,3900|4000,gas,AT|MT,SUV,wiki:Land_Rover_Discovery,I/II
+LAND ROVER,DISCOVERY,1989-2004,2500,diesel,AT|MT,SUV,wiki:Land_Rover_Discovery,I/II
+LAND ROVER,DISCOVERY,2004-2009,4400,gas,AT,SUV,wiki:Land_Rover_Discovery,3
+LAND ROVER,DISCOVERY,2004-2016,2700|3000,diesel,AT,SUV,wiki:Land_Rover_Discovery,3/4
+LAND ROVER,DISCOVERY,2017-2026,2000|3000,gas|diesel,AT,SUV,wiki:Land_Rover_Discovery,5
+LAND ROVER,DISCOVERY 3,2004-2009,2700,diesel,AT,SUV,wiki:Land_Rover_Discovery,
+LAND ROVER,DISCOVERY 3,2004-2009,4400,gas,AT,SUV,wiki:Land_Rover_Discovery,
+LAND ROVER,DISCOVERY 4,2009-2016,3000,diesel,AT,SUV,wiki:Land_Rover_Discovery,
+LAND ROVER,DISCOVERY 4,2009-2016,5000,gas,AT,SUV,wiki:Land_Rover_Discovery,
+LAND ROVER,DISCOVERY SPORT,2015-2026,2000,gas|diesel,AT,SUV,wiki:Land_Rover_Discovery_Sport,
+LAND ROVER,DISCOVERY SPORT,2020-2026,1500,hybrid,AT,SUV,wiki:Land_Rover_Discovery_Sport,P300e
+LAND ROVER,FREELANDER,1997-2006,1800|2500,gas,AT|MT,SUV,wiki:Land_Rover_Freelander,1st gen
+LAND ROVER,FREELANDER,1997-2006,2000,diesel,AT|MT,SUV,wiki:Land_Rover_Freelander,
+LAND ROVER,FREELANDER,2006-2014,3200,gas,AT,SUV,wiki:Land_Rover_Freelander,2nd gen
+LAND ROVER,FREELANDER,2006-2014,2200,diesel,AT,SUV,wiki:Land_Rover_Freelander,
+LAND ROVER,RANGE ROVER,1994-2002,4000|4600,gas,AT,SUV,wiki:Range_Rover_(P38A),P38A
+LAND ROVER,RANGE ROVER,1994-2002,2500,diesel,AT,SUV,wiki:Range_Rover_(P38A),P38A
+LAND ROVER,RANGE ROVER,2002-2012,4200|4400|5000,gas,AT,SUV,wiki:Range_Rover_(L322),L322
+LAND ROVER,RANGE ROVER,2002-2012,3600,diesel,AT,SUV,wiki:Range_Rover_(L322),L322
+LAND ROVER,RANGE ROVER,2013-2021,3000|5000,gas,AT,SUV,wiki:Range_Rover_(L405),L405
+LAND ROVER,RANGE ROVER,2013-2021,3000,diesel,AT,SUV,wiki:Range_Rover_(L405),L405
+LAND ROVER,RANGE ROVER,2018-2021,2000,hybrid,AT,SUV,wiki:Range_Rover_(L405),P400e
+LAND ROVER,RANGE ROVER,2022-2026,3000,gas|diesel|hybrid,AT,SUV,wiki:Range_Rover_(L460),L460
+LAND ROVER,RANGE ROVER,2022-2026,4400,gas,AT,SUV,wiki:Range_Rover_(L460),L460 V8
+LAND ROVER,RANGE ROVER EVOQUE,2011-2018,2000,gas,AT,SUV,wiki:Range_Rover_Evoque,L538
+LAND ROVER,RANGE ROVER EVOQUE,2011-2018,2200,diesel,AT,SUV,wiki:Range_Rover_Evoque,
+LAND ROVER,RANGE ROVER EVOQUE,2019-2026,2000,gas,AT,SUV,wiki:Range_Rover_Evoque,L551
+LAND ROVER,RANGE ROVER EVOQUE,2020-2026,1500,hybrid,AT,SUV,wiki:Range_Rover_Evoque,P300e
+LAND ROVER,RANGE ROVER VELAR,2017-2026,2000,gas|diesel|hybrid,AT,SUV,wiki:Range_Rover_Velar,
+VOLKSWAGEN,BEETLE,1946-2003,1200|1300|1500|1600,gas,MT,Sedan,wiki:Volkswagen_Beetle,Type 1
+VOLKSWAGEN,BEETLE,2011-2019,1200|1400,gas,AT,Hatchback,wiki:Volkswagen_Beetle_(A5),A5
+VOLKSWAGEN,CARAVELLE,1990-2003,2500,gas|diesel,AT|MT,Van,wiki:Volkswagen_Transporter_(T4),T4
+VOLKSWAGEN,CARAVELLE,2003-2015,2000|2500,diesel,AT,Van,wiki:Volkswagen_Transporter_(T5),T5
+VOLKSWAGEN,CARAVELLE,2015-2024,2000,diesel,AT,Van,wiki:Volkswagen_Transporter_(T6),T6
+VOLKSWAGEN,GOLF,1991-2004,1600|1800|2000,gas,AT|MT,Hatchback,wiki:Volkswagen_Golf,Mk3/Mk4
+VOLKSWAGEN,GOLF,2004-2012,1400|2000,gas,AT,Hatchback,wiki:Volkswagen_Golf,Mk5/Mk6
+VOLKSWAGEN,GOLF,2013-2019,1400|2000,gas,AT,Hatchback,wiki:Volkswagen_Golf,Mk7
+VOLKSWAGEN,NEW BEETLE,1998-2010,1600|2000,gas,AT,Hatchback,wiki:Volkswagen_New_Beetle,
+VOLKSWAGEN,SCIROCCO,2008-2017,1400|2000,gas,AT,Hatchback,wiki:Volkswagen_Scirocco,
+VOLKSWAGEN,TIGUAN,2007-2016,2000,gas|diesel,AT,SUV,wiki:Volkswagen_Tiguan,1st gen
+VOLKSWAGEN,TIGUAN,2017-2024,1400|2000,gas,AT,SUV,wiki:Volkswagen_Tiguan,2nd gen
+VOLKSWAGEN,TOUAREG,2002-2010,3200|3600|4200,gas,AT,SUV,wiki:Volkswagen_Touareg,1st gen
+VOLKSWAGEN,TOUAREG,2002-2018,2500|3000,diesel,AT,SUV,wiki:Volkswagen_Touareg,TDI
+VOLKSWAGEN,TOUAREG,2011-2018,3600,gas,AT,SUV,wiki:Volkswagen_Touareg,2nd gen
+VOLKSWAGEN,TOUAREG,2011-2018,3000,hybrid,AT,SUV,wiki:Volkswagen_Touareg,2nd gen hybrid
+HAVAL,H6,2021-2026,1500,hybrid,AT,SUV,wiki:Haval_H6,HEV/PHEV
+HAVAL,JOLION,2021-2026,1500,hybrid,AT,SUV,wiki:Haval_Jolion,HEV
+GWM,HAVAL H6,2021-2026,1500,hybrid,AT,SUV,wiki:Haval_H6,HEV/PHEV
+GWM,HAVAL JOLION,2021-2026,1500,hybrid,AT,SUV,wiki:Haval_Jolion,HEV
+GWM,TANK 300,2023-2026,2000,hybrid,AT,SUV,wiki:Tank_300,HEV
+GWM,TANK 500,2023-2026,2000,hybrid,AT,SUV,wiki:Tank_500,HEV
+GWM TANK,300,2023-2026,2000,hybrid,AT,SUV,wiki:Tank_300,HEV
+GWM TANK,500,2023-2026,2000,hybrid,AT,SUV,wiki:Tank_500,HEV
+JAGUAR,DAIMLER,1969-1992,4200|5300,gas,AT,Sedan,wiki:Daimler_Sovereign,Daimler Sovereign/Double Six
+JAGUAR,F-PACE,2016-2026,2000|3000,gas,AT,SUV,wiki:Jaguar_F-Pace,
+JAGUAR,F-PACE,2016-2026,2000,diesel,AT,SUV,wiki:Jaguar_F-Pace,
+JAGUAR,F-PACE,2021-2026,2000,hybrid,AT,SUV,wiki:Jaguar_F-Pace,P400e
+JAGUAR,S-TYPE,1999-2008,2500|3000|4200,gas,AT,Sedan,wiki:Jaguar_S-Type_(1999),
+JAGUAR,S-TYPE,2004-2008,2700,diesel,AT,Sedan,wiki:Jaguar_S-Type_(1999),
+JAGUAR,SOVEREIGN,1987-2003,3200|4000,gas,AT,Sedan,wiki:Jaguar_XJ,XJ Sovereign
+JAGUAR,X-TYPE,2001-2009,2000|2500|3000,gas,AT,Sedan,wiki:Jaguar_X-Type,
+JAGUAR,X-TYPE,2003-2009,2200,diesel,AT,Sedan,wiki:Jaguar_X-Type,
+JAGUAR,XE,2015-2024,2000,gas|diesel,AT,Sedan,wiki:Jaguar_XE,
+JAGUAR,XF,2008-2015,2000|3000,gas,AT,Sedan,wiki:Jaguar_XF,X250
+JAGUAR,XF,2008-2015,2200,diesel,AT,Sedan,wiki:Jaguar_XF,X250
+JAGUAR,XF,2016-2024,2000,gas|diesel,AT,Sedan,wiki:Jaguar_XF,X260
+JAGUAR,XF-SERIES,2008-2015,2000|3000,gas,AT,Sedan,wiki:Jaguar_XF,X250
+JAGUAR,XF-SERIES,2008-2015,2200,diesel,AT,Sedan,wiki:Jaguar_XF,
+JAGUAR,XJ,2003-2009,3000|4200,gas,AT,Sedan,wiki:Jaguar_XJ_(X350),X350
+JAGUAR,XJ,2010-2019,2000|3000|5000,gas,AT,Sedan,wiki:Jaguar_XJ_(X351),X351
+JAGUAR,XJ,2010-2019,3000,diesel,AT,Sedan,wiki:Jaguar_XJ_(X351),X351
+JAGUAR,XJ6,1986-2009,3000|3200|4000,gas,AT,Sedan,wiki:Jaguar_XJ,XJ40/X300/X350
+JAGUAR,XJ8,1997-2009,3200|4000|4200,gas,AT,Sedan,wiki:Jaguar_XJ,X308/X350
+JAGUAR,XJR,1994-2009,4000|4200,gas,AT,Sedan,wiki:Jaguar_XJ,supercharged
+JEEP,CHEROKEE,1984-2001,4000,gas,AT,SUV,wiki:Jeep_Cherokee_(XJ),XJ
+JEEP,CHEROKEE,2002-2007,3700,gas,AT,SUV,wiki:Jeep_Liberty_(KJ),KJ
+JEEP,CHEROKEE,2014-2023,2400|3200,gas,AT,SUV,wiki:Jeep_Cherokee_(KL),KL
+JEEP,GRAND CHEROKEE,1993-2004,4000|4700|5200,gas,AT,SUV,wiki:Jeep_Grand_Cherokee,ZJ/WJ
+JEEP,GRAND CHEROKEE,2005-2010,3700|5700,gas,AT,SUV,wiki:Jeep_Grand_Cherokee_(WK),WK
+JEEP,GRAND CHEROKEE,2005-2021,3000,diesel,AT,SUV,wiki:Jeep_Grand_Cherokee_(WK2),WK/WK2
+JEEP,GRAND CHEROKEE,2011-2021,3600,gas,AT,SUV,wiki:Jeep_Grand_Cherokee_(WK2),WK2
+JEEP,RENEGADE,2015-2023,1400|2400,gas,AT,SUV,wiki:Jeep_Renegade,
+JEEP,WRANGLER,1997-2006,4000,gas,AT|MT,SUV,wiki:Jeep_Wrangler_(TJ),TJ
+JEEP,WRANGLER,2007-2018,3600,gas,AT,SUV,wiki:Jeep_Wrangler_(JK),JK
+JEEP,WRANGLER,2007-2018,2800,diesel,AT,SUV,wiki:Jeep_Wrangler_(JK),JK
+JEEP,WRANGLER,2018-2026,2000|3600,gas,AT,SUV,wiki:Jeep_Wrangler_(JL),JL
+BENTLEY,BENTAYGA,2016-2026,4000|6000,gas,AT,SUV,wiki:Bentley_Bentayga,
+BENTLEY,BENTAYGA,2019-2026,3000,hybrid,AT,SUV,wiki:Bentley_Bentayga,Hybrid
+BENTLEY,BROOKLANDS,1992-1998,6750,gas,AT,Sedan,wiki:Bentley_Brooklands,
+BENTLEY,CONTINENTAL,2003-2018,4000|6000,gas,AT,Sedan,wiki:Bentley_Continental_GT,
+BENTLEY,CONTINENTAL,2019-2026,4000|6000,gas,AT,Sedan,wiki:Bentley_Continental_GT,3rd gen
+BENTLEY,EIGHT,1984-1992,6750,gas,AT,Sedan,wiki:Bentley_Eight,
+BENTLEY,FLYING SPUR,2013-2019,4000|6000,gas,AT,Sedan,wiki:Bentley_Flying_Spur,2nd gen
+BENTLEY,FLYING SPUR,2020-2026,4000|6000,gas,AT,Sedan,wiki:Bentley_Flying_Spur,3rd gen
+BENTLEY,FLYING SPUR,2021-2026,2900,hybrid,AT,Sedan,wiki:Bentley_Flying_Spur,Hybrid
+PEUGEOT,2008,2020-2026,1200,gas,AT,SUV,wiki:Peugeot_2008,P24
+PEUGEOT,3008,2009-2016,1600,gas,AT,SUV,wiki:Peugeot_3008,1st gen
+PEUGEOT,3008,2017-2026,1600,gas,AT,SUV,wiki:Peugeot_3008,2nd gen
+PEUGEOT,308,2008-2013,1600,gas,AT,Hatchback,wiki:Peugeot_308,T7
+PEUGEOT,408,2010-2016,1600|2000,gas,AT,Sedan,wiki:Peugeot_408_(2010),
+PEUGEOT,5008,2017-2026,1600,gas,AT,SUV,wiki:Peugeot_5008,2nd gen
+PEUGEOT,504,1968-1983,1800|2000,gas,MT,Sedan,wiki:Peugeot_504,
+PEUGEOT,807,2002-2014,2000|2200,gas,AT,MPV,wiki:Peugeot_807,
+PEUGEOT,EXPERT,2016-2026,2000,diesel,AT,Van,wiki:Peugeot_Expert,
+PEUGEOT,PEUGEOT3008,2017-2026,1600,gas,AT,SUV,wiki:Peugeot_3008,ชื่อในข้อมูลเป็น PEUGEOT3008
+PEUGEOT,PEUGEOT408,2010-2016,1600|2000,gas,AT,Sedan,wiki:Peugeot_408_(2010),ชื่อในข้อมูลเป็น PEUGEOT408
+MASERATI,GHIBLI,2013-2026,3000,gas|diesel,AT,Sedan,wiki:Maserati_Ghibli_(M157),
+MASERATI,GHIBLI,2021-2026,2000,hybrid,AT,Sedan,wiki:Maserati_Ghibli_(M157),Hybrid
+MASERATI,GRECALE,2022-2026,2000,hybrid,AT,SUV,wiki:Maserati_Grecale,GT/Modena mild hybrid
+MASERATI,GRECALE,2022-2026,3000,gas,AT,SUV,wiki:Maserati_Grecale,Trofeo
+MASERATI,LEVANTE,2016-2026,3000,gas|diesel,AT,SUV,wiki:Maserati_Levante,
+MASERATI,QUATTROPORTE,2013-2026,3000|3800,gas,AT,Sedan,wiki:Maserati_Quattroporte_(M156),
+MASERATI,QUATTROPORTE,2013-2026,3000,diesel,AT,Sedan,wiki:Maserati_Quattroporte_(M156),
+BYD,SEAL 5,2025-2026,1500,hybrid,AT,Sedan,wiki:BYD_Qin_Plus,Seal 5 DM-i (PHEV)
+BYD,SEALION 6,2024-2026,1500,hybrid,AT,SUV,wiki:BYD_Song_Plus,Sealion 6 DM-i (PHEV)
+BYD,SEALION 7,2024-2026,0,ev,AT,SUV,wiki:BYD_Sealion_07,รถไฟฟ้าล้วน (ข้อมูลเทรนบันทึกผิดเป็นไฮบริด)
+PROTON,EXORA,2009-2019,1600,gas,AT,MPV,wiki:Proton_Exora,
+PROTON,NEO,2006-2015,1300|1600,gas,AT,Hatchback,wiki:Proton_Satria_Neo,Satria Neo
+PROTON,PERSONA,2007-2016,1600,gas,AT|MT,Sedan,wiki:Proton_Persona,
+PROTON,SAGA,2008-2016,1300|1600,gas,AT|MT,Sedan,wiki:Proton_Saga,
+PROTON,SUPRIMA S,2013-2019,1600,gas,AT,Hatchback,wiki:Proton_Suprima_S,1.6 turbo
+CITROEN,C4,2004-2010,1600|2000,gas,AT,Hatchback,wiki:Citroën_C4,
+CITROEN,CX,1974-1991,2000|2200|2400|2500,gas,AT|MT,Sedan,wiki:Citroën_CX,
+CITROEN,DS3,2009-2016,1600,gas,AT,Hatchback,wiki:Citroën_DS3,
+CITROEN,DS3 VTI,2009-2016,1600,gas,AT,Hatchback,wiki:Citroën_DS3,
+HUMMER,H3,2005-2010,3500|3700|5300,gas,AT,SUV,wiki:Hummer_H3,
+SSANGYONG,STAVIC,2004-2019,2700,diesel,AT,MPV,wiki:SsangYong_Rodius,Rodius/Stavic
+SSANGYONG,STAVIC,2013-2019,2000,diesel,AT,MPV,wiki:SsangYong_Rodius,2nd gen
+ROLLS-ROYCE,GHOST,2009-2026,6600|6750,gas,AT,Sedan,wiki:Rolls-Royce_Ghost,
+ROLLS-ROYCE,SILVER SHADOW,1965-1980,6200|6750,gas,AT,Sedan,wiki:Rolls-Royce_Silver_Shadow,
+ROLLS-ROYCE,SILVER SPUR,1980-2000,6750,gas,AT,Sedan,wiki:Rolls-Royce_Silver_Spirit,
+LAMBORGHINI,URUS,2018-2026,4000,gas,AT,SUV,wiki:Lamborghini_Urus,
+LAMBORGHINI,URUS,2024-2026,4000,hybrid,AT,SUV,wiki:Lamborghini_Urus,Urus SE PHEV
+FIAT,1100,1953-1969,1100,gas,MT,Sedan,wiki:Fiat_1100,
+FIAT,500,2007-2020,1200|1400,gas,AT|MT,Hatchback,wiki:Fiat_500_(2007),
+DAIHATSU,MOVE CANBUS,2016-2026,660,gas,AT,Hatchback,wiki:Daihatsu_Move_Canbus,kei car นำเข้าอิสระ
+DAIHATSU,TAFT,2020-2026,660,gas,AT,SUV,wiki:Daihatsu_Taft,kei car นำเข้าอิสระ
+DAIHATSU,TANTO,2003-2026,660,gas,AT,Hatchback,wiki:Daihatsu_Tanto,kei car นำเข้าอิสระ
+FOTON,AUMARK,2015-2026,2800,diesel,MT,Pickup,wiki:Foton_Aumark,รถบรรทุกเล็ก
+THAIRUNG,TRANSFORMER,2003-2020,2500|3000,diesel,AT|MT,PPV,wiki:Thai_Rung_Union_Car,TR Transformer (D-Max base)
+OPEL,ASTRA,1991-1998,1600|1800|2000,gas,AT|MT,Hatchback,wiki:Opel_Astra,F
+OPEL,CORSA,1993-2000,1400|1600,gas,AT|MT,Hatchback,wiki:Opel_Corsa,B
+TR,TRANSFORMER LL,2012-2020,2500|3000,diesel,AT,SUV,wiki:Thai_Rung_Union_Car,TR Transformer II
+NAZA,FORZA,2007-2010,1600,gas,AT|MT,Hatchback,wiki:Naza,
+JAECOO,7,2025-2026,1500,hybrid,AT,SUV,https://www.autospinn.com/2025/02/jaecoo-7-shs-phev-141617,ไทยมีแต่ PHEV (SHS)
+AUSTIN,MINI,1959-2000,850|1000|1300,gas,MT,Hatchback,wiki:Mini,
+AUSTIN,WESTMINSTER,1954-1968,2600|2900,gas,MT,Sedan,wiki:Austin_Westminster,
+ALFA ROMEO,156,1997-2007,1800|2000|2500,gas,AT|MT,Sedan,wiki:Alfa_Romeo_156,
+CHRYSLER,300C,2004-2010,3500|5700,gas,AT,Sedan,wiki:Chrysler_300,LX
+CHRYSLER,300C,2011-2015,3600,gas,AT,Sedan,wiki:Chrysler_300,LD
+DODGE,C SERIES,1954-1960,3800,gas,MT,Pickup,wiki:Dodge_C_series,
+ROVER,MINI,1980-2000,1000|1300,gas,MT,Hatchback,wiki:Mini,
+INFINITI,G35,2002-2008,3500,gas,AT,Sedan,wiki:Infiniti_G,
+RENAULT,R-19,1988-1996,1400|1700|1800,gas,AT|MT,Sedan,wiki:Renault_19,
+SKODA,SUPERB,2008-2015,1800|2000,gas,AT,Sedan,wiki:Škoda_Superb,
+SAAB,9000,1984-1998,2000|2300,gas,AT|MT,Sedan,wiki:Saab_9000,
+GWM,TANK 300,2025-2026,2400,diesel,AT,SUV,https://autobuzz.my/2025/03/27/2025-gwm-tank-300-updated-in-thailand-with-new-2-4l-turbodiesel-powertrain/,Tank 300 Diesel
+GWM TANK,300,2025-2026,2400,diesel,AT,SUV,https://autobuzz.my/2025/03/27/2025-gwm-tank-300-updated-in-thailand-with-new-2-4l-turbodiesel-powertrain/,Tank 300 Diesel

@@ -1,0 +1,18 @@
+brand,model,years,cc,fuel,gear,body,source,note
+MINI,CLUBMAN,2008-2014,1600,gas,AT|MT,Hatchback,wiki:Mini_Clubman,R55
+MINI,CLUBMAN,2015-2024,1500|2000,gas,AT,Hatchback,wiki:Mini_Clubman,F54
+MINI,COOPER,2002-2013,1600,gas,AT|MT,Hatchback,wiki:Mini_Hatch,R50/R56
+MINI,COOPER,2014-2024,1500|2000,gas,AT,Hatchback,wiki:Mini_Hatch,F56/F55
+MINI,COOPER,2020-2026,0,ev,AT,Hatchback,wiki:Mini_Electric,Cooper SE
+MINI,COOPER 3 DOOR HATCH,2014-2024,1500|2000,gas,AT,Hatchback,wiki:Mini_Hatch,F56
+MINI,COOPER 5 DOOR HATCH,2014-2024,1500|2000,gas,AT,Hatchback,wiki:Mini_Hatch,F55
+MINI,COUNTRYMAN,2011-2016,1600,gas,AT,SUV,wiki:Mini_Countryman,R60
+MINI,COUNTRYMAN,2017-2024,1500|2000,gas,AT,SUV,wiki:Mini_Countryman,F60
+MINI,COUNTRYMAN,2017-2024,1500,hybrid,AT,SUV,wiki:Mini_Countryman,F60 PHEV
+MINI,COUNTRYMAN,2024-2026,1500|2000,gas,AT,SUV,wiki:Mini_Countryman,U25
+MINI,HATCH COOPER,2007-2013,1600,gas,AT|MT,Hatchback,wiki:Mini_Hatch,R56
+MINI,HATCH COOPER,2014-2024,1500|2000,gas,AT,Hatchback,wiki:Mini_Hatch,F56
+MINI,JOHN COOPER WORK,2008-2013,1600,gas,AT|MT,Hatchback,wiki:Mini_John_Cooper_Works,R56 JCW
+MINI,JOHN COOPER WORK,2015-2024,2000,gas,AT,Hatchback,wiki:Mini_John_Cooper_Works,F56 JCW
+MINI,ONE,2002-2013,1400|1600,gas,AT|MT,Hatchback,wiki:Mini_Hatch,R50/R56 One
+MINI,COUNTRYMAN,2012-2020,2000,diesel,AT,SUV,wiki:Mini_Countryman,Cooper SD

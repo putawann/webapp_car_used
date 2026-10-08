@@ -1,0 +1,23 @@
+brand,model,years,cc,fuel,gear,body,source,note
+FORD,ECOSPORT,2014-2018,1500,gas,AT|MT,SUV,wiki:Ford_EcoSport,
+FORD,ESCAPE,2003-2012,2000|2300|3000,gas,AT,SUV,wiki:Ford_Escape,ประกอบไทย
+FORD,EVEREST,2003-2006,2500,diesel,AT|MT,SUV,wiki:Ford_Everest,1st gen (U268)
+FORD,EVEREST,2007-2014,2500|3000,diesel,AT|MT,SUV,wiki:Ford_Everest,1st gen facelift
+FORD,EVEREST,2015-2018,2200|3200,diesel,AT,SUV,wiki:Ford_Everest,2nd gen (U375)
+FORD,EVEREST,2018-2022,2000,diesel,AT,SUV,wiki:Ford_Everest,2.0 turbo/bi-turbo
+FORD,EVEREST,2022-2026,2000,diesel,AT,SUV,wiki:Ford_Everest,3rd gen (U704)
+FORD,EVEREST,2023-2026,3000,diesel,AT,SUV,wiki:Ford_Everest,3.0 V6
+FORD,FIESTA,2010-2015,1400|1500|1600,gas,AT|MT,Hatchback,wiki:Ford_Fiesta_(sixth_generation),
+FORD,FIESTA,2010-2015,1400|1500|1600,gas,AT|MT,Sedan,wiki:Ford_Fiesta_(sixth_generation),
+FORD,FIESTA,2014-2015,1000,gas,AT,Hatchback,wiki:Ford_Fiesta_(sixth_generation),EcoBoost
+FORD,FOCUS,2005-2011,1800|2000,gas,AT|MT,Hatchback,wiki:Ford_Focus_(second_generation),
+FORD,FOCUS,2005-2011,1800|2000,gas,AT|MT,Sedan,wiki:Ford_Focus_(second_generation),
+FORD,FOCUS,2012-2018,1600|2000,gas,AT,Hatchback,wiki:Ford_Focus_(third_generation),
+FORD,FOCUS,2012-2018,1600|2000,gas,AT,Sedan,wiki:Ford_Focus_(third_generation),
+FORD,FOCUS,2014-2018,1500,gas,AT,Hatchback,wiki:Ford_Focus_(third_generation),EcoBoost
+FORD,RANGER,1998-2006,2500|2900,diesel,AT|MT,Pickup,wiki:Ford_Ranger_(Asia_Pacific),
+FORD,RANGER,2006-2011,2500|3000,diesel,AT|MT,Pickup,wiki:Ford_Ranger_(Asia_Pacific),
+FORD,RANGER,2012-2022,2200|3200,diesel,AT|MT,Pickup,wiki:Ford_Ranger_(T6),T6
+FORD,RANGER,2018-2022,2000,diesel,AT,Pickup,wiki:Ford_Ranger_(T6),2.0 turbo/bi-turbo
+FORD,RANGER,2022-2026,2000,diesel,AT|MT,Pickup,wiki:Ford_Ranger_(P703),Next-Gen
+FORD,RANGER,2022-2026,3000,diesel,AT,Pickup,wiki:Ford_Ranger_(P703),3.0 V6

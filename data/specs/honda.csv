@@ -1,0 +1,77 @@
+brand,model,years,cc,fuel,gear,body,source,note
+HONDA,ACCORD,1990-1993,2000|2200,gas,AT|MT,Sedan,wiki:Honda_Accord_(fourth_generation),CB
+HONDA,ACCORD,1994-1997,2200,gas,AT|MT,Sedan,wiki:Honda_Accord_(fifth_generation),CD
+HONDA,ACCORD,1998-2002,2300,gas,AT|MT,Sedan,wiki:Honda_Accord_(sixth_generation),CG
+HONDA,ACCORD,1998-2002,3000,gas,AT,Sedan,wiki:Honda_Accord_(sixth_generation),CG V6
+HONDA,ACCORD,2003-2007,2000|2400|3000,gas,AT,Sedan,wiki:Honda_Accord_(seventh_generation),CM
+HONDA,ACCORD,2008-2012,2000|2400|3500,gas,AT,Sedan,wiki:Honda_Accord_(eighth_generation),CP
+HONDA,ACCORD,2013-2018,2000|2400,gas,AT,Sedan,wiki:Honda_Accord_(ninth_generation),G9
+HONDA,ACCORD,2014-2018,2000,hybrid,AT,Sedan,wiki:Honda_Accord_(ninth_generation),G9 hybrid
+HONDA,ACCORD,2019-2023,1500,gas,AT,Sedan,wiki:Honda_Accord_(tenth_generation),G10 1.5 turbo
+HONDA,ACCORD,2019-2022,2000,hybrid,AT,Sedan,wiki:Honda_Accord_(tenth_generation),G10 hybrid
+HONDA,ACCORD,2023-2026,2000,hybrid,AT,Sedan,wiki:Honda_Accord_(eleventh_generation),G11 e:HEV
+HONDA,BR-V,2016-2021,1500,gas,AT,SUV,wiki:Honda_BR-V,DG1
+HONDA,BR-V,2022-2026,1500,gas,AT,SUV,wiki:Honda_BR-V,DG2
+HONDA,BRIO,2011-2019,1200,gas,AT|MT,Hatchback,wiki:Honda_Brio,Brio
+HONDA,BRIO,2013-2019,1200,gas,AT|MT,Sedan,wiki:Honda_Brio,Brio Amaze
+HONDA,CITY,1996-2002,1300|1500,gas,AT|MT,Sedan,wiki:Honda_City,3rd gen
+HONDA,CITY,2003-2008,1500,gas,AT|MT,Sedan,wiki:Honda_City,4th gen (GD)
+HONDA,CITY,2006-2008,1500,gas,AT|MT,Hatchback,wiki:Honda_City,City ZX
+HONDA,CITY,2008-2013,1500,gas,AT|MT,Sedan,wiki:Honda_City,5th gen (GM2)
+HONDA,CITY,2014-2019,1500,gas,AT|MT,Sedan,wiki:Honda_City,6th gen (GM6)
+HONDA,CITY,2019-2026,1000,gas,AT,Sedan,wiki:Honda_City,7th gen 1.0 turbo
+HONDA,CITY,2020-2026,1000,gas,AT,Hatchback,wiki:Honda_City,City Hatchback
+HONDA,CITY,2020-2026,1500,hybrid,AT,Sedan,wiki:Honda_City,e:HEV
+HONDA,CITY,2021-2026,1500,hybrid,AT,Hatchback,wiki:Honda_City,e:HEV hatchback
+HONDA,CIVIC,1992-1995,1500|1600,gas,AT|MT,Sedan,wiki:Honda_Civic_(fifth_generation),EG
+HONDA,CIVIC,1996-2000,1500|1600,gas,AT|MT,Sedan,wiki:Honda_Civic_(sixth_generation),EK
+HONDA,CIVIC,2001-2005,1700|2000,gas,AT|MT,Sedan,wiki:Honda_Civic_(seventh_generation),ES Dimension
+HONDA,CIVIC,2006-2011,1800|2000,gas,AT|MT,Sedan,wiki:Honda_Civic_(eighth_generation),FD
+HONDA,CIVIC,2012-2015,1800|2000,gas,AT|MT,Sedan,wiki:Honda_Civic_(ninth_generation),FB
+HONDA,CIVIC,2012-2015,1500,hybrid,AT,Sedan,wiki:Honda_Civic_(ninth_generation),FB hybrid
+HONDA,CIVIC,2016-2021,1500|1800,gas,AT,Sedan,wiki:Honda_Civic_(tenth_generation),FC
+HONDA,CIVIC,2017-2021,1500,gas,AT,Hatchback,wiki:Honda_Civic_(tenth_generation),FK hatchback
+HONDA,CIVIC,2018-2021,2000,gas,MT,Hatchback,wiki:Honda_Civic_Type_R,FK8 Type R
+HONDA,CIVIC,2021-2025,1500,gas,AT,Sedan,wiki:Honda_Civic_(eleventh_generation),FE
+HONDA,CIVIC,2022-2026,2000,hybrid,AT,Sedan,wiki:Honda_Civic_(eleventh_generation),FE e:HEV
+HONDA,CIVIC,2022-2025,1500,gas,AT,Hatchback,wiki:Honda_Civic_(eleventh_generation),FL hatchback
+HONDA,CIVIC,2023-2026,2000,gas,MT,Hatchback,wiki:Honda_Civic_Type_R,FL5 Type R
+HONDA,CIVIC FB,2012-2015,1800|2000,gas,AT|MT,Sedan,wiki:Honda_Civic_(ninth_generation),FB
+HONDA,CIVIC FB,2012-2015,1500,hybrid,AT,Sedan,wiki:Honda_Civic_(ninth_generation),
+HONDA,CR-V,1996-2001,2000,gas,AT|MT,SUV,wiki:Honda_CR-V,RD1
+HONDA,CR-V,2002-2006,2000|2400,gas,AT,SUV,wiki:Honda_CR-V,RD4/RD5
+HONDA,CR-V,2007-2012,2000|2400,gas,AT,SUV,wiki:Honda_CR-V,RE
+HONDA,CR-V,2013-2017,2000|2400,gas,AT,SUV,wiki:Honda_CR-V,RM
+HONDA,CR-V,2017-2022,2400,gas,AT,SUV,wiki:Honda_CR-V,RW
+HONDA,CR-V,2017-2022,1600,diesel,AT,SUV,wiki:Honda_CR-V,RW i-DTEC
+HONDA,CR-V,2023-2026,1500,gas,AT,SUV,wiki:Honda_CR-V,RS 1.5 turbo
+HONDA,CR-V,2023-2026,2000,hybrid,AT,SUV,wiki:Honda_CR-V,RS e:HEV
+HONDA,CROSSROAD,2007-2010,1800|2000,gas,AT,SUV,wiki:Honda_Crossroad,นำเข้าอิสระ
+HONDA,EDIX,2004-2009,1700|2000,gas,AT,MPV,wiki:Honda_Edix,นำเข้าอิสระ
+HONDA,ELYSION,2004-2013,2400|3000|3500,gas,AT,MPV,wiki:Honda_Elysion,นำเข้าอิสระ
+HONDA,FK,2017-2021,1500,gas,AT,Hatchback,wiki:Honda_Civic_(tenth_generation),Civic FK
+HONDA,FK,2018-2021,2000,gas,MT,Hatchback,wiki:Honda_Civic_Type_R,FK8
+HONDA,FREED,2010-2016,1500,gas,AT,MPV,wiki:Honda_Freed,GB3
+HONDA,HR-V,1999-2006,1600,gas,AT,SUV,wiki:Honda_HR-V,GH นำเข้าอิสระ
+HONDA,HR-V,2014-2021,1800,gas,AT,SUV,wiki:Honda_HR-V,RU
+HONDA,HR-V,2021-2026,1500,hybrid,AT,SUV,wiki:Honda_HR-V,RV e:HEV
+HONDA,JAZZ,2003-2007,1500,gas,AT|MT,Hatchback,wiki:Honda_Fit,GD
+HONDA,JAZZ,2008-2013,1500,gas,AT|MT,Hatchback,wiki:Honda_Fit,GE
+HONDA,JAZZ,2012-2013,1300,hybrid,AT,Hatchback,wiki:Honda_Fit,GP1 hybrid
+HONDA,JAZZ,2014-2022,1500,gas,AT|MT,Hatchback,wiki:Honda_Fit,GK
+HONDA,LIFE DUNK,2000-2003,660,gas,AT,Hatchback,wiki:Honda_Life,kei car นำเข้าอิสระ
+HONDA,MOBILIO,2014-2020,1500,gas,AT|MT,MPV,wiki:Honda_Mobilio,DD4
+HONDA,ODYSSEY,1999-2003,2300,gas,AT,MPV,wiki:Honda_Odyssey_(international),RA6
+HONDA,ODYSSEY,2004-2008,2400,gas,AT,MPV,wiki:Honda_Odyssey_(international),RB1
+HONDA,ODYSSEY,2009-2013,2400,gas,AT,MPV,wiki:Honda_Odyssey_(international),RB3
+HONDA,ODYSSEY,2014-2022,2400,gas,AT,MPV,wiki:Honda_Odyssey_(international),RC1
+HONDA,ODYSSEY,2017-2022,2000,hybrid,AT,MPV,wiki:Honda_Odyssey_(international),RC4 hybrid
+HONDA,STEPWAGON,2010-2016,2000,gas,AT,MPV,wiki:Honda_StepWGN,RK ไทย
+HONDA,STEPWAGON,2017-2023,1500,gas,AT,MPV,wiki:Honda_StepWGN,RP นำเข้าอิสระ
+HONDA,STEPWAGON,2018-2023,2000,hybrid,AT,MPV,wiki:Honda_StepWGN,RP hybrid
+HONDA,STEPWGN,2010-2016,2000,gas,AT,MPV,wiki:Honda_StepWGN,ชื่อสะกดอีกแบบในข้อมูล
+HONDA,STEPWGN,2017-2023,1500,gas,AT,MPV,wiki:Honda_StepWGN,
+HONDA,STEPWGN,2018-2023,2000,hybrid,AT,MPV,wiki:Honda_StepWGN,
+HONDA,STREAM,2001-2006,1700|2000,gas,AT,MPV,wiki:Honda_Stream,RN
+HONDA,VIGOR,1989-1997,2000|2500,gas,AT|MT,Sedan,wiki:Honda_Vigor,
+HONDA,WR-V,2023-2026,1500,gas,AT,SUV,wiki:Honda_WR-V,DG4 ไทย

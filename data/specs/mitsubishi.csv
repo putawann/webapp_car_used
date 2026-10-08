@@ -1,0 +1,45 @@
+brand,model,years,cc,fuel,gear,body,source,note
+MITSUBISHI,AIRTREK,2001-2008,2000|2400,gas,AT,SUV,wiki:Mitsubishi_Outlander,Airtrek นำเข้าอิสระ
+MITSUBISHI,ATTRAGE,2013-2026,1200,gas,AT|MT,Sedan,wiki:Mitsubishi_Attrage,
+MITSUBISHI,COLT,1988-1996,1300|1500,gas,AT|MT,Hatchback,wiki:Mitsubishi_Colt,
+MITSUBISHI,DELICA,2007-2019,2400,gas,AT,MPV,wiki:Mitsubishi_Delica,D:5
+MITSUBISHI,DELICA,2012-2019,2200,diesel,AT,MPV,wiki:Mitsubishi_Delica,D:5 diesel
+MITSUBISHI,DELICA SPACE WAGON,2007-2019,2400,gas,AT,MPV,wiki:Mitsubishi_Delica,
+MITSUBISHI,DELICA SPACE WAGON,2012-2019,2200,diesel,AT,MPV,wiki:Mitsubishi_Delica,
+MITSUBISHI,EVOLUTION,1992-2016,2000,gas,AT|MT,Sedan,wiki:Mitsubishi_Lancer_Evolution,
+MITSUBISHI,G-WAGON,2001-2005,2800,diesel,AT|MT,PPV,wiki:Mitsubishi_Strada,Strada G-Wagon
+MITSUBISHI,GALANT,1990-2008,2000|2400,gas,AT|MT,Sedan,wiki:Mitsubishi_Galant,ถึง Galant 2.4 (2004-2008)
+MITSUBISHI,I,2006-2013,660,gas,AT,Hatchback,wiki:Mitsubishi_i,kei car
+MITSUBISHI,I,2009-2016,0,ev,AT,Hatchback,wiki:Mitsubishi_i-MiEV,i-MiEV
+MITSUBISHI,LANCER,1977-2000,1300|1500|1600|1800,gas,AT|MT,Sedan,wiki:Mitsubishi_Lancer,
+MITSUBISHI,LANCER,2001-2008,1600|1800,gas,AT|MT,Sedan,wiki:Mitsubishi_Lancer,Lancer Cedia
+MITSUBISHI,LANCER EX,2009-2015,1800|2000,gas,AT,Sedan,wiki:Mitsubishi_Lancer,Lancer EX (CY)
+MITSUBISHI,LANCER EX,2009-2015,1800,gas,MT,Sedan,wiki:Mitsubishi_Lancer,
+MITSUBISHI,MIRAGE,2012-2026,1200,gas,AT|MT,Hatchback,wiki:Mitsubishi_Mirage,
+MITSUBISHI,OUTLANDER,2015-2019,2400,gas,AT,SUV,wiki:Mitsubishi_Outlander,3rd gen ไทย
+MITSUBISHI,OUTLANDER,2020-2026,2400,hybrid,AT,SUV,wiki:Mitsubishi_Outlander,PHEV
+MITSUBISHI,OUTLANDER PHEV,2020-2026,2400,hybrid,AT,SUV,wiki:Mitsubishi_Outlander,PHEV
+MITSUBISHI,PAJERO,1991-2020,2500|2800|3200,diesel,AT|MT,SUV,wiki:Mitsubishi_Pajero,
+MITSUBISHI,PAJERO,1991-2020,3000|3500|3800,gas,AT,SUV,wiki:Mitsubishi_Pajero,
+MITSUBISHI,PAJERO SPORT,2008-2015,2500|3200,diesel,AT|MT,SUV,wiki:Mitsubishi_Pajero_Sport,2nd gen
+MITSUBISHI,PAJERO SPORT,2008-2015,3000,gas,AT,SUV,wiki:Mitsubishi_Pajero_Sport,V6
+MITSUBISHI,PAJERO SPORT,2015-2026,2400,diesel,AT|MT,SUV,wiki:Mitsubishi_Pajero_Sport,3rd gen
+MITSUBISHI,RVR,1991-2002,2000,gas,AT,SUV,wiki:Mitsubishi_RVR,
+MITSUBISHI,SPACE WAGON,1991-2003,2000|2400,gas,AT,MPV,wiki:Mitsubishi_Chariot,
+MITSUBISHI,SPACE WAGON,2004-2011,2400,gas,AT,MPV,wiki:Mitsubishi_Chariot,Space Wagon ไทย
+MITSUBISHI,STRADA,1996-2005,2500|2800,diesel,AT|MT,Pickup,wiki:Mitsubishi_Strada,
+MITSUBISHI,STRADA G WAGON,2001-2005,2800,diesel,AT|MT,PPV,wiki:Mitsubishi_Strada,
+MITSUBISHI,STRADA G-WAGON,2001-2005,2800,diesel,AT|MT,PPV,wiki:Mitsubishi_Strada,
+MITSUBISHI,STRADA GRANDIS,2001-2005,2800,diesel,AT|MT,Pickup,wiki:Mitsubishi_Strada,
+MITSUBISHI,TRITON,2005-2014,2500|3200,diesel,AT|MT,Pickup,wiki:Mitsubishi_Triton,4th gen
+MITSUBISHI,TRITON,2005-2014,2400,gas,MT,Pickup,wiki:Mitsubishi_Triton,
+MITSUBISHI,TRITON,2014-2023,2400|2500,diesel,AT|MT,Pickup,wiki:Mitsubishi_Triton,5th gen
+MITSUBISHI,TRITON,2014-2023,2400,gas,MT,Pickup,wiki:Mitsubishi_Triton,
+MITSUBISHI,TRITON,2023-2026,2400,diesel,AT|MT,Pickup,wiki:Mitsubishi_Triton,6th gen
+MITSUBISHI,X-FORCE,2025-2026,1600,hybrid,AT,SUV,https://www.automotiveworld.com/news/mitsubishi-motors-xforce-hev-model-premieres-in-thailand/,ไทยมีแต่ HEV
+MITSUBISHI,XFORCE HEV,2025-2026,1600,hybrid,AT,SUV,wiki:Mitsubishi_Xforce,
+MITSUBISHI,XPANDER,2018-2026,1500,gas,AT,MPV,wiki:Mitsubishi_Xpander,
+MITSUBISHI,XPANDER,2024-2026,1600,hybrid,AT,MPV,wiki:Mitsubishi_Xpander,HEV
+MITSUBISHI,XPANDER CROSS,2020-2026,1500,gas,AT,MPV,wiki:Mitsubishi_Xpander,
+MITSUBISHI,XPANDER CROSS,2024-2026,1600,hybrid,AT,MPV,wiki:Mitsubishi_Xpander,HEV
+MITSUBISHI,LANCER,2009-2012,1800|2000,gas,AT,Sedan,wiki:Mitsubishi_Lancer,Lancer EX ที่ขายในชื่อ Lancer

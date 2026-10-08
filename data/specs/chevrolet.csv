@@ -1,0 +1,17 @@
+brand,model,years,cc,fuel,gear,body,source,note
+CHEVROLET,3100,1947-1955,3500,gas,MT,Pickup,wiki:Chevrolet_Advance_Design,
+CHEVROLET,AVEO,2006-2013,1400|1600,gas,AT|MT,Sedan,wiki:Chevrolet_Aveo,
+CHEVROLET,CAPTIVA,2007-2016,2400,gas,AT,SUV,wiki:Chevrolet_Captiva,C100/C140
+CHEVROLET,CAPTIVA,2007-2016,2000,diesel,AT,SUV,wiki:Chevrolet_Captiva,
+CHEVROLET,CAPTIVA,2019-2020,1500,gas,AT,SUV,wiki:Chevrolet_Captiva,2nd gen 1.5 turbo
+CHEVROLET,COLORADO,2004-2011,2500|3000,diesel,AT|MT,Pickup,wiki:Chevrolet_Colorado,1st gen
+CHEVROLET,COLORADO,2012-2020,2500|2800,diesel,AT|MT,Pickup,wiki:Chevrolet_Colorado,2nd gen
+CHEVROLET,CRUZE,2010-2017,1600|1800,gas,AT|MT,Sedan,wiki:Chevrolet_Cruze,
+CHEVROLET,CRUZE,2011-2017,2000,diesel,AT,Sedan,wiki:Chevrolet_Cruze,
+CHEVROLET,EXPRESS,1996-2020,5300|6000,gas,AT,Van,wiki:Chevrolet_Express,
+CHEVROLET,LUMINA,1998-2006,3800,gas,AT,Sedan,wiki:Chevrolet_Lumina,Holden-based
+CHEVROLET,OPTRA,2003-2012,1600|1800,gas,AT|MT,Sedan,wiki:Chevrolet_Optra,
+CHEVROLET,SONIC,2012-2016,1400|1600,gas,AT|MT,Sedan|Hatchback,wiki:Chevrolet_Sonic,
+CHEVROLET,TRAILBLAZER,2012-2020,2500|2800,diesel,AT,SUV,wiki:Chevrolet_TrailBlazer,
+CHEVROLET,VAN,1971-1996,5700,gas,AT,Van,wiki:Chevrolet_Van,
+CHEVROLET,ZAFIRA,2000-2006,1800|2200,gas,AT,MPV,wiki:Opel_Zafira,

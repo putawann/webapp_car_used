@@ -1,0 +1,20 @@
+brand,model,years,cc,fuel,gear,body,source,note
+SUZUKI,APV,2004-2016,1600,gas,MT,Van,wiki:Suzuki_APV,
+SUZUKI,CARIBIAN,1985-2003,1300,gas,MT,Pickup,wiki:Suzuki_Jimny,Caribian (SJ)
+SUZUKI,CELERIO,2014-2026,1000,gas,AT|MT,Hatchback,wiki:Suzuki_Celerio,
+SUZUKI,CIAZ,2015-2026,1200,gas,AT|MT,Sedan,wiki:Suzuki_Ciaz,
+SUZUKI,ERTIGA,2013-2018,1400,gas,AT|MT,MPV,wiki:Suzuki_Ertiga,1st gen
+SUZUKI,ERTIGA,2019-2026,1500,gas,AT|MT,MPV,wiki:Suzuki_Ertiga,2nd gen
+SUZUKI,EVERY,1999-2026,660,gas,AT|MT,Van,wiki:Suzuki_Every,kei van นำเข้าอิสระ
+SUZUKI,FRONX,2025-2026,1500,hybrid,AT,SUV,wiki:Suzuki_Fronx,mild hybrid
+SUZUKI,GRAND VITARA,2005-2015,2000|2400,gas,AT,SUV,wiki:Suzuki_Grand_Vitara,
+SUZUKI,JIMNY,2018-2026,1500,gas,AT|MT,SUV,wiki:Suzuki_Jimny,JB74
+SUZUKI,LAPIN,2002-2026,660,gas,AT,Hatchback,wiki:Suzuki_Alto_Lapin,kei car
+SUZUKI,SPACIA,2013-2026,660,gas,AT,Van,wiki:Suzuki_Spacia,kei car
+SUZUKI,SWIFT,2010-2012,1500,gas,AT|MT,Hatchback,wiki:Suzuki_Swift,2nd gen
+SUZUKI,SWIFT,2012-2025,1200,gas,AT|MT,Hatchback,wiki:Suzuki_Swift,3rd/4th gen
+SUZUKI,SX4,2007-2012,1600,gas,AT|MT,Hatchback,wiki:Suzuki_SX4,
+SUZUKI,VITARA,1988-2005,1600|2000,gas,AT|MT,SUV,wiki:Suzuki_Vitara,
+SUZUKI,WAGON R,2008-2017,660,gas,AT,Hatchback,wiki:Suzuki_Wagon_R,kei car
+SUZUKI,XL7,2020-2026,1500,gas,AT,MPV,wiki:Suzuki_XL7,
+SUZUKI,FRONX,2025-2026,1500,gas,AT,SUV,https://www.wapcar.my/news/imported-from-indonesia-suzuki-fronx-to-enter-thai-market-in-september-same-treatment-for-malaysia-742796,GL K15B

@@ -1,0 +1,13 @@
+brand,model,years,cc,fuel,gear,body,source,note
+HYUNDAI,CRETA,2022-2026,1500,gas,AT,SUV,wiki:Hyundai_Creta,
+HYUNDAI,ELANTRA,2011-2017,1800,gas,AT,Sedan,wiki:Hyundai_Elantra,MD/AD
+HYUNDAI,GRAND STAREX,2008-2021,2500,diesel,AT|MT,Van,wiki:Hyundai_Starex,TQ
+HYUNDAI,H-1,2008-2023,2500,diesel,AT|MT,Van,wiki:Hyundai_Starex,TQ (H-1)
+HYUNDAI,PALISADE,2019-2026,2200,diesel,AT,SUV,wiki:Hyundai_Palisade,
+HYUNDAI,SANTA FE,2007-2012,2200,diesel,AT,SUV,wiki:Hyundai_Santa_Fe,CM
+HYUNDAI,SANTA FE,2024-2026,1600,hybrid,AT,SUV,wiki:Hyundai_Santa_Fe,MX5 hybrid
+HYUNDAI,SONATA,2005-2014,2000|2400,gas,AT,Sedan,wiki:Hyundai_Sonata,NF/YF
+HYUNDAI,STARGAZER,2023-2026,1500,gas,AT,MPV,wiki:Hyundai_Stargazer,
+HYUNDAI,STARIA,2021-2026,2200,diesel,AT,Van,wiki:Hyundai_Staria,
+HYUNDAI,TUCSON,2010-2015,2000,gas|diesel,AT,SUV,wiki:Hyundai_Tucson,LM
+HYUNDAI,VELOSTER,2012-2017,1600,gas,AT,Hatchback,wiki:Hyundai_Veloster,

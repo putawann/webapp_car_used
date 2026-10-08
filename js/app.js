@@ -1,6 +1,6 @@
 // ===== ตัวหน้าเว็บ: ฟอร์ม ทำนายราคา แสดงผล ภาษา/ธีม =====
 import {T,NOW,predictPrice,EX} from "./data.js";
-import {SPEC,BODY,COLORS} from "./specs.js";
+import {SPEC,BODY,COLORS,SRC} from "./specs.js";
 import {initFx,setTheme,setScroll,showText,isPaused,setPaused} from "./fx.js";
 import {initUI,scrollToEl,scramble,sfx,isSound,setSound,refresh} from "./ui.js";
 
@@ -79,15 +79,16 @@ function render(){
 }
 
 // ===== ฟอร์มแบบเลือกไล่ลำดับ: ยี่ห้อ → รุ่น → ปี → สเปค (เฉพาะชุดที่มีจริงใน specs.js) =====
-const FUELS=["gas","diesel","hybrid"],GEARS=["AT","MT"]; // ลำดับตรงกับ tools/build_specs.py
+const FUELS=["gas","diesel","hybrid","ev"],GEARS=["AT","MT"]; // ลำดับตรงกับ tools/build_specs.py
 const sel=(id,items,keepValue)=>{const el=$(id),old=el.value;el.replaceChildren(...items.map(([v,l])=>new Option(l,v)));if(keepValue&&items.some(([v])=>v===old))el.value=old};
 const variants=()=>SPEC[$("brand").value][$("model").value][$("year").value];
-const vLabel=([cc,f,g,b])=>{const t=T[lang];return `${(cc/1000).toFixed(1)}L · ${t[FUELS[f]]} · ${t[GEARS[g]==="AT"?"at":"mt"]} · ${t.bodies[BODY[b]]||BODY[b]}`};
+const vLabel=([cc,f,g,b])=>{const t=T[lang];return `${cc?(cc/1000).toFixed(1)+"L":t.motor} · ${t[FUELS[f]]} · ${t[GEARS[g]==="AT"?"at":"mt"]} · ${t.bodies[BODY[b]]||BODY[b]}`};
 function fillVariants(keepValue){
   sel("variant",variants().map((v,i)=>[String(i),vLabel(v)]),keepValue);
   showSeen();
 }
-function showSeen(){$("seen").textContent=T[lang].seen.replace("{n}",fmt(variants()[+$("variant").value][4]))}
+// แสดงลิงก์แหล่งอ้างอิงของสเปครุ่นนี้
+function showSeen(){$("seen").replaceChildren(T[lang].src+" ",...SRC[$("brand").value][$("model").value].flatMap((u,i)=>{const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";a.textContent=new URL(u).hostname.replace(/^www\./,"");return i?[" · ",a]:[a]}))}
 function fillYears(){sel("year",Object.keys(SPEC[$("brand").value][$("model").value]).sort((a,b)=>b-a).map(y=>[y,y]),true);fillVariants()}
 function fillModels(){sel("model",Object.keys(SPEC[$("brand").value]).sort().map(m=>[m,m]));fillYears()}
 function fillColors(){sel("color",COLORS.map(c=>[c,T[lang].colors[c]||c]),true)}

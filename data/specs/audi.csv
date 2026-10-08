@@ -1,0 +1,36 @@
+brand,model,years,cc,fuel,gear,body,source,note
+AUDI,A1,2010-2018,1400,gas,AT,Hatchback,wiki:Audi_A1,
+AUDI,A3,1996-2003,1600|1800,gas,AT,Hatchback,wiki:Audi_A3,8L
+AUDI,A3,2004-2012,1800|2000,gas,AT,Hatchback,wiki:Audi_A3,8P
+AUDI,A3,2013-2020,1400|1800,gas,AT,Hatchback,wiki:Audi_A3,8V
+AUDI,A4,1995-2001,1800|2400|2800,gas,AT,Sedan,wiki:Audi_A4,B5
+AUDI,A4,2001-2008,1800|2000,gas,AT,Sedan,wiki:Audi_A4,B6/B7
+AUDI,A4,2008-2015,1800|2000,gas,AT,Sedan,wiki:Audi_A4,B8
+AUDI,A4,2016-2023,2000,gas,AT,Sedan,wiki:Audi_A4,B9
+AUDI,A5,2008-2016,2000|3200,gas,AT,Hatchback,wiki:Audi_A5,8T Sportback/Coupe
+AUDI,A5,2017-2024,2000,gas,AT,Hatchback,wiki:Audi_A5,F5 Sportback/Coupe
+AUDI,A6,1997-2004,2400|2800,gas,AT,Sedan,wiki:Audi_A6,C5
+AUDI,A6,2004-2011,2000|2400|2800|3000,gas,AT,Sedan,wiki:Audi_A6,C6
+AUDI,A6,2011-2018,2000|2800|3000,gas,AT,Sedan,wiki:Audi_A6,C7
+AUDI,A6,2019-2026,2000,gas,AT,Sedan,wiki:Audi_A6,C8
+AUDI,A7,2010-2018,2800|3000,gas,AT,Hatchback,wiki:Audi_A7,4G Sportback
+AUDI,A7,2019-2026,3000,gas|hybrid,AT,Hatchback,wiki:Audi_A7,4K Sportback
+AUDI,A8,2003-2010,3200|4200,gas,AT,Sedan,wiki:Audi_A8,D3
+AUDI,A8,2010-2017,3000|4200,gas,AT,Sedan,wiki:Audi_A8,D4
+AUDI,A8,2012-2017,2000,hybrid,AT,Sedan,wiki:Audi_A8,D4 hybrid
+AUDI,A8,2018-2026,3000,gas|hybrid,AT,Sedan,wiki:Audi_A8,D5
+AUDI,Q2,2017-2023,1000|1400,gas,AT,SUV,wiki:Audi_Q2,
+AUDI,Q3,2012-2018,2000,gas,AT,SUV,wiki:Audi_Q3,8U
+AUDI,Q3,2019-2026,1400|2000,gas,AT,SUV,wiki:Audi_Q3,F3
+AUDI,Q5,2009-2017,2000|3000,gas|diesel,AT,SUV,wiki:Audi_Q5,8R
+AUDI,Q5,2012-2017,2000,hybrid,AT,SUV,wiki:Audi_Q5,8R hybrid
+AUDI,Q5,2017-2026,2000,gas|diesel|hybrid,AT,SUV,wiki:Audi_Q5,FY
+AUDI,Q7,2006-2015,3000|3600|4200,gas,AT,SUV,wiki:Audi_Q7,4L
+AUDI,Q7,2006-2015,3000,diesel,AT,SUV,wiki:Audi_Q7,4L TDI
+AUDI,Q7,2016-2026,2000|3000,gas|diesel,AT,SUV,wiki:Audi_Q7,4M
+AUDI,Q7,2016-2026,3000,hybrid,AT,SUV,wiki:Audi_Q7,4M e-tron
+AUDI,Q8,2018-2026,3000,gas|diesel|hybrid,AT,SUV,wiki:Audi_Q8,
+AUDI,RS Q3,2019-2026,2500,gas,AT,SUV,wiki:Audi_Q3,RS Q3
+AUDI,RS Q8,2020-2026,4000,gas,AT,SUV,wiki:Audi_RS_Q8,
+AUDI,RS3,2015-2026,2500,gas,AT,Hatchback,wiki:Audi_RS3,
+AUDI,RS7,2013-2026,4000,gas,AT,Hatchback,wiki:Audi_RS7,

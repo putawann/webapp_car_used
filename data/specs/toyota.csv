@@ -1,0 +1,167 @@
+brand,model,years,cc,fuel,gear,body,source,note
+TOYOTA,ALPHARD,2003-2008,2400|3000,gas,AT,Van,wiki:Toyota_Alphard,AH10 นำเข้าอิสระ
+TOYOTA,ALPHARD,2003-2008,2400,hybrid,AT,Van,wiki:Toyota_Alphard,AH10 hybrid
+TOYOTA,ALPHARD,2008-2015,2400|3500,gas,AT,Van,wiki:Toyota_Alphard,AH20
+TOYOTA,ALPHARD,2011-2015,2400,hybrid,AT,Van,wiki:Toyota_Alphard,AH20 hybrid
+TOYOTA,ALPHARD,2015-2023,2500|3500,gas,AT,Van,wiki:Toyota_Alphard,AH30
+TOYOTA,ALPHARD,2015-2023,2500,hybrid,AT,Van,wiki:Toyota_Alphard,AH30 hybrid
+TOYOTA,ALPHARD,2023-2026,2500,hybrid,AT,Van,wiki:Toyota_Alphard,AH40 HEV/PHEV
+TOYOTA,ALTIS,2001-2007,1600|1800,gas,AT|MT,Sedan,wiki:Toyota_Corolla_(E120),E120 Corolla Altis
+TOYOTA,ALTIS,2008-2013,1600|1800|2000,gas,AT,Sedan,wiki:Toyota_Corolla_(E140),E140
+TOYOTA,ALTIS,2008-2013,1600,gas,MT,Sedan,wiki:Toyota_Corolla_(E140),E140 ตัวล่าง
+TOYOTA,ALTIS,2014-2018,1600|1800,gas,AT,Sedan,wiki:Toyota_Corolla_(E170),E170
+TOYOTA,ALTIS,2019-2025,1600|1800,gas,AT,Sedan,wiki:Toyota_Corolla_(E210),E210
+TOYOTA,ALTIS,2019-2025,1800,hybrid,AT,Sedan,wiki:Toyota_Corolla_(E210),E210 HEV
+TOYOTA,ARISTO,1991-2004,3000,gas,AT,Sedan,wiki:Lexus_GS,S140/S160 นำเข้าอิสระ
+TOYOTA,AVANZA,2004-2011,1300|1500,gas,AT|MT,MPV,wiki:Toyota_Avanza,F600
+TOYOTA,AVANZA,2012-2022,1500,gas,AT|MT,MPV,wiki:Toyota_Avanza,F650 ประกอบไทยถึงปี 2022
+TOYOTA,BB,2000-2016,1300|1500,gas,AT,Hatchback,wiki:Toyota_bB,นำเข้าอิสระ
+TOYOTA,C-HR,2018-2023,1800,gas,AT,SUV,wiki:Toyota_C-HR,AX10 ไทย
+TOYOTA,C-HR,2018-2023,1800,hybrid,AT,SUV,wiki:Toyota_C-HR,AX10 HEV
+TOYOTA,CAMRY,1997-2002,2200,gas,AT|MT,Sedan,wiki:Toyota_Camry_(XV20),XV20 5S-FE
+TOYOTA,CAMRY,1997-2002,3000,gas,AT,Sedan,wiki:Toyota_Camry_(XV20),XV20 V6
+TOYOTA,CAMRY,2002-2006,2000|2400,gas,AT,Sedan,wiki:Toyota_Camry_(XV30),XV30
+TOYOTA,CAMRY,2006-2012,2000|2400,gas,AT,Sedan,wiki:Toyota_Camry_(XV40),XV40
+TOYOTA,CAMRY,2009-2012,2400,hybrid,AT,Sedan,wiki:Toyota_Camry_(XV40),XV40 hybrid
+TOYOTA,CAMRY,2012-2018,2000|2500,gas,AT,Sedan,wiki:Toyota_Camry_(XV50),XV50
+TOYOTA,CAMRY,2012-2018,2500,hybrid,AT,Sedan,wiki:Toyota_Camry_(XV50),XV50 hybrid
+TOYOTA,CAMRY,2018-2024,2000|2500,gas,AT,Sedan,wiki:Toyota_Camry_(XV70),XV70
+TOYOTA,CAMRY,2018-2025,2500,hybrid,AT,Sedan,wiki:Toyota_Camry_(XV70),XV70 hybrid
+TOYOTA,CAMRY,2024-2026,2500,hybrid,AT,Sedan,wiki:Toyota_Camry_(XV80),XV80 hybrid อย่างเดียว
+TOYOTA,COMMUTER,2005-2019,2500|3000,diesel,AT|MT,Van,wiki:Toyota_HiAce,H200 Commuter
+TOYOTA,COMMUTER,2005-2019,2700,gas,MT,Van,wiki:Toyota_HiAce,H200 เบนซิน/NGV
+TOYOTA,COMMUTER,2019-2026,2800,diesel,AT|MT,Van,wiki:Toyota_HiAce,H300 Commuter
+TOYOTA,COROLLA,1979-2001,1300|1500|1600,gas,AT|MT,Sedan,wiki:Toyota_Corolla,รุ่นก่อนชื่อ Altis
+TOYOTA,COROLLA,1984-1992,1300|1600,gas,MT,Hatchback,wiki:Toyota_Corolla,แฮทช์แบ็ก E80/E90
+TOYOTA,COROLLA ALTIS,2001-2007,1600|1800,gas,AT|MT,Sedan,wiki:Toyota_Corolla_(E120),E120
+TOYOTA,COROLLA ALTIS,2008-2013,1600|1800|2000,gas,AT,Sedan,wiki:Toyota_Corolla_(E140),E140
+TOYOTA,COROLLA ALTIS,2008-2013,1600,gas,MT,Sedan,wiki:Toyota_Corolla_(E140),E140 ตัวล่าง
+TOYOTA,COROLLA ALTIS,2014-2018,1600|1800,gas,AT,Sedan,wiki:Toyota_Corolla_(E170),E170
+TOYOTA,COROLLA ALTIS,2019-2025,1600|1800,gas,AT,Sedan,wiki:Toyota_Corolla_(E210),E210
+TOYOTA,COROLLA ALTIS,2019-2025,1800,hybrid,AT,Sedan,wiki:Toyota_Corolla_(E210),E210 HEV
+TOYOTA,COROLLA CROSS,2020-2026,1800,gas|hybrid,AT,SUV,wiki:Toyota_Corolla_Cross,XG10
+TOYOTA,CORONA,1966-1998,1600|1800|2000,gas,AT|MT,Sedan,wiki:Toyota_Corona,ถึง Corona Exsior
+TOYOTA,CROWN,1990-2003,2000|3000,gas,AT,Sedan,wiki:Toyota_Crown,S130-S170
+TOYOTA,CROWN,2004-2008,3000,gas,AT,Sedan,wiki:Toyota_Crown,S180
+TOYOTA,CROWN,2008-2018,3500,hybrid,AT,Sedan,wiki:Toyota_Crown,S200/S210 hybrid
+TOYOTA,CROWN,2013-2018,2500,hybrid,AT,Sedan,wiki:Toyota_Crown,S210 hybrid
+TOYOTA,CROWN,2023-2025,2500,hybrid,AT,SUV,wiki:Toyota_Crown_(S235),Crown Crossover
+TOYOTA,ESQUIRE,2014-2021,2000,gas,AT,Van,wiki:Toyota_Noah,R80 นำเข้าอิสระ
+TOYOTA,ESQUIRE,2014-2021,1800,hybrid,AT,Van,wiki:Toyota_Noah,R80 hybrid
+TOYOTA,ESTIMA,2000-2006,2400|3000,gas,AT,MPV,wiki:Toyota_Previa,XR30/XR40
+TOYOTA,ESTIMA,2001-2006,2400,hybrid,AT,MPV,wiki:Toyota_Previa,AHR10
+TOYOTA,ESTIMA,2006-2019,2400|3500,gas,AT,MPV,wiki:Toyota_Previa,XR50
+TOYOTA,ESTIMA,2006-2019,2400,hybrid,AT,MPV,wiki:Toyota_Previa,AHR20
+TOYOTA,FJ CRUISER,2006-2022,4000,gas,AT,SUV,wiki:Toyota_FJ_Cruiser,นำเข้าอิสระ
+TOYOTA,FORTUNER,2005-2015,2500|3000,diesel,AT|MT,PPV,wiki:Toyota_Fortuner,AN50/AN60
+TOYOTA,FORTUNER,2005-2015,2700,gas,AT,PPV,wiki:Toyota_Fortuner,AN50 เบนซิน
+TOYOTA,FORTUNER,2015-2026,2400,diesel,AT|MT,PPV,wiki:Toyota_Fortuner,AN150
+TOYOTA,FORTUNER,2015-2026,2800,diesel,AT,PPV,wiki:Toyota_Fortuner,AN160
+TOYOTA,GR COROLLA,2023-2025,1600,gas,MT,Hatchback,wiki:Toyota_GR_Corolla,G16E-GTS
+TOYOTA,GR YARIS,2020-2025,1600,gas,MT,Hatchback,wiki:Toyota_GR_Yaris,G16E-GTS
+TOYOTA,GR YARIS,2024-2025,1600,gas,AT,Hatchback,wiki:Toyota_GR_Yaris,GR-DAT
+TOYOTA,GRANVIA,1995-2002,3400,gas,AT,Van,wiki:Toyota_Granvia,H40 นำเข้าอิสระ
+TOYOTA,GRANVIA,1995-2002,3000,diesel,AT,Van,wiki:Toyota_Granvia,H40 ดีเซล
+TOYOTA,HARRIER,1998-2003,2200|3000,gas,AT,SUV,wiki:Toyota_Harrier,XU10
+TOYOTA,HARRIER,2003-2013,2400|3000|3500,gas,AT,SUV,wiki:Toyota_Harrier,XU30
+TOYOTA,HARRIER,2005-2013,3300,hybrid,AT,SUV,wiki:Toyota_Harrier,XU30 hybrid
+TOYOTA,HARRIER,2013-2020,2000,gas,AT,SUV,wiki:Toyota_Harrier,XU60
+TOYOTA,HARRIER,2014-2020,2500,hybrid,AT,SUV,wiki:Toyota_Harrier,XU60 hybrid
+TOYOTA,HARRIER,2020-2024,2000,gas,AT,SUV,wiki:Toyota_Harrier,XU80
+TOYOTA,HARRIER,2020-2024,2500,hybrid,AT,SUV,wiki:Toyota_Harrier,XU80 hybrid
+TOYOTA,HIACE,1989-2004,2400,gas,MT,Van,wiki:Toyota_HiAce,H100
+TOYOTA,HIACE,1989-2004,2800|3000,diesel,MT,Van,wiki:Toyota_HiAce,H100 ดีเซล
+TOYOTA,HIACE,2005-2019,2500|3000,diesel,AT|MT,Van,wiki:Toyota_HiAce,H200
+TOYOTA,HIACE,2005-2019,2700,gas,MT,Van,wiki:Toyota_HiAce,H200 เบนซิน
+TOYOTA,HIACE,2019-2025,2800,diesel,AT|MT,Van,wiki:Toyota_HiAce,H300
+TOYOTA,HILUX,1988-1998,2400|2800,diesel,MT,Pickup,wiki:Toyota_Hilux,Mighty-X
+TOYOTA,HILUX,1998-2004,2400|2500|3000,diesel,MT,Pickup,wiki:Toyota_Hilux,Tiger
+TOYOTA,HILUX,2004-2015,2500|3000,diesel,AT|MT,Pickup,wiki:Toyota_Hilux,Vigo
+TOYOTA,HILUX,2015-2025,2400|2800,diesel,AT|MT,Pickup,wiki:Toyota_Hilux,Revo
+TOYOTA,HILUX CHAMP,2023-2026,2000,gas,MT,Pickup,wiki:Toyota_Hilux_Champ,1TR-FE
+TOYOTA,HILUX CHAMP,2023-2026,2700,gas,AT,Pickup,wiki:Toyota_Hilux_Champ,2TR-FE
+TOYOTA,HILUX CHAMP,2023-2026,2400,diesel,AT|MT,Pickup,wiki:Toyota_Hilux_Champ,2GD-FTV
+TOYOTA,HILUX MIGHTY-X,1988-1998,2400|2800,diesel,MT,Pickup,wiki:Toyota_Hilux,2L/3L
+TOYOTA,HILUX REVO,2015-2026,2400|2800,diesel,AT|MT,Pickup,wiki:Toyota_Hilux,AN120/AN130
+TOYOTA,HILUX SURF,1989-2002,2400|3000,diesel,AT|MT,SUV,wiki:Toyota_4Runner,นำเข้าอิสระ
+TOYOTA,HILUX SURF,1989-2002,3000|3400,gas,AT,SUV,wiki:Toyota_4Runner,V6
+TOYOTA,HILUX TIGER,1998-2004,2400|2500|3000,diesel,MT,Pickup,wiki:Toyota_Hilux,Tiger
+TOYOTA,HILUX TIGER,2001-2004,3000,diesel,AT,Pickup,wiki:Toyota_Hilux,Tiger D4D อัตโนมัติ
+TOYOTA,HILUX TIGER D4D,2001-2004,2500|3000,diesel,MT,Pickup,wiki:Toyota_Hilux,1KD/2KD
+TOYOTA,HILUX TIGER D4D,2001-2004,3000,diesel,AT,Pickup,wiki:Toyota_Hilux,
+TOYOTA,HILUX TRAVOB CAB 4X4 2.8,2025-2026,2800,diesel,AT,Pickup,wiki:Toyota_Hilux,ชื่อในข้อมูลสะกดแบบนี้
+TOYOTA,HILUX VIGO,2004-2015,2500|3000,diesel,AT|MT,Pickup,wiki:Toyota_Hilux,AN10/AN20/AN30
+TOYOTA,HILUX VIGO,2004-2015,2700,gas,MT,Pickup,wiki:Toyota_Hilux,2TR-FE
+TOYOTA,HILUX VIGO CHAMP,2011-2015,2500|3000,diesel,AT|MT,Pickup,wiki:Toyota_Hilux,Vigo Champ
+TOYOTA,HILUX VIGO CHAMP,2011-2015,2700,gas,MT,Pickup,wiki:Toyota_Hilux,
+TOYOTA,HILUX VIGO D4D,2004-2015,2500|3000,diesel,AT|MT,Pickup,wiki:Toyota_Hilux,
+TOYOTA,INNOVA,2004-2016,2000,gas,AT|MT,MPV,wiki:Toyota_Kijang_Innova,AN40
+TOYOTA,INNOVA,2016-2025,2000,gas,MT,MPV,https://www.zigwheels.co.th/en/new-cars/toyota/innova-crysta,Innova Crysta 2.0E MT
+TOYOTA,INNOVA,2016-2025,2800,diesel,AT,MPV,wiki:Toyota_Kijang_Innova,Innova Crysta
+TOYOTA,IPSUM,1996-2009,2000|2400,gas,AT,MPV,wiki:Toyota_Ipsum,นำเข้าอิสระ
+TOYOTA,KLUGER,2000-2007,2400|3000,gas,AT,SUV,wiki:Toyota_Highlander,XU20 นำเข้าอิสระ
+TOYOTA,KLUGER,2005-2007,3300,hybrid,AT,SUV,wiki:Toyota_Highlander,
+TOYOTA,LAND CRUISER,1990-1997,4200,diesel,AT|MT,SUV,wiki:Toyota_Land_Cruiser_(J80),J80
+TOYOTA,LAND CRUISER,1990-1997,4500,gas,AT,SUV,wiki:Toyota_Land_Cruiser_(J80),J80
+TOYOTA,LAND CRUISER,1998-2007,4200,diesel,AT|MT,SUV,wiki:Toyota_Land_Cruiser_(J100),J100
+TOYOTA,LAND CRUISER,1998-2007,4700,gas,AT,SUV,wiki:Toyota_Land_Cruiser_(J100),J100
+TOYOTA,LAND CRUISER,2008-2021,4500,diesel,AT,SUV,wiki:Toyota_Land_Cruiser_(J200),J200
+TOYOTA,LAND CRUISER,2008-2021,4600|5700,gas,AT,SUV,wiki:Toyota_Land_Cruiser_(J200),J200
+TOYOTA,LAND CRUISER,2021-2026,3300,diesel,AT,SUV,wiki:Toyota_Land_Cruiser_(J300),J300
+TOYOTA,LAND CRUISER,2021-2026,3500,gas,AT,SUV,wiki:Toyota_Land_Cruiser_(J300),J300
+TOYOTA,LAND CRUISER PRADO,1996-2002,2700|3400,gas,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,J90
+TOYOTA,LAND CRUISER PRADO,1996-2002,3000,diesel,AT|MT,SUV,wiki:Toyota_Land_Cruiser_Prado,J90
+TOYOTA,LAND CRUISER PRADO,2002-2009,2700|4000,gas,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,J120
+TOYOTA,LAND CRUISER PRADO,2002-2009,3000,diesel,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,J120
+TOYOTA,LAND CRUISER PRADO,2009-2023,2700|4000,gas,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,J150
+TOYOTA,LAND CRUISER PRADO,2009-2023,2800|3000,diesel,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,J150
+TOYOTA,LAND CRUISER PRADO,2024-2026,2800,diesel,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,J250
+TOYOTA,LANDCRUISER PRADO,1996-2002,2700|3400,gas,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,ชื่อสะกดอีกแบบในข้อมูล
+TOYOTA,LANDCRUISER PRADO,1996-2002,3000,diesel,AT|MT,SUV,wiki:Toyota_Land_Cruiser_Prado,
+TOYOTA,LANDCRUISER PRADO,2002-2009,2700|4000,gas,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,
+TOYOTA,LANDCRUISER PRADO,2002-2009,3000,diesel,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,
+TOYOTA,LANDCRUISER PRADO,2009-2023,2700|4000,gas,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,
+TOYOTA,LANDCRUISER PRADO,2009-2023,2800|3000,diesel,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,
+TOYOTA,LANDCRUISER PRADO,2024-2026,2800,diesel,AT,SUV,wiki:Toyota_Land_Cruiser_Prado,
+TOYOTA,MAJESTY,2019-2025,2800,diesel,AT,Van,wiki:Toyota_HiAce,H300 Majesty
+TOYOTA,PRIUS,2010-2016,1800,hybrid,AT,Hatchback,wiki:Toyota_Prius,XW30
+TOYOTA,RAV 4,1996-2005,2000,gas,AT|MT,SUV,wiki:Toyota_RAV4,XA10/XA20
+TOYOTA,RAV 4,2006-2012,2000|2400,gas,AT,SUV,wiki:Toyota_RAV4,XA30
+TOYOTA,RAV4,1996-2005,2000,gas,AT|MT,SUV,wiki:Toyota_RAV4,XA10/XA20
+TOYOTA,RAV4,2006-2012,2000|2400,gas,AT,SUV,wiki:Toyota_RAV4,XA30
+TOYOTA,SIENTA,2016-2023,1500,gas,AT,MPV,wiki:Toyota_Sienta,XP170 ไทย
+TOYOTA,SOLUNA,1996-2003,1500,gas,AT|MT,Sedan,wiki:Toyota_Tercel,Soluna (L50)
+TOYOTA,SPORT CRUISER,2001-2004,2500|3000,diesel,MT,Pickup,wiki:Toyota_Hilux,Hilux Tiger Sport Cruiser
+TOYOTA,SPORT CRUISER,2001-2004,3000,diesel,AT,Pickup,wiki:Toyota_Hilux,
+TOYOTA,SPORT RIDER,1998-2004,2500|3000,diesel,AT|MT,PPV,wiki:Toyota_Hilux,Hilux Sport Rider
+TOYOTA,TIGER,1998-2004,2400|2500|3000,diesel,MT,Pickup,wiki:Toyota_Hilux,Hilux Tiger
+TOYOTA,TIGER,2001-2004,3000,diesel,AT,Pickup,wiki:Toyota_Hilux,
+TOYOTA,VANGUARD,2007-2013,2400|3500,gas,AT,SUV,wiki:Toyota_RAV4,XA30 Vanguard นำเข้าอิสระ
+TOYOTA,VEGO,2004-2015,2500|3000,diesel,AT|MT,Pickup,wiki:Toyota_Hilux,ชื่อในข้อมูลสะกด VEGO (Vigo)
+TOYOTA,VELLFIRE,2008-2015,2400|3500,gas,AT,Van,wiki:Toyota_Alphard,AH20 Vellfire
+TOYOTA,VELLFIRE,2011-2015,2400,hybrid,AT,Van,wiki:Toyota_Alphard,
+TOYOTA,VELLFIRE,2015-2023,2500|3500,gas,AT,Van,wiki:Toyota_Alphard,AH30 Vellfire
+TOYOTA,VELLFIRE,2015-2023,2500,hybrid,AT,Van,wiki:Toyota_Alphard,
+TOYOTA,VELLFIRE,2023-2025,2500,hybrid,AT,Van,wiki:Toyota_Alphard,AH40 Vellfire
+TOYOTA,VELOZ,2022-2025,1500,gas,AT,MPV,wiki:Toyota_Avanza,W100 Veloz
+TOYOTA,VENTURY,2005-2019,2700,gas,AT,Van,wiki:Toyota_HiAce,H200 Ventury
+TOYOTA,VENTURY,2005-2019,2500|3000,diesel,AT|MT,Van,wiki:Toyota_HiAce,
+TOYOTA,VIOS,2002-2007,1500,gas,AT|MT,Sedan,wiki:Toyota_Vios,XP40
+TOYOTA,VIOS,2007-2013,1500,gas,AT|MT,Sedan,wiki:Toyota_Vios,XP90
+TOYOTA,VIOS,2013-2016,1500,gas,AT|MT,Sedan,wiki:Toyota_Vios,XP150
+TOYOTA,VIOS,2017-2022,1500,gas,AT,Sedan,https://www.carlist.my/news/2017-toyota-vios-facelift-launched-in-thailand--4-variants-cvt-only-thb609k-onwards-61934/61934/amp/,ปรับโฉม 2017 CVT อย่างเดียว
+TOYOTA,VITZ,1999-2019,1000|1300|1500,gas,AT,Hatchback,wiki:Toyota_Vitz,นำเข้าอิสระ
+TOYOTA,VOXY,2001-2026,2000,gas,AT,Van,wiki:Toyota_Noah,นำเข้าอิสระ
+TOYOTA,VOXY,2014-2026,1800,hybrid,AT,Van,wiki:Toyota_Noah,
+TOYOTA,WILL,2000-2005,1300|1500|1800,gas,AT,Hatchback,wiki:Toyota_WiLL,WiLL Vi/VS/Cypha นำเข้าอิสระ
+TOYOTA,WISH,2004-2010,2000,gas,AT,MPV,wiki:Toyota_Wish,AE10 ไทย
+TOYOTA,YARIS,2006-2013,1500,gas,AT|MT,Hatchback,wiki:Toyota_Yaris,XP90
+TOYOTA,YARIS,2013-2025,1200,gas,AT|MT,Hatchback,wiki:Toyota_Yaris,Eco Car XP150
+TOYOTA,YARIS ATIV,2017-2022,1200,gas,AT|MT,Sedan,wiki:Toyota_Yaris_Ativ,Eco Car
+TOYOTA,YARIS ATIV,2022-2026,1200,gas,AT,Sedan,wiki:Toyota_Yaris_Ativ,AC100
+TOYOTA,YARIS ATIV,2025-2026,1500,hybrid,AT,Sedan,wiki:Toyota_Yaris_Ativ,HEV
+TOYOTA,YARIS CROSS,2023-2026,1500,hybrid,AT,SUV,wiki:Toyota_Yaris_Cross,AC200 HEV
+TOYOTA,CROWN,2004-2012,2500,gas,AT,Sedan,wiki:Toyota_Crown,S180/S200 2.5
+TOYOTA,HILUX REVO,2015-2025,2700,gas,AT|MT,Pickup,https://www.georgeherald.com/News/Article/Motoring/thai-market-toyota-hilux-gets-tacoma-inspired-facelift-201711141000,2TR-FE เบนซิน
+TOYOTA,HILUX TRAVO,2025-2026,2800,diesel,AT|MT,Pickup,https://www.motorist.co.th/en/article/5221/toyota-hilux-travo-prerunner-and-4trex-officially-launched-in-thailand-prices-start-at-thb-789-000,ไทยมีแต่ 2.8
+TOYOTA,HILUX TRAVO,2025-2026,0,ev,AT,Pickup,https://www.motorist.co.th/en/article/5189/toyota-hilux-travo-to-make-global-debut-in-thailand-on-november-10,Hilux Travo EV

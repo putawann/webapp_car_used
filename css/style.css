@@ -114,6 +114,8 @@ input[type=range]::-moz-range-thumb{width:9px;height:9px;border:0;border-radius:
 .cmp .k{color:var(--muted)}
 .cmp .p{font-weight:700;font-size:1rem}
 .hint{color:var(--muted);font-size:.82rem}
+#seen{text-transform:none;letter-spacing:0}
+#seen a{color:var(--accent)}
 .motion{position:fixed;right:clamp(16px,4vw,40px);bottom:20px;z-index:4;width:36px;height:36px;display:grid;place-items:center;padding:0;background:transparent;color:var(--muted);border:1px solid var(--line);cursor:pointer;transition:color .2s,border-color .2s}
 .motion:hover{color:var(--accent);border-color:var(--accent)}
 .motion svg{width:14px;height:14px}

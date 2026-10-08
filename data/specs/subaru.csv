@@ -1,0 +1,14 @@
+brand,model,years,cc,fuel,gear,body,source,note
+SUBARU,FORESTER,2003-2008,2000,gas,AT,SUV,wiki:Subaru_Forester,SG
+SUBARU,FORESTER,2008-2012,2000|2500,gas,AT,SUV,wiki:Subaru_Forester,SH
+SUBARU,FORESTER,2013-2018,2000,gas,AT,SUV,wiki:Subaru_Forester,SJ
+SUBARU,FORESTER,2019-2024,2000,gas,AT,SUV,wiki:Subaru_Forester,SK
+SUBARU,IMPREZA,1993-2007,1500|1600|2000,gas,AT|MT,Sedan|Hatchback,wiki:Subaru_Impreza,GC/GD
+SUBARU,IMPREZA,2008-2011,1500|2000|2500,gas,AT|MT,Sedan|Hatchback,wiki:Subaru_Impreza,GE/GH
+SUBARU,IMPREZA,2012-2016,1600|2000,gas,AT,Sedan|Hatchback,wiki:Subaru_Impreza,GJ/GP
+SUBARU,IMPREZA,2017-2022,2000,gas,AT,Sedan|Hatchback,wiki:Subaru_Impreza,GK/GT
+SUBARU,LEGACY,2009-2014,2000|2500,gas,AT,Sedan,wiki:Subaru_Legacy,BM
+SUBARU,WRX,2014-2021,2000,gas,AT|MT,Sedan,wiki:Subaru_WRX,VA
+SUBARU,WRX,2022-2026,2400,gas,AT,Sedan,wiki:Subaru_WRX,VB
+SUBARU,XV,2012-2023,2000,gas,AT,SUV,wiki:Subaru_XV,GP/GT
+SUBARU,IMPREZA,2008-2014,2500,gas,MT,Sedan|Hatchback,wiki:Subaru_Impreza,WRX STI 2.5

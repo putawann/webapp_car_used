@@ -1,0 +1,47 @@
+brand,model,years,cc,fuel,gear,body,source,note
+NISSAN,ALMERA,2011-2019,1200,gas,AT|MT,Sedan,wiki:Nissan_Almera,N17
+NISSAN,ALMERA,2019-2026,1000,gas,AT,Sedan,https://paultan.org/2019/11/15/nissan-almera-generasi-kedua-dilancarkan-di-thai-1-0-liter-turbo-100-ps-152-nm-harga-bermula-rm70k,N18 turbo CVT อย่างเดียว
+NISSAN,BIG M,1986-1997,2500|2700,diesel,MT,Pickup,wiki:Nissan_Navara,D21 Big-M
+NISSAN,BIG-M FRONTIER NAVARA,1986-2006,2500|2700|3000,diesel,MT,Pickup,wiki:Nissan_Navara,ชื่อรวมในข้อมูล
+NISSAN,CEFIRO,1988-2003,2000|3000,gas,AT,Sedan,wiki:Nissan_Cefiro,A31/A32/A33
+NISSAN,CUBE,2009-2012,1500|1600,gas,AT,Hatchback,wiki:Nissan_Cube,Z12
+NISSAN,ELGRAND,2010-2020,2500|3500,gas,AT,Van,wiki:Nissan_Elgrand,E52
+NISSAN,FRONTIER,1998-2006,2700|3000,diesel,AT|MT,Pickup,wiki:Nissan_Navara,D22
+NISSAN,FRONTIER NAVARA,2007-2014,2500,diesel,AT|MT,Pickup,wiki:Nissan_Navara,D40
+NISSAN,FUGA,2004-2019,2500|3500,gas,AT,Sedan,wiki:Nissan_Fuga,นำเข้าอิสระ
+NISSAN,JUKE,2013-2017,1600,gas,AT,SUV,wiki:Nissan_Juke,F15 ไทย
+NISSAN,KICKS,2020-2026,1200,hybrid,AT,SUV,wiki:Nissan_Kicks,e-Power
+NISSAN,LIVINA,2014-2017,1600|1800,gas,AT,MPV,wiki:Nissan_Livina,Grand Livina
+NISSAN,MARCH,2010-2022,1200,gas,AT|MT,Hatchback,wiki:Nissan_Micra,K13
+NISSAN,NAVARA,2007-2014,2500,diesel,AT|MT,Pickup,wiki:Nissan_Navara,D40
+NISSAN,NAVARA,2014-2020,2500,diesel,AT|MT,Pickup,wiki:Nissan_Navara,D23
+NISSAN,NAVARA,2020-2026,2300,diesel,AT|MT,Pickup,https://paultan.org/2020/11/30/nissan-navara-2021-spesifikasi-thai-2-3l-diesel-single-twin-turbo-diperkenal-di-asean-ada-aeb/,D23 ปรับโฉม 2.3
+NISSAN,NOTE,2017-2022,1200,gas,AT,Hatchback,wiki:Nissan_Note,E12 ไทย
+NISSAN,NP 300 NAVARA,2014-2020,2500,diesel,AT|MT,Pickup,wiki:Nissan_Navara,D23 NP300
+NISSAN,NP 300 NAVARA,2020-2026,2300,diesel,AT|MT,Pickup,https://paultan.org/2020/11/30/nissan-navara-2021-spesifikasi-thai-2-3l-diesel-single-twin-turbo-diperkenal-di-asean-ada-aeb/,D23 ปรับโฉม 2.3
+NISSAN,NP300-NAVARA,2014-2020,2500,diesel,AT|MT,Pickup,wiki:Nissan_Navara,ชื่อสะกดอีกแบบในข้อมูล
+NISSAN,NP300-NAVARA,2020-2026,2300,diesel,AT|MT,Pickup,https://paultan.org/2020/11/30/nissan-navara-2021-spesifikasi-thai-2-3l-diesel-single-twin-turbo-diperkenal-di-asean-ada-aeb/,D23 ปรับโฉม 2.3
+NISSAN,NV,1994-2005,1600,gas,MT,Pickup,wiki:Nissan_AD,NV pickup (ไทย)
+NISSAN,PATROL,1977-1997,4000,gas,MT,SUV,wiki:Nissan_Patrol,
+NISSAN,PATROL,1977-1997,4200,diesel,MT,SUV,wiki:Nissan_Patrol,
+NISSAN,PULSAR,2013-2015,1600,gas,AT,Hatchback,wiki:Nissan_Pulsar,C13 ไทย (มีเทอร์โบ)
+NISSAN,ROOX,2020-2026,660,gas,AT,Hatchback,wiki:Nissan_Roox,kei car นำเข้าอิสระ
+NISSAN,SERENA,2022-2026,2000,gas,AT,Van,wiki:Nissan_Serena,C28 นำเข้าอิสระ
+NISSAN,SERENA,2022-2026,1400,hybrid,AT,Van,wiki:Nissan_Serena,e-Power
+NISSAN,SKYLINE,1989-1998,2000|2500|2600,gas,AT|MT,Sedan,wiki:Nissan_Skyline,R32/R33
+NISSAN,SUNNY,1990-2006,1500|1600|1800,gas,AT|MT,Sedan,wiki:Nissan_Sunny,B13/B14/Neo
+NISSAN,SYLPHY,2012-2020,1600|1800,gas,AT,Sedan,wiki:Nissan_Sylphy,B17
+NISSAN,TEANA,2004-2008,2300|3500,gas,AT,Sedan,wiki:Nissan_Teana,J31
+NISSAN,TEANA,2009-2013,2000|2500|3500,gas,AT,Sedan,wiki:Nissan_Teana,J32
+NISSAN,TEANA,2013-2019,2000|2500,gas,AT,Sedan,wiki:Nissan_Teana,L33
+NISSAN,TERRA,2018-2026,2300,diesel,AT,SUV,wiki:Nissan_Terra,
+NISSAN,TIIDA,2006-2013,1600|1800,gas,AT|MT,Hatchback,wiki:Nissan_Tiida,C11
+NISSAN,TIIDA,2006-2013,1600|1800,gas,AT|MT,Sedan,wiki:Nissan_Tiida,Tiida Latio
+NISSAN,URVAN,2001-2012,3000,diesel,MT,Van,wiki:Nissan_Caravan,E25
+NISSAN,URVAN,2013-2023,2500,diesel,AT|MT,Van,wiki:Nissan_NV350_Caravan,NV350
+NISSAN,X-TRAIL,2001-2007,2500,gas,AT,SUV,wiki:Nissan_X-Trail,T30
+NISSAN,X-TRAIL,2008-2013,2000|2500,gas,AT,SUV,wiki:Nissan_X-Trail,T31
+NISSAN,X-TRAIL,2014-2021,2000|2500,gas,AT,SUV,wiki:Nissan_X-Trail,T32
+NISSAN,X-TRAIL,2015-2021,2000,hybrid,AT,SUV,wiki:Nissan_X-Trail,T32 hybrid
+NISSAN,X-TRAIL,2023-2026,1500,hybrid,AT,SUV,wiki:Nissan_X-Trail,T33 e-Power
+NISSAN,CUBE,2002-2012,1400,gas,AT,Hatchback,wiki:Nissan_Cube,Z11 นำเข้าอิสระ

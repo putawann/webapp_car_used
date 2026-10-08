@@ -1,0 +1,25 @@
+brand,model,years,cc,fuel,gear,body,source,note
+VOLVO,144,1966-1974,1800|2000,gas,MT,Sedan,wiki:Volvo_140_Series,
+VOLVO,244,1974-1993,2000|2100|2300,gas,AT|MT,Sedan,wiki:Volvo_200_Series,
+VOLVO,850,1991-1997,2000|2300|2400|2500,gas,AT,Sedan,wiki:Volvo_850,
+VOLVO,940,1990-1998,2000|2300,gas,AT,Sedan,wiki:Volvo_940,
+VOLVO,960,1990-1998,2500|3000,gas,AT,Sedan,wiki:Volvo_960,
+VOLVO,C30,2007-2013,2000|2400|2500,gas,AT,Hatchback,wiki:Volvo_C30,
+VOLVO,S40,2004-2013,2000|2400,gas,AT,Sedan,wiki:Volvo_S40,
+VOLVO,S60,2001-2009,2000|2400|2500,gas,AT,Sedan,wiki:Volvo_S60,1st gen
+VOLVO,S60,2010-2018,1600|2000|2500,gas,AT,Sedan,wiki:Volvo_S60,2nd gen
+VOLVO,S60,2019-2023,2000,hybrid,AT,Sedan,wiki:Volvo_S60,3rd gen Recharge
+VOLVO,S80,1998-2016,2000|2400|2500|3000,gas,AT,Sedan,wiki:Volvo_S80,
+VOLVO,S80,2007-2016,2400,diesel,AT,Sedan,wiki:Volvo_S80,D5
+VOLVO,S90,2017-2024,2000,gas|hybrid,AT,Sedan,wiki:Volvo_S90,
+VOLVO,V40,2012-2019,1600|2000,gas,AT,Hatchback,wiki:Volvo_V40,
+VOLVO,XC40,2018-2024,2000,gas,AT,SUV,wiki:Volvo_XC40,
+VOLVO,XC40,2020-2024,1500,hybrid,AT,SUV,wiki:Volvo_XC40,T5 Recharge
+VOLVO,XC40,2022-2026,0,ev,AT,SUV,wiki:Volvo_XC40,Recharge Pure Electric
+VOLVO,XC60,2008-2017,2000|3000,gas,AT,SUV,wiki:Volvo_XC60,1st gen
+VOLVO,XC60,2008-2017,2400,diesel,AT,SUV,wiki:Volvo_XC60,D5
+VOLVO,XC60,2018-2026,2000,gas|diesel|hybrid,AT,SUV,wiki:Volvo_XC60,2nd gen
+VOLVO,XC90,2002-2014,2500|2900|3200|4400,gas,AT,SUV,wiki:Volvo_XC90,1st gen
+VOLVO,XC90,2002-2014,2400,diesel,AT,SUV,wiki:Volvo_XC90,D5
+VOLVO,XC90,2015-2026,2000,gas|diesel|hybrid,AT,SUV,wiki:Volvo_XC90,2nd gen
+VOLVO,S90,2017-2019,2000,diesel,AT,Sedan,wiki:Volvo_S90,D4
