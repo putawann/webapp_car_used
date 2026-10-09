@@ -23,3 +23,14 @@ VOLVO,XC90,2002-2014,2500|2900|3200|4400,gas,AT,SUV,wiki:Volvo_XC90,1st gen
 VOLVO,XC90,2002-2014,2400,diesel,AT,SUV,wiki:Volvo_XC90,D5
 VOLVO,XC90,2015-2026,2000,gas|diesel|hybrid,AT,SUV,wiki:Volvo_XC90,2nd gen
 VOLVO,S90,2017-2019,2000,diesel,AT,Sedan,wiki:Volvo_S90,D4
+VOLVO,740,1990-1992,2300,gas,AT|MT,Sedan,wiki:Volvo_700_series,
+VOLVO,S70,1997-2000,2000|2400|2500,gas,AT,Sedan,wiki:Volvo_S70,
+VOLVO,V70,1997-2007,2000|2400|2500,gas,AT,Wagon,wiki:Volvo_V70,
+VOLVO,XC70,2003-2007,2500,gas,AT,Wagon,wiki:Volvo_XC70,
+VOLVO,V60,2012-2018,1600|2000,gas,AT,Wagon,wiki:Volvo_V60,
+VOLVO,V90,2017-2020,2000,gas|diesel,AT,Wagon,wiki:Volvo_V90,Cross Country
+VOLVO,C70,1998-2013,2000|2400|2500,gas,AT,Coupe|Convertible,wiki:Volvo_C70,
+VOLVO,C40,2022-2026,0,ev,AT,SUV,wiki:Volvo_EC40,C40 / EC40
+VOLVO,EX30,2024-2026,0,ev,AT,SUV,wiki:Volvo_EX30,
+VOLVO,EX90,2025-2026,0,ev,AT,SUV,https://www.zigwheels.co.th/new-cars/volvo+electric,
+VOLVO,ES90,2026,0,ev,AT,Sedan,https://www.zigwheels.co.th/new-cars/volvo+electric,

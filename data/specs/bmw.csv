@@ -125,3 +125,23 @@ BMW,X6,2008-2014,3000|3500,gas,AT,SUV,wiki:BMW_X6,E71
 BMW,X6,2008-2019,3000,diesel,AT,SUV,wiki:BMW_X6,E71/F16 30d
 BMW,X6,2020-2025,3000,gas|diesel,AT,SUV,wiki:BMW_X6,G06
 BMW,X7,2019-2025,3000,diesel,AT,SUV,wiki:BMW_X7,G07 30d
+BMW,Z3,1996-2002,1900|2000|2200|2800|3000,gas,AT|MT,Convertible,wiki:BMW_Z3,
+BMW,Z4,2003-2016,2000|2500|3000|3500,gas,AT|MT,Convertible,wiki:BMW_Z4,E85/E89
+BMW,Z4,2019-2026,2000|3000,gas,AT,Convertible,wiki:BMW_Z4,G29
+BMW,SERIES 4,2014-2026,2000|3000,gas,AT,Coupe|Convertible|Hatchback,wiki:BMW_4_Series,Gran Coupe = แฮทช์แบ็ก
+BMW,SERIES 8,1990-1999,4000|4400|5000|5400,gas,AT|MT,Coupe,wiki:BMW_8_Series_(E31),นำเข้าอิสระ
+BMW,SERIES 8,2019-2025,3000|4400,gas,AT,Coupe|Convertible|Sedan,wiki:BMW_8_Series_(G15),Gran Coupe 4 ประตู
+BMW,M2,2016-2026,3000,gas,AT|MT,Coupe,wiki:BMW_M2,
+BMW,M4,2014-2026,3000,gas,AT|MT,Coupe|Convertible,wiki:BMW_M4,
+BMW,M8,2019-2025,4400,gas,AT,Coupe|Convertible|Sedan,wiki:BMW_M8,
+BMW,X3 M,2019-2026,3000,gas,AT,SUV,wiki:BMW_X3_M,
+BMW,X5 M,2010-2026,4400,gas,AT,SUV,wiki:BMW_X5_M,
+BMW,X6 M,2010-2026,4400,gas,AT,SUV,wiki:BMW_X6_M,
+BMW,XM,2023-2026,4400,hybrid,AT,SUV,wiki:BMW_XM,
+BMW,I4,2022-2026,0,ev,AT,Hatchback,wiki:BMW_i4,Gran Coupe
+BMW,I5,2024-2026,0,ev,AT,Sedan,wiki:BMW_i5,
+BMW,I7,2023-2026,0,ev,AT,Sedan,wiki:BMW_i7,
+BMW,IX,2022-2026,0,ev,AT,SUV,wiki:BMW_iX,
+BMW,IX1,2023-2026,0,ev,AT,SUV,wiki:BMW_iX1,
+BMW,IX3,2021-2026,0,ev,AT,SUV,wiki:BMW_iX3,
+BMW,I8,2015-2020,1500,hybrid,AT,Coupe|Convertible,wiki:BMW_i8,

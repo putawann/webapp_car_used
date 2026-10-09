@@ -27,3 +27,12 @@ MAZDA,MAZDA3,2014-2019,2000,gas,AT,Sedan,wiki:Mazda3,BM/BN
 MAZDA,MAZDA3,2019-2026,2000,gas,AT,Hatchback,wiki:Mazda3,BP
 MAZDA,MAZDA3,2019-2026,2000,gas,AT,Sedan,wiki:Mazda3,BP
 MAZDA,TRIBUTE,2002-2008,2000|2300|3000,gas,AT,SUV,wiki:Mazda_Tribute,
+MAZDA,MX-5,2008-2026,2000,gas,AT|MT,Convertible,wiki:Mazda_MX-5,NC/ND
+MAZDA,RX-8,2004-2011,1300,gas,AT|MT,Coupe,wiki:Mazda_RX-8,เครื่องโรตารี
+MAZDA,MAZDA6,2002-2008,2000|2300,gas,AT,Sedan,wiki:Mazda6,GG
+MAZDA,MAZDA6,2014-2019,2000|2500,gas,AT,Sedan,wiki:Mazda6,GJ
+MAZDA,MAZDA6,2014-2019,2200,diesel,AT,Sedan,wiki:Mazda6,GJ diesel
+MAZDA,323,1990-2004,1600|1800,gas,AT|MT,Sedan|Hatchback,wiki:Mazda_Familia,Protegé/Astina
+MAZDA,MAGNUM,1990-1998,2200|2500,diesel,MT,Pickup,wiki:Mazda_B-Series,
+MAZDA,6E,2025-2026,0,ev,AT,Sedan,https://www.electrive.com/2025/02/28/mazda-to-launch-two-evs-in-thailand,
+MAZDA,CX-6E,2026,0,ev,AT,SUV,https://en.thairath.co.th/news/auto/2922023,

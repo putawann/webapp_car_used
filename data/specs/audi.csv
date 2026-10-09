@@ -34,3 +34,8 @@ AUDI,RS Q3,2019-2026,2500,gas,AT,SUV,wiki:Audi_Q3,RS Q3
 AUDI,RS Q8,2020-2026,4000,gas,AT,SUV,wiki:Audi_RS_Q8,
 AUDI,RS3,2015-2026,2500,gas,AT,Hatchback,wiki:Audi_RS3,
 AUDI,RS7,2013-2026,4000,gas,AT,Hatchback,wiki:Audi_RS7,
+AUDI,TT,1999-2023,1800|2000|2500|3200,gas,AT|MT,Coupe|Convertible,wiki:Audi_TT,
+AUDI,R8,2008-2023,4200|5200,gas,AT|MT,Coupe|Convertible,wiki:Audi_R8,
+AUDI,Q4 E-TRON,2023-2026,0,ev,AT,SUV,wiki:Audi_Q4_e-tron,
+AUDI,E-TRON,2020-2026,0,ev,AT,SUV,wiki:Audi_Q8_e-tron,e-tron / Q8 e-tron
+AUDI,E-TRON GT,2021-2026,0,ev,AT,Sedan,wiki:Audi_e-tron_GT,

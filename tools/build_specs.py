@@ -1,7 +1,8 @@
 """สร้าง js/specs.js จาก data/specs/*.csv (สเปครถตลาดไทยที่คัดจากแหล่งอ้างอิง หนึ่งไฟล์ต่อยี่ห้อ) ใช้ทำ dropdown ในฟอร์ม
 
 ใช้:  python tools/build_specs.py [path/to/car_dataset.csv]
-      ถ้าใส่ไฟล์ข้อมูลเทรน จะตรวจว่าทุกรุ่นที่โมเดลรู้จักมีสเปคครบ และไม่มีรุ่นที่โมเดลไม่รู้จัก
+      ถ้าใส่ไฟล์ข้อมูลเทรน จะตรวจว่าทุกรุ่นที่โมเดลรู้จักมีสเปคครบ และบอกว่ารุ่นไหนโมเดลไม่รู้จัก
+      (มีรุ่นที่ไม่อยู่ในข้อมูลเทรนได้ เพราะ dropdown รวมทุกรุ่นที่ขายในไทยจริง)
 
 รูปแบบไฟล์ใน data/specs/ (หนึ่งแถว = สเปคชุดหนึ่งในช่วงปีที่ขายในไทย):
   brand,model    ชื่อตรงกับข้อมูลเทรน (โมเดลรู้จักชื่อนี้)
@@ -10,6 +11,7 @@
   fuel           gas | diesel | hybrid | ev  (ev ใส่ cc=0)
   gear           AT | MT
   body           Sedan | Hatchback | SUV | PPV | MPV | Pickup | Van  (ตามประเภทในข้อมูลเทรน)
+                 หรือ Coupe | Convertible | Wagon (ตัวถังจริงที่ข้อมูลเทรนไม่มี เว็บโชว์ตามจริง แต่ส่งให้โมเดลเป็นหมวดใน BODY_MODEL)
   source         ลิงก์แหล่งอ้างอิง (ย่อ "wiki:Ford_Everest" ได้)
   note           หมายเหตุ (ไม่ใช้ในเว็บ)
 """
@@ -22,7 +24,8 @@ import sys
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 FUELS = ["gas", "diesel", "hybrid", "ev"]    # ตรงกับ FUELS ใน app.js
 GEARS = ["AT", "MT"]                          # ตรงกับ GEARS ใน app.js
-BODY = ["Hatchback", "MPV", "PPV", "Pickup", "SUV", "Sedan", "Van"]
+BODY = ["Hatchback", "MPV", "PPV", "Pickup", "SUV", "Sedan", "Van", "Coupe", "Convertible", "Wagon"]
+BODY_MODEL = {"Coupe": "Sedan", "Convertible": "Sedan", "Wagon": "Hatchback"}  # ข้อมูลเทรนจัดคูเป้เป็น Sedan (เช่น Continental GT)
 # สีตามหมวดในข้อมูลเทรน (เรียงจากที่พบบ่อยสุด) โมเดลรู้จักเฉพาะค่าเหล่านี้
 COLORS = ["White", "Black", "Grey Bronze", "Grey", "Red", "Silver Bronze", "Silver", "Brown", "Blue", "Orange", "Green",
           "Light Blue", "Yellow", "Others", "Golden", "Sky Blue", "Gold", "Cream", "Purple", "Pink", "Beige"]
@@ -66,7 +69,7 @@ dump = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":"))
 with open(os.path.join(ROOT, "js", "specs.js"), "w", encoding="utf-8", newline="\n") as fh:
     fh.write("// สร้างอัตโนมัติด้วย tools/build_specs.py จาก data/specs/*.csv อย่าแก้ด้วยมือ\n")
     fh.write("// SPEC[ยี่ห้อ][รุ่น][ปี] = [[ซีซี, เชื้อเพลิง, เกียร์, ตัวถัง], ...]  SRC[ยี่ห้อ][รุ่น] = [ลิงก์อ้างอิง]\n")
-    fh.write(f"export const BODY={dump(BODY)};\nexport const COLORS={dump(COLORS)};\n")
+    fh.write(f"export const BODY={dump(BODY)};\nexport const BODY_MODEL={dump(BODY_MODEL)};\nexport const COLORS={dump(COLORS)};\n")
     fh.write(f"export const SPEC={dump(spec)};\nexport const SRC={dump(src)};\n")
 print(f"js/specs.js: {len(spec)} brands, {sum(len(v) for v in spec.values())} models, "
       f"{sum(len(l) for b in spec.values() for m in b.values() for l in m.values())} year-specs")

@@ -21,3 +21,7 @@ FORD,RANGER,2012-2022,2200|3200,diesel,AT|MT,Pickup,wiki:Ford_Ranger_(T6),T6
 FORD,RANGER,2018-2022,2000,diesel,AT,Pickup,wiki:Ford_Ranger_(T6),2.0 turbo/bi-turbo
 FORD,RANGER,2022-2026,2000,diesel,AT|MT,Pickup,wiki:Ford_Ranger_(P703),Next-Gen
 FORD,RANGER,2022-2026,3000,diesel,AT,Pickup,wiki:Ford_Ranger_(P703),3.0 V6
+FORD,MUSTANG,2016-2026,2300|5000,gas,AT,Coupe|Convertible,wiki:Ford_Mustang,
+FORD,LASER,1990-2005,1600|1800,gas,AT|MT,Sedan|Hatchback,wiki:Ford_Laser,
+FORD,TELSTAR,1990-1998,2000|2500,gas,AT|MT,Sedan,wiki:Ford_Telstar,
+FORD,MONDEO,2001-2007,2000|2500,gas,AT,Sedan,wiki:Ford_Mondeo,Mk3 ยังไม่ยืนยันช่วงปีที่ขายในไทย

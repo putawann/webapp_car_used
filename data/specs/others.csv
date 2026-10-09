@@ -173,3 +173,95 @@ SKODA,SUPERB,2008-2015,1800|2000,gas,AT,Sedan,wiki:Škoda_Superb,
 SAAB,9000,1984-1998,2000|2300,gas,AT|MT,Sedan,wiki:Saab_9000,
 GWM,TANK 300,2025-2026,2400,diesel,AT,SUV,https://autobuzz.my/2025/03/27/2025-gwm-tank-300-updated-in-thailand-with-new-2-4l-turbodiesel-powertrain/,Tank 300 Diesel
 GWM TANK,300,2025-2026,2400,diesel,AT,SUV,https://autobuzz.my/2025/03/27/2025-gwm-tank-300-updated-in-thailand-with-new-2-4l-turbodiesel-powertrain/,Tank 300 Diesel
+ALFA ROMEO,147,2001-2010,1600|2000,gas,AT|MT,Hatchback,wiki:Alfa_Romeo_147,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+ALFA ROMEO,159,2006-2011,2200|3200,gas,AT|MT,Sedan,wiki:Alfa_Romeo_159,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+ALFA ROMEO,GT,2004-2010,2000|3200,gas,AT|MT,Coupe,wiki:Alfa_Romeo_GT,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+ALFA ROMEO,GIULIA,2016-2026,2000|2900,gas,AT,Sedan,wiki:Alfa_Romeo_Giulia_(952),ยังไม่ยืนยันช่วงปีที่ขายในไทย
+ALFA ROMEO,STELVIO,2017-2026,2000|2900,gas,AT,SUV,wiki:Alfa_Romeo_Stelvio,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+BENTLEY,TURBO R,1985-1997,6750,gas,AT,Sedan,wiki:Bentley_Turbo_R,
+BENTLEY,AZURE,1995-2009,6750,gas,AT,Convertible,wiki:Bentley_Azure,
+BENTLEY,ARNAGE,1998-2009,4400|6750,gas,AT,Sedan,wiki:Bentley_Arnage,
+BENTLEY,MULSANNE,2010-2020,6750,gas,AT,Sedan,wiki:Bentley_Mulsanne_(2010),
+BYD,E6,2019-2022,0,ev,AT,MPV,wiki:BYD_e6,
+BYD,ATTO 3,2022-2026,0,ev,AT,SUV,wiki:BYD_Atto_3,
+BYD,DOLPHIN,2023-2026,0,ev,AT,Hatchback,wiki:BYD_Dolphin,
+BYD,SEAL,2023-2026,0,ev,AT,Sedan,wiki:BYD_Seal,
+BYD,M6,2024-2026,0,ev,AT,MPV,wiki:BYD_e6,e6 รุ่นที่ 2
+BYD,ATTO 2,2025-2026,0,ev,AT,SUV,wiki:BYD_Atto_2,
+BYD,SEALION 5,2025-2026,1500,hybrid,AT,SUV,https://www.car250.com/byd-price-th-2026-04.html,DM-i ยังไม่ยืนยันปีเปิดตัว
+BYD,SEAL 6,2025-2026,1500,hybrid,AT,Sedan,https://www.car250.com/byd-price-th-2026-04.html,DM-i ยังไม่ยืนยันปีเปิดตัว
+CHRYSLER,GRAND VOYAGER,1996-2007,3300|3800,gas,AT,MPV,wiki:Chrysler_Voyager,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+CITROEN,BX,1982-1994,1600|1900,gas,AT|MT,Hatchback,wiki:Citroën_BX,
+CITROEN,XANTIA,1993-2001,2000,gas,AT|MT,Hatchback,wiki:Citroën_Xantia,
+CITROEN,C5 AIRCROSS,2019-2023,1600,gas,AT,SUV,wiki:Citroën_C5_Aircross,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+DAIHATSU,MIRA,1990-1999,850,gas,MT,Hatchback|Pickup,wiki:Daihatsu_Mira,ไทยมีทั้งเก๋งและกระบะเล็ก
+DAIHATSU,COPEN,2002-2026,660,gas,AT|MT,Convertible,wiki:Daihatsu_Copen,นำเข้าอิสระ
+DODGE,JOURNEY,2009-2012,2400|2700|3600,gas,AT,MPV,wiki:Dodge_Journey,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+DODGE,CHALLENGER,2008-2023,3600|5700|6200|6400,gas,AT,Coupe,wiki:Dodge_Challenger_(2008),นำเข้าอิสระ
+FOTON,TUNLAND,2013-2016,2800,diesel,MT,Pickup,wiki:Foton_Tunland,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+GWM,ORA GOOD CAT,2021-2026,0,ev,AT,Hatchback,wiki:Ora_Good_Cat,เลิกขาย ก.พ. 2026
+GWM,ORA 07,2024-2026,0,ev,AT,Sedan,wiki:Ora_Lightning_Cat,
+HUMMER,H2,2003-2009,6000|6200,gas,AT,SUV,wiki:Hummer_H2,นำเข้าอิสระ
+INFINITI,FX35,2003-2012,3500,gas,AT,SUV,wiki:Infiniti_FX,นำเข้าอิสระ
+INFINITI,Q50,2014-2024,2000|3000,gas,AT,Sedan,wiki:Infiniti_Q50,นำเข้าอิสระ
+INFINITI,Q50,2014-2024,3500,hybrid,AT,Sedan,wiki:Infiniti_Q50,hybrid นำเข้าอิสระ
+JAECOO,6,2024-2026,0,ev,AT,SUV,https://autobuzz.my/2025/03/25/jaecoo-6-launched-in-thailand-defender-inspired-ev-launching-soon-in-malaysia-this-year/,
+JAGUAR,XK,1996-2014,4000|4200|5000,gas,AT,Coupe|Convertible,wiki:Jaguar_XK,XK8/XKR/X150
+JAGUAR,F-TYPE,2013-2024,2000|3000|5000,gas,AT,Coupe|Convertible,wiki:Jaguar_F-Type,
+JAGUAR,E-PACE,2018-2024,2000,gas,AT,SUV,wiki:Jaguar_E-Pace,
+JAGUAR,I-PACE,2019-2024,0,ev,AT,SUV,wiki:Jaguar_I-Pace,
+JEEP,GLADIATOR,2021-2024,3600,gas,AT,Pickup,wiki:Jeep_Gladiator_(JT),ยังไม่ยืนยันช่วงปีที่ขายในไทย
+KIA,PREGIO,1997-2005,2700,diesel,MT,Van,wiki:Kia_Pregio,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+KIA,SOUL,2009-2014,1600,gas,AT,Hatchback,wiki:Kia_Soul,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+KIA,SPORTAGE,2011-2016,2000,gas|diesel,AT,SUV,wiki:Kia_Sportage,SL ยังไม่ยืนยันช่วงปีที่ขายในไทย
+KIA,EV6,2022-2026,0,ev,AT,SUV,wiki:Kia_EV6,
+KIA,EV9,2024-2026,0,ev,AT,SUV,wiki:Kia_EV9,
+KIA,EV5,2025-2026,0,ev,AT,SUV,https://www.kia.com/th/en/util/news/kia-motor-expo-press-day-2025.html,
+LAMBORGHINI,DIABLO,1990-2001,5700|6000,gas,MT,Coupe|Convertible,wiki:Lamborghini_Diablo,
+LAMBORGHINI,MURCIELAGO,2002-2010,6200|6500,gas,AT|MT,Coupe|Convertible,wiki:Lamborghini_Murciélago,
+LAMBORGHINI,GALLARDO,2004-2013,5000|5200,gas,AT|MT,Coupe|Convertible,wiki:Lamborghini_Gallardo,
+LAMBORGHINI,AVENTADOR,2012-2022,6500,gas,AT,Coupe|Convertible,wiki:Lamborghini_Aventador,
+LAMBORGHINI,HURACAN,2014-2024,5200,gas,AT,Coupe|Convertible,wiki:Lamborghini_Huracán,
+LAMBORGHINI,REVUELTO,2024-2026,6500,hybrid,AT,Coupe,wiki:Lamborghini_Revuelto,
+LAMBORGHINI,TEMERARIO,2025-2026,4000,hybrid,AT,Coupe,wiki:Lamborghini_Temerario,
+LAND ROVER,RANGE ROVER SPORT,2005-2013,2700|3000|3600,diesel,AT,SUV,wiki:Range_Rover_Sport,L320
+LAND ROVER,RANGE ROVER SPORT,2005-2013,4200|4400|5000,gas,AT,SUV,wiki:Range_Rover_Sport,L320
+LAND ROVER,RANGE ROVER SPORT,2014-2022,3000|5000,gas,AT,SUV,wiki:Range_Rover_Sport,L494
+LAND ROVER,RANGE ROVER SPORT,2014-2022,3000,diesel,AT,SUV,wiki:Range_Rover_Sport,L494
+LAND ROVER,RANGE ROVER SPORT,2019-2022,2000,hybrid,AT,SUV,wiki:Range_Rover_Sport,L494 P400e
+LAND ROVER,RANGE ROVER SPORT,2023-2026,3000,diesel|hybrid,AT,SUV,wiki:Range_Rover_Sport,L461
+LAND ROVER,RANGE ROVER SPORT,2023-2026,4400,gas,AT,SUV,wiki:Range_Rover_Sport,L461
+MASERATI,SPYDER,2001-2007,4200,gas,AT|MT,Convertible,wiki:Maserati_Coupé,
+MASERATI,COUPE,2002-2007,4200,gas,AT|MT,Coupe,wiki:Maserati_Coupé,
+MASERATI,GRANTURISMO,2008-2019,4200|4700,gas,AT,Coupe,wiki:Maserati_GranTurismo,
+MASERATI,GRANTURISMO,2023-2026,3000,gas,AT,Coupe,wiki:Maserati_GranTurismo,รุ่นที่ 2
+MASERATI,GRANCABRIO,2010-2019,4700,gas,AT,Convertible,wiki:Maserati_GranTurismo,
+MASERATI,MC20,2021-2026,3000,gas,AT,Coupe|Convertible,wiki:Maserati_MC20,
+OPEL,VECTRA,1995-2002,1800|2000|2200|2500,gas,AT|MT,Sedan,wiki:Opel_Vectra,
+PEUGEOT,405,1988-1997,1600|1900|2000,gas,AT|MT,Sedan,wiki:Peugeot_405,
+PEUGEOT,306,1993-2001,1600|1800|2000,gas,AT|MT,Hatchback|Sedan,wiki:Peugeot_306,
+PEUGEOT,406,1996-2004,1800|2000|3000,gas,AT|MT,Sedan,wiki:Peugeot_406,
+PEUGEOT,206,1999-2008,1400|1600,gas,AT|MT,Hatchback,wiki:Peugeot_206,
+PEUGEOT,607,2000-2010,2200|3000,gas,AT,Sedan,wiki:Peugeot_607,
+PEUGEOT,407,2004-2011,2000|2200|3000,gas,AT,Sedan,wiki:Peugeot_407,
+PEUGEOT,508,2012-2017,1600,gas,AT,Sedan,wiki:Peugeot_508,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+PROTON,SAVVY,2006-2011,1200,gas,AT|MT,Hatchback,wiki:Proton_Savvy,
+PROTON,GEN-2,2007-2012,1600,gas,AT|MT,Hatchback,wiki:Proton_Gen-2,
+PROTON,PREVE,2013-2016,1600,gas,AT,Sedan,wiki:Proton_Prevé,
+ROLLS-ROYCE,SILVER SERAPH,1998-2002,5400,gas,AT,Sedan,wiki:Rolls-Royce_Silver_Seraph,
+ROLLS-ROYCE,PHANTOM,2003-2017,6750,gas,AT,Sedan|Coupe|Convertible,wiki:Rolls-Royce_Phantom_VII,Phantom VII / Drophead / Coupé
+ROLLS-ROYCE,PHANTOM,2018-2026,6750,gas,AT,Sedan,wiki:Rolls-Royce_Phantom_VIII,
+ROLLS-ROYCE,WRAITH,2013-2023,6600,gas,AT,Coupe,wiki:Rolls-Royce_Wraith_(2013),
+ROLLS-ROYCE,DAWN,2016-2023,6600,gas,AT,Convertible,wiki:Rolls-Royce_Dawn_(2015),
+ROLLS-ROYCE,CULLINAN,2018-2026,6750,gas,AT,SUV,wiki:Rolls-Royce_Cullinan,
+ROLLS-ROYCE,SPECTRE,2023-2026,0,ev,AT,Coupe,wiki:Rolls-Royce_Spectre,
+SAAB,900,1990-1998,2000|2300,gas,AT|MT,Hatchback,wiki:Saab_900,
+SAAB,9-5,1997-2010,2000|2300,gas,AT,Sedan,wiki:Saab_9-5,
+SAAB,9-3,1998-2011,2000,gas,AT,Sedan|Hatchback|Convertible,wiki:Saab_9-3,
+SKODA,OCTAVIA,2008-2014,1800|2000,gas,AT,Sedan,wiki:Škoda_Octavia,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+SSANGYONG,REXTON,2004-2015,2700,diesel,AT,SUV,wiki:SsangYong_Rexton,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+SSANGYONG,ACTYON SPORTS,2008-2015,2000,diesel,AT|MT,Pickup,wiki:SsangYong_Actyon,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+VOLKSWAGEN,PASSAT,1990-2016,1800|2000|2300|2800|3600,gas,AT|MT,Sedan,wiki:Volkswagen_Passat,
+VOLKSWAGEN,VENTO,1992-1998,1800|2000,gas,AT|MT,Sedan,wiki:Volkswagen_Jetta,Jetta A3 ที่ใช้ชื่อ Vento
+VOLKSWAGEN,SHARAN,1996-2010,1800|2000|2800,gas,AT,MPV,wiki:Volkswagen_Sharan,
+VOLKSWAGEN,MULTIVAN,2004-2024,2000|2500,diesel,AT,Van,wiki:Volkswagen_Transporter,T5/T6

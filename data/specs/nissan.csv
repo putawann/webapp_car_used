@@ -45,3 +45,7 @@ NISSAN,X-TRAIL,2014-2021,2000|2500,gas,AT,SUV,wiki:Nissan_X-Trail,T32
 NISSAN,X-TRAIL,2015-2021,2000,hybrid,AT,SUV,wiki:Nissan_X-Trail,T32 hybrid
 NISSAN,X-TRAIL,2023-2026,1500,hybrid,AT,SUV,wiki:Nissan_X-Trail,T33 e-Power
 NISSAN,CUBE,2002-2012,1400,gas,AT,Hatchback,wiki:Nissan_Cube,Z11 นำเข้าอิสระ
+NISSAN,350Z,2003-2009,3500,gas,AT|MT,Coupe,wiki:Nissan_350Z,Z33
+NISSAN,370Z,2009-2020,3700,gas,AT|MT,Coupe,wiki:Nissan_370Z,Z34
+NISSAN,GT-R,2008-2024,3800,gas,AT,Coupe,wiki:Nissan_GT-R,R35
+NISSAN,LEAF,2018-2023,0,ev,AT,Hatchback,wiki:Nissan_Leaf,ZE1

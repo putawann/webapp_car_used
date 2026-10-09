@@ -12,3 +12,7 @@ SUBARU,WRX,2014-2021,2000,gas,AT|MT,Sedan,wiki:Subaru_WRX,VA
 SUBARU,WRX,2022-2026,2400,gas,AT,Sedan,wiki:Subaru_WRX,VB
 SUBARU,XV,2012-2023,2000,gas,AT,SUV,wiki:Subaru_XV,GP/GT
 SUBARU,IMPREZA,2008-2014,2500,gas,MT,Sedan|Hatchback,wiki:Subaru_Impreza,WRX STI 2.5
+SUBARU,OUTBACK,2009-2019,2500|3600,gas,AT,SUV,wiki:Subaru_Outback,
+SUBARU,LEVORG,2015-2020,1600,gas,AT,Wagon,wiki:Subaru_Levorg,
+SUBARU,BRZ,2012-2022,2000,gas,AT|MT,Coupe,wiki:Subaru_BRZ,
+SUBARU,CROSSTREK,2023-2026,2000,gas,AT,SUV,wiki:Subaru_Crosstrek,

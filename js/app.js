@@ -1,6 +1,6 @@
 // ===== ตัวหน้าเว็บ: ฟอร์ม ทำนายราคา แสดงผล ภาษา/ธีม =====
 import {T,NOW,predictPrice,EX} from "./data.js";
-import {SPEC,BODY,COLORS,SRC} from "./specs.js";
+import {SPEC,BODY,BODY_MODEL,COLORS,SRC} from "./specs.js";
 import {initFx,setTheme,setScroll,showText,isPaused,setPaused} from "./fx.js";
 import {initUI,scrollToEl,scramble,sfx,isSound,setSound,refresh} from "./ui.js";
 
@@ -23,7 +23,7 @@ const sgn=v=>(v<0?"−":"+")+fmt(r1(Math.abs(v)));
 
 function paint(animate){
   const t=T[lang],lo=r1(cur.price*0.92),hi=r1(cur.price*1.08);
-  $("out").innerHTML=`<div class="${animate?"fade":""}"><p class="range">${t.est}</p><div class="price"><span id="pv">${fmt(cur.price)}</span> ${t.baht}</div><p class="range">${t.rng}</p><div class="bar"><b></b></div><div class="ends"><span>${fmt(lo)}</span><span>${fmt(hi)}</span></div><button class="ghost" id="pin" type="button">${t.pin}</button></div>`;
+  $("out").innerHTML=`<div class="${animate?"fade":""}"><p class="range">${t.est}</p><div class="price"><span id="pv">${fmt(cur.price)}</span> ${t.baht}</div><p class="range">${t.rng}</p><div class="bar"><b></b></div><div class="ends"><span>${fmt(lo)}</span><span>${fmt(hi)}</span></div><button class="ghost" id="pin" type="button">${t.pin}</button>${cur.untrained?`<p class="hint">${t.untrained}</p>`:""}</div>`;
   $("pin").onclick=()=>{pinned=cur;paintCmp();refresh()};
   if(animate)scramble($("pv"),fmt(cur.price));
   paintMore();paintCmp();
@@ -46,7 +46,7 @@ function paintCmp(){
   $("cmp").hidden=!pinned;
   if(!pinned)return;
   const B=cur!==pinned?cur:null;
-  const rows=[[t.car,c=>`${c.x.brand} ${c.x.model}`],[t.year,c=>c.x.year],[t.mileage,c=>fmt(c.x.mileage)+" km"],[t.trans,c=>t[c.x.trans==="AT"?"at":"mt"]],[t.fuel,c=>t[c.x.fuel]],[t.cc,c=>fmt(c.x.cc)+" cc"],[t.body,c=>t.bodies[c.x.body]||c.x.body],[t.color,c=>t.colors[c.x.color]||c.x.color]];
+  const rows=[[t.car,c=>`${c.x.brand} ${c.x.model}`],[t.year,c=>c.x.year],[t.mileage,c=>fmt(c.x.mileage)+" km"],[t.trans,c=>t[c.x.trans==="AT"?"at":"mt"]],[t.fuel,c=>t[c.x.fuel]],[t.cc,c=>fmt(c.x.cc)+" cc"],[t.body,c=>t.bodies[c.x.shape]||c.x.shape],[t.color,c=>t.colors[c.x.color]||c.x.color]];
   let h=`<span></span><span class="h">${t.cmpA}</span><span class="h">${t.cmpB}</span>`;
   rows.forEach(([k,f])=>h+=`<span class="k">${k}</span><span>${f(pinned)}</span><span>${B?f(B):"—"}</span>`);
   h+=`<span class="k">${t.price}</span><span class="p">${fmt(pinned.price)}</span><span class="p">${B?fmt(B.price):"—"}</span>`;
@@ -112,7 +112,7 @@ const syncR=()=>{$("mileageR").value=$("mileage").value};
 function setErr(id,msg){$("e-"+id).textContent=msg;$(id).setAttribute("aria-invalid",!!msg)}
 function read(){
   const [cc,f,g,b]=variants()[+$("variant").value];
-  return {brand:$("brand").value,model:$("model").value,year:+$("year").value,mileage:+$("mileage").value,trans:GEARS[g],fuel:FUELS[f],cc,body:BODY[b],color:$("color").value};
+  return {brand:$("brand").value,model:$("model").value,year:+$("year").value,mileage:+$("mileage").value,trans:GEARS[g],fuel:FUELS[f],cc,body:BODY_MODEL[BODY[b]]||BODY[b],shape:BODY[b],color:$("color").value}; // body = หมวดที่ส่งให้โมเดล, shape = ตัวถังจริงไว้แสดง
 }
 // ช่องที่กรอกเองได้มีแค่เลขไมล์ ที่เหลือมาจาก dropdown จึงถูกต้องเสมอ
 function check(){
@@ -144,7 +144,7 @@ $("f").onsubmit=async e=>{
   // ราคาปัจจุบัน + อีก 5 ปีข้างหน้า (ขับปีละ 15,000 กม.)
   const [r,...fut]=await Promise.all([predictPrice(x),...[1,2,3,4,5].map(k=>predictPrice({...x,year:x.year-k,mileage:x.mileage+15000*k})),new Promise(res=>setTimeout(res,450))]);
   if(id!==seq)return;
-  cur={x,price:r.price,base:r.base,parts:r.parts,fut:[r.price,...fut.slice(0,5).map(f=>f.price)]};
+  cur={x,price:r.price,base:r.base,parts:r.parts,untrained:r.untrained,fut:[r.price,...fut.slice(0,5).map(f=>f.price)]};
   paint(true);
   showText(cur.price.toLocaleString("en-US")); // จุดในฉากหลังรวมตัวเป็นตัวเลขราคา
   refresh();
