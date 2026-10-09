@@ -82,7 +82,9 @@ function render(){
 const FUELS=["gas","diesel","hybrid","ev"],GEARS=["AT","MT"]; // ลำดับตรงกับ tools/build_specs.py
 const sel=(id,items,keepValue)=>{const el=$(id),old=el.value;el.replaceChildren(...items.map(([v,l])=>new Option(l,v)));if(keepValue&&items.some(([v])=>v===old))el.value=old};
 const variants=()=>SPEC[$("brand").value][$("model").value][$("year").value];
-const vLabel=([cc,f,g,b])=>{const t=T[lang];return `${cc?(cc/1000).toFixed(1)+"L":t.motor} · ${t[FUELS[f]]} · ${t[GEARS[g]==="AT"?"at":"mt"]} · ${t.bodies[BODY[b]]||BODY[b]}`};
+const narrow=matchMedia("(max-width:480px)"); // จอมือถือ: ใช้ AT/MT แทนคำเต็ม ไม่ให้ป้ายสเปคถูกตัด
+narrow.addEventListener("change",()=>fillVariants(true));
+const vLabel=([cc,f,g,b])=>{const t=T[lang];return `${cc?(cc/1000).toFixed(1)+"L":t.motor} · ${t[FUELS[f]]} · ${narrow.matches?GEARS[g]:t[GEARS[g]==="AT"?"at":"mt"]} · ${t.bodies[BODY[b]]||BODY[b]}`};
 function fillVariants(keepValue){
   sel("variant",variants().map((v,i)=>[String(i),vLabel(v)]),keepValue);
   showSeen();

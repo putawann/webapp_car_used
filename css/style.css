@@ -116,9 +116,13 @@ input[type=range]::-moz-range-thumb{width:9px;height:9px;border:0;border-radius:
 .hint{color:var(--muted);font-size:.82rem}
 #seen{text-transform:none;letter-spacing:0}
 #seen a{color:var(--accent)}
-.motion{position:fixed;right:clamp(16px,4vw,40px);bottom:20px;z-index:4;width:36px;height:36px;display:grid;place-items:center;padding:0;background:transparent;color:var(--muted);border:1px solid var(--line);cursor:pointer;transition:color .2s,border-color .2s}
+.motion{position:fixed;right:clamp(16px,4vw,40px);bottom:20px;z-index:4;width:36px;height:36px;display:grid;place-items:center;padding:0;background:var(--bg);color:var(--muted);border:1px solid var(--line);cursor:pointer;transition:color .2s,border-color .2s}
 .motion:hover{color:var(--accent);border-color:var(--accent)}
 .motion svg{width:14px;height:14px}
+/* มือถือ: เว้นที่ท้ายหน้าให้ปุ่มหยุดแอนิเมชันไม่ทับเนื้อหา และบีบหัวเว็บให้พอดีจอแคบ */
+@media(max-width:480px){main{padding-bottom:64px}.motion{bottom:16px}}
+@media(max-width:400px){.brand{gap:6px}.tools{gap:6px}.tools button{min-width:36px}.tools #langBtn{width:72px}.tag{display:none}}
+@media(max-width:359px){#variant{font-size:.85rem}}
 /* เคอร์เซอร์วงเล็งแบบ ctOS (เฉพาะเมาส์) วงตามเมาส์ ส่วนเคอร์เซอร์ปกติยังอยู่ */
 #cursor{position:fixed;left:0;top:0;z-index:50;width:36px;height:36px;margin:-18px 0 0 -18px;border:1px solid var(--accent);border-radius:50%;pointer-events:none;opacity:.7;transition:width .2s,height .2s,margin .2s,opacity .2s}
 #cursor::before,#cursor::after{content:"";position:absolute;background:var(--accent)}
