@@ -15,11 +15,13 @@ export const CARS={"TOYOTA":{"ALPHARD":3712000,"ALTIS":988000,"ARISTO":531000,"A
    หมายเหตุ: fuel อาจเป็น "ev" (cc=0) ซึ่งไม่มีในข้อมูลเทรน ต้องแปลงก่อนส่งเข้าโมเดลจริง
    คืน {price} ; ถ้าใส่ base (ราคาใหม่) กับ parts [[คีย์,ส่วนต่างบาท],...] เพิ่ม จะแสดงกราฟ "อะไรทำให้ราคาขึ้น/ลง" */
 export const NOW=2026;
+// ยี่ห้อที่ไม่มีในข้อมูลเทรนเลย: ราคารถใหม่โดยประมาณของยี่ห้อ (บาท, ประมาณเอง ใช้กับสูตรจำลองเท่านั้น)
+const BRAND_BASE={"ASTON MARTIN":18e6,"AVATR":2.1e6,"CADILLAC":6e6,"CHANGAN":45e4,"CHERY":9e5,"DAEWOO":6e5,"DEEPAL":12e5,"DENZA":23e5,"DFSK":8e5,"FERRARI":2e7,"FIREFLY":8e5,"GAC AION":1e6,"GEELY":7e5,"GMC":6e6,"HYPTEC":17e5,"LEAPMOTOR":8e5,"LEPAS":8e5,"LINCOLN":6e6,"LOTUS":7e6,"MAYBACH":3e7,"MCLAREN":18e6,"MITSUOKA":25e5,"NETA":65e4,"OMODA":9e5,"SMART":15e5,"TATA":55e4,"TESLA":16e5,"VINFAST":9e5,"WULING":42e4,"XPENG":14e5,"ZEEKR":2e6};
 // รุ่นที่ไม่มีในข้อมูลเทรน ใช้ราคากลาง (มัธยฐาน) ของยี่ห้อนั้นแทน
 const median=a=>{a=[...a].sort((p,q)=>p-q);return a[a.length>>1]};
 export function predictPrice(x){
   const known=CARS[x.brand]?.[x.model];
-  const base=known??median(Object.values(CARS[x.brand]||{x:800000}));
+  const base=known??(CARS[x.brand]?median(Object.values(CARS[x.brand])):BRAND_BASE[x.brand]??8e5);
   const age=Math.max(0,NOW-x.year);
   const parts=[];
   let p=base*Math.pow(0.88,age);

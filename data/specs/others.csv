@@ -265,3 +265,96 @@ VOLKSWAGEN,PASSAT,1990-2016,1800|2000|2300|2800|3600,gas,AT|MT,Sedan,wiki:Volksw
 VOLKSWAGEN,VENTO,1992-1998,1800|2000,gas,AT|MT,Sedan,wiki:Volkswagen_Jetta,Jetta A3 ที่ใช้ชื่อ Vento
 VOLKSWAGEN,SHARAN,1996-2010,1800|2000|2800,gas,AT,MPV,wiki:Volkswagen_Sharan,
 VOLKSWAGEN,MULTIVAN,2004-2024,2000|2500,diesel,AT,Van,wiki:Volkswagen_Transporter,T5/T6
+ASTON MARTIN,DB7,1994-2004,3200|5900,gas,AT|MT,Coupe|Convertible,wiki:Aston_Martin_DB7,
+ASTON MARTIN,VANQUISH,2001-2007,5900,gas,AT,Coupe,wiki:Aston_Martin_Vanquish,รุ่นที่ 1
+ASTON MARTIN,VANQUISH,2012-2018,5900,gas,AT,Coupe|Convertible,wiki:Aston_Martin_Vanquish,รุ่นที่ 2
+ASTON MARTIN,VANQUISH,2025-2026,5200,gas,AT,Coupe|Convertible,wiki:Aston_Martin_Vanquish,รุ่นที่ 3
+ASTON MARTIN,DB9,2004-2016,5900,gas,AT|MT,Coupe|Convertible,wiki:Aston_Martin_DB9,
+ASTON MARTIN,VANTAGE,2005-2017,4300|4700|5900,gas,AT|MT,Coupe|Convertible,wiki:Aston_Martin_Vantage_(2005),
+ASTON MARTIN,VANTAGE,2018-2026,4000,gas,AT|MT,Coupe|Convertible,wiki:Aston_Martin_Vantage_(2018),
+ASTON MARTIN,DBS,2007-2012,5900,gas,AT|MT,Coupe|Convertible,wiki:Aston_Martin_DBS_V12,
+ASTON MARTIN,DBS,2018-2024,5200,gas,AT,Coupe|Convertible,wiki:Aston_Martin_DBS_Superleggera,Superleggera
+ASTON MARTIN,RAPIDE,2010-2020,5900,gas,AT,Hatchback,wiki:Aston_Martin_Rapide,
+ASTON MARTIN,DB11,2016-2023,4000|5200,gas,AT,Coupe|Convertible,wiki:Aston_Martin_DB11,
+ASTON MARTIN,DBX,2020-2026,4000,gas,AT,SUV,wiki:Aston_Martin_DBX,
+ASTON MARTIN,DB12,2023-2026,4000,gas,AT,Coupe|Convertible,wiki:Aston_Martin_DB12,
+AVATR,11,2024-2026,0,ev,AT,SUV,https://cnevpost.com/2024/09/18/avatr-enters-thailand-launch-11/,
+CADILLAC,ESCALADE,1999-2026,6000|6200,gas,AT,SUV,wiki:Cadillac_Escalade,ยังไม่ยืนยันว่ามีตัวแทนขายทางการ
+CADILLAC,CTS,2003-2014,2800|3600,gas,AT,Sedan,wiki:Cadillac_CTS,ยังไม่ยืนยันว่ามีตัวแทนขายทางการ
+CHANGAN,LUMIN,2024-2026,0,ev,AT,Hatchback,wiki:Changan_Lumin,
+CHERY,QQ,2009-2010,1100,gas,MT,Hatchback,wiki:Chery_QQ,ยุคแรกที่เข้าไทย ยังไม่ยืนยันปี
+CHERY,V23,2025-2026,0,ev,AT,SUV,https://www.segmenty.com/GenerateNewsStaticJsps/Chery_enters_local_market.html,
+CHERY,TIGGO 8,2025-2026,1500,hybrid,AT,SUV,https://www.segmenty.com/GenerateNewsStaticJsps/Chery_enters_local_market.html,Tiggo 8 CSH
+DAEWOO,ESPERO,1991-1997,1500|2000,gas,AT|MT,Sedan,wiki:Daewoo_Espero,ยังไม่ยืนยันปีที่ขายในไทย
+DAEWOO,CIELO,1995-1998,1500,gas,AT|MT,Sedan,wiki:Daewoo_Nexia,ยังไม่ยืนยันปีที่ขายในไทย
+DAEWOO,NUBIRA,1997-2000,1600|2000,gas,AT|MT,Sedan,wiki:Daewoo_Nubira,ยังไม่ยืนยันปีที่ขายในไทย
+DAEWOO,LANOS,1997-2000,1500|1600,gas,AT|MT,Sedan|Hatchback,wiki:Daewoo_Lanos,ยังไม่ยืนยันปีที่ขายในไทย
+DAEWOO,LEGANZA,1997-2000,2000,gas,AT|MT,Sedan,wiki:Daewoo_Leganza,ยังไม่ยืนยันปีที่ขายในไทย
+DEEPAL,S07,2024-2026,0,ev,AT,SUV,https://autonews.gasgoo.com/china_news/70032177.html,
+DEEPAL,S07,2024-2026,1500,hybrid,AT,SUV,https://autonews.gasgoo.com/china_news/70032177.html,REEV
+DEEPAL,L07,2024-2026,0,ev,AT,Sedan,https://autonews.gasgoo.com/china_news/70032177.html,
+DEEPAL,L07,2024-2026,1500,hybrid,AT,Sedan,https://autonews.gasgoo.com/china_news/70032177.html,REEV
+DEEPAL,S05,2025-2026,0,ev,AT,SUV,wiki:Deepal_S05,ยังไม่ยืนยันปีเปิดตัวในไทย
+DENZA,D9,2024-2026,0,ev,AT,MPV,wiki:Denza_D9,
+DFSK,GLORY I-AUTO,2021-2023,1500,gas,AT,SUV,https://www.car250.com/dfsk-glory-i-auto.html,ยังไม่ยืนยันช่วงปี
+DFSK,GLORY 560,2022-2023,1500,gas,AT,SUV,wiki:Dongfeng_Fengguang_S560,
+FIREFLY,FIREFLY,2026,0,ev,AT,Hatchback,https://cnevpost.com/2026/03/24/nio-officially-launches-firefly-ev-in-thailand/,แบรนด์ย่อยของ NIO
+GAC AION,Y PLUS,2023-2026,0,ev,AT,SUV,wiki:Aion_Y,
+GAC AION,ES,2024-2026,0,ev,AT,Sedan,wiki:Aion_S,ยังไม่ยืนยันปีเปิดตัวในไทย
+GAC AION,V,2024-2026,0,ev,AT,SUV,wiki:Aion_V,
+HYPTEC,HT,2025-2026,0,ev,AT,SUV,wiki:Hyptec_HT,แบรนด์ของ GAC ยังไม่ยืนยันปีเปิดตัวในไทย
+GEELY,EX5,2025-2026,0,ev,AT,SUV,wiki:Geely_Xingyuan,EX5
+GEELY,EX2,2025-2026,0,ev,AT,Hatchback,https://global.geely.com/en/news/2025/geely-ex2-thailand-debut,
+GEELY,STARRAY EM-I,2025-2026,1500,hybrid,AT,SUV,https://en.thairath.co.th/news/auto/2926888,PHEV
+GMC,SIERRA,1999-2026,5300|6200,gas,AT,Pickup,wiki:GMC_Sierra,นำเข้าอิสระ
+GMC,YUKON,1999-2026,5300|6200,gas,AT,SUV,wiki:GMC_Yukon,นำเข้าอิสระ
+LEAPMOTOR,C10,2024-2026,0,ev,AT,SUV,https://www.motorist.co.th/en/article/3654/leapmotor-c10-set-to-enter-the-thai-market,
+LEAPMOTOR,T03,2025-2026,0,ev,AT,Hatchback,wiki:Leapmotor_T03,ยังไม่ยืนยันปีเปิดตัวในไทย
+LEAPMOTOR,B10,2025-2026,0,ev,AT,SUV,https://autobuzz.my/2025/10/13/leapmotor-b10-debuts-in-thailand-same-power-as-c10-smaller-package/,
+LEPAS,L6,2026,0,ev,AT,SUV,https://paultan.org/2026/07/27/2026-lepas-l6-ev-launched-in-thailand/,
+LINCOLN,TOWN CAR,1990-2011,4600,gas,AT,Sedan,wiki:Lincoln_Town_Car,นำเข้าอิสระ
+LINCOLN,NAVIGATOR,1998-2017,5400,gas,AT,SUV,wiki:Lincoln_Navigator,นำเข้าอิสระ
+LINCOLN,NAVIGATOR,2018-2026,3500,gas,AT,SUV,wiki:Lincoln_Navigator,นำเข้าอิสระ
+LOTUS,ELISE,1996-2021,1800,gas,MT,Convertible,wiki:Lotus_Elise,
+LOTUS,EXIGE,2000-2021,1800|3500,gas,AT|MT,Coupe,wiki:Lotus_Exige,
+LOTUS,EVORA,2009-2021,3500,gas,AT|MT,Coupe,wiki:Lotus_Evora,
+LOTUS,EMIRA,2022-2026,2000|3500,gas,AT|MT,Coupe,wiki:Lotus_Emira,
+LOTUS,ELETRE,2023-2026,0,ev,AT,SUV,wiki:Lotus_Eletre,
+LOTUS,EMEYA,2024-2026,0,ev,AT,Sedan,wiki:Lotus_Emeya,
+MAYBACH,57,2003-2012,5500|6000,gas,AT,Sedan,wiki:Maybach_57_and_62,
+MAYBACH,62,2003-2012,5500|6000,gas,AT,Sedan,wiki:Maybach_57_and_62,
+MCLAREN,12C,2011-2014,3800,gas,AT,Coupe|Convertible,wiki:McLaren_12C,
+MCLAREN,650S,2014-2017,3800,gas,AT,Coupe|Convertible,wiki:McLaren_650S,
+MCLAREN,570S,2015-2021,3800,gas,AT,Coupe|Convertible,wiki:McLaren_570S,
+MCLAREN,720S,2017-2023,4000,gas,AT,Coupe|Convertible,wiki:McLaren_720S,
+MCLAREN,GT,2019-2024,4000,gas,AT,Coupe,wiki:McLaren_GT,
+MCLAREN,ARTURA,2022-2026,3000,hybrid,AT,Coupe|Convertible,wiki:McLaren_Artura,
+MCLAREN,750S,2023-2026,4000,gas,AT,Coupe|Convertible,wiki:McLaren_750S,
+MCLAREN,GTS,2024-2026,4000,gas,AT,Coupe,wiki:McLaren_GTS,
+MITSUOKA,VIEWT,1993-2026,1300|1500,gas,AT,Sedan,wiki:Mitsuoka_Viewt,นำเข้าอิสระ
+MITSUOKA,HIMIKO,2008-2026,2000,gas,AT|MT,Convertible,wiki:Mitsuoka_Himiko,นำเข้าอิสระ
+NETA,V,2022-2026,0,ev,AT,Hatchback,https://www.carlist.my/news/the-neta-v-is-sold-in-thailand-for-just-rm72k-and-is-coming-to-malaysia-next-94216/94216,
+NETA,V-II,2024-2026,0,ev,AT,Hatchback,https://www.zigwheels.co.th/en/new-cars/neta,
+NETA,X,2024-2026,0,ev,AT,SUV,https://carnewschina.com/2024/07/28/neta-announces-neta-x-to-be-produced-in-thailand-and-sold-in-thailand-and-malaysia/,
+OMODA,C5 EV,2024-2026,0,ev,AT,SUV,wiki:Omoda_5,Omoda C5 EV / E5
+SMART,FORTWO,2006-2015,1000,gas,AT,Hatchback|Convertible,wiki:Smart_Fortwo,ยังไม่ยืนยันช่วงปีที่ขายในไทย
+SMART,#1,2024-2026,0,ev,AT,SUV,wiki:Smart_1,
+SMART,#3,2024-2026,0,ev,AT,SUV,wiki:Smart_3,
+TATA,XENON,2008-2017,2200,diesel,MT,Pickup,wiki:Tata_Xenon,
+TATA,SUPER ACE,2010-2015,1400,diesel,MT,Pickup,wiki:Tata_Ace,
+TESLA,MODEL 3,2022-2026,0,ev,AT,Sedan,wiki:Tesla_Model_3,
+TESLA,MODEL Y,2022-2026,0,ev,AT,SUV,wiki:Tesla_Model_Y,
+TESLA,MODEL S,2013-2026,0,ev,AT,Hatchback,wiki:Tesla_Model_S,นำเข้าอิสระ
+TESLA,MODEL X,2016-2026,0,ev,AT,SUV,wiki:Tesla_Model_X,นำเข้าอิสระ
+VINFAST,VF E34,2024-2026,0,ev,AT,SUV,https://paultan.org/2024/04/02/bangkok-2024-vinfast-enters-thailand-vf-e34-june-launch-vf3-vf5-vf6-vf7-vf8-vf9-evs-previewed/,
+VINFAST,VF 5,2024-2026,0,ev,AT,SUV,https://paultan.org/2024/04/02/bangkok-2024-vinfast-enters-thailand-vf-e34-june-launch-vf3-vf5-vf6-vf7-vf8-vf9-evs-previewed/,
+VINFAST,VF 6,2024-2026,0,ev,AT,SUV,https://www.pcauto.com/th/cars/vinfast/vf-6/,
+VINFAST,VF 7,2024-2026,0,ev,AT,SUV,https://www.pcauto.com/th/cars/vinfast/vf-7/,ยังไม่ยืนยันราคาในไทย
+WULING,AIR EV,2023-2026,0,ev,AT,Hatchback,https://wapcar.my/news/wuling-air-floats-into-thailand-as-its-cheapest-ev-price-equals-rm-52k-for-200-km-range-70169,
+WULING,BINGUO,2024-2026,0,ev,AT,Hatchback,https://carnewschina.com/2024/07/09/wuling-bingo-ev-launched-in-thailand-starting-at-11500-usd/,Bingo
+XPENG,G6,2024-2026,0,ev,AT,SUV,wiki:Xpeng_G6,
+XPENG,X9,2025-2026,0,ev,AT,MPV,wiki:Xpeng_X9,ยังไม่ยืนยันปีเปิดตัวในไทย
+ZEEKR,X,2024-2026,0,ev,AT,SUV,wiki:Zeekr_X,
+ZEEKR,001,2024-2026,0,ev,AT,Wagon,wiki:Zeekr_001,shooting brake
+ZEEKR,009,2024-2026,0,ev,AT,MPV,wiki:Zeekr_009,
+ZEEKR,7X,2025-2026,0,ev,AT,SUV,wiki:Zeekr_7X,
