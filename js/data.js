@@ -19,7 +19,10 @@ export async function predictPrices(xs){
   try{
     const r=await fetch(API+"/predict",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(xs),signal:ctl.signal});
     if(!r.ok)throw new Error("HTTP "+r.status);
-    return (await r.json()).map(o=>({price:o.price,untrained:!o.known_model||o.warnings.length>0}));
+    const d=await r.json(); // ตรวจผลจาก API ก่อนนำไปแสดง (ห้ามเชื่อ response ภายนอกตรงๆ)
+    if(!Array.isArray(d)||d.length!==xs.length)throw new Error("bad response");
+    return d.map(o=>{const p=Number(o?.price);if(!Number.isFinite(p)||p<0)throw new Error("bad price");
+      return {price:p,untrained:o.known_model!==true||(Array.isArray(o.warnings)&&o.warnings.length>0)}});
   }finally{clearTimeout(to)}
 }
 // ตัวอย่างสำเร็จรูป: ยี่ห้อ, รุ่น, ปี, ไมล์ (ใช้สเปคที่พบบ่อยสุดของปีนั้น)
