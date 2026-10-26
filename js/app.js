@@ -1,5 +1,5 @@
 // ===== ตัวหน้าเว็บ: ฟอร์ม ทำนายราคา แสดงผล ภาษา/ธีม =====
-import {T,NOW,predictPrice,EX} from "./data.js";
+import {T,NOW,predictPrices,SPACE_PAGE,EX} from "./data.js";
 import {SPEC,BODY,BODY_MODEL,COLORS,SRC} from "./specs.js";
 import {initFx,setTheme,setScroll,showText,isPaused,setPaused} from "./fx.js";
 import {initUI,scrollToEl,scramble,sfx,isSound,setSound,refresh} from "./ui.js";
@@ -11,7 +11,7 @@ let lang,theme;
 try{lang=localStorage.lang;theme=localStorage.theme}catch(e){}
 lang||=navigator.language.startsWith("th")?"th":"en";
 theme||=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
-let cur=null,pinned=null,seq=0,typed=null,tw=0,tt=0;
+let cur=null,pinned=null,seq=0,typed=null,tw=0,tt=0,failed=false;
 const SVG=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 const SUN=SVG('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>');
 const MOON=SVG('<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>');
@@ -29,14 +29,8 @@ function paint(animate){
   paintMore();paintCmp();
 }
 function paintMore(){
-  const t=T[lang],ps=(cur.parts||[]).filter(p=>Math.abs(p[1])>=500);
+  const t=T[lang];
   $("more").hidden=false;
-  const mx=Math.max(1,...ps.map(p=>Math.abs(p[1])));
-  let h="";
-  if(cur.base)h+=`<div class="fr"><span>${t.fBase}</span><span></span><span class="v">${fmt(r1(cur.base))}</span></div>`;
-  h+=ps.map(([k,v])=>`<div class="fr"><span>${t[k]}</span><span class="t"><i style="${v<0?"right":"left"}:50%;width:${Math.abs(v)/mx*50}%;background:var(--${v<0?"bad":"ok"})"></i></span><span class="v ${v<0?"dn":"up"}">${sgn(v)}</span></div>`).join("");
-  h+=`<div class="fr tot"><span>${t.fTotal}</span><span></span><span class="v">${fmt(cur.price)}</span></div>`;
-  $("fac").innerHTML=cur.parts?h:`<p class="hint">—</p>`;
   const f=cur.fut,W=360,H=170,PX=34,TOP=24,BOT=30,top=Math.max(...f)*1.05;
   const X=i=>PX+i*(W-2*PX)/(f.length-1),Y=v=>TOP+(H-TOP-BOT)*(1-v/top);
   $("chart").innerHTML=`<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${t.cAlt}: ${fmt(f[0])} → ${fmt(f[f.length-1])} ${t.baht}"><line x1="${PX}" x2="${W-PX}" y1="${H-BOT}" y2="${H-BOT}" stroke="var(--line)"/><polyline fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round" points="${f.map((v,i)=>X(i)+","+Y(v)).join(" ")}"/>${f.map((v,i)=>`<line x1="${X(i)}" x2="${X(i)}" y1="${TOP}" y2="${H-BOT}" stroke="var(--line)" stroke-dasharray="2 3"/><rect x="${X(i)-4}" y="${Y(v)-4}" width="8" height="8" transform="rotate(45 ${X(i)} ${Y(v)})" fill="var(--accent)"/><text x="${X(i)}" y="${H-10}" text-anchor="middle">${NOW+i}</text>`).join("")}<text x="${X(0)}" y="${Y(f[0])-10}" text-anchor="middle">${fmt(f[0])}</text><text x="${X(f.length-1)}" y="${Y(f[f.length-1])-10}" text-anchor="middle">${fmt(f[f.length-1])}</text></svg><p class="hint">${t.cNote}</p>`;
@@ -75,7 +69,8 @@ function render(){
   setTheme();paintMotion();
   fillVariants(true);fillColors(); // ป้ายใน dropdown เปลี่ยนตามภาษา
   if(document.querySelector("input[aria-invalid=true]"))check();
-  if(cur)paint(false);else paintCmp();
+  if(failed)showErr();
+  if(cur&&!failed)paint(false);else paintCmp();
 }
 
 // ===== ฟอร์มแบบเลือกไล่ลำดับ: ยี่ห้อ → รุ่น → ปี → สเปค (เฉพาะชุดที่มีจริงใน specs.js) =====
@@ -133,18 +128,30 @@ $("langBtn").onclick=()=>{lang=lang==="th"?"en":"th";store("lang",lang);render()
 $("themeBtn").onclick=()=>{theme=theme==="dark"?"light":"dark";store("theme",theme);render()};
 $("soundBtn").onclick=()=>{setSound(!isSound());render();sfx("tick")};
 $("motion").onclick=()=>{setPaused(!isPaused());paintMotion()};
+function showErr(){
+  $("out").innerHTML=`<p class="hint">${T[lang].err}</p><button class="ghost" id="retry" type="button">${T[lang].retry}</button>`;
+  $("retry").onclick=()=>$("f").requestSubmit();
+  $("more").hidden=true;
+}
 $("f").onsubmit=async e=>{
   e.preventDefault();
   if(!check())return;
   const x=read();
   const id=++seq;
+  failed=false;
   scrollToEl(document.querySelector(".result"));
   sfx("scan");
   $("out").innerHTML='<div class="sk big"></div><div class="sk"></div><div class="sk"></div>';
-  // ราคาปัจจุบัน + อีก 5 ปีข้างหน้า (ขับปีละ 15,000 กม.)
-  const [r,...fut]=await Promise.all([predictPrice(x),...[1,2,3,4,5].map(k=>predictPrice({...x,year:x.year-k,mileage:x.mileage+15000*k})),new Promise(res=>setTimeout(res,450))]);
+  // เซิร์ฟเวอร์ฟรีหลับอยู่: ถ้ารอนานกว่า 4 วินาที บอกผู้ใช้ว่ากำลังปลุก
+  const wake=setTimeout(()=>{if(id===seq)$("out").insertAdjacentHTML("beforeend",`<p class="hint">${T[lang].wake}</p>`)},4000);
+  // ราคาปัจจุบัน + อีก 5 ปีข้างหน้า (ขับปีละ 15,000 กม.) ส่งไปในคำขอเดียว (ไมล์สูงสุดที่โมเดลรับคือ 999,999)
+  const xs=[x,...[1,2,3,4,5].map(k=>({...x,year:x.year-k,mileage:Math.min(999999,x.mileage+15000*k)}))];
+  let rs;
+  try{[rs]=await Promise.all([predictPrices(xs),new Promise(res=>setTimeout(res,450))])}
+  catch(err){clearTimeout(wake);if(id===seq){failed=true;showErr()}return}
+  clearTimeout(wake);
   if(id!==seq)return;
-  cur={x,price:r.price,base:r.base,parts:r.parts,untrained:r.untrained,fut:[r.price,...fut.slice(0,5).map(f=>f.price)]};
+  cur={x,price:rs[0].price,untrained:rs[0].untrained,fut:rs.map(r=>r.price)};
   paint(true);
   showText(cur.price.toLocaleString("en-US")); // จุดในฉากหลังรวมตัวเป็นตัวเลขราคา
   refresh();
@@ -152,6 +159,7 @@ $("f").onsubmit=async e=>{
 
 $("hid").textContent=String(1e6+Math.floor(Math.random()*9e6));
 $("soundBtn").innerHTML=SPK;
+$("spaceLink").href=SPACE_PAGE;
 fillBrands();syncR();
 render();               // ตั้งธีมก่อน ให้ฉาก 3D อ่านสีได้
 initFx($("fx"));

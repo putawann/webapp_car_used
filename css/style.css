@@ -92,21 +92,14 @@ input[type=range]::-moz-range-thumb{width:9px;height:9px;border:0;border-radius:
 .bar{margin:22px 7px 10px;position:relative;height:8px;border-bottom:1px solid var(--muted);background:repeating-linear-gradient(90deg,var(--muted) 0 1px,transparent 1px 12px) bottom/100% 5px no-repeat}
 .bar b{position:absolute;left:50%;top:100%;width:10px;height:10px;margin:-5px 0 0 -5px;transform:rotate(45deg);background:var(--accent)}
 .ends{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:8px}
+.note a{color:inherit}
 .note{margin-top:24px;color:var(--accent);font-style:italic;font-size:.74rem;text-align:center}
 .fade{animation:up .45s ease both}
 @keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .sk{height:12px;margin:14px auto;width:60%;background:linear-gradient(90deg,var(--soft) 25%,var(--line) 50%,var(--soft) 75%);background-size:200% 100%;animation:sh 1s linear infinite}
 .sk.big{height:44px;width:80%}
 @keyframes sh{to{background-position:-200% 0}}
-.two{display:grid;gap:32px;grid-template-columns:1fr}
-@media(min-width:700px){.two{grid-template-columns:1fr 1fr}}
-.fr{display:grid;grid-template-columns:7.5em 1fr 6.5em;gap:8px;align-items:center;font-size:.82rem;margin:9px 0;text-align:left}
-.fr .v{text-align:right;font-variant-numeric:tabular-nums}
-.fr .t{position:relative;height:4px;background:var(--soft)}
-.fr .t::before{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--muted)}
-.fr .t i{position:absolute;top:0;bottom:0}
 .up{color:var(--accent)}.dn{color:var(--bad)}
-.fr.tot{border-top:1px solid var(--line);padding-top:10px;font-weight:700}
 .chart{width:100%;height:auto;display:block}
 .chart text{fill:var(--muted);font-size:10px;font-family:var(--mono)}
 .cmp{display:grid;grid-template-columns:7em 1fr 1fr;gap:8px 12px;font-size:.85rem;text-align:left}
