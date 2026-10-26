@@ -1,5 +1,6 @@
 // ===== ตัวหน้าเว็บ: ฟอร์ม ทำนายราคา แสดงผล ภาษา/ธีม =====
-import {T,NOW,predictPrices,SPACE_PAGE,EX} from "./data.js";
+import {T,NOW,predictPrices,EX} from "./data.js";
+import {modelReady} from "./model.js";
 import {SPEC,BODY,BODY_MODEL,COLORS,SRC} from "./specs.js";
 import {initFx,setTheme,setScroll,showText,isPaused,setPaused} from "./fx.js";
 import {initUI,scrollToEl,scramble,sfx,isSound,setSound,refresh} from "./ui.js";
@@ -11,7 +12,7 @@ let lang,theme;
 try{lang=localStorage.lang;theme=localStorage.theme}catch(e){}
 lang||=navigator.language.startsWith("th")?"th":"en";
 theme||=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
-let cur=null,pinned=null,seq=0,typed=null,tw=0,tt=0,failed=false;
+let cur=null,pinned=null,seq=0,typed=null,tw=0,tt=0,failed=false,modelLoaded=false;
 const SVG=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 const SUN=SVG('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>');
 const MOON=SVG('<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>');
@@ -142,14 +143,17 @@ $("f").onsubmit=async e=>{
   scrollToEl(document.querySelector(".result"));
   sfx("scan");
   $("out").innerHTML='<div class="sk big"></div><div class="sk"></div><div class="sk"></div>';
-  // เซิร์ฟเวอร์ฟรีหลับอยู่: ถ้ารอนานกว่า 4 วินาที บอกผู้ใช้ว่ากำลังปลุก
-  const wake=setTimeout(()=>{if(id===seq)$("out").insertAdjacentHTML("beforeend",`<p class="hint">${T[lang].wake}</p>`)},4000);
-  // ราคาปัจจุบัน + อีก 5 ปีข้างหน้า (ขับปีละ 15,000 กม.) ส่งไปในคำขอเดียว (ไมล์สูงสุดที่โมเดลรับคือ 999,999)
+  // โหลด JSON ครั้งแรก: แสดง "กำลังโหลดโมเดล…" เฉพาะตอนที่ยังโหลดไม่เสร็จ
+  let loadHint=null;
+  if(!modelLoaded){
+    loadHint=document.createElement("p");loadHint.className="hint";loadHint.textContent=T[lang].load;$("out").append(loadHint);
+  }
+  modelReady().then(()=>{modelLoaded=true;loadHint?.remove()},()=>loadHint?.remove());
+  // ราคาปัจจุบัน + อีก 5 ปีข้างหน้า (ขับปีละ 15,000 กม.) คำนวณในเบราว์เซอร์ (ไมล์สูงสุดที่โมเดลรับคือ 999,999)
   const xs=[x,...[1,2,3,4,5].map(k=>({...x,year:x.year-k,mileage:Math.min(999999,x.mileage+15000*k)}))];
   let rs;
   try{[rs]=await Promise.all([predictPrices(xs),new Promise(res=>setTimeout(res,450))])}
-  catch(err){clearTimeout(wake);if(id===seq){failed=true;showErr()}return}
-  clearTimeout(wake);
+  catch(err){if(id===seq){failed=true;showErr()}return}
   if(id!==seq)return;
   cur={x,price:rs[0].price,untrained:rs[0].untrained,fut:rs.map(r=>r.price)};
   paint(true);
@@ -159,7 +163,6 @@ $("f").onsubmit=async e=>{
 
 $("hid").textContent=String(1e6+Math.floor(Math.random()*9e6));
 $("soundBtn").innerHTML=SPK;
-$("spaceLink").href=SPACE_PAGE;
 fillBrands();syncR();
 render();               // ตั้งธีมก่อน ให้ฉาก 3D อ่านสีได้
 initFx($("fx"));

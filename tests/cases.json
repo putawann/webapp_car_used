@@ -1,0 +1,896 @@
+[
+ {
+  "car": {
+   "brand": "BMW",
+   "model": "SERIES 6",
+   "year": 2026,
+   "mileage": 119339,
+   "trans": "AT",
+   "fuel": "diesel",
+   "cc": 2400,
+   "body": "SUV",
+   "shape": "MPV"
+  },
+  "raw": 1608600.625,
+  "price": 1609000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "LEXUS",
+   "model": "LM300H",
+   "year": 2011,
+   "mileage": 100758,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 2000,
+   "body": "PPV"
+  },
+  "raw": 629075.5625,
+  "price": 629000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "BMW",
+   "model": "325I",
+   "year": 2007,
+   "mileage": 195791,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 1600,
+   "body": "Van",
+   "shape": "MPV"
+  },
+  "raw": 253451.515625,
+  "price": 253000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "TOYOTA",
+   "model": "HARRIER",
+   "year": 2010,
+   "mileage": 114140,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 2000,
+   "body": "Pickup",
+   "shape": "PPV",
+   "color": "Silver"
+  },
+  "raw": 341046.84375,
+  "price": 341000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "LAND ROVER",
+   "model": "FREELANDER",
+   "year": 2019,
+   "mileage": 375533,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 2500,
+   "body": "Pickup",
+   "shape": "Sedan",
+   "color": "Black"
+  },
+  "raw": 1083859.75,
+  "price": 1084000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MINI",
+   "model": "COOPER 3 DOOR HATCH",
+   "year": 2005,
+   "mileage": 117401,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 1600,
+   "body": "MPV",
+   "shape": "MPV"
+  },
+  "raw": 330992.875,
+  "price": 331000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "BMW",
+   "model": "SERIES 5",
+   "year": 2013,
+   "mileage": 162376,
+   "trans": "AT",
+   "fuel": "hybrid",
+   "cc": 2800,
+   "body": "MPV",
+   "color": "Grey"
+  },
+  "raw": 410302.46875,
+  "price": 410000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "BMW",
+   "model": "X6",
+   "year": 2013,
+   "mileage": 86151,
+   "trans": "AT",
+   "fuel": "diesel",
+   "cc": 1800,
+   "body": "MPV",
+   "color": "Grey"
+  },
+  "raw": 491568.59375,
+  "price": 492000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "BMW",
+   "model": "750E",
+   "year": 2019,
+   "mileage": 372224,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 2500,
+   "body": "PPV"
+  },
+  "raw": 780370.0,
+  "price": 780000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "KIA",
+   "model": "RIO",
+   "year": 2001,
+   "mileage": 158061,
+   "trans": "MT",
+   "fuel": "gas",
+   "cc": 3000,
+   "body": "Pickup"
+  },
+  "raw": 116676.8203125,
+  "price": 117000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MINI",
+   "model": "HATCH COOPER",
+   "year": 2002,
+   "mileage": 6208,
+   "trans": "AT",
+   "fuel": "gas",
+   "cc": 2000,
+   "body": "MPV"
+  },
+  "raw": 367232.0625,
+  "price": 367000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "HAVAL",
+   "model": "H6",
+   "year": 2015,
+   "mileage": 184775,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 1000,
+   "body": "Hatchback",
+   "shape": "SUV"
+  },
+  "raw": 197621.703125,
+  "price": 198000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "TOYOTA",
+   "model": "KLUGER",
+   "year": 2021,
+   "mileage": 257183,
+   "trans": "MT",
+   "fuel": "gas",
+   "cc": 2000,
+   "body": "PPV",
+   "shape": "Pickup"
+  },
+  "raw": 634480.375,
+  "price": 634000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MERCEDES-BENZ",
+   "model": "CLA35",
+   "year": 2017,
+   "mileage": 236746,
+   "trans": "AT",
+   "fuel": "gas",
+   "cc": 2000,
+   "body": "Pickup",
+   "color": "White"
+  },
+  "raw": 772547.125,
+  "price": 773000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MERCEDES-BENZ",
+   "model": "GLC-CLASS",
+   "year": 2025,
+   "mileage": 194551,
+   "trans": "MT",
+   "fuel": "gas",
+   "cc": 1800,
+   "body": "Pickup",
+   "color": "Silver"
+  },
+  "raw": 805052.8125,
+  "price": 805000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "FORD",
+   "model": "ECOSPORT",
+   "year": 2012,
+   "mileage": 369815,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 2400,
+   "body": "SUV",
+   "color": "Blue"
+  },
+  "raw": 203711.3125,
+  "price": 204000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MAZDA",
+   "model": "CX-7",
+   "year": 2014,
+   "mileage": 329193,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 1500,
+   "body": "PPV"
+  },
+  "raw": 182890.21875,
+  "price": 183000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "BMW",
+   "model": "730LI",
+   "year": 2007,
+   "mileage": 201390,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 2400,
+   "body": "Hatchback"
+  },
+  "raw": 269533.59375,
+  "price": 270000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MERCEDES-BENZ",
+   "model": "G400",
+   "year": 2009,
+   "mileage": 326067,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 1600,
+   "body": "PPV"
+  },
+  "raw": 1075625.5,
+  "price": 1076000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MERCEDES-BENZ",
+   "model": "C250",
+   "year": 2008,
+   "mileage": 101901,
+   "trans": "AT",
+   "fuel": "diesel",
+   "cc": 2000,
+   "body": "Hatchback"
+  },
+  "raw": 398022.78125,
+  "price": 398000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "TOYOTA",
+   "model": "C-HR",
+   "year": 2011,
+   "mileage": 213499,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 2800,
+   "body": "SUV",
+   "color": "Red"
+  },
+  "raw": 290172.40625,
+  "price": 290000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "VOLVO",
+   "model": "S80",
+   "year": 2004,
+   "mileage": 310174,
+   "trans": "AT",
+   "fuel": "hybrid",
+   "cc": 2800,
+   "body": "MPV",
+   "color": "Red"
+  },
+  "raw": 187729.25,
+  "price": 188000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "SUBARU",
+   "model": "FORESTER",
+   "year": 2025,
+   "mileage": 236447,
+   "trans": "AT",
+   "fuel": "gas",
+   "cc": 2400,
+   "body": "SUV",
+   "color": "White"
+  },
+  "raw": 918382.3125,
+  "price": 918000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "BMW",
+   "model": "328I",
+   "year": 2005,
+   "mileage": 245619,
+   "trans": "AT",
+   "fuel": "diesel",
+   "cc": 1000,
+   "body": "MPV",
+   "shape": "SUV",
+   "color": "Grey"
+  },
+  "raw": 386072.15625,
+  "price": 386000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MG",
+   "model": "ZS",
+   "year": 2002,
+   "mileage": 297633,
+   "trans": "AT",
+   "fuel": "hybrid",
+   "cc": 1600,
+   "body": "Sedan",
+   "shape": "Pickup",
+   "color": "White"
+  },
+  "raw": 42749.44921875,
+  "price": 43000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "TR",
+   "model": "TRANSFORMER LL",
+   "year": 2003,
+   "mileage": 223851,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 2500,
+   "body": "PPV",
+   "shape": "Hatchback"
+  },
+  "raw": 323780.5625,
+  "price": 324000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MERCEDES-BENZ",
+   "model": "GLE300",
+   "year": 2008,
+   "mileage": 254326,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 2500,
+   "body": "Sedan",
+   "color": "White"
+  },
+  "raw": 540019.5,
+  "price": 540000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "HONDA",
+   "model": "ODYSSEY",
+   "year": 2021,
+   "mileage": 53885,
+   "trans": "AT",
+   "fuel": "hybrid",
+   "cc": 1200,
+   "body": "Pickup",
+   "shape": "Sedan"
+  },
+  "raw": 843167.625,
+  "price": 843000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MITSUBISHI",
+   "model": "DELICA",
+   "year": 2026,
+   "mileage": 229151,
+   "trans": "AT",
+   "fuel": "diesel",
+   "cc": 3000,
+   "body": "Sedan",
+   "shape": "PPV"
+  },
+  "raw": 2582713.0,
+  "price": 2583000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "MERCEDES-BENZ",
+   "model": "S350",
+   "year": 2016,
+   "mileage": 53817,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 3000,
+   "body": "MPV",
+   "shape": "Pickup",
+   "color": "Black"
+  },
+  "raw": 1235257.375,
+  "price": 1235000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "PROTON",
+   "model": "SUPRIMA S",
+   "year": 2021,
+   "mileage": 197453,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 2500,
+   "body": "PPV"
+  },
+  "raw": 714373.5625,
+  "price": 714000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "NISSAN",
+   "model": "ALMERA",
+   "year": 2016,
+   "mileage": 275262,
+   "trans": "AT",
+   "fuel": "gas",
+   "cc": 2800,
+   "body": "Sedan",
+   "shape": "Wagon"
+  },
+  "raw": 352522.5,
+  "price": 353000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "HONDA",
+   "model": "CITY",
+   "year": 2009,
+   "mileage": 46204,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 2400,
+   "body": "MPV"
+  },
+  "raw": 396147.5625,
+  "price": 396000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "HONDA",
+   "model": "HR-V",
+   "year": 2005,
+   "mileage": 278301,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 1500,
+   "body": "PPV",
+   "shape": "PPV"
+  },
+  "raw": 248837.28125,
+  "price": 249000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "AUDI",
+   "model": "Q2",
+   "year": 2005,
+   "mileage": 328140,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 1500,
+   "body": "PPV"
+  },
+  "raw": 237727.21875,
+  "price": 238000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "GWM",
+   "model": "HAVAL H6",
+   "year": 2007,
+   "mileage": 275329,
+   "trans": "AT",
+   "fuel": "diesel",
+   "cc": 2400,
+   "body": "MPV"
+  },
+  "raw": 159088.34375,
+  "price": 159000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "TOYOTA",
+   "model": "ALTIS",
+   "year": 2018,
+   "mileage": 261019,
+   "trans": "AT",
+   "fuel": "diesel",
+   "cc": 1800,
+   "body": "Van"
+  },
+  "raw": 743998.5625,
+  "price": 744000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "toyota",
+   "model": "Altis 1.8",
+   "year": 2019,
+   "mileage": 55221,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 1800,
+   "body": "Van"
+  },
+  "raw": 859485.375,
+  "price": 859000,
+  "known_model": false,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "NISSAN",
+   "model": "np300-navara",
+   "year": 2020,
+   "mileage": 89129,
+   "trans": "AT",
+   "fuel": "gas",
+   "cc": 2500,
+   "body": "Pickup"
+  },
+  "raw": 473323.75,
+  "price": 473000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "NISSAN",
+   "model": "NP 300 NAVARA",
+   "year": 2017,
+   "mileage": 91952,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 2500,
+   "body": "Pickup"
+  },
+  "raw": 309185.0,
+  "price": 309000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "TOYOTA",
+   "model": "ZZZ NOT A CAR",
+   "year": 2020,
+   "mileage": 231764,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 2000,
+   "body": "Hatchback"
+  },
+  "raw": 662256.0,
+  "price": 662000,
+  "known_model": false,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "ZZTEST",
+   "model": "CAMRY",
+   "year": 2020,
+   "mileage": 187944,
+   "trans": "AT",
+   "fuel": "hybrid",
+   "cc": 2000,
+   "body": "Pickup"
+  },
+  "raw": 480827.90625,
+  "price": 481000,
+  "known_model": false,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": " zz test ",
+   "model": "not-a-model",
+   "year": 2015,
+   "mileage": 175448,
+   "trans": "AT",
+   "fuel": "diesel",
+   "cc": 1500,
+   "body": "SUV"
+  },
+  "raw": 304504.59375,
+  "price": 305000,
+  "known_model": false,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "TOYOTA",
+   "model": "CAMRY",
+   "year": 2022,
+   "mileage": 322287,
+   "trans": "AT",
+   "fuel": "ev",
+   "cc": 2500,
+   "body": "SUV"
+  },
+  "raw": 814955.5625,
+  "price": 815000,
+  "known_model": true,
+  "warnings": [
+   "ev_not_in_training"
+  ]
+ },
+ {
+  "car": {
+   "brand": "BYD",
+   "model": "SEALION 6",
+   "year": 2025,
+   "mileage": 66450,
+   "trans": "MT",
+   "fuel": "ev",
+   "cc": 1500,
+   "body": "Pickup"
+  },
+  "raw": 649791.6875,
+  "price": 650000,
+  "known_model": true,
+  "warnings": [
+   "ev_not_in_training"
+  ]
+ },
+ {
+  "car": {
+   "brand": "HONDA",
+   "model": "CIVIC",
+   "year": 2019,
+   "mileage": 51230,
+   "trans": "AT",
+   "fuel": "gas",
+   "cc": 900,
+   "body": "Sedan"
+  },
+  "raw": 413944.28125,
+  "price": 414000,
+  "known_model": true,
+  "warnings": [
+   "engine_outside_training_range"
+  ]
+ },
+ {
+  "car": {
+   "brand": "HONDA",
+   "model": "CIVIC",
+   "year": 2019,
+   "mileage": 92848,
+   "trans": "MT",
+   "fuel": "gas",
+   "cc": 3500,
+   "body": "Sedan"
+  },
+  "raw": 1528317.5,
+  "price": 1528000,
+  "known_model": true,
+  "warnings": [
+   "engine_outside_training_range"
+  ]
+ },
+ {
+  "car": {
+   "brand": "HONDA",
+   "model": "CIVIC",
+   "year": 1995,
+   "mileage": 222631,
+   "trans": "MT",
+   "fuel": "gas",
+   "cc": 1800,
+   "body": "PPV"
+  },
+  "raw": 148705.65625,
+  "price": 149000,
+  "known_model": true,
+  "warnings": [
+   "year_outside_training_range"
+  ]
+ },
+ {
+  "car": {
+   "brand": "HONDA",
+   "model": "CIVIC",
+   "year": 2030,
+   "mileage": 309999,
+   "trans": "MT",
+   "fuel": "gas",
+   "cc": 1800,
+   "body": "MPV"
+  },
+  "raw": 930348.125,
+  "price": 930000,
+  "known_model": true,
+  "warnings": [
+   "year_outside_training_range"
+  ]
+ },
+ {
+  "car": {
+   "brand": "HONDA",
+   "model": "CIVIC",
+   "year": 1900,
+   "mileage": 55684,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 1000,
+   "body": "Pickup"
+  },
+  "raw": 192901.890625,
+  "price": 193000,
+  "known_model": true,
+  "warnings": [
+   "year_outside_training_range"
+  ]
+ },
+ {
+  "car": {
+   "brand": "TOYOTA",
+   "model": "YARIS",
+   "year": 2001,
+   "mileage": 0,
+   "trans": "MT",
+   "fuel": "hybrid",
+   "cc": 1000,
+   "body": "Pickup"
+  },
+  "raw": 215780.578125,
+  "price": 216000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "TOYOTA",
+   "model": "YARIS",
+   "year": 2026,
+   "mileage": 999999,
+   "trans": "AT",
+   "fuel": "gas",
+   "cc": 3000,
+   "body": "MPV"
+  },
+  "raw": 2209690.5,
+  "price": 2210000,
+  "known_model": true,
+  "warnings": []
+ },
+ {
+  "car": {
+   "brand": "TOYOTA",
+   "model": "YARIS",
+   "year": 2100,
+   "mileage": 363358,
+   "trans": "MT",
+   "fuel": "diesel",
+   "cc": 0,
+   "body": "Sedan"
+  },
+  "raw": 399598.09375,
+  "price": 400000,
+  "known_model": true,
+  "warnings": [
+   "engine_outside_training_range",
+   "year_outside_training_range"
+  ]
+ }
+]
