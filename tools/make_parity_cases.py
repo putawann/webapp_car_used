@@ -1,20 +1,17 @@
-"""Build synthetic parity cases with the Python pipeline (app.py is the truth).
+"""Build synthetic parity cases with the reproduced notebook Python pipeline.
 
-Run with the venv that can import app.py (fastapi/pydantic):
-  <apptest python> -X utf8 tools/make_parity_cases.py
+Run with the research venv after refit_merge50minc.py:
+  python -X utf8 tools/make_parity_cases.py
 Writes tests/cases.json: car (web vocabulary), raw, price, known_model, warnings.
 No data rows from any CSV are used; every car below is generated.
 """
 import json
 import random
-import sys
 from pathlib import Path
 
-MODEL_DIR = Path(r"D:\AI_Workspace\car-project\deploy\xgb_new_cardb_space")
 OUT = Path(__file__).resolve().parent.parent / "tests" / "cases.json"
 
-sys.path.insert(0, str(MODEL_DIR))
-import app  # noqa: E402  (loads the real pipeline)
+import model_reference as app  # loads the reproduced notebook pipeline
 
 BODIES = ["Sedan", "Hatchback", "Pickup", "Van", "SUV", "PPV", "MPV"]
 GEARS = ["AT", "MT"]
@@ -69,6 +66,16 @@ def main():
     cars.append(car("TOYOTA", "YARIS", year=2026, cc=3000, mileage=999_999))
     cars.append(car("TOYOTA", "YARIS", year=2100, cc=0))
 
+    # New model: every known pair, each separate SUV/PPV/MPV category, real range boundaries.
+    for pair in PAIRS:
+        cars.append(car(*pair.split("|", 1), year=2020, cc=1500, mileage=75000))
+    for body in BODIES:
+        cars.append(car("TOYOTA", "FORTUNER", body=body, year=2020, cc=2800))
+    for year in [2005, 2006, 2026, 2027]:
+        for cc in [999, 1000, 3500, 3501]:
+            cars.append(car("HONDA", "CIVIC", year=year, cc=cc))
+    cars.append(car("BYD", "ATTO 3", fuel="ev", cc=0, year=2025))
+
     py_cars = [app.Car(**c) for c in cars]
     raw, rows = app.predict_raw(py_cars)
 
@@ -84,6 +91,7 @@ def main():
 
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(cases, ensure_ascii=False, indent=1), encoding="utf-8")
+    (OUT.parent / "model_id.json").write_text(json.dumps(app.META["model_id"]), encoding="utf-8")
     print(f"wrote {OUT} with {len(cases)} cases")
 
 

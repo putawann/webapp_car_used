@@ -39,7 +39,7 @@ js/data.js  predictPrices()  >  js/model.js  predictCars()
 - รถ "อีก k ปีข้างหน้า" คำนวณโดยลด `year` ลง k และเพิ่มไมล์ 15,000 × k (สูงสุด 999,999)
   เพื่อแสดงแนวโน้มราคาตกของรถคันนั้น
 - ถ้ารุ่นหรือสเปกไม่อยู่ในข้อมูลเทรน ระบบยังทำนายให้ แต่ติดป้ายว่าไม่เคยเห็นในข้อมูลเทรน (`untrained`)
-- ขนาดที่ต้องโหลด: โมเดล ~1.8 MB (`model/*.json`) และสเปก ~0.5 MB (`js/specs.js`)
+- ขนาดที่ต้องโหลด: โมเดล ~3.8 MB (`model/*.json`) และสเปก ~0.5 MB (`js/specs.js`)
 
 ## 2. โครงสร้างโฟลเดอร์
 
@@ -53,9 +53,12 @@ js/data.js  predictPrices()  >  js/model.js  predictCars()
 | `js/specs.js` | **ไฟล์สร้างอัตโนมัติ ห้ามแก้ด้วยมือ** สเปกรถตลาดไทยสำหรับ dropdown |
 | `js/fx.js` | ฉากหลัง 3D (อนุภาครูปรถ เปลี่ยนรูปทรง ล้อหมุน ถนน) |
 | `js/ui.js` | แอนิเมชันเลื่อนหน้า (GSAP/Lenis) ตัวอักษรสุ่ม เคอร์เซอร์ เสียง |
-| `model/xgb_new_cardb_trees.json` | ต้นไม้ทุกต้น + base_score ของโมเดล (1.7 MB) |
+| `model/xgb_merge50minc_trees.json` | ต้นไม้ทุกต้น + base_score ของโมเดล (3.8 MB) |
 | `model/encoder.json` | ลำดับและค่าของ one-hot, ช่วงปี/เครื่องยนต์ที่เทรน, รายชื่อคู่ ยี่ห้อ-รุ่นที่รู้จัก, alias |
 | `data/specs/*.csv` | ต้นทางของสเปก (หนึ่งไฟล์ต่อยี่ห้อ ยี่ห้อเล็กรวมใน `others.csv`) ทุกแถวมีแหล่งอ้างอิง |
+| `tools/refit_merge50minc.py` | สร้าง pipeline ผู้ชนะและตรวจ metric ก่อนบันทึกนอก repo |
+| `model/provenance.json` | พารามิเตอร์ ผลตรวจ metric เวอร์ชันไลบรารี และ hash ต้นทาง |
+| `tools/model_reference.py` | Python oracle สำหรับสร้างกรณีทดสอบ |
 | `tools/export_model.py` | ส่งออกโมเดลที่เทรนแล้วเป็น `model/*.json` |
 | `tools/make_parity_cases.py` | สร้างกรณีทดสอบ `tests/cases.json` จาก pipeline Python |
 | `tools/build_specs.py` | สร้าง `js/specs.js` จาก `data/specs/*.csv` |
@@ -76,19 +79,19 @@ python -m http.server 8765
 
 ## 4. โมเดลและการทำนาย
 
-**โมเดลปัจจุบัน:** `XGB_new_cardb` (ชุดข้อมูล v5 `new_car_dataset.csv` แบบ base: ไม่ใช้ log ไม่ scale)
+**โมเดลปัจจุบัน:** `XGB_merge50minC` (ชุดข้อมูล v5 `merge_50min_clean.csv` แบบ base: ไม่ใช้ log ไม่ scale)
 
 | รายการ | ค่า |
 |---|---|
 | ฟีเจอร์ | `engine`, `mileage`, `car_age`, `brand`, `model`, `car_type`, `fuel`, `gear` |
-| พารามิเตอร์ | max_depth 12, min_child_weight 1, n_estimators 300, reg_lambda 1.0 |
-| ข้อมูล | train 23,657 / validation 2,957 / test 2,957 แถว |
-| ผลบน test | R² 0.9398, MAE 64,228 บาท, RMSE 144,547 บาท |
+| พารามิเตอร์ | max_depth 16, min_child_weight 1, n_estimators 122, reg_lambda 10.0 |
+| ข้อมูล | train 36,859 / validation 4,607 / test 4,608 แถว |
+| ผลบน test | R² 0.9458, MAE 51,271 บาท, RMSE 76,379 บาท |
 | เวอร์ชันที่เทรน | xgboost 3.4.1, scikit-learn 1.9.1 |
 
-> โมเดลนี้เป็นรอบเก่า (`new_cardb`) ผลรอบใหม่ `merge50minC` ยังไม่ถูกนำมาใช้ในเว็บ ดูหัวข้อ 8
+> สร้างโมเดลผู้ชนะโดย fit เฉพาะ train (80%) ผล metric ทั้งสามชุดตรงกับ notebook หลักฐานอยู่ใน `model/provenance.json` โดยไม่มีแถวข้อมูลเทรน
 
-### การเข้ารหัสฟีเจอร์ (`js/model.js` ต้องตรงกับ `app.py`/`model_def.py` ของโมเดลทุกจุด)
+### การเข้ารหัสฟีเจอร์ (`js/model.js` ต้องตรงกับ pipeline และ `tools/model_reference.py`)
 
 - ตัวเลข: `engine` = cc, `mileage` = กม., `car_age` = `2026 - year`
 - ตัวหมวดหมู่ one-hot ตามลำดับใน `encoder.json`; ค่าที่ไม่รู้จักจะได้ศูนย์ทั้งแถว (เหมือน pipeline)
@@ -98,16 +101,16 @@ python -m http.server 8765
   |---|---|
   | fuel `gas` / `diesel` / `hybrid` / `ev` | `Benzine` / `Diesel` / `Hybrid` / `Hybrid` (ไฟฟ้าไม่มีในข้อมูลเทรน จึงใช้ Hybrid และเตือน) |
   | trans `AT` / `MT` | `Automatic` / `Manual` |
-  | body `SUV`, `PPV`, `MPV` | `SUV/PPV/MPV` (Sedan, Hatchback, Pickup, Van ใช้ชื่อเดิม) |
+  | body ทุกแบบ | ใช้ชื่อเดิม แยก `SUV`, `PPV`, `MPV` ตาม `body_map` ใน encoder |
 
-- ชื่อรุ่น: ตัวพิมพ์ใหญ่ เก็บเฉพาะ A-Z และ 0-9 แล้วแทน alias (เช่น `ALTIS` เป็น `COROLLAALTIS`) ใช้คีย์ `ยี่ห้อ|รุ่น` ใน `model_key_map`
+- ชื่อรุ่น: ตัวพิมพ์ใหญ่ เก็บเฉพาะ A-Z และ 0-9 แล้วค้นชื่อจริงก่อน alias (เช่น `ALTIS` เป็น `COROLLAALTIS` เมื่อมีชื่อปลายทางในยี่ห้อนั้น) ใช้คีย์ `ยี่ห้อ|รุ่น` ใน `model_key_map`
   ถ้าไม่พบคู่ ยี่ห้อ|รุ่น ที่รู้จัก ใช้รุ่น `__unknown__` (`known_model=false`)
 - ผลลัพธ์ = `max(0, round(raw/1000) × 1000)` โดย round แบบครึ่งเป็นคู่เหมือน Python
 
 ### ผลลัพธ์ของ `predictCars(list)`
 
 คืน `[{price, raw, known_model, warnings}]` โดย `warnings` มีได้ 3 แบบ:
-`ev_not_in_training`, `engine_outside_training_range` (นอก 1,000-3,000 cc), `year_outside_training_range` (นอก 2001-2026)
+`ev_not_in_training`, `engine_outside_training_range` (นอก 1,000-3,500 cc), `year_outside_training_range` (นอก 2006-2026)
 
 ตรวจ input ตามกติกาเดียวกับ pydantic ฝั่ง Python (ชนิด/ช่วง ถ้าผิดจะ throw): ยี่ห้อ 1-60 ตัวอักษร,
 รุ่น 1-80, ปี 1900-2100 (จำนวนเต็ม), ไมล์ 0-999,999, cc 0-10,000
@@ -120,16 +123,16 @@ python -m http.server 8765
 
 ### วิธีเปลี่ยนไปใช้โมเดลตัวใหม่
 
-1. เทรนและบันทึก pipeline (`model.joblib`, `meta.json`, `model_def.py`) ตามโครงสร้างของโฟลเดอร์ `deploy/xgb_new_cardb_space/` ใน repo งานวิจัย
-2. แก้ `MODEL_DIR` ใน `tools/export_model.py` ให้ชี้โฟลเดอร์นั้น แล้วรัน `python -X utf8 tools/export_model.py` ได้ `model/*.json` ใหม่
-   (สคริปต์ตรวจ objective เป็น `reg:squarederror`, ไม่มี categorical split, ลำดับคอลัมน์ encoder ตรงกับ booster)
-3. แก้ `TREES_URL` ใน `js/model.js` ถ้าเปลี่ยนชื่อไฟล์
-4. สร้างกรณีทดสอบใหม่ด้วย `tools/make_parity_cases.py` (ต้องรันในสภาพแวดล้อมที่ import `app.py` ของโมเดลได้ ต้องมี fastapi/pydantic) แล้วแก้ `MODEL_DIR` ข้างใน
-5. รัน `node tests/parity.mjs` ต้องผ่านก่อนเสมอ
-6. อัปเดตหัวข้อ 4 ของ README นี้ (ชื่อโมเดล, ผล test, พารามิเตอร์) ให้ตรง
+1. รัน `python -X utf8 tools/refit_merge50minc.py` ด้วย research venv เพื่อสร้าง pipeline จาก encoder/model factory และพารามิเตอร์ผู้ชนะใน notebook ตรวจ metric ทุกชุดให้ตรงก่อนบันทึก
+2. รัน `python -X utf8 tools/export_model.py` เพื่อส่งออกต้นไม้, encoder และ `model/provenance.json`
+3. รัน `python -X utf8 tools/make_parity_cases.py` เพื่อสร้างกรณีทดสอบสังเคราะห์จาก pipeline Python จริง ไม่ต้องมี FastAPI
+4. รัน `node tests/parity.mjs` แล้วตรวจหน้าเว็บผ่าน HTTP
+5. โมเดลรอบอื่นต้องปรับชื่อไฟล์, MODEL_ID, การเตรียมข้อมูล/แบ่งชุด และการแปลงค่าฟอร์มให้ตรง พร้อมอัปเดตเอกสาร
 
-> `MODEL_DIR` ในสคริปต์ทั้งสองชี้พาธเครื่องผู้พัฒนา (`D:\AI_Workspace\car-project\deploy\xgb_new_cardb_space`) ต้องแก้ก่อนรันบนเครื่องอื่น
-> โฟลเดอร์โมเดลนั้นอยู่ใน repo งานวิจัย ไม่ได้อยู่ใน repo นี้
+ค่าปริยายของ --project-dir คือ D:/AI_Workspace/car-project; อ่าน notebook ใน reports/car-price-v5/XGB/XGB_merge50minC.ipynb และ CSV ใน data/main/merge_50min_clean.csv โดยไม่แก้ต้นทาง
+ไฟล์ส่วนตัว (model.joblib, model_def.py, meta.json) บันทึกที่ D:/AI_Workspace/artifacts/xgb_merge50minc_browser นอก repo เปลี่ยนด้วย --output-dir และ --model-dir ของ export ได้ ถ้าเปลี่ยนต้องแก้ MODEL_DIR ใน tools/model_reference.py ด้วย
+
+Rollback: คืน js/model.js, js/data.js, model/encoder.json และชุดทดสอบจาก commit ก่อนเปลี่ยนพร้อมกัน ไฟล์ model/xgb_new_cardb_trees.json ยังเก็บไว้ แต่เว็บไม่โหลดไฟล์นี้ รุ่นต้นไม้และ encoder ต้องตรงกัน ระบบจะปฏิเสธไฟล์ข้ามรุ่น
 
 ## 5. ข้อมูลสเปกรถ (dropdown)
 
@@ -179,10 +182,10 @@ node tests/parity.mjs
 ```
 
 ต้องการ Node ที่รองรับ ES modules (ทดสอบกับ Node 24) ไม่ต้องติดตั้งแพ็กเกจ
-ผลที่คาดหวัง: `parity ok: 53 cases, max raw diff 0`
+ผลที่คาดหวัง: `parity ok: 192 cases, max raw diff 0`
 
 ทดสอบอะไรบ้าง
-- 53 กรณีจาก pipeline Python จริง (`tests/cases.json`): รุ่นที่รู้จัก, alias, รุ่น/ยี่ห้อที่ไม่รู้จัก, รถไฟฟ้า, นอกช่วงปี/เครื่องยนต์, ขอบเขตค่า
+- 192 กรณีจาก pipeline Python จริง (`tests/cases.json`): รุ่นที่รู้จัก, alias, รุ่น/ยี่ห้อที่ไม่รู้จัก, รถไฟฟ้า, นอกช่วงปี/เครื่องยนต์, ขอบเขตค่า รวมครบ 115 คู่ยี่ห้อ-รุ่นและตัวถัง 7 แบบ
   ต้องได้ราคา, `known_model`, `warnings` ตรงกัน และค่า `raw` ต่างกันไม่เกิน 1
 - input ผิดรูปแบบ 15 แบบ ต้อง throw
 
@@ -192,8 +195,7 @@ node tests/parity.mjs
 
 ## 8. งานที่ทำต่อได้
 
-1. **เปลี่ยนไปใช้โมเดลรอบใหม่ `merge50minC` (XGB)** ผล test MAE 51,271 บาท (รอบเก่า 64,228) ทำตามหัวข้อ 4 "วิธีเปลี่ยนไปใช้โมเดลตัวใหม่"
-   ข้อควรระวัง: โมเดลใหม่เทรนด้วยชุดข้อมูลอื่น (46,074 แถว) ช่วงปี/เครื่องยนต์/รายชื่อรุ่นที่รู้จักอาจต่างกัน ต้องสร้าง `encoder.json` และกรณีทดสอบใหม่ และตรวจ `CURRENT_YEAR`
+1. เปลี่ยนเป็น `merge50minC` แล้ว: MAE 51,271 บาท บน test ของชุดข้อมูลนี้ (คะแนนรอบเก่า 64,228 บาทมาจากคนละชุดข้อมูล จึงไม่ใช่การเปรียบเทียบบน test เดียวกัน)
 2. ตรวจสเปกของรุ่นหางยาว (~500 รุ่น) กับแหล่งอ้างอิงจริง ยังไม่แน่ใจ: Mitsubishi Triton 2005 V6 3.0 เบนซินในไทย, MG5 แฮตช์แบ็ก 2015 มีขายในไทยหรือไม่
 3. เตือนเมื่อเลขไมล์ผิดปกติเมื่อเทียบกับอายุรถ
 4. ทดสอบบนมือถือ (ฉาก 3D ทดสอบบนเดสก์ท็อปเป็นหลัก)
@@ -203,7 +205,7 @@ node tests/parity.mjs
 ## 9. ข้อจำกัดที่ต้องรู้
 
 - เป็นเดโมนักศึกษา ราคาเป็นค่าประมาณ ไม่รับรองความถูกต้อง
-- โมเดลเทรนกับรถปี 2001-2026 เครื่อง 1,000-3,000 cc อายุไม่เกิน 25 ปี นอกช่วงนี้ยังได้ราคา แต่ไม่น่าเชื่อถือ (มี `warnings`)
+- โมเดลเทรนกับรถปี 2006-2026 เครื่อง 1,000-3,500 cc นอกช่วงนี้ยังได้ราคา แต่ไม่น่าเชื่อถือ (มี `warnings`)
 - ปีอ้างอิง 2026 ฝังอยู่ในโมเดลและ `js/data.js` อายุรถจึงเพี้ยนเมื่อข้ามปี
 - ไม่ใช้สีและตัวถังแบบ Coupe/Convertible/Wagon ในการคำนวณ (สีไม่ใช่ฟีเจอร์ของโมเดล ตัวถังพิเศษถูกแปลงเป็น Sedan/Hatchback)
 - ราคาอีก 5 ปีข้างหน้าเป็นการจำลองง่าย ๆ (ไมล์ +15,000 กม./ปี) ไม่ใช่การพยากรณ์ตลาด

@@ -1,17 +1,20 @@
-"""Export the trained XGB_new_cardb pipeline to compact JSON for the browser.
+"""Export the trained XGB_merge50minC pipeline to compact JSON for the browser.
 
 Reads the read-only model folder (model.joblib, meta.json, model_def.py) and writes:
-  model/xgb_new_cardb_trees.json  every tree + base_score (XGBoost's own JSON model is the source)
+  model/xgb_merge50minc_trees.json  every tree + base_score (XGBoost's own JSON model is the source)
   model/encoder.json              FoldOneHot column order/levels + meta used by app.py
 
 No data rows are written. Run with the research venv:
   python -X utf8 tools/export_model.py
 """
 import json
+import argparse
 import sys
 from pathlib import Path
 
-MODEL_DIR = Path(r"D:\AI_Workspace\car-project\deploy\xgb_new_cardb_space")
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--model-dir", type=Path, default=Path(r"D:\AI_Workspace\artifacts\xgb_merge50minc_browser"))
+MODEL_DIR = parser.parse_args().model_dir
 OUT_DIR = Path(__file__).resolve().parent.parent / "model"
 
 sys.path.insert(0, str(MODEL_DIR))
@@ -66,6 +69,7 @@ def main():
         out.append({"f": f, "t": th, "l": lc, "r": rc, "d": dl, "v": val})
 
     trees_doc = {
+        "model_id": META["model_id"],
         "n_features": n_features,
         "n_trees": len(out),
         "base_score": base_score,
@@ -76,6 +80,7 @@ def main():
     # --- encoder: FoldOneHot's own fitted order/levels ---
     cats = [{"name": c, "levels": [str(x) for x in enc.levels_[c]]} for c in enc.categorical_]
     encoder_doc = {
+        "model_id": META["model_id"],
         "numeric_columns": list(enc.numeric_),
         "categorical_columns": cats,
         "n_features": n_features,
@@ -84,16 +89,20 @@ def main():
         "year_range": [int(x) for x in META["year_range"]],
         "known_brand_model_pairs": META["known_brand_model_pairs"],
         "model_key_map": META["model_key_map"],
-        "model_aliases": dict(md.MODEL_ALIASES),
+        "model_aliases": {},  # exact normalized names + aliases are resolved in model_key_map
+        "body_map": META["body_map"],
         "unknown_model": "__unknown__",  # app.py UNKNOWN_MODEL
         "unseen_encoding": "all_zero",  # FoldOneHot: ค่าที่ไม่อยู่ใน levels ได้ dummy 0 ทั้งแถว
     }
 
     OUT_DIR.mkdir(exist_ok=True)
-    p1 = OUT_DIR / "xgb_new_cardb_trees.json"
+    p1 = OUT_DIR / "xgb_merge50minc_trees.json"
     p2 = OUT_DIR / "encoder.json"
     p1.write_text(json.dumps(trees_doc, separators=(",", ":")), encoding="utf-8")
     p2.write_text(json.dumps(encoder_doc, separators=(",", ":")), encoding="utf-8")
+    provenance = {k: META[k] for k in ["model_id", "dataset", "dataset_sha256", "notebook_sha256",
+                  "best_params", "notebook_metrics", "reproduced_metrics", "n_rows", "versions"]}
+    (OUT_DIR / "provenance.json").write_text(json.dumps(provenance, indent=2), encoding="utf-8")
     print(f"{p1} {p1.stat().st_size} bytes")
     print(f"{p2} {p2.stat().st_size} bytes")
     print(f"total {p1.stat().st_size + p2.stat().st_size} bytes, {len(out)} trees, base_score={base_score}")

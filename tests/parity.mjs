@@ -4,10 +4,18 @@ import {predictCars} from "../js/model.js";
 
 const read = p => JSON.parse(readFileSync(new URL(p, import.meta.url), "utf8"));
 const data = {
-  trees: read("../model/xgb_new_cardb_trees.json"),
+  trees: read("../model/xgb_merge50minc_trees.json"),
   encoder: read("../model/encoder.json"),
 };
 const cases = read("./cases.json");
+if(data.trees.model_id!==read("./model_id.json"))throw new Error("parity fixtures belong to a different model");
+// A cached encoder from the previous deployment must never silently price a car.
+for (const field of ["trees", "encoder"]) {
+  let rejected = false;
+  try { await predictCars([cases[0].car], {...data, [field]: {...data[field], model_id: "old-model"}}); }
+  catch (error) { rejected = error.message === "model version mismatch"; }
+  if (!rejected) throw new Error(`mixed-version ${field} was accepted`);
+}
 
 const out = await predictCars(cases.map(c => c.car), data);
 let maxDiff = 0, maxAt = -1, bad = 0;

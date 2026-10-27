@@ -1,13 +1,13 @@
 // ===== โมเดล XGBoost รันในเบราว์เซอร์: อ่าน JSON ครั้งเดียวแล้วคำนวณเอง ไม่มีเซิร์ฟเวอร์ =====
-// ค่าและลำดับคอลัมน์ต้องตรงกับ FoldOneHot + to_features ใน app.py ทุกจุด (มี tests/parity.mjs คุมไว้)
-const TREES_URL=new URL("../model/xgb_new_cardb_trees.json",import.meta.url);
-const ENCODER_URL=new URL("../model/encoder.json",import.meta.url);
+// ค่าและลำดับคอลัมน์ต้องตรงกับ FoldOneHot + tools/model_reference.py (มี tests/parity.mjs คุมไว้)
+const MODEL_ID="XGB_merge50minC";
+const TREES_URL=new URL("../model/xgb_merge50minc_trees.json",import.meta.url);
+const ENCODER_URL=new URL("../model/encoder.json?v=merge50minc",import.meta.url);
 const BODIES=["Sedan","Hatchback","Pickup","Van","SUV","PPV","MPV"];
 const FUELS=["gas","diesel","hybrid","ev"];
 const GEARS=["AT","MT"];
-// web value -> training value (เหมือน app.py)
+// web value -> training value
 const FUEL={gas:"Benzine",diesel:"Diesel",hybrid:"Hybrid",ev:"Hybrid"},GEAR={AT:"Automatic",MT:"Manual"};
-const BODY={Sedan:"Sedan",Hatchback:"Hatchback",Pickup:"Pickup",Van:"Van",SUV:"SUV/PPV/MPV",PPV:"SUV/PPV/MPV",MPV:"SUV/PPV/MPV"};
 
 let cache=null;
 // โหลด JSON ครั้งเดียวและแคช promise ไว้; ถ้าพลาดให้ล้างแคชเพื่อให้ปุ่ม Retry ลองใหม่ได้
@@ -59,6 +59,7 @@ function pyRound(x){
 }
 function compile({trees,encoder}){
   if(!trees||!Array.isArray(trees.trees)||!encoder)throw new Error("invalid model data");
+  if(trees.model_id!==MODEL_ID||encoder.model_id!==MODEL_ID)throw new Error("model version mismatch");
   const cats=encoder.categorical_columns,offsets=[];
   let at=encoder.numeric_columns.length;
   for(const c of cats){offsets.push(at);at+=c.levels.length}
@@ -73,6 +74,7 @@ function compile({trees,encoder}){
     aliases:encoder.model_aliases||{},
     year:encoder.CURRENT_YEAR,eng:encoder.engine_range,yrs:encoder.year_range,
     unknown:encoder.unknown_model,
+    body:encoder.body_map,
   };
 }
 // model_def.model_key_of: upper-case, เก็บ A-Z0-9, แล้วแทน alias
@@ -92,7 +94,7 @@ function predictOne(m,c){
   // แถวเดียวกับ to_features(): numeric ตามลำดับ แล้ว one-hot ทุก categorical
   const v=new Float64Array(m.n),vals={engine:c.cc,mileage:c.mileage,car_age:m.year-c.year};
   for(let i=0;i<m.num.length;i++)v[i]=vals[m.num[i]];
-  const row={brand,model:known?name:m.unknown,car_type:BODY[c.body],fuel:FUEL[c.fuel],gear:GEAR[c.trans]};
+  const row={brand,model:known?name:m.unknown,car_type:m.body[c.body],fuel:FUEL[c.fuel],gear:GEAR[c.trans]};
   for(let i=0;i<m.cats.length;i++){
     const j=m.maps[i].get(row[m.cats[i].name]);
     if(j!==undefined)v[m.offsets[i]+j]=1; // ค่า unseen/reference = dummy 0 ทั้งแถว เหมือน pipeline
