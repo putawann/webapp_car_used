@@ -1,4 +1,4 @@
-// ===== ลูกเล่นหน้าเว็บ: เลื่อนหน้านุ่ม, เล่าเรื่องตามการเลื่อน, ตัวเลขถอดรหัส, เคอร์เซอร์วงเล็ง, เสียง =====
+// ===== ลูกเล่นหน้าเว็บ: เลื่อนหน้านุ่ม, เล่าเรื่องตามการเลื่อน, ตัวเลขถอดรหัส, เคอร์เซอร์วงเล็ง =====
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Lenis from "lenis";
@@ -21,8 +21,6 @@ export function initUI(onScroll){
   // การ์ดค่อยๆ ลอยขึ้นมาเมื่อเลื่อนถึง
   gsap.utils.toArray("main > .card:not([hidden])").forEach(el=>gsap.from(el,{y:56,opacity:0,duration:1,ease:"power3.out",scrollTrigger:{trigger:el,start:"top 90%",once:true}}));
   cursor();
-  // เสียงติ๊กเมื่อกดปุ่ม
-  document.addEventListener("click",e=>{if(e.target.closest("button,a"))sfx("tick")});
 }
 export function scrollToEl(el){
   if(!el)return;
@@ -51,25 +49,4 @@ function cursor(){
   addEventListener("pointermove",e=>{x=e.clientX;y=e.clientY});
   document.addEventListener("pointerover",e=>c.classList.toggle("on",!!e.target.closest("a,button,input,select,label")));
   gsap.ticker.add(()=>{cx+=(x-cx)*.25;cy+=(y-cy)*.25;c.style.transform=`translate(${cx}px,${cy}px)`});
-}
-
-// เสียงประกอบ สังเคราะห์ด้วย Web Audio (ไม่มีไฟล์เสียง) ปิดไว้เป็นค่าเริ่มต้น
-let ac=null,soundOn=false;
-try{soundOn=localStorage.sound==="1"}catch(e){}
-export const isSound=()=>soundOn;
-export function setSound(v){soundOn=v;try{localStorage.sound=v?"1":"0"}catch(e){}}
-export function sfx(kind){
-  if(!soundOn)return;
-  ac??=new AudioContext();
-  const os=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime;
-  os.connect(g).connect(ac.destination);
-  if(kind==="scan"){ // เสียงสแกนกวาดความถี่ขึ้น
-    os.type="sawtooth";os.frequency.setValueAtTime(220,t);os.frequency.exponentialRampToValueAtTime(1400,t+.45);
-    g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.04,t+.05);g.gain.exponentialRampToValueAtTime(.0001,t+.5);
-    os.start(t);os.stop(t+.52);
-  }else{ // ติ๊กสั้นๆ
-    os.type="square";os.frequency.setValueAtTime(1800,t);
-    g.gain.setValueAtTime(.025,t);g.gain.exponentialRampToValueAtTime(.0001,t+.05);
-    os.start(t);os.stop(t+.06);
-  }
 }

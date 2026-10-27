@@ -3,7 +3,7 @@ import {T,NOW,predictPrices,EX} from "./data.js";
 import {modelReady} from "./model.js";
 import {SPEC,BODY,BODY_MODEL,COLORS,SRC} from "./specs.js";
 import {initFx,setTheme,setScroll,showText,isPaused,setPaused} from "./fx.js";
-import {initUI,scrollToEl,scramble,sfx,isSound,setSound,refresh} from "./ui.js";
+import {initUI,scrollToEl,scramble,refresh} from "./ui.js";
 
 const $=id=>document.getElementById(id);
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -17,7 +17,6 @@ const SVG=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-
 const SUN=SVG('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>');
 const MOON=SVG('<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>');
 const PLAY=SVG('<path d="M8 5v14l11-7z" fill="currentColor"/>'),PAUSE=SVG('<path d="M9 5v14M15 5v14"/>');
-const SPK=SVG('<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/>');
 const r1=n=>Math.round(n/1000)*1000;
 const fmt=n=>n.toLocaleString(lang==="th"?"th-TH":"en-US");
 const sgn=v=>(v<0?"−":"+")+fmt(r1(Math.abs(v)));
@@ -64,7 +63,6 @@ function render(){
   $("langBtn").setAttribute("aria-checked",lang==="en");
   $("themeBtn").innerHTML=theme==="dark"?SUN:MOON;
   $("themeBtn").setAttribute("aria-label",theme==="dark"?T[lang].light:T[lang].dark);
-  $("soundBtn").setAttribute("aria-label",T[lang].sound);$("soundBtn").setAttribute("aria-pressed",isSound());
   document.title=T[lang].brandName+" - "+T[lang].title;
   if(!reduce&&typed!==lang){typed=lang;typeIt()}
   setTheme();paintMotion();
@@ -127,7 +125,6 @@ $("variant").onchange=showSeen;
 $("cmpClear").onclick=()=>{pinned=null;paintCmp();refresh()};
 $("langBtn").onclick=()=>{lang=lang==="th"?"en":"th";store("lang",lang);render()};
 $("themeBtn").onclick=()=>{theme=theme==="dark"?"light":"dark";store("theme",theme);render()};
-$("soundBtn").onclick=()=>{setSound(!isSound());render();sfx("tick")};
 $("motion").onclick=()=>{setPaused(!isPaused());paintMotion()};
 function showErr(){
   $("out").innerHTML=`<p class="hint">${T[lang].err}</p><button class="ghost" id="retry" type="button">${T[lang].retry}</button>`;
@@ -141,7 +138,6 @@ $("f").onsubmit=async e=>{
   const id=++seq;
   failed=false;
   scrollToEl(document.querySelector(".result"));
-  sfx("scan");
   $("out").innerHTML='<div class="sk big"></div><div class="sk"></div><div class="sk"></div>';
   // โหลด JSON ครั้งแรก: แสดง "กำลังโหลดโมเดล…" เฉพาะตอนที่ยังโหลดไม่เสร็จ
   let loadHint=null;
@@ -162,7 +158,6 @@ $("f").onsubmit=async e=>{
 };
 
 $("hid").textContent=String(1e6+Math.floor(Math.random()*9e6));
-$("soundBtn").innerHTML=SPK;
 fillBrands();syncR();
 render();               // ตั้งธีมก่อน ให้ฉาก 3D อ่านสีได้
 initFx($("fx"));
