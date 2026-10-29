@@ -115,15 +115,15 @@
     "brand": "NISSAN",
     "model": "SYLPHY",
     "years": [],
-    "file": "files/rep-nissan-sylphy.jpg",
-    "source": "https://commons.wikimedia.org/wiki/File:Nissan_Sylphy_B17_1.8_V_2018_(1).jpg",
-    "author": "Ethan Llamas",
+    "file": "files/nissan-sylphy-front-replacement.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2012-2015_Nissan_Sylphy_(B17)_1.8_Premium_sedan_(2017-11-28).jpg",
+    "author": "EurovisionNim",
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "changes": "resized by Wikimedia thumbnail service",
-    "description": "Front view of a 2018 Nissan Sylphy B17 1.8 V photographed at Westgate in Filinvest City, Brgy. Alabang, Muntinlupa, Metro Manila, Philippines",
-    "status": "candidate",
-    "representative": true
+    "changes": "Resized by Wikimedia thumbnail service",
+    "description": "2012-2015 Nissan Sylphy (B17) 1.8 Premium sedan. Photographed in Singapore. Representative model photo; market, year and trim may differ.",
+    "representative": true,
+    "status": "candidate"
   },
   {
     "brand": "NISSAN",

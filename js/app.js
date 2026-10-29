@@ -24,16 +24,18 @@ function paintCarPhoto(){
   const photo=match?.photo;
   img.hidden=true;img.removeAttribute("src");caption.replaceChildren();
   if(!photo){caption.textContent=lang==="th"?"ยังไม่มีภาพสำหรับรุ่นและปีนี้":"No image is available for this model and year yet.";return}
-  img.alt=`${brand} ${model}`;
+  const illustration=Boolean(photo.illustration_file);
+  img.alt=illustration?`${lang==="th"?"ภาพวาด":"Illustration of"} ${brand} ${model}`:`${brand} ${model}`;
   img.onerror=()=>{img.hidden=true;caption.textContent=lang==="th"?"โหลดภาพรถไม่ได้":"Car image could not be loaded."};
-  img.src=new URL(`../data/car-images/${photo.file}`,import.meta.url).href;
+  img.src=new URL(`../data/car-images/${photo.illustration_file||photo.file}`,import.meta.url).href;
   img.hidden=false;
   const source=document.createElement("a"),license=document.createElement("a");
   source.href=photo.source;source.target="_blank";source.rel="noopener";source.textContent=photo.author;
   license.href=photo.license_url;license.target="_blank";license.rel="noopener";license.textContent=photo.license;
   const matchingYear=match.matchingYear;
   const note=lang==="th"?(matchingYear?"ภาพประกอบตามปีที่ระบุในแหล่งภาพ โฉมและรุ่นย่อยอาจต่างกัน":"ภาพประกอบรุ่น ปีและโฉมอาจต่างจากที่เลือก"):(matchingYear?"Illustrative image dated to this year; appearance and trim may differ":"Illustrative model image; year and appearance may differ");
-  caption.append(`${brand} ${model} · `,source," · ",license,lang==="th"?" · ปรับขนาดภาพ · ":" · Resized · ",note);
+  const treatment=illustration?(lang==="th"?" · ภาพวาดดัดแปลง · ":" · Illustration adapted from photo · "):(lang==="th"?" · ปรับขนาดภาพ · ":" · Resized · ");
+  caption.append(`${brand} ${model} · `,source," · ",license,treatment,note);
 }
 const SVG=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 const SUN=SVG('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>');

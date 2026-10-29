@@ -45,7 +45,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Photographed in Thailand; exact facelift boundary and trim should be verified.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/bmw-320d-2022.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -80,7 +83,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2021 BMW 330e M Sport Auto.jpg",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/missing-bmw-330e.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -124,7 +129,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Photographed in Thailand; exact facelift boundary and trim should be verified.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/bmw-520d-2018.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -158,7 +165,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2024 BMW 5-Series 530e M Sport Pro.jpg",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/missing-bmw-530e.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -198,7 +207,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2023 BMW X1 sDrive 18i in Khon Kaen, Thailand.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/bmw-x1-2023.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -243,7 +254,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2018 BMW X3 xDrive 20d M Sport.jpg",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/missing-bmw-x3.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -278,7 +291,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2022 BMW X4 xDrive 20d M Sport.jpg",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/neutral/missing-bmw-x4.png",
+          "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -330,7 +346,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2019 BMW X5 xDrive 30d M Sport.jpg",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/missing-bmw-x5.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -365,7 +383,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2019 Chevrolet Captiva Premier.jpg",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/neutral/missing-chevrolet-captiva.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -405,7 +426,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Chevrolet Colorado in Thailand.jpg",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/neutral/missing-chevrolet-colorado.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -437,7 +461,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Chevrolet Trailblazer facelift 01 Thailand 2022-03-09.jpg",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/missing-chevrolet-trailblazer.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -486,7 +512,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "New-generation Ford Everest Titanium+ photographed in Bangkok in August 2022. The generation launched in March 2022; earlier 2022 vehicles may have the prior exterior. Model year alone is insufficient to choose reliably.",
           "evidence": "https://www.ford.co.th/en/about-ford/newsroom/2022/ford-debuts-ford-ranger-everest-ranger-raptor-and-a-host-of-always-on-customer-experience-initiatives-at-bangkok-motor-show-2022/",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/ford-everest-2022.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -542,7 +570,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Photographed in Thailand; exact facelift boundary and body style require verification.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/ford-ranger-2022-rep.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [],
@@ -554,7 +584,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2022 Ford Ranger Sport Double-Cab in Nonthaburi, Thailand.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/ford-ranger-2022.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -585,7 +617,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Photographed in Thailand; exact facelift boundary and trim require verification.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/haval-h6-2021.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -616,7 +650,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Photographed in Thailand; exact facelift boundary and trim require verification.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/haval-jolion-2021.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -684,7 +720,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2019 Honda Accord Turbo EL in Central Plaza Khon Kaen, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/honda-accord-2019.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -697,7 +735,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2021 Honda Accord EL in Honda Maliwan, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/honda-accord-2021.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -731,7 +771,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "2017 Honda BR-V 1.5 VX in Modern Steel Metallic.",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-honda-br-v.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -763,7 +805,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "2016 Honda Brio Satya E (facelift) photographed in West Surabaya, East Java, Indonesia.",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-honda-brio.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -818,7 +862,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2019 Honda City RS in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/honda-city-2019.png",
+          "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -831,7 +878,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2020 Honda City e-HEV RS in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/honda-city-2020.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -897,7 +947,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2017 Honda Civic (FC) 1.8 EL Sedan (12-08-2017) in Bangkok Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/honda-civic-2017.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -952,7 +1004,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2020 Honda CR-V 2.4 ES 4WD in Honda Maliwan, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/honda-cr-v-2020.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -982,7 +1036,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "Place: Kowloon, Hong Kong",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-honda-freed.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1027,7 +1083,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2017 Honda HR-V 1.8 EL in Bangkok Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/honda-hr-v-2017.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1070,7 +1128,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "Honda Jazz in Thailand",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-honda-jazz.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1100,7 +1160,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "2016 Honda Mobilio 1.5 RS (DD4)",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-honda-mobilio.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1139,7 +1201,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2021 Hyundai H-1 Elite NS.jpg (Thailand)",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/misc-hyundai-h-1.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1168,7 +1232,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2022 Hyundai Staria Premium.jpg (Thailand)",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/misc-hyundai-staria.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1219,7 +1285,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2019 Isuzu D-Max Hi-Lander 4-Door 1.9 Ddi M in Kow Yoo Hah Motors, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/isuzu-d-max-2019.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -1232,7 +1300,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2020 Isuzu D-Max X-Series Hi-Lander 2-Door 1.9 Ddi in Central Plaza Khon Kaen, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/isuzu-d-max-2020.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -1245,7 +1315,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2023 Isuzu D-Max Cab4 1.9 Ddi L in Kow Yoo Hah Motors, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/isuzu-d-max-2023.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1278,7 +1351,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "Isuzu MU-7 in Bangkok, Thailand",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-isuzu-mu-7.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1316,7 +1391,10 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "Front view of 2020 Isuzu MU-X LS 4x2 MT seen in Las Piñas, Philippines",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/neutral/rep-isuzu-mu-x.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1364,7 +1442,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2021 Kia Carnival SXL.jpg (Thailand)",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/misc-kia-carnival.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1408,7 +1489,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2018 Kia Grand Carnival 2.2 Diesel SXL.jpg (Thailand)",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/misc-kia-grand-carnival.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1440,7 +1523,10 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "Mazda BT-50 UR Extended Cab photographed in Lat Phrao, Bangkok, Thailand.",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/neutral/rep-mazda-bt-50-pro.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1476,7 +1562,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2020 Mazda CX-3 2.0 Proactive in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/mazda-cx-3-2020.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1507,7 +1596,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2020 Mazda CX-30 2.0S in Mazda Pijitphet, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mazda-cx-30-2020.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1544,7 +1635,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "SONY DSC",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-mazda-cx-5.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1574,7 +1667,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2019 Mazda CX-8 2.5SP in Mazda Pijitphet, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/mazda-cx-8-2019.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1616,7 +1712,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2019 Mazda 2 Hatchback 1.3S Sports Leather in Mazda Pijitphet, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/mazda-mazda2-2019.png",
+          "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1662,7 +1761,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2019 Mazda 3 2.0C Sedan in Mazda Pijitphet, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mazda-mazda3-2019.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1709,7 +1810,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2020 Mercedes-Benz A-Class A200 Sedan AMG Dynamic photographed in Thailand, trim may vary",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-a200.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1769,7 +1872,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2014 Mercedes Benz C 200 (W 205) sedan (2014-12-19); car photographed outside Thailand, trim may differ.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/mercedes-c200.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1826,7 +1932,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2018 Mercedes-Benz C-Class C220d Exclusive photographed in Thailand, trim may vary",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-c220.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1866,7 +1974,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2019 Mercedes-Benz C-Class C300e AMG Dynamic photographed in Thailand, trim may vary",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-c300.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1909,7 +2019,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2022 Mercedes-Benz C-Class C350e AMG Dynamic photographed in Thailand, trim may vary",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-c350.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -1961,7 +2073,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2021 Mercedes-Benz E 200 front; car photographed outside Thailand, trim may differ.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-e200.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2021,7 +2135,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2021 Mercedes-Benz E-Class E220d AMG Sport photographed in Thailand, trim may vary",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-e220.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2052,7 +2168,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Mercedes-Benz E250 (W212) front; car photographed outside Thailand, trim may differ.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-e250.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2102,7 +2220,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2021 Mercedes-Benz E-Class E300e Avantgarde photographed in Thailand, trim may vary",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-e300.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2145,7 +2265,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2017 Mercedes-Benz E-Class E350e AMG Dynamic photographed in Thailand, trim may vary",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-e350.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2181,7 +2303,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2020 Mercedes-Benz GLA-Class GLA200 AMG Dynamic photographed in Thailand, trim may vary",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-gla200.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2212,7 +2336,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Mercedes-Benz GLA 250 4MATIC (X156) front; car photographed outside Thailand, trim may differ.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/mercedes-gla250.png",
+          "recolor_changes": "AI-edited original illustration: neutral gloss black paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2246,7 +2373,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2019 Mercedes-Benz GLC-Class GLC220d AMG Dynamic photographed in Thailand, trim may vary",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-glc220.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2274,7 +2403,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2017 Mercedes-Benz GLC-Class GLC250d 4MATIC AMG Dynamic photographed in Thailand, trim may vary",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-glc250.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2302,7 +2433,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2018 Mercedes-Benz GLC300 4MATIC; car photographed outside Thailand, trim may differ.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/mercedes-glc300.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2336,7 +2470,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Mercedes-Benz S300 W221, photographed in Thailand; illustrative and may differ from selected year or trim.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mercedes-s300-front.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2369,7 +2505,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "Photographed in Thailand; exact facelift boundary and body style require verification.",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mg-extender-2021-rep.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2400,7 +2538,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2022 MG HS X.jpg (Thailand)",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/misc-mg-hs.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2435,7 +2576,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2024 MG 3 Hybrid+ X.jpg",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/misc-mg-mg3.png",
+          "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2469,7 +2613,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2021 MG 5 1.5X.jpg (Thailand)",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/misc-mg-mg5.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2497,7 +2643,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2022 MG VS HEV X.png (Thailand)",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/misc-mg-vs-hev.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2533,7 +2681,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2020 MG ZS 1.5X+ facelift photographed in Khon Kaen. The facelift launched in March 2020; cars registered earlier in 2020 may have the earlier exterior. Model year alone is insufficient to choose reliably.",
           "evidence": "https://www.thairath.co.th/news/auto/news/1803229",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mg-zs-2020.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2582,7 +2732,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2021 MINI Cooper SE.jpg (Thailand)",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/misc-mini-cooper.png",
+          "recolor_changes": "AI-edited original illustration: neutral pearl white with gloss black mirror caps, replacing the yellow mirror caps with black paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2621,7 +2774,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2024 MINI Countryman John Cooper Works.jpg",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/misc-mini-countryman.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray with gloss black roof and mirror caps, replacing all red decorative trim with black paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2659,7 +2815,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2019 Mitsubishi Attrage GTS-LTD in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mitsubishi-attrage-2019.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2698,7 +2856,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2019 Mitsubishi Mirage 1.2 GLS in Mitsu Khonkaen Yonpiboon, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mitsubishi-mirage-2019.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2741,7 +2901,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2019 Mitsubishi Pajero Sport GT-Premium 4WD in BITEC, Bangna, Bangkok, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mitsubishi-pajero-sport-2019.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2787,7 +2949,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2022 Mitsubishi Triton Double-Cab 2.4 Plus S-Limited in BITEC, Bangna, Bangkok, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mitsubishi-triton-2022.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2820,7 +2984,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2022 Mitsubishi Xpander GT in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/mitsubishi-xpander-2022.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2851,7 +3017,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2020 Mitsubishi Xpander Cross in Mitsu Nakorn Khon Kaen, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/mitsubishi-xpander-cross-2020.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2892,7 +3061,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2021 Nissan Almera 1.0L Turbo VL Sportech in Nissan KKT, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/nissan-almera-2021.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2920,7 +3091,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "2019 Nissan Juke Tekna - 1598cc 1.6 (110PS) Petrol - Black",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-nissan-juke.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2951,7 +3124,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2020 Nissan Kicks e-Power VL in Central Plaza Nakorn Ratchasima, Nakorn Ratchasima, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/nissan-kicks-2020.png",
+          "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -2987,7 +3163,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "Nissan March in Ubon Ratchathani, Thailand",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-nissan-march.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3032,7 +3210,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2020 Nissan Navara Double-Cab 4WD VL in Central Plaza Khon Kaen, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/nissan-navara-2020.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3061,7 +3242,10 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "DBA-E12型日産・ノートX DIG-Sをフロントから撮影。",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/neutral/rep-nissan-note.png",
+          "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3098,7 +3282,10 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "2016 Nissan NP300 Navara Tekna DCi 3.0 Taken in Leamington Spa",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/neutral/rep-nissan-np300-navara.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3122,15 +3309,17 @@
       "images": [
         {
           "years": [],
-          "file": "files/rep-nissan-sylphy.jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:Nissan_Sylphy_B17_1.8_V_2018_(1).jpg",
-          "author": "Ethan Llamas",
+          "file": "files/nissan-sylphy-front-replacement.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:2012-2015_Nissan_Sylphy_(B17)_1.8_Premium_sedan_(2017-11-28).jpg",
+          "author": "EurovisionNim",
           "license": "CC BY-SA 4.0",
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-          "changes": "resized by Wikimedia thumbnail service",
-          "description": "Front view of a 2018 Nissan Sylphy B17 1.8 V photographed at Westgate in Filinvest City, Brgy. Alabang, Muntinlupa, Metro Manila, Philippines",
+          "changes": "Resized by Wikimedia thumbnail service",
+          "description": "2012-2015 Nissan Sylphy (B17) 1.8 Premium sedan. Photographed in Singapore. Representative model photo; market, year and trim may differ.",
+          "representative": true,
           "status": "candidate",
-          "representative": true
+          "illustration_file": "newspaper/nissan-sylphy-front-replacement.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3169,7 +3358,10 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "NISSAN TEANA (J31) China",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/neutral/rep-nissan-teana.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3202,7 +3394,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2023 Nissan Terra Sport 2.3 VL 4WD in KICE, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/nissan-terra-2023.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3250,7 +3444,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "Nissan X-Trail, 1. Generation",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-nissan-x-trail.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3297,7 +3493,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2023 Porsche Cayenne e-Hybrid Coupé.jpg",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/misc-porsche-cayenne.png",
+          "recolor_changes": "AI-edited original illustration: neutral gloss black paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3342,7 +3541,10 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "2022 Subaru Forester 2.0i-S EyeSight in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/neutral/rep-subaru-forester.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3377,7 +3579,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "2018 Subaru XV (GT7) 2.0i-S wagon. Photographed in Fremantle, Western Australia, Australia.",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-subaru-xv.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3413,7 +3617,9 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "2017 Suzuki Celerio SZ4 Automatic 1.0 Front Taken in Leamington Spa",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/rep-suzuki-celerio.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3448,7 +3654,10 @@
           "changes": "resized by Wikimedia thumbnail service",
           "description": "2020 Suzuki Ciaz RS in Suzuki R-Heng Wattana, Khon Kaen, Thailand.",
           "status": "candidate",
-          "representative": true
+          "representative": true,
+          "illustration_file": "newspaper/neutral/rep-suzuki-ciaz.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3486,7 +3695,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2020 Suzuki Ertiga GX in Suzuki R-Heng Wattana, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/suzuki-ertiga-2020.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -3499,7 +3711,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2022 Suzuki Ertiga Smart Hybrid GX in Suzuki R-Heng Wattana, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/suzuki-ertiga-2022.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3539,7 +3754,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2021 Suzuki Swift GLX in Suzuki R-Heng Wattana, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/suzuki-swift-2021.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3570,7 +3788,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "resized via Wikimedia thumbnail service",
           "description": "2020 Suzuki XL7 GLX in Suzuki R-Heng Wattana, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/suzuki-xl7-2020.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3618,7 +3839,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2023 Toyota Alphard 2.5 HEV in Toyota Alive Space, Bangna, Bangkok, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-alphard-2023-136219561.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -3631,7 +3854,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2026 Toyota Alphard HEV Smart in BITEC, Bangna, Bangkok, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-alphard-2026-199418450.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3674,7 +3899,9 @@
           "description": "The front view of a silver Toyota Avanza in America with Mexico license plates",
           "representative": true,
           "depicted_year": null,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-avanza-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3704,7 +3931,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2022 Toyota C-HR HEV GR Sport in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-c-hr-2022-116705129.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3763,7 +3992,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2009 Toyota Camry 2.0G in Khon Kaen University, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-camry-2009-74569722.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -3776,7 +4007,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2018 Toyota Camry 2.0 G in Toyota Kaennakorn, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-camry-2018-74385323.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -3789,7 +4022,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2012 Toyota Camry 2.0G in Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-camry-2012-74618336.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -3802,7 +4037,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2018 Toyota Camry 2.5 G in Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-camry-2018.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3848,7 +4085,9 @@
           "description": "Toyota Commuter",
           "representative": true,
           "depicted_year": null,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-commuter-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3900,7 +4139,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2019 Toyota Corolla Altis 1.6 G in Toyota Khonkaen, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-corolla-altis-2019-81920713.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -3913,7 +4154,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2001 Toyota Corolla Altis 1.6E in Khon Kaen University, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-corolla-altis-2001-74569720.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -3926,7 +4169,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2021 Toyota Corolla Altis 1.8 Sport in Toyota Kaennakorn, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-corolla-altis-2021-115394181.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -3957,7 +4202,10 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2020 Toyota Corolla Cross 1.8 Sport in Toyota Khonkaen, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/toyota-corolla-cross-2020-110424065.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -3970,7 +4218,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2024 Toyota Corolla Cross HEV Premium in Toyota Alive Space, Bangna, Bangkok, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-corolla-cross-2024-145212114.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -3983,7 +4233,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2022 Toyota Corolla Cross 1.8 Sport Plus in Toyota Alive Space, Bangna, Bangkok, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-corolla-cross-2022-127064088.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -3996,7 +4248,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2021 Toyota Corolla Cross Hybrid Premium Modellista in Toyota Amata, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-corolla-cross-2021-112519181.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4042,7 +4296,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2020 Toyota Fortuner 2.4V in Toyota Amata, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-fortuner-2020-91009220.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -4055,7 +4311,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2024 Toyota Fortuner Leader 2.4 S in Central Plaza Udon Thani, Udon Thani, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-fortuner-2024-155068599.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -4068,7 +4326,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2022 Toyota Fortuner 2.4 Commander in Toyota Kaennakorn, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-fortuner-2022-115724281.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         },
         {
           "years": [
@@ -4081,7 +4341,9 @@
           "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
           "changes": "Wikimedia thumbnail resized to 800px",
           "description": "2021 Toyota Fortuner 2.4V Modellista in Toyota Amata, Khon Kaen, Thailand.",
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-fortuner-2021-110922000.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4132,7 +4394,9 @@
           "description": "2015 Toyota Harrier Premium 2WD 2.0 (DBA-ZSU60W)",
           "representative": true,
           "depicted_year": 2015,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-harrier-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4184,16 +4448,17 @@
       "images": [
         {
           "years": [],
-          "file": "files/toyota-hiace-representative.jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:TOYOTA_HIACE_IN_PAKKLONGTALAD_1.JPG",
-          "author": "Anuvadh Phanna",
-          "license": "Public domain",
-          "license_url": "https://commons.wikimedia.org/wiki/File:TOYOTA_HIACE_IN_PAKKLONGTALAD_1.JPG",
-          "changes": "resized by Wikimedia thumbnail service",
-          "description": "FRONT TOYOTA HIACE IN PAKKLONGTALAND, BANGKOK, THAILAND.",
+          "file": "files/toyota-hiace-front-replacement.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:2011-2013_Toyota_HiAce_(KDH201R)_LWB_van_(2018-09-17)_01.jpg",
+          "author": "EurovisionNim",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "changes": "Resized by Wikimedia thumbnail service",
+          "description": "2011-2013 Toyota HiAce (KDH201R) LWB van. Photographed in Fremantle, Western Australia, Australia. Representative model photo; market, year and trim may differ.",
           "representative": true,
-          "depicted_year": null,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-hiace-front-replacement.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4230,7 +4495,9 @@
           "description": "2017 Toyota Hilux Revo 2.4J Plus in Toyota Amata, Khon Kaen, Thailand.",
           "representative": true,
           "depicted_year": 2017,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-hilux-revo-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4266,7 +4533,9 @@
           "description": "2008 Toyota Hilux Vigo (KUN15) 2.5E Smart Cab taken in Thailand",
           "representative": true,
           "depicted_year": 2008,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-hilux-vigo-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4313,7 +4582,9 @@
           "description": "2023 Toyota Innova Zenix 2.0 HEV Premium in Toyota Kaennakorn, Khon Kaen, Thailand.",
           "representative": true,
           "depicted_year": 2023,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-innova-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4344,7 +4615,9 @@
           "description": "2019 Toyota Majesty Grande in BITEC, Bangna, Bangkok, Thailand.",
           "representative": true,
           "depicted_year": 2019,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-majesty-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4375,7 +4648,10 @@
           "description": "2020 Toyota Prius photographed in Montréal , Québec, Canada at the 2020 Montréal International Auto Show .",
           "representative": true,
           "depicted_year": 2020,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/toyota-prius-representative.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4407,7 +4683,9 @@
           "description": "Toyota Sienta",
           "representative": true,
           "depicted_year": 2004,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-sienta-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4449,7 +4727,9 @@
           "description": "2023 Toyota Vellfire 2.5 HEV in Toyota Alive Space, Bangna, Bangkok, Thailand.",
           "representative": true,
           "depicted_year": 2023,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-vellfire-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4477,7 +4757,9 @@
           "description": "2022 Toyota Veloz Premium in Toyota Amata, Khon Kaen, Thailand.",
           "representative": true,
           "depicted_year": 2022,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-veloz-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4507,16 +4789,18 @@
       "images": [
         {
           "years": [],
-          "file": "files/toyota-ventury-representative.jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:Toyota_Ventury_in_Kamphaeng_Phet.JPG",
-          "author": "Supercarwaar",
-          "license": "CC BY-SA 3.0",
-          "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-          "changes": "resized by Wikimedia thumbnail service",
-          "description": "Toyota Ventury from Sixt near the city wall of Kamphaeng Phet.",
+          "file": "files/toyota-ventury-front-replacement.png",
+          "source": "https://www.toyotakan.com/inventory/ventury/",
+          "author": "Toyota promotional image via Toyota Kanchanaburi; photographer not stated",
+          "license": "Copyright retained; no open license stated",
+          "license_url": "https://www.toyotakan.com/inventory/ventury/",
+          "changes": "None; original downloaded image",
+          "description": "White Toyota Ventury front three-quarter promotional image, supplied on Toyota Kanchanaburi Ventury product page. Representative only; year and trim may differ.",
           "representative": true,
-          "depicted_year": null,
-          "status": "candidate"
+          "status": "candidate",
+          "download_url": "https://www.toyotakan.com/wp-content/uploads/2016/11/04-3.png",
+          "illustration_file": "newspaper/toyota-ventury-front-replacement.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4562,7 +4846,10 @@
           "description": "Toyota Vios-- Chiangmai, Thailand",
           "representative": true,
           "depicted_year": 2007,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/toyota-vios-representative.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4606,7 +4893,9 @@
           "description": "2021 Toyota Yaris Sport in Bangkok, Thailand",
           "representative": true,
           "depicted_year": 2021,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-yaris-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4640,7 +4929,9 @@
           "description": "2022 Toyota Yaris Ativ Premium Luxury (Thailand) front view",
           "representative": true,
           "depicted_year": 2022,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-yaris-ativ-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4668,7 +4959,9 @@
           "description": "2023 Toyota Yaris Cross HEV Premium in Toyota Alive Space, Bangna, Bangkok, Thailand.",
           "representative": true,
           "depicted_year": 2023,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/toyota-yaris-cross-representative.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4728,7 +5021,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "1995-1996 Volkswagen Caravelle (T4) GL Wagons (12-08-2017) 01.jpg",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/misc-volkswagen-caravelle.png",
+          "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4760,7 +5056,10 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2020 Volvo XC40 Recharge T5 Inscription.jpg (Thailand)",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/neutral/misc-volvo-xc40.png",
+          "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4802,7 +5101,9 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2023 Volvo XC60 T8 R-Line front.jpg",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/misc-volvo-xc60.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     },
@@ -4850,9 +5151,12 @@
           "changes": "Resized by Wikimedia thumbnail service",
           "description": "2020 Volvo XC90 T8 R-Design facelift Front.jpg",
           "representative": true,
-          "status": "candidate"
+          "status": "candidate",
+          "illustration_file": "newspaper/misc-volvo-xc90.png",
+          "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
         }
       ]
     }
-  ]
+  ],
+  "image_style": "newspaper"
 }
