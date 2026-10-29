@@ -1,0 +1,30 @@
+[
+  {
+    "brand": "MG",
+    "model": "ZS",
+    "years": [2020],
+    "file": "files/mg-zs-2020.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2020_MG_ZS_1.5X%2B.jpg",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized by Wikimedia thumbnail service",
+    "description": "2020 MG ZS 1.5X+ facelift photographed in Khon Kaen. The facelift launched in March 2020; cars registered earlier in 2020 may have the earlier exterior. Model year alone is insufficient to choose reliably.",
+    "evidence": "https://www.thairath.co.th/news/auto/news/1803229",
+    "status": "candidate"
+  },
+  {
+    "brand": "FORD",
+    "model": "EVEREST",
+    "years": [2022],
+    "file": "files/ford-everest-2022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Ford_Everest_Titanium_29082022.jpg",
+    "author": "Poramin (W700)",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized by Wikimedia thumbnail service",
+    "description": "New-generation Ford Everest Titanium+ photographed in Bangkok in August 2022. The generation launched in March 2022; earlier 2022 vehicles may have the prior exterior. Model year alone is insufficient to choose reliably.",
+    "evidence": "https://www.ford.co.th/en/about-ford/newsroom/2022/ford-debuts-ford-ranger-everest-ranger-raptor-and-a-host-of-always-on-customer-experience-initiatives-at-bangkok-motor-show-2022/",
+    "status": "candidate"
+  }
+]

@@ -38,7 +38,7 @@ js/data.js  predictPrices()  >  js/model.js  predictCars()
 
 - รถ "อีก k ปีข้างหน้า" คำนวณโดยลด `year` ลง k และเพิ่มไมล์ 15,000 × k (สูงสุด 999,999)
   เพื่อแสดงแนวโน้มราคาตกของรถคันนั้น
-- ถ้ารุ่นหรือสเปกไม่อยู่ในข้อมูลเทรน ระบบยังทำนายให้ แต่ติดป้ายว่าไม่เคยเห็นในข้อมูลเทรน (`untrained`)
+- ฟอร์มแสดงเฉพาะคู่ยี่ห้อ–รุ่นที่โมเดลรู้จักจากข้อมูลเทรน ส่วนปีและสเปกยังมาจากข้อมูลตลาดไทย และอาจอยู่นอกช่วงที่โมเดลเคยเห็น จึงยังมีคำเตือน (`untrained`)
 - ขนาดที่ต้องโหลด: โมเดล ~3.8 MB (`model/*.json`) และสเปก ~0.5 MB (`js/specs.js`)
 
 ## 2. โครงสร้างโฟลเดอร์
@@ -63,6 +63,9 @@ js/data.js  predictPrices()  >  js/model.js  predictCars()
 | `tools/make_parity_cases.py` | สร้างกรณีทดสอบ `tests/cases.json` จาก pipeline Python |
 | `tools/build_specs.py` | สร้าง `js/specs.js` จาก `data/specs/*.csv` |
 | `tests/parity.mjs`, `tests/cases.json` | ทดสอบว่า JavaScript ให้ผลตรงกับ Python |
+| `data/car-images/inventory.json` | รายการรุ่น ปี และภาพที่แสดงได้ พร้อมที่มาและใบอนุญาต ภาพที่ยังรอตรวจอยู่ใน `research-*.json` |
+| `tools/image_inventory.mjs`, `tests/car-images.mjs` | สร้างรายการค้นคว้าเริ่มต้นและตรวจความครบถ้วนของ metadata ภาพ |
+| `tools/merge_car_images.mjs` | รวมรายการภาพจากไฟล์ค้นคว้าเข้า inventory ก่อนตรวจด้วย `tests/car-images.mjs` |
 | `handoffs/` | บันทึกส่งต่องานเก่า (9 ต.ค. 2026) พาธและเวอร์ชันในนั้นล้าสมัยแล้ว |
 
 ## 3. รันในเครื่อง
@@ -136,8 +139,9 @@ Rollback: คืน js/model.js, js/data.js, model/encoder.json และชุ�
 
 ## 5. ข้อมูลสเปกรถ (dropdown)
 
-dropdown มาจากสเปกรถ**ตลาดไทยจริง** ไม่ได้มาจากไฟล์เทรน (เป็นข้อกำหนดของผู้ใช้) มี 85 ยี่ห้อ 880 รุ่น
-รวมรุ่นที่ขายในไทยแต่ไม่มีในข้อมูลเทรน (ทำนายได้ แต่ขึ้นป้าย untrained)
+ภาพรถในฟอร์มใช้ข้อมูลจาก `data/car-images/inventory.json` เลือกภาพที่แหล่งข้อมูลระบุปีตรงก่อน แล้วจึงใช้ภาพตัวแทนของรุ่นเมื่อไม่มีภาพปีนั้น ภาพทั้งหมดเป็นภาพประกอบ ไม่ยืนยันว่าตรงรุ่นย่อยหรือตรงโฉมเมื่อมีการเปลี่ยนระหว่างปี และแสดงเครดิตกับสัญญาอนุญาตใต้ภาพ รุ่นที่ยังไม่มีภาพจะแสดงข้อความแทน
+
+ฐานสเปกรถ**ตลาดไทยจริง** ไม่ได้มาจากไฟล์เทรน มี 85 ยี่ห้อ 880 รุ่น แต่ฟอร์มกรองด้วย `known_brand_model_pairs` ใน `model/encoder.json` ให้เลือกได้เฉพาะ 20 ยี่ห้อ 115 รุ่นที่โมเดลรู้จัก ปีและสเปกยังมาจากฐานสเปก และบางค่าอาจอยู่นอกช่วงข้อมูลเทรน
 
 รูปแบบไฟล์ `data/specs/*.csv` หนึ่งแถว = สเปกชุดหนึ่งในช่วงปีที่ขาย:
 
@@ -163,22 +167,20 @@ TOYOTA,ALPHARD,2003-2008,2400|3000,gas,AT,Van,wiki:Toyota_Alphard,AH10 นำเ
 คุณภาพข้อมูล: เทียบกับประกาศจริงตรงกัน 97.2% ที่ไม่ตรงส่วนใหญ่เป็นความผิดพลาดของข้อมูลเทรน
 รุ่นหายาก/หรู/เก่า/นำเข้าอิสระราว 500 รุ่นคัดจากความรู้ ยังไม่ได้ตรวจกับแหล่งเว็บทุกรุ่น
 
-## 6. หน้าเว็บและฉาก 3D
+## 6. Frontend design
 
-- ดีไซน์สไตล์ ctOS (ตัวอักษร monospace สีเน้นสีน้ำเงิน) สลับ TH/EN และธีมมืด/สว่างได้
-- ฟอร์ม: ยี่ห้อ > รุ่น > ปี > สเปก เลือกต่อเนื่อง + สี; เลขไมล์เป็นช่องกรอกเพียงช่องเดียว (ช่องตัวเลขกับแถบเลื่อนซิงก์กัน)
-- ฉากหลัง (`fx.js`): อนุภาครูปรถเปลี่ยนไปมา 6 ทรง (sedan, SUV, pickup, hatchback, van, sports) ล้อหมุน ถนนและเส้นความเร็ว
-  เมื่อทำนายเสร็จ อนุภาครวมเป็นตัวเลขราคา
-  - มือถือใช้จำนวนอนุภาคน้อยลง
-  - ปุ่มหยุด/เล่นอยู่มุมขวาล่าง แอนิเมชันเล่นอัตโนมัติ แม้ระบบตั้งลดการเคลื่อนไหว
-- `ui.js`: เลื่อนหน้านุ่มด้วย Lenis, เล่าเรื่องตามการเลื่อนด้วย GSAP ScrollTrigger, ตัวเลขสุ่มก่อนลงค่าจริง (`scramble`), เคอร์เซอร์
-- ภาษา: ข้อความทั้งหมดอยู่ใน `T` ใน `js/data.js` (`T.th`, `T.en`)
-- ดีไซน์แบบเรียบรุ่นก่อนอยู่ที่คอมมิต `dbb2cd0` (v0.0.4)
+- Warm charcoal default theme with coral accent; Thai/English and light/dark switches.
+- Compact single-column form beside the selected vehicle photo; price and trend chart below.
+- Mobile layout stacks the vehicle photo, form and result. Reduced-motion preferences are respected.
+- Vehicle photos include source, author, license and a representative-image notice.
+- Native scrolling and brief result transitions replace the previous Three.js/GSAP/Lenis effects. Old fx.js is retained but is no longer loaded.
+- The hidden color selector is retained for comparison compatibility; color is not a model feature.
 
 ## 7. ทดสอบ
 
 ```bash
 node tests/parity.mjs
+node tests/car-images.mjs
 ```
 
 ต้องการ Node ที่รองรับ ES modules (ทดสอบกับ Node 24) ไม่ต้องติดตั้งแพ็กเกจ

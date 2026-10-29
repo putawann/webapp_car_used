@@ -1,0 +1,98 @@
+[
+  {
+    "brand": "BMW",
+    "model": "320D",
+    "years": [
+      2022
+    ],
+    "file": "files/bmw-320d-2022.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_BMW_3-Series_320d_M_Sport.jpg",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized by Wikimedia thumbnail service",
+    "description": "Photographed in Thailand; exact facelift boundary and trim should be verified.",
+    "representative": true,
+    "status": "candidate"
+  },
+  {
+    "brand": "BMW",
+    "model": "520D",
+    "years": [
+      2018
+    ],
+    "file": "files/bmw-520d-2018.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2018_BMW_5-Series_520d_M_Sport.jpg",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized by Wikimedia thumbnail service",
+    "description": "Photographed in Thailand; exact facelift boundary and trim should be verified.",
+    "representative": true,
+    "status": "candidate"
+  },
+  {
+    "brand": "HAVAL",
+    "model": "H6",
+    "years": [
+      2021
+    ],
+    "file": "files/haval-h6-2021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2021_Haval_H6_HEV_Pro.jpg",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized by Wikimedia thumbnail service",
+    "description": "Photographed in Thailand; exact facelift boundary and trim require verification.",
+    "representative": true,
+    "status": "candidate"
+  },
+  {
+    "brand": "HAVAL",
+    "model": "JOLION",
+    "years": [
+      2021
+    ],
+    "file": "files/haval-jolion-2021.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2021_Haval_Jolion_HEV_Ultra.jpg",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized by Wikimedia thumbnail service",
+    "description": "Photographed in Thailand; exact facelift boundary and trim require verification.",
+    "representative": true,
+    "status": "candidate"
+  },
+  {
+    "brand": "FORD",
+    "model": "RANGER",
+    "years": [
+      2022
+    ],
+    "file": "files/ford-ranger-2022-rep.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Ford_Ranger_XLT_Double-Cab_2.0L_Turbo_Hi-Rider.jpg",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized by Wikimedia thumbnail service",
+    "description": "Photographed in Thailand; exact facelift boundary and body style require verification.",
+    "representative": true,
+    "status": "candidate"
+  },
+  {
+    "brand": "MG",
+    "model": "EXTENDER",
+    "years": [
+      2021
+    ],
+    "file": "files/mg-extender-2021-rep.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2021_MG_Extender_DC_2.0X_Grand_4WD.jpg",
+    "author": "Chanokchon",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized by Wikimedia thumbnail service",
+    "description": "Photographed in Thailand; exact facelift boundary and body style require verification.",
+    "representative": true,
+    "status": "candidate"
+  }
+]

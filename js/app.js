@@ -2,17 +2,39 @@
 import {T,NOW,predictPrices,EX} from "./data.js";
 import {modelReady} from "./model.js";
 import {SPEC,BODY,BODY_MODEL,COLORS,SRC} from "./specs.js";
-import {initFx,setTheme,setScroll,showText,isPaused,setPaused} from "./fx.js";
+
 import {initUI,scrollToEl,scramble,refresh} from "./ui.js";
+import {findCarImage} from "./car-images.js";
 
 const $=id=>document.getElementById(id);
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const store=(k,v)=>{try{localStorage[k]=v}catch(e){}};
 let lang,theme;
 try{lang=localStorage.lang;theme=localStorage.theme}catch(e){}
-lang||=navigator.language.startsWith("th")?"th":"en";
-theme||=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+lang||="th";
+theme||="dark";
 let cur=null,pinned=null,seq=0,typed=null,tw=0,tt=0,failed=false,modelLoaded=false;
+// รายการยี่ห้อและรุ่นต้องตรงกับคู่ที่โมเดลรู้จัก ไม่ใช่ทุกคู่ในฐานสเปกรถ
+let trainedModels={};
+let carImages=[];
+function paintCarPhoto(){
+  const img=$("carPhotoImage"),caption=$("carPhotoCaption");
+  const brand=$("brand").value,model=$("model").value,year=Number($("year").value);
+  const match=findCarImage(carImages,brand,model,year);
+  const photo=match?.photo;
+  img.hidden=true;img.removeAttribute("src");caption.replaceChildren();
+  if(!photo){caption.textContent=lang==="th"?"ยังไม่มีภาพสำหรับรุ่นและปีนี้":"No image is available for this model and year yet.";return}
+  img.alt=`${brand} ${model}`;
+  img.onerror=()=>{img.hidden=true;caption.textContent=lang==="th"?"โหลดภาพรถไม่ได้":"Car image could not be loaded."};
+  img.src=new URL(`../data/car-images/${photo.file}`,import.meta.url).href;
+  img.hidden=false;
+  const source=document.createElement("a"),license=document.createElement("a");
+  source.href=photo.source;source.target="_blank";source.rel="noopener";source.textContent=photo.author;
+  license.href=photo.license_url;license.target="_blank";license.rel="noopener";license.textContent=photo.license;
+  const matchingYear=match.matchingYear;
+  const note=lang==="th"?(matchingYear?"ภาพประกอบตามปีที่ระบุในแหล่งภาพ โฉมและรุ่นย่อยอาจต่างกัน":"ภาพประกอบรุ่น ปีและโฉมอาจต่างจากที่เลือก"):(matchingYear?"Illustrative image dated to this year; appearance and trim may differ":"Illustrative model image; year and appearance may differ");
+  caption.append(`${brand} ${model} · `,source," · ",license,lang==="th"?" · ปรับขนาดภาพ · ":" · Resized · ",note);
+}
 const SVG=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 const SUN=SVG('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>');
 const MOON=SVG('<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>');
@@ -23,7 +45,7 @@ const sgn=v=>(v<0?"−":"+")+fmt(r1(Math.abs(v)));
 
 function paint(animate){
   const t=T[lang],lo=r1(cur.price*0.92),hi=r1(cur.price*1.08);
-  $("out").innerHTML=`<div class="${animate?"fade":""}"><p class="range">${t.est}</p><div class="price"><span id="pv">${fmt(cur.price)}</span> ${t.baht}</div><p class="range">${t.rng}</p><div class="bar"><b></b></div><div class="ends"><span>${fmt(lo)}</span><span>${fmt(hi)}</span></div><button class="ghost" id="pin" type="button">${t.pin}</button>${cur.untrained?`<p class="hint">${t.untrained}</p>`:""}</div>`;
+  $("out").innerHTML=`<div class="${animate?"fade":""}"><p class="range">${t.est}</p><div class="price"><span id="pv">${fmt(cur.price)}</span> ${t.baht}</div><p class="range">${t.rng} <small>(±8%)</small></p><div class="bar"><b></b></div><div class="ends"><span>${fmt(lo)}</span><span>${fmt(hi)}</span></div><p class="car-summary">${cur.x.brand} ${cur.x.model} · ${cur.x.year} · ${fmt(cur.x.mileage)} km</p><button class="ghost" id="pin" type="button">${t.pin}</button>${cur.untrained?`<p class="hint">${t.untrained}</p>`:""}</div>`;
   $("pin").onclick=()=>{pinned=cur;paintCmp();refresh()};
   if(animate)scramble($("pv"),fmt(cur.price));
   paintMore();paintCmp();
@@ -49,12 +71,6 @@ function paintCmp(){
   else h+=`<span class="hint" style="grid-column:1/-1">${t.cmpWait}</span>`;
   $("cmpBody").innerHTML=`<div class="cmp">${h}</div>`;
 }
-function typeIt(){
-  const el=$("lead"),s=el.textContent;let i=0;
-  clearInterval(tw);clearTimeout(tt);el.classList.add("typing");el.textContent="";
-  tw=setInterval(()=>{el.textContent=s.slice(0,++i);if(i>=s.length){clearInterval(tw);tt=setTimeout(()=>el.classList.remove("typing"),1200)}},16);
-}
-function paintMotion(){$("motion").innerHTML=isPaused()?PLAY:PAUSE;$("motion").setAttribute("aria-label",T[lang][isPaused()?"play":"pause"])}
 function render(){
   document.documentElement.lang=lang;
   document.documentElement.dataset.theme=theme;
@@ -64,8 +80,8 @@ function render(){
   $("themeBtn").innerHTML=theme==="dark"?SUN:MOON;
   $("themeBtn").setAttribute("aria-label",theme==="dark"?T[lang].light:T[lang].dark);
   document.title=T[lang].brandName+" - "+T[lang].title;
-  if(!reduce&&typed!==lang){typed=lang;typeIt()}
-  setTheme();paintMotion();
+
+
   fillVariants(true);fillColors(); // ป้ายใน dropdown เปลี่ยนตามภาษา
   if(document.querySelector("input[aria-invalid=true]"))check();
   if(failed)showErr();
@@ -81,17 +97,17 @@ narrow.addEventListener("change",()=>fillVariants(true));
 const vLabel=([cc,f,g,b])=>{const t=T[lang];return `${cc?(cc/1000).toFixed(1)+"L":t.motor} · ${t[FUELS[f]]} · ${narrow.matches?GEARS[g]:t[GEARS[g]==="AT"?"at":"mt"]} · ${t.bodies[BODY[b]]||BODY[b]}`};
 function fillVariants(keepValue){
   sel("variant",variants().map((v,i)=>[String(i),vLabel(v)]),keepValue);
-  showSeen();
+  showSeen();paintCarPhoto();
 }
 // แสดงลิงก์แหล่งอ้างอิงของสเปครุ่นนี้
 function showSeen(){$("seen").replaceChildren(T[lang].src+" ",...SRC[$("brand").value][$("model").value].flatMap((u,i)=>{const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";a.textContent=new URL(u).hostname.replace(/^www\./,"");return i?[" · ",a]:[a]}))}
 function fillYears(){sel("year",Object.keys(SPEC[$("brand").value][$("model").value]).sort((a,b)=>b-a).map(y=>[y,y]),true);fillVariants()}
-function fillModels(){sel("model",Object.keys(SPEC[$("brand").value]).sort().map(m=>[m,m]));fillYears()}
+function fillModels(){sel("model",trainedModels[$("brand").value].map(m=>[m,m]));fillYears()}
 function fillColors(){sel("color",COLORS.map(c=>[c,T[lang].colors[c]||c]),true)}
 function fillBrands(){
-  sel("brand",Object.keys(SPEC).sort().map(b=>[b,b]));
+  sel("brand",Object.keys(trainedModels).sort().map(b=>[b,b]));
   fillModels();fillColors();
-  EX.forEach(([brand,model,year,mileage])=>{
+  EX.filter(([brand,model,year])=>trainedModels[brand]?.includes(model)&&SPEC[brand][model][year]).forEach(([brand,model,year,mileage])=>{
     const b=document.createElement("button");
     b.type="button";b.className="chip";b.textContent=model+" "+year;
     b.onclick=()=>{
@@ -125,7 +141,7 @@ $("variant").onchange=showSeen;
 $("cmpClear").onclick=()=>{pinned=null;paintCmp();refresh()};
 $("langBtn").onclick=()=>{lang=lang==="th"?"en":"th";store("lang",lang);render()};
 $("themeBtn").onclick=()=>{theme=theme==="dark"?"light":"dark";store("theme",theme);render()};
-$("motion").onclick=()=>{setPaused(!isPaused());paintMotion()};
+
 function showErr(){
   $("out").innerHTML=`<p class="hint">${T[lang].err}</p><button class="ghost" id="retry" type="button">${T[lang].retry}</button>`;
   $("retry").onclick=()=>$("f").requestSubmit();
@@ -153,13 +169,44 @@ $("f").onsubmit=async e=>{
   if(id!==seq)return;
   cur={x,price:rs[0].price,untrained:rs[0].untrained,fut:rs.map(r=>r.price)};
   paint(true);
-  showText(cur.price.toLocaleString("en-US")); // จุดในฉากหลังรวมตัวเป็นตัวเลขราคา
   refresh();
 };
 
-$("hid").textContent=String(1e6+Math.floor(Math.random()*9e6));
-fillBrands();syncR();
-render();               // ตั้งธีมก่อน ให้ฉาก 3D อ่านสีได้
-initFx($("fx"));
-setTheme();paintMotion();
-initUI(setScroll);
+
+async function start(){
+  try{
+    const response=await fetch(new URL("../model/encoder.json?v=merge50minc",import.meta.url));
+    if(!response.ok)throw new Error("encoder load failed");
+    const encoder=await response.json();
+    if(!Array.isArray(encoder.known_brand_model_pairs))throw new Error("invalid encoder");
+    const models={};
+    for(const pair of encoder.known_brand_model_pairs){
+      const [brand,model]=pair.split("|");
+      if(SPEC[brand]?.[model])(models[brand]??=[]).push(model);
+    }
+    for(const list of Object.values(models))list.sort();
+    if(!Object.keys(models).length)throw new Error("no supported cars");
+    trainedModels=models;
+    try{
+      const imagesResponse=await fetch(new URL("../data/car-images/inventory.json",import.meta.url));
+      if(imagesResponse.ok){const images=await imagesResponse.json();if(images.model_id===encoder.model_id&&Array.isArray(images.cars))carImages=images.cars}
+    }catch(e){ /* ฟอร์มยังทำงานได้เมื่อข้อมูลภาพไม่พร้อม */ }
+    fillBrands();
+    if(trainedModels.TOYOTA?.includes("CAMRY")){$("brand").value="TOYOTA";fillModels();$("model").value="CAMRY";fillYears();if(SPEC.TOYOTA.CAMRY[2018])$("year").value="2018";fillVariants()}
+    syncR();
+    render();               // ตั้งธีมก่อน ให้ฉาก 3D อ่านสีได้
+
+
+    initUI();
+  }catch(err){
+    document.querySelectorAll("[data-i]").forEach(e=>e.textContent=T[lang][e.dataset.i]);
+    $("f").hidden=true;
+    $("chips").hidden=true;
+    $("out").textContent=T[lang].err;
+    const retry=document.createElement("button");
+    retry.type="button";retry.className="ghost";retry.textContent=T[lang].retry;
+    retry.onclick=()=>location.reload();
+    $("out").append(document.createElement("br"),retry);
+  }
+}
+start();

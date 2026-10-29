@@ -8,20 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
-<script type="importmap">
-{"imports":{
-  "three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js",
-  "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
-  "gsap":"https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js",
-  "gsap/ScrollTrigger":"https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js",
-  "lenis":"https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.mjs"
-}}
-</script>
+
 <script type="module" src="js/app.js"></script>
 </head>
 <body>
-<canvas id="fx" aria-hidden="true"></canvas>
-<div id="cursor" aria-hidden="true" hidden></div>
+
+
 <header>
   <div class="brand"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 40l4-14c1-3 3-5 6-5h20c3 0 5 1 7 3l8 9c3 1 7 2 7 7v2H6z"/><circle cx="18" cy="46" r="5"/><circle cx="46" cy="46" r="5"/></svg><span data-i="brandName"></span><span class="tag" data-i="tag"></span></div>
   <div class="tools">
@@ -31,38 +23,47 @@
 </header>
 <section class="hero" id="hero">
   <div class="in">
-    <p class="hello"><span data-i="hello"></span><span id="hid"></span></p>
+
     <h1 data-i="title"></h1>
     <p class="lead" id="lead" data-i="heroSub"></p>
-    <a class="btn" href="#form" data-i="start"></a>
+
   </div>
 </section>
-<button class="motion" id="motion" type="button"></button>
+
 <main>
+  <div class="workspace">
   <section class="card" id="form">
     <h2 data-i="formTitle"></h2>
     <p class="sub" data-i="formSub"></p>
     <div class="chips" id="chips"><span data-i="examples"></span></div>
+
     <form id="f" novalidate>
-      <p class="grp" data-i="gCar"></p>
+
       <label><span data-i="brand"></span><select id="brand"></select></label>
       <label><span data-i="model"></span><select id="model"></select></label>
-      <p class="grp" data-i="gSpec"></p>
+
       <label><span data-i="year"></span><select id="year"></select></label>
-      <label><span data-i="color"></span><select id="color"></select></label>
+      <select id="color" hidden aria-hidden="true"></select>
       <label class="full"><span data-i="spec"></span><select id="variant" aria-describedby="seen"></select><small class="hint" id="seen"></small></label>
-      <p class="grp" data-i="gCond"></p>
+
       <label class="full"><span data-i="mileage"></span><span class="unit"><input id="mileage" type="number" inputmode="numeric" min="0" max="999999" value="80000" aria-describedby="e-mileage"><i>km</i></span><input id="mileageR" type="range" min="0" max="400000" step="5000" data-al="mileage"><small class="e" id="e-mileage"></small></label>
       <button class="go full" type="submit" data-i="go"></button>
     </form>
   </section>
+      <figure class="car-photo" id="carPhoto" aria-live="polite">
+      <img id="carPhotoImage" alt="" hidden>
+      <figcaption id="carPhotoCaption"></figcaption>
+    </figure>
+  </div>
   <section class="card result" aria-live="polite">
     <h2 data-i="resTitle"></h2>
     <div id="out"><p class="empty" data-i="empty"></p></div>
+    <section class="card wide" id="more" hidden><h3 data-i="cTitle"></h3><div id="chart"></div></section>
     <div class="note"><span data-i="note"></span> <a href="https://putawann.github.io/car-price-v5/" target="_blank" rel="noopener" data-i="noteReport"></a></div>
   </section>
-  <section class="card wide" id="more" hidden><h3 data-i="cTitle"></h3><div id="chart"></div></section>
+
   <section class="card wide" id="cmp" hidden aria-live="polite"><h3 data-i="cmpTitle"></h3><div id="cmpBody"></div><button class="ghost" id="cmpClear" type="button" data-i="clear"></button></section>
 </main>
+<footer><span class="footer-brand">Car<span>Price</span></span><p data-i="heroSub"></p></footer>
 </body>
 </html>
