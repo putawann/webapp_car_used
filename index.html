@@ -68,16 +68,15 @@
       <label><span data-i="year"></span><select id="year"></select></label>
       <select id="color" hidden aria-hidden="true"></select>
       <div class="pair">
-        <label><span data-i="cc"></span><span class="unit"><input id="cc" type="number" inputmode="numeric" min="600" max="8000" step="100" list="ccList" aria-describedby="e-cc"><i>cc</i></span><small class="e" id="e-cc"></small></label>
+        <label><span data-i="cc"></span><select id="cc"></select></label>
         <label><span data-i="fuel"></span><select id="fuel"></select></label>
         <label><span data-i="trans"></span><select id="trans"></select></label>
         <label><span data-i="body"></span><select id="body"></select></label>
       </div>
-      <datalist id="ccList"></datalist>
       <div class="chips spec-chips" id="specs" aria-describedby="seen"></div>
       <small class="hint" id="seen"></small>
 
-      <label class="full"><span data-i="mileage"></span><span class="unit"><input id="mileage" type="number" inputmode="numeric" min="0" max="999999" value="80000" aria-describedby="e-mileage"><i>km</i></span><input id="mileageR" type="range" min="0" max="400000" step="5000" data-al="mileage"><small class="e" id="e-mileage"></small></label>
+      <label class="full"><span data-i="mileage"></span><span class="unit"><input id="mileage" type="number" inputmode="numeric" min="0" max="300000" value="80000" aria-describedby="e-mileage"><i>km</i></span><input id="mileageR" type="range" min="0" max="300000" step="5000" data-al="mileage"><small class="e" id="e-mileage"></small></label>
       <button class="go full" type="submit" data-i="go"></button>
     </div>
   </section>

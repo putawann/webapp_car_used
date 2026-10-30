@@ -56,6 +56,7 @@ js/data.js  predictPrices()  >  js/model.js  predictCars()
 | `model/xgb_merge50minc_trees.json` | ต้นไม้ทุกต้น + base_score ของโมเดล (3.8 MB) |
 | `model/encoder.json` | ลำดับและค่าของ one-hot, ช่วงปี/เครื่องยนต์ที่เทรน, รายชื่อคู่ ยี่ห้อ-รุ่นที่รู้จัก, alias |
 | `data/specs/*.csv` | ต้นทางของสเปก (หนึ่งไฟล์ต่อยี่ห้อ ยี่ห้อเล็กรวมใน `others.csv`) ทุกแถวมีแหล่งอ้างอิง |
+| `data/trained-specs.csv` | ชุด ยี่ห้อ/รุ่น/ปี/ซีซี/เชื้อเพลิง/เกียร์ ที่มีในข้อมูลเทรน (สร้างจากไฟล์ข้อมูลเทรน) ใช้กรองสเปกให้ฟอร์มกรอกได้เฉพาะข้อมูลที่เทรน |
 | `tools/refit_merge50minc.py` | สร้าง pipeline ผู้ชนะและตรวจ metric ก่อนบันทึกนอก repo |
 | `model/provenance.json` | พารามิเตอร์ ผลตรวจ metric เวอร์ชันไลบรารี และ hash ต้นทาง |
 | `tools/model_reference.py` | Python oracle สำหรับสร้างกรณีทดสอบ |
@@ -161,7 +162,8 @@ TOYOTA,ALPHARD,2003-2008,2400|3000,gas,AT,Van,wiki:Toyota_Alphard,AH10 นำเ
 | `source` | ลิงก์อ้างอิง ย่อ `wiki:ชื่อบทความ` ได้ |
 | `note` | หมายเหตุ ไม่ใช้ในเว็บ |
 
-แก้ข้อมูลแล้วสร้างใหม่: `python tools/build_specs.py` (ส่งไฟล์ข้อมูลเทรนเป็นอาร์กิวเมนต์ได้ จะตรวจว่าทุกรุ่นที่โมเดลรู้จักมีใน dropdown)
+แก้ข้อมูลแล้วสร้างใหม่: `python tools/build_specs.py` (ส่งไฟล์ข้อมูลเทรนเป็นอาร์กิวเมนต์ได้ จะสร้าง `data/trained-specs.csv` ใหม่และตรวจว่าทุกรุ่นที่โมเดลรู้จักมีใน dropdown)
+`js/specs.js` เก็บเฉพาะสเปกที่ปี ซีซี เชื้อเพลิง และเกียร์ตรงกับ `data/trained-specs.csv` ส่วนตัวถังใช้ตามจริงจาก `data/specs/`
 ห้ามแก้ `js/specs.js` ตรง ๆ
 
 คุณภาพข้อมูล: เทียบกับประกาศจริงตรงกัน 97.2% ที่ไม่ตรงส่วนใหญ่เป็นความผิดพลาดของข้อมูลเทรน

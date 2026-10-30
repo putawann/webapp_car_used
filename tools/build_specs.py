@@ -1,8 +1,10 @@
 """สร้าง js/specs.js จาก data/specs/*.csv (สเปครถตลาดไทยที่คัดจากแหล่งอ้างอิง หนึ่งไฟล์ต่อยี่ห้อ) ใช้ทำ dropdown ในฟอร์ม
 
-ใช้:  python tools/build_specs.py [path/to/car_dataset.csv]
-      ถ้าใส่ไฟล์ข้อมูลเทรน จะตรวจว่าทุกรุ่นที่โมเดลรู้จักมีสเปคครบ และบอกว่ารุ่นไหนโมเดลไม่รู้จัก
-      (ฐานสเปกเก็บเฉพาะรุ่นที่โมเดลรู้จัก ตาม known_brand_model_pairs ใน model/encoder.json)
+ใช้:  python tools/build_specs.py [path/to/training.csv]
+      ถ้าใส่ไฟล์ข้อมูลเทรน จะสร้าง data/trained-specs.csv ใหม่ (ชุด ยี่ห้อ/รุ่น/ปี/ซีซี/เชื้อเพลิง/เกียร์ ที่มีในข้อมูลเทรน)
+      และตรวจว่าทุกรุ่นที่โมเดลรู้จักมีสเปคครบ
+      ทุกครั้งที่ build จะเก็บใน specs.js เฉพาะสเปคที่ตรงกับ data/trained-specs.csv ฟอร์มจึงกรอกได้เฉพาะข้อมูลที่เทรน
+      (ตัวถังไม่ต้องตรง: เว็บใช้ตัวถังจริงจาก data/specs/ เช่น Brio Amaze ซีดาน แม้ข้อมูลเทรนลงเป็น Hatchback)
 
 รูปแบบไฟล์ใน data/specs/ (หนึ่งแถว = สเปคชุดหนึ่งในช่วงปีที่ขายในไทย):
   brand,model    ชื่อตรงกับข้อมูลเทรน (โมเดลรู้จักชื่อนี้)
@@ -59,16 +61,41 @@ for where, r in rows:
 if errors:
     sys.exit("\n".join(errors))
 
-if len(sys.argv) > 1:  # ตรวจกับรายชื่อรุ่นที่โมเดลรู้จัก
-    known = {(r["brand"], r["model"]) for r in csv.DictReader(open(sys.argv[1], encoding="utf-8-sig"))}
+TRAINED = os.path.join(ROOT, "data", "trained-specs.csv")
+TRAIN_FUEL = {"Benzine": "gas", "Diesel": "diesel", "Hybrid": "hybrid"}
+TRAIN_GEAR = {"Automatic": "AT", "Manual": "MT"}
+if len(sys.argv) > 1:  # สรุปชุดสเปคจากข้อมูลเทรน แล้วตรวจกับรายชื่อรุ่นที่โมเดลรู้จัก
+    count = {}
+    for r in csv.DictReader(open(sys.argv[1], encoding="utf-8-sig")):
+        k = (r["brand"], r["model"], int(r["year"]), int(float(r["engine"])), TRAIN_FUEL[r["fuel"]], TRAIN_GEAR[r["gear"]])
+        count[k] = count.get(k, 0) + 1
+    with open(TRAINED, "w", encoding="utf-8", newline="") as fh:
+        w = csv.writer(fh, lineterminator="\n")
+        w.writerow(["brand", "model", "year", "cc", "fuel", "gear", "rows"])
+        w.writerows([*k, n] for k, n in sorted(count.items()))
+    known = {(b, m) for b, m, *_ in count}
     have = {(b, m) for b in spec for m in spec[b]}
     print("missing specs:", sorted(known - have) or "none")
     print("unknown to model:", sorted(have - known) or "none")
 
+# เก็บเฉพาะสเปคที่มีในข้อมูลเทรน (ปี ซีซี เชื้อเพลิง เกียร์ ตรงกัน) ปีที่ไม่เหลือสเปคก็ตัดทิ้ง
+trained = {(r["brand"], r["model"], int(r["year"]), int(r["cc"]), FUELS.index(r["fuel"]), GEARS.index(r["gear"]))
+           for r in csv.DictReader(open(TRAINED, encoding="utf-8"))}
+before = sum(len(l) for b in spec.values() for m in b.values() for l in m.values())
+for b in spec:
+    for m in spec[b]:
+        years = {y: [v for v in l if (b, m, y, *v[:3]) in trained] for y, l in spec[b][m].items()}
+        spec[b][m] = {y: l for y, l in years.items() if l}
+        if not spec[b][m]:
+            errors.append(f"{b} {m}: no spec matches the training data")
+if errors:
+    sys.exit("\n".join(errors))
+print(f"kept {sum(len(l) for b in spec.values() for m in b.values() for l in m.values())} of {before} year-specs found in training data")
+
 dump = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":"))
 with open(os.path.join(ROOT, "js", "specs.js"), "w", encoding="utf-8", newline="\n") as fh:
     fh.write("// สร้างอัตโนมัติด้วย tools/build_specs.py จาก data/specs/*.csv อย่าแก้ด้วยมือ\n")
-    fh.write("// SPEC[ยี่ห้อ][รุ่น][ปี] = [[ซีซี, เชื้อเพลิง, เกียร์, ตัวถัง], ...]  SRC[ยี่ห้อ][รุ่น] = [ลิงก์อ้างอิง]\n")
+    fh.write("// SPEC[ยี่ห้อ][รุ่น][ปี] = [[ซีซี, เชื้อเพลิง, เกียร์, ตัวถัง], ...] เฉพาะที่มีในข้อมูลเทรน  SRC[ยี่ห้อ][รุ่น] = [ลิงก์อ้างอิง]\n")
     fh.write(f"export const BODY={dump(BODY)};\nexport const BODY_MODEL={dump(BODY_MODEL)};\nexport const COLORS={dump(COLORS)};\n")
     fh.write(f"export const SPEC={dump(spec)};\nexport const SRC={dump(src)};\n")
 print(f"js/specs.js: {len(spec)} brands, {sum(len(v) for v in spec.values())} models, "

@@ -6,7 +6,6 @@
       "brand": "BMW",
       "model": "320D",
       "years": [
-        2007,
         2008,
         2009,
         2010,
@@ -24,8 +23,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)",
@@ -65,8 +63,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/BMW_3_Series_(F30)",
@@ -107,9 +104,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/BMW_5_Series_(F10)",
@@ -146,9 +141,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/BMW_5_Series_(G30)",
@@ -217,9 +210,6 @@
       "brand": "BMW",
       "model": "X3",
       "years": [
-        2004,
-        2005,
-        2006,
         2007,
         2008,
         2009,
@@ -237,8 +227,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/BMW_X3"
@@ -272,10 +261,7 @@
         2019,
         2020,
         2021,
-        2022,
-        2023,
-        2024,
-        2025
+        2022
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/BMW_X4"
@@ -302,18 +288,6 @@
       "brand": "BMW",
       "model": "X5",
       "years": [
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
         2012,
         2013,
         2014,
@@ -321,13 +295,10 @@
         2016,
         2017,
         2018,
-        2019,
         2020,
         2021,
         2022,
-        2023,
-        2024,
-        2025
+        2023
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/BMW_X5_(E53)",
@@ -357,8 +328,6 @@
       "model": "CAPTIVA",
       "years": [
         2007,
-        2008,
-        2009,
         2010,
         2011,
         2012,
@@ -396,14 +365,7 @@
       "brand": "CHEVROLET",
       "model": "COLORADO",
       "years": [
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
         2010,
-        2011,
         2012,
         2013,
         2014,
@@ -439,13 +401,10 @@
       "brand": "CHEVROLET",
       "model": "TRAILBLAZER",
       "years": [
-        2012,
         2013,
         2014,
-        2015,
         2016,
         2017,
-        2018,
         2019,
         2020
       ],
@@ -473,12 +432,7 @@
       "brand": "FORD",
       "model": "EVEREST",
       "years": [
-        2003,
-        2004,
-        2005,
-        2006,
         2007,
-        2008,
         2009,
         2010,
         2011,
@@ -524,19 +478,6 @@
       "brand": "FORD",
       "model": "RANGER",
       "years": [
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
         2011,
         2012,
         2013,
@@ -633,8 +574,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Haval_Jolion"
@@ -662,22 +602,6 @@
       "brand": "HONDA",
       "model": "ACCORD",
       "years": [
-        1990,
-        1991,
-        1992,
-        1993,
-        1994,
-        1995,
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -755,9 +679,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Honda_BR-V"
@@ -817,17 +739,6 @@
       "brand": "HONDA",
       "model": "CITY",
       "years": [
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
         2007,
         2008,
         2009,
@@ -891,20 +802,6 @@
       "brand": "HONDA",
       "model": "CIVIC",
       "years": [
-        1992,
-        1993,
-        1994,
-        1995,
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -959,17 +856,6 @@
       "brand": "HONDA",
       "model": "CR-V",
       "years": [
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
         2007,
         2008,
         2009,
@@ -988,8 +874,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Honda_CR-V"
@@ -1048,14 +933,6 @@
       "brand": "HONDA",
       "model": "HR-V",
       "years": [
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
         2014,
         2015,
         2016,
@@ -1095,9 +972,6 @@
       "brand": "HONDA",
       "model": "JAZZ",
       "years": [
-        2003,
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -1173,7 +1047,6 @@
       "brand": "HYUNDAI",
       "model": "H-1",
       "years": [
-        2008,
         2009,
         2010,
         2011,
@@ -1218,7 +1091,6 @@
         2022,
         2023,
         2024,
-        2025,
         2026
       ],
       "spec_sources": [
@@ -1245,10 +1117,6 @@
       "brand": "ISUZU",
       "model": "D-MAX",
       "years": [
-        2002,
-        2003,
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -1329,8 +1197,6 @@
       "brand": "ISUZU",
       "model": "MU-7",
       "years": [
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -1405,30 +1271,12 @@
       "brand": "KIA",
       "model": "CARNIVAL",
       "years": [
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
         2020,
         2021,
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Kia_Carnival",
@@ -1456,15 +1304,9 @@
       "brand": "KIA",
       "model": "GRAND CARNIVAL",
       "years": [
-        2006,
-        2007,
         2008,
-        2009,
-        2010,
         2011,
         2012,
-        2013,
-        2014,
         2015,
         2016,
         2017,
@@ -1473,9 +1315,7 @@
         2020,
         2021,
         2022,
-        2023,
-        2024,
-        2025
+        2023
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Kia_Carnival",
@@ -1547,8 +1387,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mazda_CX-3"
@@ -1619,10 +1458,7 @@
         2020,
         2021,
         2022,
-        2023,
-        2024,
-        2025,
-        2026
+        2023
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mazda_CX-5"
@@ -1726,7 +1562,6 @@
       "brand": "MAZDA",
       "model": "MAZDA3",
       "years": [
-        2005,
         2006,
         2007,
         2008,
@@ -1745,9 +1580,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mazda3"
@@ -1774,20 +1607,7 @@
       "brand": "MERCEDES-BENZ",
       "model": "A200",
       "years": [
-        2005,
-        2006,
-        2007,
         2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018,
         2019,
         2020,
         2021,
@@ -1823,21 +1643,6 @@
       "brand": "MERCEDES-BENZ",
       "model": "C200",
       "years": [
-        1994,
-        1995,
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
         2009,
         2010,
         2011,
@@ -1845,17 +1650,7 @@
         2013,
         2014,
         2015,
-        2016,
-        2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025,
-        2026
+        2016
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W202)",
@@ -1886,36 +1681,16 @@
       "brand": "MERCEDES-BENZ",
       "model": "C220",
       "years": [
-        1994,
-        1995,
-        1996,
-        1997,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
         2012,
         2013,
         2014,
-        2015,
-        2016,
-        2017,
         2018,
         2019,
         2020,
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W202)",
@@ -1945,18 +1720,9 @@
       "brand": "MERCEDES-BENZ",
       "model": "C300",
       "years": [
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
         2014,
         2015,
         2016,
-        2017,
-        2018,
         2019,
         2020,
         2021,
@@ -1987,25 +1753,13 @@
       "brand": "MERCEDES-BENZ",
       "model": "C350",
       "years": [
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
         2016,
         2017,
         2018,
-        2019,
-        2020,
-        2021,
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class_(W204)",
@@ -2032,19 +1786,7 @@
       "brand": "MERCEDES-BENZ",
       "model": "E200",
       "years": [
-        1995,
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
         2006,
-        2007,
         2008,
         2009,
         2010,
@@ -2053,11 +1795,7 @@
         2013,
         2014,
         2015,
-        2016,
-        2017,
-        2018,
-        2019,
-        2020
+        2016
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W210)",
@@ -2086,40 +1824,18 @@
       "brand": "MERCEDES-BENZ",
       "model": "E220",
       "years": [
-        1993,
-        1994,
-        1995,
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
         2006,
         2007,
-        2008,
         2009,
-        2010,
         2011,
         2012,
-        2013,
-        2014,
-        2015,
         2016,
         2017,
-        2018,
         2019,
         2020,
         2021,
         2022,
-        2023,
-        2024,
-        2025,
-        2026
+        2023
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_W124",
@@ -2152,10 +1868,7 @@
         2010,
         2011,
         2012,
-        2013,
-        2014,
-        2015,
-        2016
+        2013
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W212)"
@@ -2181,31 +1894,18 @@
       "brand": "MERCEDES-BENZ",
       "model": "E300",
       "years": [
-        1993,
-        1994,
-        1995,
-        1996,
-        1997,
-        1998,
-        1999,
-        2009,
         2010,
-        2011,
         2012,
         2013,
         2014,
         2015,
         2016,
-        2017,
-        2018,
         2019,
         2020,
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_W124",
@@ -2233,25 +1933,10 @@
       "brand": "MERCEDES-BENZ",
       "model": "E350",
       "years": [
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
         2017,
         2018,
         2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025,
-        2026
+        2020
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W212)",
@@ -2289,8 +1974,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_GLA-Class"
@@ -2321,9 +2005,7 @@
         2017,
         2018,
         2019,
-        2020,
-        2021,
-        2022
+        2020
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_GLA-Class"
@@ -2350,17 +2032,11 @@
       "brand": "MERCEDES-BENZ",
       "model": "GLC220",
       "years": [
-        2016,
-        2017,
-        2018,
         2019,
         2020,
         2021,
         2022,
-        2023,
-        2024,
-        2025,
-        2026
+        2023
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_GLC-Class"
@@ -2386,7 +2062,6 @@
       "brand": "MERCEDES-BENZ",
       "model": "GLC250",
       "years": [
-        2015,
         2016,
         2017,
         2018,
@@ -2416,7 +2091,6 @@
       "brand": "MERCEDES-BENZ",
       "model": "GLC300",
       "years": [
-        2019,
         2020,
         2021,
         2022,
@@ -2451,12 +2125,10 @@
         2009,
         2010,
         2011,
-        2012,
         2013,
         2014,
         2015,
-        2016,
-        2017
+        2016
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class_(W221)",
@@ -2489,8 +2161,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Maxus_T60"
@@ -2523,9 +2194,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/MG_HS"
@@ -2560,10 +2229,8 @@
         2020,
         2021,
         2022,
-        2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/MG3"
@@ -2694,10 +2361,6 @@
       "brand": "MINI",
       "model": "COOPER",
       "years": [
-        2002,
-        2003,
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -2716,9 +2379,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mini_Hatch",
@@ -2759,9 +2420,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mini_Countryman"
@@ -2841,8 +2500,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mitsubishi_Mirage"
@@ -2886,8 +2544,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mitsubishi_Pajero_Sport"
@@ -2914,7 +2571,6 @@
       "brand": "MITSUBISHI",
       "model": "TRITON",
       "years": [
-        2005,
         2006,
         2007,
         2008,
@@ -3003,8 +2659,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Mitsubishi_Xpander"
@@ -3046,8 +2701,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Nissan_Almera",
@@ -3111,9 +2765,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Nissan_Kicks"
@@ -3181,14 +2833,9 @@
       "years": [
         2007,
         2008,
-        2009,
-        2010,
-        2011,
-        2012,
         2013,
         2014,
         2015,
-        2016,
         2017,
         2018,
         2019,
@@ -3266,10 +2913,8 @@
         2018,
         2019,
         2020,
-        2021,
         2022,
         2023,
-        2024,
         2025,
         2026
       ],
@@ -3333,11 +2978,8 @@
       "brand": "NISSAN",
       "model": "TEANA",
       "years": [
-        2004,
-        2005,
         2006,
         2007,
-        2008,
         2009,
         2010,
         2011,
@@ -3384,8 +3026,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Nissan_Terra"
@@ -3412,17 +3053,7 @@
       "brand": "NISSAN",
       "model": "X-TRAIL",
       "years": [
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
         2007,
-        2008,
-        2009,
-        2010,
-        2011,
         2012,
         2013,
         2014,
@@ -3431,9 +3062,7 @@
         2017,
         2018,
         2019,
-        2020,
-        2025,
-        2026
+        2020
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Nissan_X-Trail"
@@ -3459,14 +3088,8 @@
       "brand": "PORSCHE",
       "model": "CAYENNE",
       "years": [
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
         2008,
         2009,
-        2010,
         2011,
         2012,
         2013,
@@ -3474,15 +3097,7 @@
         2015,
         2016,
         2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025,
-        2026
+        2019
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Porsche_Cayenne"
@@ -3509,19 +3124,9 @@
       "brand": "SUBARU",
       "model": "FORESTER",
       "years": [
-        2003,
-        2004,
-        2005,
-        2006,
         2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
         2013,
         2014,
-        2015,
         2016,
         2017,
         2018,
@@ -3605,8 +3210,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Suzuki_Celerio"
@@ -3641,8 +3245,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Suzuki_Ciaz"
@@ -3671,18 +3274,13 @@
       "years": [
         2013,
         2014,
-        2015,
         2016,
         2017,
         2018,
         2019,
         2020,
         2021,
-        2022,
-        2023,
-        2024,
-        2025,
-        2026
+        2022
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Suzuki_Ertiga"
@@ -3773,9 +3371,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Suzuki_XL7"
@@ -3803,10 +3399,6 @@
       "brand": "TOYOTA",
       "model": "ALPHARD",
       "years": [
-        2003,
-        2004,
-        2005,
-        2006,
         2007,
         2008,
         2009,
@@ -3823,10 +3415,7 @@
         2020,
         2021,
         2022,
-        2023,
-        2024,
-        2025,
-        2026
+        2023
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Toyota_Alphard"
@@ -3848,9 +3437,7 @@
           "illustration_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left; window and paint reflections removed with AI edit"
         },
         {
-          "years": [
-            2026
-          ],
+          "years": [],
           "file": "files/toyota-alphard-2026-199418450.jpg",
           "source": "https://commons.wikimedia.org/wiki/File:2026_Toyota_Alphard_HEV_Smart.jpg",
           "author": "Chanokchon",
@@ -3868,13 +3455,8 @@
       "brand": "TOYOTA",
       "model": "AVANZA",
       "years": [
-        2004,
-        2005,
-        2006,
         2007,
         2008,
-        2009,
-        2010,
         2011,
         2012,
         2013,
@@ -3945,15 +3527,6 @@
       "brand": "TOYOTA",
       "model": "CAMRY",
       "years": [
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -3973,8 +3546,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Toyota_Camry_(XV20)",
@@ -4051,9 +3623,7 @@
       "brand": "TOYOTA",
       "model": "COMMUTER",
       "years": [
-        2005,
         2006,
-        2007,
         2008,
         2009,
         2010,
@@ -4100,11 +3670,6 @@
       "brand": "TOYOTA",
       "model": "COROLLA ALTIS",
       "years": [
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -4150,7 +3715,8 @@
         },
         {
           "years": [
-            2001
+            2006,
+            2007
           ],
           "file": "files/toyota-corolla-altis-2001-74569720.jpg",
           "source": "https://commons.wikimedia.org/wiki/File:2001_Toyota_Corolla_Altis_1.6E.jpg",
@@ -4263,7 +3829,6 @@
       "brand": "TOYOTA",
       "model": "FORTUNER",
       "years": [
-        2005,
         2006,
         2007,
         2008,
@@ -4357,28 +3922,15 @@
       "brand": "TOYOTA",
       "model": "HARRIER",
       "years": [
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
         2007,
         2008,
         2009,
         2010,
         2011,
-        2012,
-        2013,
         2014,
         2015,
         2016,
-        2017,
         2018,
-        2019,
         2020,
         2021,
         2022,
@@ -4410,23 +3962,6 @@
       "brand": "TOYOTA",
       "model": "HIACE",
       "years": [
-        1989,
-        1990,
-        1991,
-        1992,
-        1993,
-        1994,
-        1995,
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -4446,8 +3981,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Toyota_HiAce"
@@ -4512,8 +4046,6 @@
       "brand": "TOYOTA",
       "model": "HILUX VIGO",
       "years": [
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -4550,12 +4082,8 @@
       "brand": "TOYOTA",
       "model": "INNOVA",
       "years": [
-        2004,
-        2005,
-        2006,
         2007,
         2008,
-        2009,
         2010,
         2011,
         2012,
@@ -4603,8 +4131,6 @@
         2019,
         2020,
         2021,
-        2022,
-        2023,
         2024,
         2025
       ],
@@ -4637,9 +4163,7 @@
         2011,
         2012,
         2013,
-        2014,
-        2015,
-        2016
+        2015
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Toyota_Prius"
@@ -4716,10 +4240,7 @@
         2019,
         2020,
         2021,
-        2022,
-        2023,
-        2024,
-        2025
+        2022
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Toyota_Alphard"
@@ -4776,7 +4297,6 @@
       "brand": "TOYOTA",
       "model": "VENTURY",
       "years": [
-        2005,
         2006,
         2007,
         2008,
@@ -4817,10 +4337,6 @@
       "brand": "TOYOTA",
       "model": "VIOS",
       "years": [
-        2002,
-        2003,
-        2004,
-        2005,
         2006,
         2007,
         2008,
@@ -4979,23 +4495,6 @@
       "brand": "VOLKSWAGEN",
       "model": "CARAVELLE",
       "years": [
-        1990,
-        1991,
-        1992,
-        1993,
-        1994,
-        1995,
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
         2007,
         2008,
         2009,
@@ -5011,9 +4510,7 @@
         2019,
         2020,
         2021,
-        2022,
-        2023,
-        2024
+        2022
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Volkswagen_Transporter_(T4)",
@@ -5042,15 +4539,11 @@
       "brand": "VOLVO",
       "model": "XC40",
       "years": [
-        2018,
         2019,
         2020,
         2021,
         2022,
-        2023,
-        2024,
-        2025,
-        2026
+        2023
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Volvo_XC40"
@@ -5077,8 +4570,6 @@
       "brand": "VOLVO",
       "model": "XC60",
       "years": [
-        2008,
-        2009,
         2010,
         2011,
         2012,
@@ -5093,9 +4584,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Volvo_XC60"
@@ -5121,20 +4610,12 @@
       "brand": "VOLVO",
       "model": "XC90",
       "years": [
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
         2007,
         2008,
         2009,
         2010,
         2011,
-        2012,
-        2013,
         2014,
-        2015,
         2016,
         2017,
         2018,
@@ -5143,9 +4624,7 @@
         2021,
         2022,
         2023,
-        2024,
-        2025,
-        2026
+        2024
       ],
       "spec_sources": [
         "https://en.wikipedia.org/wiki/Volvo_XC90"
