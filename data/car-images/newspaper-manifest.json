@@ -1,5 +1,5 @@
 {
-  "style_reference": "newspaper/toyota-camry-2018-74385323.png",
+  "style_reference": "newspaper/toyota-camry-2018-74385323.webp",
   "orientation": "front-left",
   "items": [
     {
@@ -18,8 +18,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/bmw-320d-2022.jpg",
-      "output_file": "newspaper/neutral/bmw-320d-2022.png",
-      "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style"
+      "output_file": "newspaper/neutral/bmw-320d-2022.webp",
+      "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "BMW",
@@ -35,7 +36,8 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/missing-bmw-330e.jpg",
-      "output_file": "newspaper/missing-bmw-330e.png"
+      "output_file": "newspaper/missing-bmw-330e.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "BMW",
@@ -53,7 +55,8 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/bmw-520d-2018.jpg",
-      "output_file": "newspaper/bmw-520d-2018.png"
+      "output_file": "newspaper/bmw-520d-2018.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "BMW",
@@ -69,7 +72,8 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/missing-bmw-530e.jpg",
-      "output_file": "newspaper/missing-bmw-530e.png"
+      "output_file": "newspaper/missing-bmw-530e.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "BMW",
@@ -85,7 +89,7 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/bmw-x1-2023.jpg",
-      "output_file": "newspaper/bmw-x1-2023.png"
+      "output_file": "newspaper/bmw-x1-2023.webp"
     },
     {
       "brand": "BMW",
@@ -101,7 +105,8 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/missing-bmw-x3.jpg",
-      "output_file": "newspaper/missing-bmw-x3.png"
+      "output_file": "newspaper/missing-bmw-x3.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "BMW",
@@ -117,7 +122,7 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/missing-bmw-x4.jpg",
-      "output_file": "newspaper/neutral/missing-bmw-x4.png",
+      "output_file": "newspaper/neutral/missing-bmw-x4.webp",
       "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style"
     },
     {
@@ -134,7 +139,7 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/missing-bmw-x5.jpg",
-      "output_file": "newspaper/missing-bmw-x5.png"
+      "output_file": "newspaper/missing-bmw-x5.webp"
     },
     {
       "brand": "CHEVROLET",
@@ -150,8 +155,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/missing-chevrolet-captiva.jpg",
-      "output_file": "newspaper/neutral/missing-chevrolet-captiva.png",
-      "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style"
+      "output_file": "newspaper/neutral/missing-chevrolet-captiva.webp",
+      "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "CHEVROLET",
@@ -167,8 +173,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/missing-chevrolet-colorado.jpg",
-      "output_file": "newspaper/neutral/missing-chevrolet-colorado.png",
-      "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style"
+      "output_file": "newspaper/neutral/missing-chevrolet-colorado.webp",
+      "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "CHEVROLET",
@@ -184,7 +191,8 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/missing-chevrolet-trailblazer.jpg",
-      "output_file": "newspaper/missing-chevrolet-trailblazer.png"
+      "output_file": "newspaper/missing-chevrolet-trailblazer.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "FORD",
@@ -202,7 +210,8 @@
       "evidence": "https://www.ford.co.th/en/about-ford/newsroom/2022/ford-debuts-ford-ranger-everest-ranger-raptor-and-a-host-of-always-on-customer-experience-initiatives-at-bangkok-motor-show-2022/",
       "status": "complete",
       "original_file": "files/ford-everest-2022.jpg",
-      "output_file": "newspaper/ford-everest-2022.png"
+      "output_file": "newspaper/ford-everest-2022.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "FORD",
@@ -220,7 +229,7 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/ford-ranger-2022-rep.jpg",
-      "output_file": "newspaper/ford-ranger-2022-rep.png"
+      "output_file": "newspaper/ford-ranger-2022-rep.webp"
     },
     {
       "brand": "FORD",
@@ -236,7 +245,8 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/ford-ranger-2022.jpg",
-      "output_file": "newspaper/ford-ranger-2022.png"
+      "output_file": "newspaper/ford-ranger-2022.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HAVAL",
@@ -254,7 +264,8 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/haval-h6-2021.jpg",
-      "output_file": "newspaper/haval-h6-2021.png"
+      "output_file": "newspaper/haval-h6-2021.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HAVAL",
@@ -272,7 +283,8 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/haval-jolion-2021.jpg",
-      "output_file": "newspaper/haval-jolion-2021.png"
+      "output_file": "newspaper/haval-jolion-2021.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -289,7 +301,8 @@
       "description": "2019 Honda Accord Turbo EL in Central Plaza Khon Kaen, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/honda-accord-2019.jpg",
-      "output_file": "newspaper/honda-accord-2019.png"
+      "output_file": "newspaper/honda-accord-2019.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -306,7 +319,8 @@
       "description": "2021 Honda Accord EL in Honda Maliwan, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/honda-accord-2021.jpg",
-      "output_file": "newspaper/honda-accord-2021.png"
+      "output_file": "newspaper/honda-accord-2021.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -322,8 +336,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-honda-br-v.jpg",
-      "output_file": "newspaper/rep-honda-br-v.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-honda-br-v.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -339,8 +354,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-honda-brio.jpg",
-      "output_file": "newspaper/rep-honda-brio.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-honda-brio.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -357,9 +373,10 @@
       "description": "2019 Honda City RS in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
       "status": "complete",
       "original_file": "files/honda-city-2019.jpg",
-      "output_file": "newspaper/neutral/honda-city-2019.png",
+      "output_file": "newspaper/neutral/honda-city-2019.webp",
       "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -376,9 +393,10 @@
       "description": "2020 Honda City e-HEV RS in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
       "status": "complete",
       "original_file": "files/honda-city-2020.jpg",
-      "output_file": "newspaper/neutral/honda-city-2020.png",
+      "output_file": "newspaper/neutral/honda-city-2020.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -395,8 +413,9 @@
       "description": "2017 Honda Civic (FC) 1.8 EL Sedan (12-08-2017) in Bangkok Thailand.",
       "status": "complete",
       "original_file": "files/honda-civic-2017.jpg",
-      "output_file": "newspaper/honda-civic-2017.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/honda-civic-2017.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -413,8 +432,9 @@
       "description": "2020 Honda CR-V 2.4 ES 4WD in Honda Maliwan, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/honda-cr-v-2020.jpg",
-      "output_file": "newspaper/honda-cr-v-2020.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/honda-cr-v-2020.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -430,8 +450,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-honda-freed.jpg",
-      "output_file": "newspaper/rep-honda-freed.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-honda-freed.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -448,8 +469,9 @@
       "description": "2017 Honda HR-V 1.8 EL in Bangkok Thailand.",
       "status": "complete",
       "original_file": "files/honda-hr-v-2017.jpg",
-      "output_file": "newspaper/honda-hr-v-2017.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/honda-hr-v-2017.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -465,8 +487,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-honda-jazz.jpg",
-      "output_file": "newspaper/rep-honda-jazz.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-honda-jazz.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HONDA",
@@ -482,8 +505,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-honda-mobilio.jpg",
-      "output_file": "newspaper/rep-honda-mobilio.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-honda-mobilio.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "HYUNDAI",
@@ -499,7 +523,7 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-hyundai-h-1.jpg",
-      "output_file": "newspaper/misc-hyundai-h-1.png",
+      "output_file": "newspaper/misc-hyundai-h-1.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -516,8 +540,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-hyundai-staria.jpg",
-      "output_file": "newspaper/misc-hyundai-staria.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/misc-hyundai-staria.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "ISUZU",
@@ -534,8 +559,9 @@
       "description": "2019 Isuzu D-Max Hi-Lander 4-Door 1.9 Ddi M in Kow Yoo Hah Motors, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/isuzu-d-max-2019.jpg",
-      "output_file": "newspaper/isuzu-d-max-2019.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/isuzu-d-max-2019.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "ISUZU",
@@ -552,8 +578,9 @@
       "description": "2020 Isuzu D-Max X-Series Hi-Lander 2-Door 1.9 Ddi in Central Plaza Khon Kaen, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/isuzu-d-max-2020.jpg",
-      "output_file": "newspaper/isuzu-d-max-2020.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/isuzu-d-max-2020.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "ISUZU",
@@ -570,7 +597,7 @@
       "description": "2023 Isuzu D-Max Cab4 1.9 Ddi L in Kow Yoo Hah Motors, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/isuzu-d-max-2023.jpg",
-      "output_file": "newspaper/neutral/isuzu-d-max-2023.png",
+      "output_file": "newspaper/neutral/isuzu-d-max-2023.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
@@ -588,8 +615,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-isuzu-mu-7.jpg",
-      "output_file": "newspaper/rep-isuzu-mu-7.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-isuzu-mu-7.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "ISUZU",
@@ -605,9 +633,10 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-isuzu-mu-x.jpg",
-      "output_file": "newspaper/neutral/rep-isuzu-mu-x.png",
+      "output_file": "newspaper/neutral/rep-isuzu-mu-x.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "KIA",
@@ -623,9 +652,10 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-kia-carnival.jpg",
-      "output_file": "newspaper/neutral/misc-kia-carnival.png",
+      "output_file": "newspaper/neutral/misc-kia-carnival.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "KIA",
@@ -641,8 +671,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-kia-grand-carnival.jpg",
-      "output_file": "newspaper/misc-kia-grand-carnival.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/misc-kia-grand-carnival.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MAZDA",
@@ -658,9 +689,10 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-mazda-bt-50-pro.jpg",
-      "output_file": "newspaper/neutral/rep-mazda-bt-50-pro.png",
+      "output_file": "newspaper/neutral/rep-mazda-bt-50-pro.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MAZDA",
@@ -677,9 +709,10 @@
       "description": "2020 Mazda CX-3 2.0 Proactive in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
       "status": "complete",
       "original_file": "files/mazda-cx-3-2020.jpg",
-      "output_file": "newspaper/neutral/mazda-cx-3-2020.png",
+      "output_file": "newspaper/neutral/mazda-cx-3-2020.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MAZDA",
@@ -696,8 +729,9 @@
       "description": "2020 Mazda CX-30 2.0S in Mazda Pijitphet, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/mazda-cx-30-2020.jpg",
-      "output_file": "newspaper/mazda-cx-30-2020.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mazda-cx-30-2020.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MAZDA",
@@ -713,8 +747,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-mazda-cx-5.jpg",
-      "output_file": "newspaper/rep-mazda-cx-5.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-mazda-cx-5.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MAZDA",
@@ -731,9 +766,10 @@
       "description": "2019 Mazda CX-8 2.5SP in Mazda Pijitphet, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/mazda-cx-8-2019.jpg",
-      "output_file": "newspaper/neutral/mazda-cx-8-2019.png",
+      "output_file": "newspaper/neutral/mazda-cx-8-2019.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MAZDA",
@@ -750,9 +786,10 @@
       "description": "2019 Mazda 2 Hatchback 1.3S Sports Leather in Mazda Pijitphet, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/mazda-mazda2-2019.jpg",
-      "output_file": "newspaper/neutral/mazda-mazda2-2019.png",
+      "output_file": "newspaper/neutral/mazda-mazda2-2019.webp",
       "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MAZDA",
@@ -769,8 +806,9 @@
       "description": "2019 Mazda 3 2.0C Sedan in Mazda Pijitphet, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/mazda-mazda3-2019.jpg",
-      "output_file": "newspaper/mazda-mazda3-2019.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mazda-mazda3-2019.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -786,8 +824,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-a200.jpg",
-      "output_file": "newspaper/mercedes-a200.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mercedes-a200.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -803,9 +842,10 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-c200.jpg",
-      "output_file": "newspaper/neutral/mercedes-c200.png",
+      "output_file": "newspaper/neutral/mercedes-c200.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -821,8 +861,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-c220.jpg",
-      "output_file": "newspaper/mercedes-c220.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mercedes-c220.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -838,7 +879,7 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-c300.jpg",
-      "output_file": "newspaper/mercedes-c300.png",
+      "output_file": "newspaper/mercedes-c300.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -855,8 +896,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-c350.jpg",
-      "output_file": "newspaper/mercedes-c350.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mercedes-c350.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -872,7 +914,7 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-e200.jpg",
-      "output_file": "newspaper/mercedes-e200.png",
+      "output_file": "newspaper/mercedes-e200.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -889,8 +931,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-e220.jpg",
-      "output_file": "newspaper/mercedes-e220.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mercedes-e220.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -906,8 +949,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-e250.jpg",
-      "output_file": "newspaper/mercedes-e250.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mercedes-e250.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -923,8 +967,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-e300.jpg",
-      "output_file": "newspaper/mercedes-e300.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mercedes-e300.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -940,8 +985,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-e350.jpg",
-      "output_file": "newspaper/mercedes-e350.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mercedes-e350.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -957,8 +1003,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-gla200.jpg",
-      "output_file": "newspaper/mercedes-gla200.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mercedes-gla200.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -974,9 +1021,10 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-gla250.jpg",
-      "output_file": "newspaper/neutral/mercedes-gla250.png",
+      "output_file": "newspaper/neutral/mercedes-gla250.webp",
       "recolor_changes": "AI-edited original illustration: neutral gloss black paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -992,8 +1040,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-glc220.jpg",
-      "output_file": "newspaper/mercedes-glc220.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mercedes-glc220.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -1009,7 +1058,7 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-glc250.jpg",
-      "output_file": "newspaper/mercedes-glc250.png",
+      "output_file": "newspaper/mercedes-glc250.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1026,9 +1075,10 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-glc300.jpg",
-      "output_file": "newspaper/neutral/mercedes-glc300.png",
+      "output_file": "newspaper/neutral/mercedes-glc300.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MERCEDES-BENZ",
@@ -1044,8 +1094,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mercedes-s300-front.jpg",
-      "output_file": "newspaper/mercedes-s300-front.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mercedes-s300-front.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MG",
@@ -1063,7 +1114,7 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/mg-extender-2021-rep.jpg",
-      "output_file": "newspaper/mg-extender-2021-rep.png",
+      "output_file": "newspaper/mg-extender-2021-rep.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1080,9 +1131,10 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-mg-hs.jpg",
-      "output_file": "newspaper/neutral/misc-mg-hs.png",
+      "output_file": "newspaper/neutral/misc-mg-hs.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MG",
@@ -1098,9 +1150,10 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-mg-mg3.jpg",
-      "output_file": "newspaper/neutral/misc-mg-mg3.png",
+      "output_file": "newspaper/neutral/misc-mg-mg3.webp",
       "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MG",
@@ -1116,8 +1169,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-mg-mg5.jpg",
-      "output_file": "newspaper/misc-mg-mg5.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/misc-mg-mg5.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MG",
@@ -1133,8 +1187,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-mg-vs-hev.png",
-      "output_file": "newspaper/misc-mg-vs-hev.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/misc-mg-vs-hev.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MG",
@@ -1152,7 +1207,7 @@
       "evidence": "https://www.thairath.co.th/news/auto/news/1803229",
       "status": "complete",
       "original_file": "files/mg-zs-2020.jpg",
-      "output_file": "newspaper/mg-zs-2020.png",
+      "output_file": "newspaper/mg-zs-2020.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1169,7 +1224,7 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-mini-cooper.jpg",
-      "output_file": "newspaper/neutral/misc-mini-cooper.png",
+      "output_file": "newspaper/neutral/misc-mini-cooper.webp",
       "recolor_changes": "AI-edited original illustration: neutral pearl white with gloss black mirror caps, replacing the yellow mirror caps with black paint; same car, angle and newspaper style",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
@@ -1187,9 +1242,10 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-mini-countryman.jpg",
-      "output_file": "newspaper/neutral/misc-mini-countryman.png",
+      "output_file": "newspaper/neutral/misc-mini-countryman.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray with gloss black roof and mirror caps, replacing all red decorative trim with black paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MITSUBISHI",
@@ -1206,8 +1262,9 @@
       "description": "2019 Mitsubishi Attrage GTS-LTD in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
       "status": "complete",
       "original_file": "files/mitsubishi-attrage-2019.jpg",
-      "output_file": "newspaper/mitsubishi-attrage-2019.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mitsubishi-attrage-2019.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MITSUBISHI",
@@ -1224,7 +1281,7 @@
       "description": "2019 Mitsubishi Mirage 1.2 GLS in Mitsu Khonkaen Yonpiboon, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/mitsubishi-mirage-2019.jpg",
-      "output_file": "newspaper/mitsubishi-mirage-2019.png",
+      "output_file": "newspaper/mitsubishi-mirage-2019.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1242,8 +1299,9 @@
       "description": "2019 Mitsubishi Pajero Sport GT-Premium 4WD in BITEC, Bangna, Bangkok, Thailand.",
       "status": "complete",
       "original_file": "files/mitsubishi-pajero-sport-2019.jpg",
-      "output_file": "newspaper/mitsubishi-pajero-sport-2019.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/mitsubishi-pajero-sport-2019.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "MITSUBISHI",
@@ -1260,7 +1318,7 @@
       "description": "2022 Mitsubishi Triton Double-Cab 2.4 Plus S-Limited in BITEC, Bangna, Bangkok, Thailand.",
       "status": "complete",
       "original_file": "files/mitsubishi-triton-2022.jpg",
-      "output_file": "newspaper/mitsubishi-triton-2022.png",
+      "output_file": "newspaper/mitsubishi-triton-2022.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1278,7 +1336,7 @@
       "description": "2022 Mitsubishi Xpander GT in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
       "status": "complete",
       "original_file": "files/mitsubishi-xpander-2022.jpg",
-      "output_file": "newspaper/mitsubishi-xpander-2022.png",
+      "output_file": "newspaper/mitsubishi-xpander-2022.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1296,9 +1354,10 @@
       "description": "2020 Mitsubishi Xpander Cross in Mitsu Nakorn Khon Kaen, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/mitsubishi-xpander-cross-2020.jpg",
-      "output_file": "newspaper/neutral/mitsubishi-xpander-cross-2020.png",
+      "output_file": "newspaper/neutral/mitsubishi-xpander-cross-2020.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1315,8 +1374,9 @@
       "description": "2021 Nissan Almera 1.0L Turbo VL Sportech in Nissan KKT, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/nissan-almera-2021.jpg",
-      "output_file": "newspaper/nissan-almera-2021.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/nissan-almera-2021.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1332,8 +1392,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-nissan-juke.jpg",
-      "output_file": "newspaper/rep-nissan-juke.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-nissan-juke.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1350,9 +1411,10 @@
       "description": "2020 Nissan Kicks e-Power VL in Central Plaza Nakorn Ratchasima, Nakorn Ratchasima, Thailand.",
       "status": "complete",
       "original_file": "files/nissan-kicks-2020.jpg",
-      "output_file": "newspaper/neutral/nissan-kicks-2020.png",
+      "output_file": "newspaper/neutral/nissan-kicks-2020.webp",
       "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1368,8 +1430,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-nissan-march.jpg",
-      "output_file": "newspaper/rep-nissan-march.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-nissan-march.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1386,9 +1449,10 @@
       "description": "2020 Nissan Navara Double-Cab 4WD VL in Central Plaza Khon Kaen, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/nissan-navara-2020.jpg",
-      "output_file": "newspaper/neutral/nissan-navara-2020.png",
+      "output_file": "newspaper/neutral/nissan-navara-2020.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1404,9 +1468,10 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-nissan-note.jpg",
-      "output_file": "newspaper/neutral/rep-nissan-note.png",
+      "output_file": "newspaper/neutral/rep-nissan-note.webp",
       "recolor_changes": "AI-edited original illustration: neutral pearl white paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1422,9 +1487,10 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-nissan-np300-navara.jpg",
-      "output_file": "newspaper/neutral/rep-nissan-np300-navara.png",
+      "output_file": "newspaper/neutral/rep-nissan-np300-navara.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1441,8 +1507,9 @@
       "status": "complete",
       "replaces_original_file": "files/rep-nissan-sylphy.jpg",
       "original_file": "files/nissan-sylphy-front-replacement.jpg",
-      "output_file": "newspaper/nissan-sylphy-front-replacement.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration from original; background removed; front facing left."
+      "output_file": "newspaper/nissan-sylphy-front-replacement.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration from original; background removed; front facing left.",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1458,9 +1525,10 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-nissan-teana.jpg",
-      "output_file": "newspaper/neutral/rep-nissan-teana.png",
+      "output_file": "newspaper/neutral/rep-nissan-teana.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1477,8 +1545,9 @@
       "description": "2023 Nissan Terra Sport 2.3 VL 4WD in KICE, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/nissan-terra-2023.jpg",
-      "output_file": "newspaper/nissan-terra-2023.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/nissan-terra-2023.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "NISSAN",
@@ -1494,8 +1563,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-nissan-x-trail.jpg",
-      "output_file": "newspaper/rep-nissan-x-trail.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-nissan-x-trail.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "PORSCHE",
@@ -1511,7 +1581,7 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-porsche-cayenne.jpg",
-      "output_file": "newspaper/neutral/misc-porsche-cayenne.png",
+      "output_file": "newspaper/neutral/misc-porsche-cayenne.webp",
       "recolor_changes": "AI-edited original illustration: neutral gloss black paint; same car, angle and newspaper style",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
@@ -1529,9 +1599,10 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-subaru-forester.jpg",
-      "output_file": "newspaper/neutral/rep-subaru-forester.png",
+      "output_file": "newspaper/neutral/rep-subaru-forester.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "SUBARU",
@@ -1547,8 +1618,9 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-subaru-xv.jpg",
-      "output_file": "newspaper/rep-subaru-xv.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/rep-subaru-xv.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "SUZUKI",
@@ -1564,7 +1636,7 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-suzuki-celerio.jpg",
-      "output_file": "newspaper/rep-suzuki-celerio.png",
+      "output_file": "newspaper/rep-suzuki-celerio.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1581,9 +1653,10 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-suzuki-ciaz.jpg",
-      "output_file": "newspaper/neutral/rep-suzuki-ciaz.png",
+      "output_file": "newspaper/neutral/rep-suzuki-ciaz.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "SUZUKI",
@@ -1600,9 +1673,10 @@
       "description": "2020 Suzuki Ertiga GX in Suzuki R-Heng Wattana, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/suzuki-ertiga-2020.jpg",
-      "output_file": "newspaper/neutral/suzuki-ertiga-2020.png",
+      "output_file": "newspaper/neutral/suzuki-ertiga-2020.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "SUZUKI",
@@ -1619,9 +1693,10 @@
       "description": "2022 Suzuki Ertiga Smart Hybrid GX in Suzuki R-Heng Wattana, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/suzuki-ertiga-2022.jpg",
-      "output_file": "newspaper/neutral/suzuki-ertiga-2022.png",
+      "output_file": "newspaper/neutral/suzuki-ertiga-2022.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "SUZUKI",
@@ -1638,9 +1713,10 @@
       "description": "2021 Suzuki Swift GLX in Suzuki R-Heng Wattana, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/suzuki-swift-2021.jpg",
-      "output_file": "newspaper/neutral/suzuki-swift-2021.png",
+      "output_file": "newspaper/neutral/suzuki-swift-2021.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "SUZUKI",
@@ -1657,7 +1733,7 @@
       "description": "2020 Suzuki XL7 GLX in Suzuki R-Heng Wattana, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/suzuki-xl7-2020.jpg",
-      "output_file": "newspaper/neutral/suzuki-xl7-2020.png",
+      "output_file": "newspaper/neutral/suzuki-xl7-2020.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
@@ -1676,8 +1752,9 @@
       "description": "2023 Toyota Alphard 2.5 HEV in Toyota Alive Space, Bangna, Bangkok, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-alphard-2023-136219561.jpg",
-      "output_file": "newspaper/toyota-alphard-2023-136219561.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-alphard-2023-136219561.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1694,8 +1771,9 @@
       "description": "2026 Toyota Alphard HEV Smart in BITEC, Bangna, Bangkok, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-alphard-2026-199418450.jpg",
-      "output_file": "newspaper/toyota-alphard-2026-199418450.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-alphard-2026-199418450.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1712,8 +1790,9 @@
       "depicted_year": null,
       "status": "complete",
       "original_file": "files/toyota-avanza-representative.jpg",
-      "output_file": "newspaper/toyota-avanza-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-avanza-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1730,8 +1809,9 @@
       "description": "2022 Toyota C-HR HEV GR Sport in Impact Challenger Hall, Muang Thong Thani, Nonthaburi, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-c-hr-2022-116705129.jpg",
-      "output_file": "newspaper/toyota-c-hr-2022-116705129.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-c-hr-2022-116705129.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1748,7 +1828,7 @@
       "description": "2009 Toyota Camry 2.0G in Khon Kaen University, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-camry-2009-74569722.jpg",
-      "output_file": "newspaper/toyota-camry-2009-74569722.png",
+      "output_file": "newspaper/toyota-camry-2009-74569722.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1766,7 +1846,8 @@
       "description": "2018 Toyota Camry 2.0 G in Toyota Kaennakorn, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-camry-2018-74385323.jpg",
-      "output_file": "newspaper/toyota-camry-2018-74385323.png"
+      "output_file": "newspaper/toyota-camry-2018-74385323.webp",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1783,8 +1864,9 @@
       "description": "2012 Toyota Camry 2.0G in Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-camry-2012-74618336.jpg",
-      "output_file": "newspaper/toyota-camry-2012-74618336.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-camry-2012-74618336.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1801,8 +1883,9 @@
       "description": "2018 Toyota Camry 2.5 G in Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-camry-2018.jpg",
-      "output_file": "newspaper/toyota-camry-2018.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-camry-2018.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1819,8 +1902,9 @@
       "depicted_year": null,
       "status": "complete",
       "original_file": "files/toyota-commuter-representative.jpg",
-      "output_file": "newspaper/toyota-commuter-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-commuter-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1837,8 +1921,9 @@
       "description": "2019 Toyota Corolla Altis 1.6 G in Toyota Khonkaen, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-corolla-altis-2019-81920713.jpg",
-      "output_file": "newspaper/toyota-corolla-altis-2019-81920713.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-corolla-altis-2019-81920713.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1855,7 +1940,7 @@
       "description": "2001 Toyota Corolla Altis 1.6E in Khon Kaen University, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-corolla-altis-2001-74569720.jpg",
-      "output_file": "newspaper/toyota-corolla-altis-2001-74569720.png",
+      "output_file": "newspaper/toyota-corolla-altis-2001-74569720.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1873,8 +1958,9 @@
       "description": "2021 Toyota Corolla Altis 1.8 Sport in Toyota Kaennakorn, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-corolla-altis-2021-115394181.jpg",
-      "output_file": "newspaper/toyota-corolla-altis-2021-115394181.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-corolla-altis-2021-115394181.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1891,9 +1977,10 @@
       "description": "2020 Toyota Corolla Cross 1.8 Sport in Toyota Khonkaen, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-corolla-cross-2020-110424065.jpg",
-      "output_file": "newspaper/neutral/toyota-corolla-cross-2020-110424065.png",
+      "output_file": "newspaper/neutral/toyota-corolla-cross-2020-110424065.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1910,8 +1997,9 @@
       "description": "2024 Toyota Corolla Cross HEV Premium in Toyota Alive Space, Bangna, Bangkok, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-corolla-cross-2024-145212114.jpg",
-      "output_file": "newspaper/toyota-corolla-cross-2024-145212114.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-corolla-cross-2024-145212114.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1928,7 +2016,7 @@
       "description": "2022 Toyota Corolla Cross 1.8 Sport Plus in Toyota Alive Space, Bangna, Bangkok, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-corolla-cross-2022-127064088.jpg",
-      "output_file": "newspaper/toyota-corolla-cross-2022-127064088.png",
+      "output_file": "newspaper/toyota-corolla-cross-2022-127064088.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1946,8 +2034,9 @@
       "description": "2021 Toyota Corolla Cross Hybrid Premium Modellista in Toyota Amata, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-corolla-cross-2021-112519181.jpg",
-      "output_file": "newspaper/toyota-corolla-cross-2021-112519181.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-corolla-cross-2021-112519181.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -1964,7 +2053,7 @@
       "description": "2020 Toyota Fortuner 2.4V in Toyota Amata, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-fortuner-2020-91009220.jpg",
-      "output_file": "newspaper/toyota-fortuner-2020-91009220.png",
+      "output_file": "newspaper/toyota-fortuner-2020-91009220.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -1982,7 +2071,7 @@
       "description": "2024 Toyota Fortuner Leader 2.4 S in Central Plaza Udon Thani, Udon Thani, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-fortuner-2024-155068599.jpg",
-      "output_file": "newspaper/toyota-fortuner-2024-155068599.png",
+      "output_file": "newspaper/toyota-fortuner-2024-155068599.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -2000,7 +2089,7 @@
       "description": "2022 Toyota Fortuner 2.4 Commander in Toyota Kaennakorn, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-fortuner-2022-115724281.jpg",
-      "output_file": "newspaper/toyota-fortuner-2022-115724281.png",
+      "output_file": "newspaper/toyota-fortuner-2022-115724281.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -2018,8 +2107,9 @@
       "description": "2021 Toyota Fortuner 2.4V Modellista in Toyota Amata, Khon Kaen, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-fortuner-2021-110922000.jpg",
-      "output_file": "newspaper/toyota-fortuner-2021-110922000.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-fortuner-2021-110922000.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2036,8 +2126,9 @@
       "depicted_year": 2015,
       "status": "complete",
       "original_file": "files/toyota-harrier-representative.jpg",
-      "output_file": "newspaper/toyota-harrier-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-harrier-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2054,8 +2145,9 @@
       "status": "complete",
       "replaces_original_file": "files/toyota-hiace-representative.jpg",
       "original_file": "files/toyota-hiace-front-replacement.jpg",
-      "output_file": "newspaper/toyota-hiace-front-replacement.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration from original; background removed; front facing left."
+      "output_file": "newspaper/toyota-hiace-front-replacement.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration from original; background removed; front facing left.",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2072,8 +2164,9 @@
       "depicted_year": 2017,
       "status": "complete",
       "original_file": "files/toyota-hilux-revo-representative.jpg",
-      "output_file": "newspaper/toyota-hilux-revo-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-hilux-revo-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2090,8 +2183,9 @@
       "depicted_year": 2008,
       "status": "complete",
       "original_file": "files/toyota-hilux-vigo-representative.jpg",
-      "output_file": "newspaper/toyota-hilux-vigo-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-hilux-vigo-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2108,8 +2202,9 @@
       "depicted_year": 2023,
       "status": "complete",
       "original_file": "files/toyota-innova-representative.jpg",
-      "output_file": "newspaper/toyota-innova-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-innova-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2126,8 +2221,9 @@
       "depicted_year": 2019,
       "status": "complete",
       "original_file": "files/toyota-majesty-representative.jpg",
-      "output_file": "newspaper/toyota-majesty-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-majesty-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2144,9 +2240,10 @@
       "depicted_year": 2020,
       "status": "complete",
       "original_file": "files/toyota-prius-representative.jpg",
-      "output_file": "newspaper/neutral/toyota-prius-representative.png",
+      "output_file": "newspaper/neutral/toyota-prius-representative.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2163,8 +2260,9 @@
       "depicted_year": 2004,
       "status": "complete",
       "original_file": "files/toyota-sienta-representative.jpg",
-      "output_file": "newspaper/toyota-sienta-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-sienta-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2181,8 +2279,9 @@
       "depicted_year": 2023,
       "status": "complete",
       "original_file": "files/toyota-vellfire-representative.jpg",
-      "output_file": "newspaper/toyota-vellfire-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-vellfire-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2199,7 +2298,7 @@
       "depicted_year": 2022,
       "status": "complete",
       "original_file": "files/toyota-veloz-representative.jpg",
-      "output_file": "newspaper/toyota-veloz-representative.png",
+      "output_file": "newspaper/toyota-veloz-representative.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -2218,7 +2317,7 @@
       "download_url": "https://www.toyotakan.com/wp-content/uploads/2016/11/04-3.png",
       "replaces_original_file": "files/toyota-ventury-representative.jpg",
       "original_file": "files/toyota-ventury-front-replacement.png",
-      "output_file": "newspaper/toyota-ventury-front-replacement.png",
+      "output_file": "newspaper/toyota-ventury-front-replacement.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration from original; background removed; front facing left."
     },
     {
@@ -2236,9 +2335,10 @@
       "depicted_year": 2007,
       "status": "complete",
       "original_file": "files/toyota-vios-representative.jpg",
-      "output_file": "newspaper/neutral/toyota-vios-representative.png",
+      "output_file": "newspaper/neutral/toyota-vios-representative.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2255,8 +2355,9 @@
       "depicted_year": 2021,
       "status": "complete",
       "original_file": "files/toyota-yaris-representative.jpg",
-      "output_file": "newspaper/toyota-yaris-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-yaris-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "TOYOTA",
@@ -2273,7 +2374,7 @@
       "depicted_year": 2022,
       "status": "complete",
       "original_file": "files/toyota-yaris-ativ-representative.png",
-      "output_file": "newspaper/toyota-yaris-ativ-representative.png",
+      "output_file": "newspaper/toyota-yaris-ativ-representative.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     },
     {
@@ -2291,8 +2392,9 @@
       "depicted_year": 2023,
       "status": "complete",
       "original_file": "files/toyota-yaris-cross-representative.jpg",
-      "output_file": "newspaper/toyota-yaris-cross-representative.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/toyota-yaris-cross-representative.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "VOLKSWAGEN",
@@ -2308,9 +2410,10 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-volkswagen-caravelle.jpg",
-      "output_file": "newspaper/neutral/misc-volkswagen-caravelle.png",
+      "output_file": "newspaper/neutral/misc-volkswagen-caravelle.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "VOLVO",
@@ -2326,9 +2429,10 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-volvo-xc40.jpg",
-      "output_file": "newspaper/neutral/misc-volvo-xc40.png",
+      "output_file": "newspaper/neutral/misc-volvo-xc40.webp",
       "recolor_changes": "AI-edited original illustration: neutral charcoal gray paint; same car, angle and newspaper style",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "VOLVO",
@@ -2344,8 +2448,9 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-volvo-xc60.jpg",
-      "output_file": "newspaper/misc-volvo-xc60.png",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/misc-volvo-xc60.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
     },
     {
       "brand": "VOLVO",
@@ -2361,7 +2466,7 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-volvo-xc90.jpg",
-      "output_file": "newspaper/misc-volvo-xc90.png",
+      "output_file": "newspaper/misc-volvo-xc90.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
     }
   ]

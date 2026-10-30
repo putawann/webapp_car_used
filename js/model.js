@@ -82,7 +82,7 @@ function modelKey(m,aliases){
   const k=m.toUpperCase().replace(/[^A-Z0-9]/g,"");
   return aliases[k]??k;
 }
-function predictOne(m,c){
+function predictOne(m,c,refYear){
   const brand=c.brand.trim().toUpperCase();
   const key=modelKey(c.model,m.aliases);
   const name=m.keys.get(`${brand}|${key}`);
@@ -92,7 +92,7 @@ function predictOne(m,c){
   if(!(m.eng[0]<=c.cc&&c.cc<=m.eng[1]))warnings.push("engine_outside_training_range");
   if(!(m.yrs[0]<=c.year&&c.year<=m.yrs[1]))warnings.push("year_outside_training_range");
   // แถวเดียวกับ to_features(): numeric ตามลำดับ แล้ว one-hot ทุก categorical
-  const v=new Float64Array(m.n),vals={engine:c.cc,mileage:c.mileage,car_age:m.year-c.year};
+  const v=new Float64Array(m.n),vals={engine:c.cc,mileage:c.mileage,car_age:refYear-c.year};
   for(let i=0;i<m.num.length;i++)v[i]=vals[m.num[i]];
   const row={brand,model:known?name:m.unknown,car_type:m.body[c.body],fuel:FUEL[c.fuel],gear:GEAR[c.trans]};
   for(let i=0;i<m.cats.length;i++){
@@ -115,9 +115,10 @@ function predictOne(m,c){
   const raw=acc[0];
   return {price:Math.max(0,pyRound(raw/1000)*1000),raw,known_model:known,warnings};
 }
-export async function predictCars(list,data){
+// refYear: ปีที่ใช้คิดอายุรถ ค่าเริ่มต้นคือ CURRENT_YEAR ตอนเทรน (tests/parity.mjs ใช้ค่านี้)
+export async function predictCars(list,data,{refYear}={}){
   if(!Array.isArray(list)||list.length===0)throw new Error("cars must be a non-empty array");
   list.forEach((c,i)=>checkCar(c,`cars[${i}]`));
   const m=compile(data||await load());
-  return list.map(c=>predictOne(m,c));
+  return list.map(c=>predictOne(m,c,refYear??m.year));
 }

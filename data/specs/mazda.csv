@@ -1,20 +1,12 @@
 brand,model,years,cc,fuel,gear,body,source,note
-MAZDA,626,1987-1999,2000,gas,AT|MT,Sedan,wiki:Mazda_Capella,GD/GE/GF
-MAZDA,BT-50,2006-2011,2500|3000,diesel,AT|MT,Pickup,wiki:Mazda_BT-50,J97M
-MAZDA,BT-50,2020-2026,1900|3000,diesel,AT|MT,Pickup,wiki:Mazda_BT-50,TF (D-Max base)
 MAZDA,BT-50 PRO,2012-2020,2200|3200,diesel,AT|MT,Pickup,wiki:Mazda_BT-50,UP/UR
 MAZDA,CX-3,2015-2026,2000,gas,AT,SUV,wiki:Mazda_CX-3,DK
 MAZDA,CX-3,2015-2018,1500,diesel,AT,SUV,wiki:Mazda_CX-3,SKYACTIV-D 1.5
 MAZDA,CX-30,2020-2026,2000,gas,AT,SUV,wiki:Mazda_CX-30,DM
 MAZDA,CX-5,2013-2026,2000|2500,gas,AT,SUV,wiki:Mazda_CX-5,KE/KF
 MAZDA,CX-5,2013-2026,2200,diesel,AT,SUV,wiki:Mazda_CX-5,SKYACTIV-D 2.2
-MAZDA,CX-7,2007-2012,2300,gas,AT,SUV,wiki:Mazda_CX-7,turbo
 MAZDA,CX-8,2019-2024,2500,gas,AT,SUV,wiki:Mazda_CX-8,KG
-MAZDA,CX-8,2019-2024,2200,diesel,AT,SUV,wiki:Mazda_CX-8,
-MAZDA,CX-9,2007-2015,3700,gas,AT,SUV,wiki:Mazda_CX-9,TB
-MAZDA,FAMILIA,1980-1998,1400|1600,gas,MT,Pickup,wiki:Mazda_B-Series,Familia pickup (B-Series)
-MAZDA,FAMILIA,1985-1998,2200,diesel,MT,Pickup,wiki:Mazda_B-Series,
-MAZDA,FIGHTER,1998-2006,2500|2900,diesel,AT|MT,Pickup,wiki:Mazda_B-Series,Fighter
+MAZDA,CX-8,2019-2023,2200,diesel,AT,SUV,wiki:Mazda_CX-8,ดีเซล ปีตามข้อมูลเทรน (merged_min50) ยังไม่ยืนยันปีขายในไทย
 MAZDA,MAZDA2,2009-2014,1500,gas,AT|MT,Hatchback|Sedan,wiki:Mazda2,DE
 MAZDA,MAZDA2,2015-2026,1300,gas,AT,Hatchback,wiki:Mazda2,DJ
 MAZDA,MAZDA2,2015-2026,1300,gas,AT,Sedan,wiki:Mazda2,DL
@@ -26,13 +18,3 @@ MAZDA,MAZDA3,2014-2019,2000,gas,AT,Hatchback,wiki:Mazda3,BM/BN
 MAZDA,MAZDA3,2014-2019,2000,gas,AT,Sedan,wiki:Mazda3,BM/BN
 MAZDA,MAZDA3,2019-2026,2000,gas,AT,Hatchback,wiki:Mazda3,BP
 MAZDA,MAZDA3,2019-2026,2000,gas,AT,Sedan,wiki:Mazda3,BP
-MAZDA,TRIBUTE,2002-2008,2000|2300|3000,gas,AT,SUV,wiki:Mazda_Tribute,
-MAZDA,MX-5,2008-2026,2000,gas,AT|MT,Convertible,wiki:Mazda_MX-5,NC/ND
-MAZDA,RX-8,2004-2011,1300,gas,AT|MT,Coupe,wiki:Mazda_RX-8,เครื่องโรตารี
-MAZDA,MAZDA6,2002-2008,2000|2300,gas,AT,Sedan,wiki:Mazda6,GG
-MAZDA,MAZDA6,2014-2019,2000|2500,gas,AT,Sedan,wiki:Mazda6,GJ
-MAZDA,MAZDA6,2014-2019,2200,diesel,AT,Sedan,wiki:Mazda6,GJ diesel
-MAZDA,323,1990-2004,1600|1800,gas,AT|MT,Sedan|Hatchback,wiki:Mazda_Familia,Protegé/Astina
-MAZDA,MAGNUM,1990-1998,2200|2500,diesel,MT,Pickup,wiki:Mazda_B-Series,
-MAZDA,6E,2025-2026,0,ev,AT,Sedan,https://www.electrive.com/2025/02/28/mazda-to-launch-two-evs-in-thailand,
-MAZDA,CX-6E,2026,0,ev,AT,SUV,https://en.thairath.co.th/news/auto/2922023,

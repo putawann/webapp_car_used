@@ -11,11 +11,11 @@ const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const store=(k,v)=>{try{localStorage[k]=v}catch(e){}};
 let lang,theme;
 try{lang=localStorage.lang;theme=localStorage.theme}catch(e){}
-lang||="th";
-theme||="dark";
+if(lang!=="th"&&lang!=="en")lang="th"; // ค่าที่เก็บไว้อาจเสีย/ถูกแก้ ต้องไม่ทำให้ทั้งหน้าพัง
+if(theme!=="dark"&&theme!=="light")theme="light";
 let cur=null,pinned=null,seq=0,typed=null,tw=0,tt=0,failed=false,modelLoaded=false;
 // รายการยี่ห้อและรุ่นต้องตรงกับคู่ที่โมเดลรู้จัก ไม่ใช่ทุกคู่ในฐานสเปกรถ
-let trainedModels={};
+let trainedModels={},trainedYears=null;
 let carImages=[];
 function paintCarPhoto(){
   const img=$("carPhotoImage"),caption=$("carPhotoCaption");
@@ -29,13 +29,7 @@ function paintCarPhoto(){
   img.onerror=()=>{img.hidden=true;caption.textContent=lang==="th"?"โหลดภาพรถไม่ได้":"Car image could not be loaded."};
   img.src=new URL(`../data/car-images/${photo.illustration_file||photo.file}`,import.meta.url).href;
   img.hidden=false;
-  const source=document.createElement("a"),license=document.createElement("a");
-  source.href=photo.source;source.target="_blank";source.rel="noopener";source.textContent=photo.author;
-  license.href=photo.license_url;license.target="_blank";license.rel="noopener";license.textContent=photo.license;
-  const matchingYear=match.matchingYear;
-  const note=lang==="th"?(matchingYear?"ภาพประกอบตามปีที่ระบุในแหล่งภาพ โฉมและรุ่นย่อยอาจต่างกัน":"ภาพประกอบรุ่น ปีและโฉมอาจต่างจากที่เลือก"):(matchingYear?"Illustrative image dated to this year; appearance and trim may differ":"Illustrative model image; year and appearance may differ");
-  const treatment=illustration?(lang==="th"?" · ภาพวาดดัดแปลง · ":" · Illustration adapted from photo · "):(lang==="th"?" · ปรับขนาดภาพ · ":" · Resized · ");
-  caption.append(`${brand} ${model} · `,source," · ",license,treatment,note);
+  // เครดิตผู้ถ่าย/สัญญาอนุญาตของทุกภาพอยู่ใน credits.html (ลิงก์ที่ footer) ตามเงื่อนไข CC BY/BY-SA
 }
 const SVG=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 const SUN=SVG('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>');
@@ -47,7 +41,7 @@ const sgn=v=>(v<0?"−":"+")+fmt(r1(Math.abs(v)));
 
 function paint(animate){
   const t=T[lang],lo=r1(cur.price*0.92),hi=r1(cur.price*1.08);
-  $("out").innerHTML=`<div class="${animate?"fade":""}"><p class="range">${t.est}</p><div class="price"><span id="pv">${fmt(cur.price)}</span> ${t.baht}</div><p class="range">${t.rng} <small>(±8%)</small></p><div class="bar"><b></b></div><div class="ends"><span>${fmt(lo)}</span><span>${fmt(hi)}</span></div><p class="car-summary">${cur.x.brand} ${cur.x.model} · ${cur.x.year} · ${fmt(cur.x.mileage)} km</p><button class="ghost" id="pin" type="button">${t.pin}</button>${cur.untrained?`<p class="hint">${t.untrained}</p>`:""}</div>`;
+  $("out").innerHTML=`<div class="${animate?"fade":""}"><p class="range">${t.est}</p><div class="price"><span id="pv">${fmt(cur.price)}</span> ${t.baht}</div><p class="range">${t.rng} <small>(±8%)</small></p><div class="bar"><b></b></div><div class="ends"><span>${fmt(lo)}</span><span>${fmt(hi)}</span></div><p class="car-summary">${cur.x.brand} ${cur.x.model} · ${cur.x.year} · ${fmt(cur.x.mileage)} km</p><button class="ghost" id="pin" type="button">${t.pin}</button>${cur.x.custom?`<p class="hint">${t.customSpec}</p>`:""}${cur.untrained?`<p class="hint">${t.untrained}</p>`:""}</div>`;
   $("pin").onclick=()=>{pinned=cur;paintCmp();refresh()};
   if(animate)scramble($("pv"),fmt(cur.price));
   paintMore();paintCmp();
@@ -84,26 +78,46 @@ function render(){
   document.title=T[lang].brandName+" - "+T[lang].title;
 
 
-  fillVariants(true);fillColors(); // ป้ายใน dropdown เปลี่ยนตามภาษา
+  fillYears(true);fillColors(); // ป้ายใน dropdown เปลี่ยนตามภาษา
   if(document.querySelector("input[aria-invalid=true]"))check();
   if(failed)showErr();
   if(cur&&!failed)paint(false);else paintCmp();
 }
 
-// ===== ฟอร์มแบบเลือกไล่ลำดับ: ยี่ห้อ → รุ่น → ปี → สเปค (เฉพาะชุดที่มีจริงใน specs.js) =====
+// ===== ฟอร์ม: ยี่ห้อ → รุ่น → ปี แล้วกรอกสเปคเอง 4 ช่อง (ค่าเริ่มต้นและปุ่มลัดมาจากสเปคที่มีขายจริงใน specs.js) =====
 const FUELS=["gas","diesel","hybrid","ev"],GEARS=["AT","MT"]; // ลำดับตรงกับ tools/build_specs.py
 const sel=(id,items,keepValue)=>{const el=$(id),old=el.value;el.replaceChildren(...items.map(([v,l])=>new Option(l,v)));if(keepValue&&items.some(([v])=>v===old))el.value=old};
 const variants=()=>SPEC[$("brand").value][$("model").value][$("year").value];
 const narrow=matchMedia("(max-width:480px)"); // จอมือถือ: ใช้ AT/MT แทนคำเต็ม ไม่ให้ป้ายสเปคถูกตัด
-narrow.addEventListener("change",()=>fillVariants(true));
+narrow.addEventListener("change",()=>fillSpec(true));
 const vLabel=([cc,f,g,b])=>{const t=T[lang];return `${cc?(cc/1000).toFixed(1)+"L":t.motor} · ${t[FUELS[f]]} · ${narrow.matches?GEARS[g]:t[GEARS[g]==="AT"?"at":"mt"]} · ${t.bodies[BODY[b]]||BODY[b]}`};
-function fillVariants(keepValue){
-  sel("variant",variants().map((v,i)=>[String(i),vLabel(v)]),keepValue);
+// สเปคที่กรอกตรงกับชุดที่มีขายจริงชุดไหน (ไม่ตรง = -1)
+const specIndex=()=>variants().findIndex(([cc,f,g,b])=>($("fuel").value==="ev"||cc===+$("cc").value)&&FUELS[f]===$("fuel").value&&GEARS[g]===$("trans").value&&BODY[b]===$("body").value);
+function syncEv(){const ev=$("fuel").value==="ev";$("cc").disabled=ev;if(ev){$("cc").value=0;setErr("cc","")}}
+function applyVariant([cc,f,g,b]){$("cc").value=cc;$("fuel").value=FUELS[f];$("trans").value=GEARS[g];$("body").value=BODY[b];syncEv();setErr("cc","");paintSpecs()}
+function paintSpecs(){
+  const i=specIndex();
+  $("specs").replaceChildren(Object.assign(document.createElement("span"),{textContent:T[lang].specHint}),...variants().map((v,j)=>{
+    const b=document.createElement("button");
+    b.type="button";b.className="chip";b.textContent=vLabel(v);b.setAttribute("aria-pressed",j===i);b.onclick=()=>applyVariant(v);
+    return b;
+  }));
+}
+// keepValue: เปลี่ยนแค่ป้าย (เช่นเปลี่ยนภาษา) ไม่ทับค่าที่ผู้ใช้กรอกไว้
+function fillSpec(keepValue){
+  const t=T[lang];
+  sel("fuel",FUELS.map(f=>[f,t[f]]),true);
+  sel("trans",GEARS.map(g=>[g,t[g==="AT"?"at":"mt"]]),true);
+  sel("body",BODY.map(b=>[b,t.bodies[b]||b]),true);
+  $("ccList").replaceChildren(...[...new Set(variants().map(v=>v[0]).filter(Boolean))].map(cc=>new Option(cc+" cc",cc)));
+  if(keepValue)paintSpecs();else applyVariant(variants()[0]);
   showSeen();paintCarPhoto();
 }
 // แสดงลิงก์แหล่งอ้างอิงของสเปครุ่นนี้
 function showSeen(){$("seen").replaceChildren(T[lang].src+" ",...SRC[$("brand").value][$("model").value].flatMap((u,i)=>{const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";a.textContent=new URL(u).hostname.replace(/^www\./,"");return i?[" · ",a]:[a]}))}
-function fillYears(){sel("year",Object.keys(SPEC[$("brand").value][$("model").value]).sort((a,b)=>b-a).map(y=>[y,y]),true);fillVariants()}
+// ปีนอกช่วงข้อมูลเทรนยังเลือกได้ แต่บอกไว้ในป้ายตั้งแต่ตอนเลือก
+const yLabel=y=>trainedYears&&(y<trainedYears[0]||y>trainedYears[1])?`${y} (${T[lang].yOld})`:y;
+function fillYears(keepSpec){sel("year",Object.keys(SPEC[$("brand").value][$("model").value]).sort((a,b)=>b-a).map(y=>[y,yLabel(+y)]),true);fillSpec(keepSpec)}
 function fillModels(){sel("model",trainedModels[$("brand").value].map(m=>[m,m]));fillYears()}
 function fillColors(){sel("color",COLORS.map(c=>[c,T[lang].colors[c]||c]),true)}
 function fillBrands(){
@@ -113,7 +127,7 @@ function fillBrands(){
     const b=document.createElement("button");
     b.type="button";b.className="chip";b.textContent=model+" "+year;
     b.onclick=()=>{
-      $("brand").value=brand;fillModels();$("model").value=model;fillYears();$("year").value=year;fillVariants();
+      $("brand").value=brand;fillModels();$("model").value=model;fillYears();$("year").value=year;fillSpec();
       $("mileage").value=mileage;syncR();$("f").requestSubmit();
     };
     $("chips").append(b);
@@ -123,23 +137,29 @@ const syncR=()=>{$("mileageR").value=$("mileage").value};
 
 function setErr(id,msg){$("e-"+id).textContent=msg;$(id).setAttribute("aria-invalid",!!msg)}
 function read(){
-  const [cc,f,g,b]=variants()[+$("variant").value];
-  return {brand:$("brand").value,model:$("model").value,year:+$("year").value,mileage:+$("mileage").value,trans:GEARS[g],fuel:FUELS[f],cc,body:BODY_MODEL[BODY[b]]||BODY[b],shape:BODY[b],color:$("color").value}; // body = หมวดที่ส่งให้โมเดล, shape = ตัวถังจริงไว้แสดง
+  const shape=$("body").value;
+  return {brand:$("brand").value,model:$("model").value,year:+$("year").value,mileage:+$("mileage").value,trans:$("trans").value,fuel:$("fuel").value,cc:+$("cc").value,body:BODY_MODEL[shape]||shape,shape,color:$("color").value,custom:specIndex()<0}; // body = หมวดที่ส่งให้โมเดล, shape = ตัวถังจริงไว้แสดง
 }
-// ช่องที่กรอกเองได้มีแค่เลขไมล์ ที่เหลือมาจาก dropdown จึงถูกต้องเสมอ
+// ช่องที่พิมพ์เองได้คือเลขไมล์และขนาดเครื่อง ที่เหลือเป็น dropdown
 function check(){
-  const ok=$("mileage").value!==""&&+$("mileage").value>=0&&+$("mileage").value<=999999;
-  setErr("mileage",ok?"":T[lang].eMile);
-  if(!ok)$("mileage").focus();
-  return ok;
+  const v=$("mileage").value,n=+v;
+  const okM=v!==""&&Number.isInteger(n)&&n>=0&&n<=999999; // โมเดลรับเฉพาะจำนวนเต็ม
+  const c=$("cc").value,k=+c;
+  const okC=$("fuel").value==="ev"||(c!==""&&Number.isInteger(k)&&k>=600&&k<=8000);
+  setErr("mileage",okM?"":T[lang].eMile);
+  setErr("cc",okC?"":T[lang].eCc);
+  if(!okM)$("mileage").focus();else if(!okC)$("cc").focus();
+  return okM&&okC;
 }
 
 $("mileageR").oninput=()=>{$("mileage").value=$("mileageR").value;setErr("mileage","")};
 $("mileage").oninput=()=>{$("mileageR").value=$("mileage").value;setErr("mileage","")};
 $("brand").onchange=fillModels;
-$("model").onchange=fillYears;
-$("year").onchange=()=>fillVariants();
-$("variant").onchange=showSeen;
+$("model").onchange=()=>fillYears();
+$("year").onchange=()=>fillSpec();
+$("cc").oninput=()=>{setErr("cc","");paintSpecs()};
+$("fuel").onchange=()=>{syncEv();paintSpecs()};
+$("trans").onchange=$("body").onchange=paintSpecs;
 $("cmpClear").onclick=()=>{pinned=null;paintCmp();refresh()};
 $("langBtn").onclick=()=>{lang=lang==="th"?"en":"th";store("lang",lang);render()};
 $("themeBtn").onclick=()=>{theme=theme==="dark"?"light":"dark";store("theme",theme);render()};
@@ -151,7 +171,11 @@ function showErr(){
 }
 $("f").onsubmit=async e=>{
   e.preventDefault();
-  if(!check())return;
+  if(!check()){ // ไม่ปล่อยราคาของค่าก่อนหน้าค้างไว้ข้างข้อความเตือน
+    seq++;cur=null;failed=false;
+    $("out").innerHTML=`<p class="empty" data-i="empty">${T[lang].empty}</p>`;$("more").hidden=true;paintCmp();
+    return;
+  }
   const x=read();
   const id=++seq;
   failed=false;
@@ -189,12 +213,14 @@ async function start(){
     for(const list of Object.values(models))list.sort();
     if(!Object.keys(models).length)throw new Error("no supported cars");
     trainedModels=models;
+    if(Array.isArray(encoder.year_range))trainedYears=encoder.year_range;
     try{
-      const imagesResponse=await fetch(new URL("../data/car-images/inventory.json",import.meta.url));
+      // no-cache: ตรวจกับเซิร์ฟเวอร์ทุกครั้ง ไม่ใช้รายการภาพเก่าที่ชี้ไปยังไฟล์ที่ถูกลบแล้ว
+      const imagesResponse=await fetch(new URL("../data/car-images/inventory.json",import.meta.url),{cache:"no-cache"});
       if(imagesResponse.ok){const images=await imagesResponse.json();if(images.model_id===encoder.model_id&&Array.isArray(images.cars))carImages=images.cars}
     }catch(e){ /* ฟอร์มยังทำงานได้เมื่อข้อมูลภาพไม่พร้อม */ }
     fillBrands();
-    if(trainedModels.TOYOTA?.includes("CAMRY")){$("brand").value="TOYOTA";fillModels();$("model").value="CAMRY";fillYears();if(SPEC.TOYOTA.CAMRY[2018])$("year").value="2018";fillVariants()}
+    if(trainedModels.TOYOTA?.includes("CAMRY")){$("brand").value="TOYOTA";fillModels();$("model").value="CAMRY";fillYears();if(SPEC.TOYOTA.CAMRY[2018])$("year").value="2018";fillSpec()}
     syncR();
     render();               // ตั้งธีมก่อน ให้ฉาก 3D อ่านสีได้
 
