@@ -18,8 +18,8 @@ let cur=null,pinned=null,seq=0,typed=null,tw=0,tt=0,failed=false,modelLoaded=fal
 // รายการยี่ห้อและรุ่นต้องตรงกับคู่ที่โมเดลรู้จัก ไม่ใช่ทุกคู่ในฐานสเปกรถ
 let trainedModels={};
 let carImages=[];
-// โลโก้ยี่ห้อจาก Simple Icons (CC0) ใน data/brand-logos/ ยี่ห้อที่ไม่มีโลโก้แสดงเป็นตัวอักษรแทน
-const LOGOS={BMW:"bmw",CHEVROLET:"chevrolet",FORD:"ford",HONDA:"honda",HYUNDAI:"hyundai",KIA:"kia",MAZDA:"mazda",MG:"mg",MINI:"mini",
+// โลโก้ยี่ห้อใน data/brand-logos/ (Simple Icons CC0 ยกเว้น mercedes-benz.svg ที่วาดเองจากรูปทรงเรขาคณิต) ยี่ห้อที่ไม่มีโลโก้แสดงเป็นตัวอักษรแทน
+const LOGOS={BMW:"bmw",CHEVROLET:"chevrolet",FORD:"ford",HONDA:"honda",HYUNDAI:"hyundai",KIA:"kia",MAZDA:"mazda","MERCEDES-BENZ":"mercedes-benz",MG:"mg",MINI:"mini",
   MITSUBISHI:"mitsubishi",NISSAN:"nissan",PORSCHE:"porsche",SUBARU:"subaru",SUZUKI:"suzuki",TOYOTA:"toyota",VOLKSWAGEN:"volkswagen",VOLVO:"volvo"};
 function renderLogo(visual,brand){
   if(visual.firstChild)return;
