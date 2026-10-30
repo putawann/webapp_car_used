@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CarPrice - เครดิตภาพ</title>
-<meta name="description" content="แหล่งที่มา ผู้ถ่าย และสัญญาอนุญาตของภาพรถทุกภาพที่ใช้ในเว็บ CarPrice">
+<title>Used Car Prices - เครดิตภาพ</title>
+<meta name="description" content="แหล่งที่มา ผู้ถ่าย และสัญญาอนุญาตของภาพรถทุกภาพที่ใช้ในเว็บ Used Car Prices">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23f29a81' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 40l4-14c1-3 3-5 6-5h20c3 0 5 1 7 3l8 9c3 1 7 2 7 7v2H6z'/%3E%3Ccircle cx='18' cy='46' r='5'/%3E%3Ccircle cx='46' cy='46' r='5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=0.3.7">
+<link rel="stylesheet" href="css/style.css?v=0.3.8">
 <style>
 .credits{width:min(1120px,100% - 64px);margin:32px auto 64px}
 .credits h1{font-size:clamp(26px,4vw,36px);margin:0 0 8px}
@@ -35,7 +35,7 @@
 // หน้ารวมเครดิตภาพ: สร้างจาก data/car-images/inventory.json ชุดเดียวกับที่หน้าหลักใช้
 const L={
   th:{title:"เครดิตภาพ",back:"← กลับหน้าหลัก",lead:"ภาพรถในเว็บนี้เป็นภาพวาดที่ดัดแปลงจากภาพถ่ายของผู้ถ่ายด้านล่าง ภาพดัดแปลงจากต้นฉบับ CC BY-SA เผยแพร่ภายใต้สัญญาอนุญาตเดียวกับต้นฉบับ",car:"รุ่นรถ",author:"ภาพต้นฉบับ",license:"สัญญาอนุญาต",changes:"การดัดแปลง",photo:"ภาพถ่าย (ปรับขนาด)",err:"โหลดรายการภาพไม่ได้"},
-  en:{title:"Image credits",back:"← Back to CarPrice",lead:"Car images on this site are illustrations adapted from the photographs credited below. Adaptations of CC BY-SA originals are shared under the same license as the original.",car:"Car",author:"Original image",license:"License",changes:"Changes",photo:"Photo (resized)",err:"Could not load the image list."}
+  en:{title:"Image credits",back:"← Back to Used Car Prices",lead:"Car images on this site are illustrations adapted from the photographs credited below. Adaptations of CC BY-SA originals are shared under the same license as the original.",car:"Car",author:"Original image",license:"License",changes:"Changes",photo:"Photo (resized)",err:"Could not load the image list."}
 };
 let lang;try{lang=localStorage.lang}catch(e){}
 if(lang!=="th"&&lang!=="en")lang="en";
@@ -43,7 +43,7 @@ let theme;try{theme=localStorage.theme}catch(e){}
 document.documentElement.dataset.theme=theme==="light"?"light":"dark";
 document.documentElement.lang=lang;
 const t=L[lang],$=id=>document.getElementById(id);
-document.title="CarPrice - "+t.title;
+document.title="Used Car Prices - "+t.title;
 $("h").textContent=t.title;$("back").textContent=t.back;$("lead").textContent=t.lead;
 $("cCar").textContent=t.car;$("cAuthor").textContent=t.author;$("cLicense").textContent=t.license;$("cChanges").textContent=t.changes;
 const link=(href,text)=>{if(!href)return document.createTextNode(text||"");const a=document.createElement("a");a.href=href;a.target="_blank";a.rel="noopener";a.textContent=text;return a};
