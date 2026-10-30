@@ -4,7 +4,7 @@ import {modelReady} from "./model.js";
 import {SPEC,BODY,BODY_MODEL,COLORS,SRC} from "./specs.js";
 
 import {initUI,scrollToEl,scramble,refresh} from "./ui.js";
-import {findCarImage} from "./car-images.js";
+import {createModelCarousel} from "./model-carousel.js";
 
 const $=id=>document.getElementById(id);
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -17,19 +17,11 @@ let cur=null,pinned=null,seq=0,typed=null,tw=0,tt=0,failed=false,modelLoaded=fal
 // รายการยี่ห้อและรุ่นต้องตรงกับคู่ที่โมเดลรู้จัก ไม่ใช่ทุกคู่ในฐานสเปกรถ
 let trainedModels={},trainedYears=null;
 let carImages=[];
+const carousel=createModelCarousel({track:$("modelTrack"),previous:$("modelPrev"),next:$("modelNext"),status:$("modelStatus"),
+  onSelect:model=>{$("model").value=model;fillYears()}});
 function paintCarPhoto(){
-  const img=$("carPhotoImage"),caption=$("carPhotoCaption");
-  const brand=$("brand").value,model=$("model").value,year=Number($("year").value);
-  const match=findCarImage(carImages,brand,model,year);
-  const photo=match?.photo;
-  img.hidden=true;img.removeAttribute("src");caption.replaceChildren();
-  if(!photo){caption.textContent=lang==="th"?"ยังไม่มีภาพสำหรับรุ่นและปีนี้":"No image is available for this model and year yet.";return}
-  const illustration=Boolean(photo.illustration_file);
-  img.alt=illustration?`${lang==="th"?"ภาพวาด":"Illustration of"} ${brand} ${model}`:`${brand} ${model}`;
-  img.onerror=()=>{img.hidden=true;caption.textContent=lang==="th"?"โหลดภาพรถไม่ได้":"Car image could not be loaded."};
-  img.src=new URL(`../data/car-images/${photo.illustration_file||photo.file}`,import.meta.url).href;
-  img.hidden=false;
-  // เครดิตผู้ถ่าย/สัญญาอนุญาตของทุกภาพอยู่ใน credits.html (ลิงก์ที่ footer) ตามเงื่อนไข CC BY/BY-SA
+  carousel.update({brand:$("brand").value,models:trainedModels[$("brand").value]||[],selected:$("model").value,
+    year:Number($("year").value),cars:carImages,labels:T[lang]});
 }
 const SVG=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 const SUN=SVG('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>');

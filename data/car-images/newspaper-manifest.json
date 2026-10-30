@@ -1318,8 +1318,10 @@
       "description": "2022 Mitsubishi Triton Double-Cab 2.4 Plus S-Limited in BITEC, Bangna, Bangkok, Thailand.",
       "status": "complete",
       "original_file": "files/mitsubishi-triton-2022.jpg",
-      "output_file": "newspaper/mitsubishi-triton-2022.webp",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/stock/mitsubishi-triton-2022.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "stock_cleanup": "Return this same white pickup to a plain undecorated appearance. Remove all graphic/livery decals: red and gray stripes on bonnet, roof and side doors, the large RALLIART-style RA markings, dark side stripe across rear doors and bed, and decorative vertical stripes on the bed. Reconstruct continuous plain white painted panels. Change red decorative accents on lower front bumper and side step to neutral black/dark gray. Retain Mitsubishi grille logo, original grille and bumper shapes, door handles, mirrors, wheels and stance. No new sports bodykit or replacement vehicle.",
+      "illustration_changes": "AI-generated newspaper illustration; AI edit removed nonstandard accessories, personal markings or display items: Return this same white pickup to a plain undecorated appearance. Remove all graphic/livery decals: red and gray stripes on bonnet, roof and side doors, the large RALLIART-style RA markings, dark side stripe across rear doors and bed, and decorative vertical stripes on the bed. Reconstruct continuous plain white painted panels. Change red decorative accents on lower front bumper and side step to neutral black/dark gray. Retain Mitsubishi grille logo, original grille and bumper shapes, door handles, mirrors, wheels and stance. No new sports bodykit or replacement vehicle."
     },
     {
       "brand": "MITSUBISHI",
@@ -1525,10 +1527,11 @@
       "status": "complete",
       "representative": true,
       "original_file": "files/rep-nissan-teana.jpg",
-      "output_file": "newspaper/neutral/rep-nissan-teana.webp",
+      "output_file": "newspaper/stock/rep-nissan-teana.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
-      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit; AI edit removed nonstandard accessories, personal markings or display items: Remove the red rectangular personal ornament and its thin hanging string suspended from the interior rear-view mirror behind the windshield. Reconstruct clean dark interior glass behind it, keeping the rear-view mirror itself, seats, dashboard and steering wheel intact. Make no other vehicle changes.",
+      "stock_cleanup": "Remove the red rectangular personal ornament and its thin hanging string suspended from the interior rear-view mirror behind the windshield. Reconstruct clean dark interior glass behind it, keeping the rear-view mirror itself, seats, dashboard and steering wheel intact. Make no other vehicle changes."
     },
     {
       "brand": "NISSAN",
@@ -1902,9 +1905,10 @@
       "depicted_year": null,
       "status": "complete",
       "original_file": "files/toyota-commuter-representative.jpg",
-      "output_file": "newspaper/toyota-commuter-representative.webp",
+      "output_file": "newspaper/stock/toyota-commuter-representative.webp",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
-      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit; AI edit removed nonstandard accessories, personal markings or display items: Remove the green institutional seal/logo on the sliding door, the entire orange and green stripe along the vehicle sides, and the small green sticker in the side window. Remove added black rain/wind deflectors above the driver side window. Reconstruct clean plain white bodywork and clean dark glass underneath. Keep Toyota grille badge, stock seams, handles, lights, wheels and van body unchanged.",
+      "stock_cleanup": "Remove the green institutional seal/logo on the sliding door, the entire orange and green stripe along the vehicle sides, and the small green sticker in the side window. Remove added black rain/wind deflectors above the driver side window. Reconstruct clean plain white bodywork and clean dark glass underneath. Keep Toyota grille badge, stock seams, handles, lights, wheels and van body unchanged."
     },
     {
       "brand": "TOYOTA",
@@ -2071,8 +2075,10 @@
       "description": "2024 Toyota Fortuner Leader 2.4 S in Central Plaza Udon Thani, Udon Thani, Thailand.",
       "status": "complete",
       "original_file": "files/toyota-fortuner-2024-155068599.jpg",
-      "output_file": "newspaper/toyota-fortuner-2024-155068599.webp",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/stock/toyota-fortuner-2024-155068599.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "stock_cleanup": "Remove the pale rectangular showroom specification/price paper stuck inside the front side window. Reconstruct clean dark tinted glass and the original cabin behind it. Keep the factory exterior, original wheels, paint, roof rails and Toyota grille badge unchanged. No new text or stickers.",
+      "illustration_changes": "AI-generated newspaper illustration; AI edit removed nonstandard accessories, personal markings or display items: Remove the pale rectangular showroom specification/price paper stuck inside the front side window. Reconstruct clean dark tinted glass and the original cabin behind it. Keep the factory exterior, original wheels, paint, roof rails and Toyota grille badge unchanged. No new text or stickers."
     },
     {
       "brand": "TOYOTA",
@@ -2240,10 +2246,11 @@
       "depicted_year": 2020,
       "status": "complete",
       "original_file": "files/toyota-prius-representative.jpg",
-      "output_file": "newspaper/neutral/toyota-prius-representative.webp",
+      "output_file": "newspaper/stock/toyota-prius-representative.webp",
       "recolor_changes": "AI-edited original illustration: neutral metallic silver paint; same car, angle and newspaper style",
       "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
-      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit"
+      "illustration_changes": "AI-generated illustration; window and paint reflections removed with AI edit; AI edit removed nonstandard accessories, personal markings or display items: Remove ALL roof-mounted accessories completely: the skis/sports gear, every roof rack, carrier, horizontal crossbar, mounting feet and clamps. Restore the smooth factory silver roof and original roof outline. Preserve only an original small antenna if present. Keep Toyota hybrid emblem, fender hybrid badge, stock wheels and the exact rest of the car.",
+      "stock_cleanup": "Remove ALL roof-mounted accessories completely: the skis/sports gear, every roof rack, carrier, horizontal crossbar, mounting feet and clamps. Restore the smooth factory silver roof and original roof outline. Preserve only an original small antenna if present. Keep Toyota hybrid emblem, fender hybrid badge, stock wheels and the exact rest of the car."
     },
     {
       "brand": "TOYOTA",
@@ -2466,8 +2473,10 @@
       "representative": true,
       "status": "complete",
       "original_file": "files/misc-volvo-xc90.jpg",
-      "output_file": "newspaper/misc-volvo-xc90.webp",
-      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left"
+      "output_file": "newspaper/stock/misc-volvo-xc90.webp",
+      "generated_changes": "AI-generated colored newspaper halftone illustration; background removed; front facing left",
+      "stock_cleanup": "Remove the added transverse roof rack crossbars, cargo or sports gear, straps, raised mounting brackets and equipment on top. Restore an uncluttered original roof. Retain only the original low longitudinal factory roof rails following the two roof edges front to rear. Keep original Volvo emblem, champagne/silver paint, stock wheels and all other geometry.",
+      "illustration_changes": "AI-generated newspaper illustration; AI edit removed nonstandard accessories, personal markings or display items: Remove the added transverse roof rack crossbars, cargo or sports gear, straps, raised mounting brackets and equipment on top. Restore an uncluttered original roof. Retain only the original low longitudinal factory roof rails following the two roof edges front to rear. Keep original Volvo emblem, champagne/silver paint, stock wheels and all other geometry."
     }
   ]
 }

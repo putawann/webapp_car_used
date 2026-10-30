@@ -33,17 +33,38 @@
 </section>
 
 <main>
-  <div class="workspace">
-  <section class="card" id="form">
-    <h2 data-i="formTitle"></h2>
+  <form id="f" class="appraisal-form" novalidate>
+    <section class="brand-picker" aria-labelledby="brandTitle">
+      <div>
+        <p class="step-label" data-i="brandStep"></p>
+        <h2 id="brandTitle" data-i="chooseBrand"></h2>
+      </div>
+      <label class="brand-field"><span data-i="brand"></span><select id="brand"></select></label>
+    </section>
+
+    <section class="model-picker" aria-labelledby="modelsTitle">
+      <div class="model-heading">
+        <div>
+          <p class="step-label" data-i="modelStep"></p>
+          <h2 id="modelsTitle" data-i="chooseModel"></h2>
+          <p class="sub" data-i="modelHint"></p>
+        </div>
+        <label class="model-field"><span data-i="modelList"></span><select id="model"></select></label>
+      </div>
+      <div class="model-track" id="modelTrack" role="group" data-al="chooseModel" tabindex="-1"></div>
+      <div class="model-navigation">
+        <button class="model-arrow" id="modelPrev" type="button" data-i="previousModel"></button>
+        <p id="modelStatus" class="model-status" role="status"></p>
+        <button class="model-arrow" id="modelNext" type="button" data-i="nextModel"></button>
+      </div>
+    </section>
+
+  <section class="card details-card" id="form" aria-labelledby="detailsTitle">
+    <p class="step-label" data-i="detailsStep"></p>
+    <h2 id="detailsTitle" data-i="formTitle"></h2>
     <p class="sub" data-i="formSub"></p>
     <div class="chips" id="chips"><span data-i="examples"></span></div>
-
-    <form id="f" novalidate>
-
-      <label><span data-i="brand"></span><select id="brand"></select></label>
-      <label><span data-i="model"></span><select id="model"></select></label>
-
+    <div class="details-grid">
       <label><span data-i="year"></span><select id="year"></select></label>
       <select id="color" hidden aria-hidden="true"></select>
       <div class="pair">
@@ -58,13 +79,9 @@
 
       <label class="full"><span data-i="mileage"></span><span class="unit"><input id="mileage" type="number" inputmode="numeric" min="0" max="999999" value="80000" aria-describedby="e-mileage"><i>km</i></span><input id="mileageR" type="range" min="0" max="400000" step="5000" data-al="mileage"><small class="e" id="e-mileage"></small></label>
       <button class="go full" type="submit" data-i="go"></button>
-    </form>
+    </div>
   </section>
-      <figure class="car-photo" id="carPhoto" aria-live="polite">
-      <img id="carPhotoImage" alt="" hidden>
-      <figcaption id="carPhotoCaption"></figcaption>
-    </figure>
-  </div>
+  </form>
   <section class="card result" aria-live="polite">
     <h2 data-i="resTitle"></h2>
     <div id="out"><p class="empty" data-i="empty"></p></div>

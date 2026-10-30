@@ -20,6 +20,8 @@ T.en.rng="Display range";
 T.th.yOld="นอกช่วงข้อมูลเทรน";
 T.th.credits="เครดิตภาพ";
 T.en.credits="Image credits";
+Object.assign(T.th,{brandStep:"01 / ยี่ห้อรถ",chooseBrand:"เริ่มจากแบรนด์รถของคุณ",modelStep:"02 / รุ่นรถ",chooseModel:"เลือกรุ่นรถ",modelHint:"เลื่อนซ้าย–ขวาเพื่อเลือกรุ่น หรือคลิกที่รูปรถ",modelList:"เลือกจากรายชื่อรุ่น",previousModel:"รุ่นก่อนหน้า",nextModel:"รุ่นถัดไป",selectedModel:"เลือกแล้ว",noModels:"ไม่พบรุ่นรถ",noImage:"ยังไม่มีภาพรุ่นนี้",detailsStep:"03 / รายละเอียดรถ",formSub:"ระบุปี สเปก และเลขไมล์ เพื่อประเมินราคารถของคุณ",go:"ประเมินราคา"});
+Object.assign(T.en,{brandStep:"01 / BRAND",chooseBrand:"Start with your car’s brand",modelStep:"02 / MODEL",chooseModel:"Choose your model",modelHint:"Scroll left or right to select, or click a car",modelList:"Choose from the model list",previousModel:"Previous model",nextModel:"Next model",selectedModel:"Selected",noModels:"No models available",noImage:"Image unavailable",detailsStep:"03 / CAR DETAILS",formSub:"Add the year, specifications and mileage to estimate your car’s value",go:"Estimate price"});
 T.en.yOld="outside training data";
 T.th.eCc="ขนาดเครื่องยนต์ต้องเป็นจำนวนเต็ม 600-8,000 cc";
 T.en.eCc="Engine size must be a whole number from 600 to 8,000 cc";

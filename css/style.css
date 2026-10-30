@@ -14,3 +14,38 @@
 @media(min-width:601px) and (max-width:900px){header,main,footer,.hero{width:calc(100% - 48px)}.hero{padding:20px 0 28px}.car-photo{max-width:none;padding:16px}.car-photo img{max-height:300px}form{grid-template-columns:repeat(3,1fr);gap:16px}.pair{grid-column:1/-1;grid-template-columns:repeat(4,1fr)}form .full,#specs,#seen{grid-column:1/-1}.result{grid-template-columns:1fr 1fr}.result .wide{border-top:0;border-left:1px solid var(--line);padding:0 0 0 24px}.result .note{grid-column:1/-1}}
 /* ===== มือถือ: หัวเว็บกระชับ ภาพเตี้ยลง ปุ่มทำนายติดขอบล่างจอ ===== */
 @media(max-width:600px){header,main,footer,.hero{width:calc(100% - 32px)}header{height:60px}.brand{font-size:21px}.hero{padding:6px 0 18px}.hero h1{font-size:27px;margin-bottom:6px}.lead{font-size:14px}.workspace{gap:16px;margin-bottom:16px}.car-photo{max-width:none;padding:10px;border-radius:14px}.car-photo img{max-height:180px}.card{padding:18px;border-radius:14px}h2{font-size:21px}.sub{margin-bottom:12px}form{gap:12px}.go{position:sticky;bottom:12px;z-index:2;min-height:52px;font-size:16px;box-shadow:0 10px 24px -10px rgba(40,20,10,.55)}.result{gap:16px}.price{font-size:40px}.cmp{grid-template-columns:auto 1fr 1fr;font-size:12px;gap:8px 10px}#seen{font-size:10px}footer{margin-top:32px}}
+
+/* Brand → three-car model rail → details, sharing the existing paper palette. */
+.appraisal-form{display:block;margin-bottom:28px;min-width:0}
+.step-label{font-size:11px;font-weight:600;letter-spacing:.09em;color:var(--accent);margin:0 0 8px}
+.brand-picker{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+.brand-picker h2{margin:0;font-size:24px}
+.brand-field,.model-field{width:280px;flex-shrink:0}
+.brand-field select{font-weight:600;background:var(--card)}
+.model-picker{padding:32px 0 28px;min-width:0}
+.model-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:22px}
+.model-heading .sub{margin:6px 0 0}
+.model-track{--model-gap:18px;display:flex;gap:var(--model-gap);position:relative;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--field) transparent;padding:4px 0 14px;touch-action:pan-x pan-y;min-width:0}
+.model-card{flex:0 0 calc((100% - 2 * var(--model-gap))/3);min-width:0;scroll-snap-align:start;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--card);color:var(--text);cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:8px;transition:border-color .18s,background .18s,box-shadow .18s}
+.model-card:hover{border-color:var(--accent)}
+.model-card[aria-pressed=true]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.model-visual{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/3;border-radius:8px;background:var(--paper);overflow:hidden}
+.model-visual img{display:block;width:100%;height:100%;object-fit:contain}
+.model-image-fallback{padding:16px;font-size:12px;text-align:center;color:var(--paper-ink)}
+.model-name{font-size:19px;font-weight:600;line-height:1.4;overflow-wrap:anywhere}
+.model-selected{font-size:11px;line-height:1.6;color:var(--accent);visibility:hidden;margin-top:auto}
+.model-card[aria-pressed=true] .model-selected{visibility:visible}
+.model-navigation{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:10px}
+.model-status{font-size:12px;color:var(--muted);margin:0;text-align:center;overflow-wrap:anywhere}
+.model-arrow{min-height:44px;flex-shrink:0;padding:9px 16px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);cursor:pointer;font-size:13px}
+.model-arrow:hover:enabled{border-color:var(--accent);color:var(--accent)}
+.model-arrow:disabled{opacity:.35;cursor:default}
+.details-grid{display:grid;grid-template-columns:minmax(120px,.7fr) minmax(0,3fr);gap:18px;align-items:start}
+.details-grid>.pair{grid-column:2;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.details-grid>.full,.details-grid>#specs,.details-grid>#seen{grid-column:1/-1}
+.details-grid>.go{position:static;box-shadow:none;min-height:52px;margin-top:6px}
+.details-card .chips{margin-bottom:20px}
+.details-card #specs{margin-bottom:0}
+.details-grid>.full:has(#mileage){max-width:520px}
+@media(max-width:900px){.details-grid{grid-template-columns:1fr}.details-grid>.pair{grid-column:1;grid-template-columns:repeat(4,minmax(0,1fr))}.details-grid>label:first-child{max-width:280px}.model-card{padding:10px}.model-name{font-size:16px}}
+@media(max-width:600px){.brand-picker{align-items:stretch;flex-direction:column;gap:16px;padding:20px 0}.brand-picker h2{font-size:21px}.brand-field,.model-field{width:100%}.model-picker{padding:24px 0 20px}.model-heading{align-items:stretch;flex-direction:column;gap:16px;margin-bottom:16px}.model-heading .sub{font-size:12px}.model-track{--model-gap:8px;padding-bottom:10px}.model-card{border-radius:9px;padding:5px;gap:7px}.model-visual{border-radius:5px}.model-name{font-size:12px}.model-selected{font-size:10px}.model-status{font-size:10px}.model-navigation{gap:8px}.model-arrow{font-size:11px;padding:8px 10px}.details-grid{gap:14px}.details-grid>.pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.details-grid>label:first-child{max-width:none}.step-label{font-size:10px}.appraisal-form{margin-bottom:18px}}
