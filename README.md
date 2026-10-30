@@ -67,6 +67,8 @@ js/data.js  predictPrices()  >  js/model.js  predictCars()
 | `data/car-images/inventory.json` | รายการรุ่น ปี และภาพที่แสดงได้ พร้อมที่มาและใบอนุญาต ภาพที่ยังรอตรวจอยู่ใน `research-*.json` |
 | `tools/image_inventory.mjs`, `tests/car-images.mjs` | สร้างรายการค้นคว้าเริ่มต้นและตรวจความครบถ้วนของ metadata ภาพ |
 | `tools/merge_car_images.mjs` | รวมรายการภาพจากไฟล์ค้นคว้าเข้า inventory ก่อนตรวจด้วย `tests/car-images.mjs` |
+| `data/brand-logos/*.svg` | โลโก้ยี่ห้อจาก [Simple Icons](https://simpleicons.org) v16.36.0 (CC0, ไฟล์ต้นฉบับไม่แก้) แสดงด้วย CSS mask ให้สีตามธีม ยี่ห้อที่ไม่มีใน Simple Icons (HAVAL, ISUZU, MERCEDES-BENZ) แสดงเป็นตัวอักษร โลโก้เป็นเครื่องหมายการค้าของเจ้าของ ใช้เพื่อระบุยี่ห้อเท่านั้น |
+| `js/carousel.js` | แถวการ์ดเลือกยี่ห้อ/รุ่นแบบวน ใช้ร่วมกับ dropdown |
 | `tests/cache-version.mjs` | ตรวจว่า JS/CSS ทุกไฟล์ใน `index.html` (import map) และ `credits.html` ใช้เลข `?v=` เดียวกัน ทุกครั้งที่อัปเดตเว็บให้เปลี่ยนเลขนี้ ไม่งั้นมือถืออาจใช้ JS เก่าจากแคชกับ HTML ใหม่จนฟอร์มหาย |
 | `handoffs/` | บันทึกส่งต่องานเก่า (9 ต.ค. 2026) พาธและเวอร์ชันในนั้นล้าสมัยแล้ว |
 

@@ -1,28 +1,27 @@
-import {findCarImage} from './car-images.js';
-
-// One selection shared by the picture rail and the native model dropdown.
-// With more than three models the rail loops: the cards are rendered three times and the
+// A rail of picture cards that shares one selection with a native dropdown (used for brands and models).
+// With more than three items the rail loops: the cards are rendered three times and the
 // scroll position is moved back to the middle copy whenever it settles in an outer copy.
-export function createModelCarousel({track,previous,next,status,onSelect}){
-  let brand='',models=[],selected='',year=0,cars=[],labels={},buttons=[],loop=false;
-  let settleTimer,programmatic=false;
+// render(visual,item) fills a card's picture area; it runs on every update so it must be repeatable.
+export function createCarousel({track,previous,next,status,onSelect,render}){
+  let items=[],selected='',labels={},name=item=>item,buttons=[],loop=false;
+  // expected: the card the code itself is scrolling to; a scroll that settles anywhere else came from the user.
+  let settleTimer,expected=null;
   const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const imageUrl=photo=>new URL(`../data/car-images/${photo.illustration_file||photo.file}`,import.meta.url).href;
-  const wrap=i=>loop?(i+models.length)%models.length:i;
+  const wrap=i=>loop?(i+items.length)%items.length:i;
 
   function paintSelection(){
-    const index=models.indexOf(selected),n=models.length;
+    const index=items.indexOf(selected),n=items.length;
     buttons.forEach((button,i)=>{
       const on=n>0&&i%n===index;
       button.setAttribute('aria-pressed',on?'true':'false');
       button.tabIndex=on&&button.getAttribute('aria-hidden')!=='true'?0:-1;
-      button.querySelector('.model-selected').textContent=labels.selectedModel;
+      button.querySelector('.model-selected').textContent=labels.selected;
     });
     previous.disabled=!loop&&index<=0;
     next.disabled=!loop&&(index<0||index>=n-1);
-    previous.textContent=labels.previousModel;
-    next.textContent=labels.nextModel;
-    status.textContent=n?`${index+1} / ${n} · ${brand} ${selected}`:labels.noModels;
+    previous.textContent=labels.previous;
+    next.textContent=labels.next;
+    status.textContent=n?`${index+1} / ${n} · ${name(selected)}`:labels.none;
   }
 
   // Index of the card whose left edge is nearest the current scroll position.
@@ -32,14 +31,14 @@ export function createModelCarousel({track,previous,next,status,onSelect}){
   }
 
   function scrollToCard(position,behavior){
-    programmatic=true;
+    expected=position;
     clearTimeout(settleTimer);
     track.scrollTo({left:Math.max(0,buttons[position].offsetLeft),behavior:reduced()?'instant':behavior});
     settleTimer=setTimeout(settle,400);
   }
 
   function reveal(behavior='smooth'){
-    const index=models.indexOf(selected),n=models.length;
+    const index=items.indexOf(selected),n=items.length;
     if(index<0||!buttons.length)return;
     if(!loop){
       // Keep three complete cards in view; center the selection when it has neighbours.
@@ -56,24 +55,24 @@ export function createModelCarousel({track,previous,next,status,onSelect}){
   // Jump back to the matching card in the middle copy; the copies look identical, so this is invisible.
   function recenter(){
     if(!loop)return;
-    const n=models.length,start=startCard(),span=buttons[n].offsetLeft-buttons[0].offsetLeft;
+    const n=items.length,start=startCard(),span=buttons[n].offsetLeft-buttons[0].offsetLeft;
     const shift=start<n-1?span:start>2*n-2?-span:0;
     if(!shift)return;
-    programmatic=true;
+    expected=start+(shift>0?n:-n);
     track.scrollTo({left:track.scrollLeft+shift,behavior:'instant'});
     clearTimeout(settleTimer);
     settleTimer=setTimeout(settle,160);
   }
 
   function settle(){
-    const user=!programmatic;
-    programmatic=false;
     if(!buttons.length)return;
+    const user=expected===null||startCard()!==expected;
+    expected=null;
     if(user){
       let index;
-      if(loop)index=(startCard()+1)%models.length;
+      if(loop)index=(startCard()+1)%items.length;
       else if(track.scrollLeft<=2)index=0;
-      else if(track.scrollLeft+track.clientWidth>=track.scrollWidth-2)index=models.length-1;
+      else if(track.scrollLeft+track.clientWidth>=track.scrollWidth-2)index=items.length-1;
       else{
         const bounds=track.getBoundingClientRect(),center=bounds.left+bounds.width/2;
         index=buttons.reduce((best,button,i)=>{
@@ -88,74 +87,59 @@ export function createModelCarousel({track,previous,next,status,onSelect}){
 
   function choose(index,{scroll=true,focus=false}={}){
     index=wrap(index);
-    if(index<0||index>=models.length)return;
-    const changed=selected!==models[index];
-    selected=models[index];
+    if(index<0||index>=items.length)return;
+    const changed=selected!==items[index];
+    selected=items[index];
     paintSelection();
     if(changed)onSelect(selected);
     if(scroll)reveal();
-    if(focus)buttons[loop?models.length+index:index].focus({preventScroll:true});
+    if(focus)buttons[loop?items.length+index:index].focus({preventScroll:true});
   }
 
-  function card(model,clone){
+  function card(item,clone){
     const button=document.createElement('button');
-    button.type='button';button.className='model-card';button.dataset.model=model;
+    button.type='button';button.className='model-card';button.dataset.item=item;
     if(clone)button.setAttribute('aria-hidden','true');
     const visual=document.createElement('span');visual.className='model-visual';
-    const img=document.createElement('img');img.alt='';img.loading='lazy';img.decoding='async';
-    img.width=600;img.height=450;
-    const fallback=document.createElement('span');fallback.className='model-image-fallback';fallback.hidden=true;
-    img.onerror=()=>{img.hidden=true;fallback.hidden=false};
-    visual.append(img,fallback);
-    const name=document.createElement('span');name.className='model-name';name.textContent=model;
+    const label=document.createElement('span');label.className='model-name';label.textContent=item;
     const badge=document.createElement('span');badge.className='model-selected';
-    button.append(visual,name,badge);
-    button.onclick=()=>choose(models.indexOf(model));
+    button.append(visual,label,badge);
+    button.onclick=()=>choose(items.indexOf(item));
     return button;
   }
 
-  function setImage(button,model){
-    const photo=findCarImage(cars,brand,model,year)?.photo;
-    const img=button.querySelector('img'),fallback=button.querySelector('.model-image-fallback');
-    fallback.textContent=labels.noImage;
-    fallback.hidden=!!photo;
-    img.hidden=!photo;
-    if(!photo){img.removeAttribute('src');return}
-    const url=imageUrl(photo);
-    if(img.src!==url)img.src=url;
-  }
-
+  // state: {items, selected, labels:{selected,previous,next,none}, name: item => text for the status line}
   function update(state){
-    const rebuild=brand!==state.brand||models.join('|')!==state.models.join('|');
+    const rebuild=items.join('|')!==state.items.join('|');
     const changed=selected!==state.selected;
-    ({brand,models,selected,year,cars,labels}=state);
+    ({items,selected,labels}=state);
+    name=state.name||(item=>item);
     if(rebuild){
-      loop=models.length>3;
-      const copy=clone=>models.map(model=>card(model,clone));
+      loop=items.length>3;
+      const copy=clone=>items.map(item=>card(item,clone));
       buttons=loop?[...copy(true),...copy(false),...copy(true)]:copy(false);
       track.replaceChildren(...buttons);
       track.scrollLeft=0;
     }
-    buttons.forEach((button,i)=>setImage(button,models[i%models.length]));
+    buttons.forEach((button,i)=>render(button.querySelector('.model-visual'),items[i%items.length]));
     paintSelection();
     if(rebuild||changed)reveal('instant');
   }
 
-  previous.onclick=()=>choose(models.indexOf(selected)-1);
-  next.onclick=()=>choose(models.indexOf(selected)+1);
+  previous.onclick=()=>choose(items.indexOf(selected)-1);
+  next.onclick=()=>choose(items.indexOf(selected)+1);
   track.onkeydown=event=>{
-    const index=models.indexOf(selected);
-    const target={ArrowLeft:index-1,ArrowRight:index+1,Home:0,End:models.length-1}[event.key];
+    const index=items.indexOf(selected);
+    const target={ArrowLeft:index-1,ArrowRight:index+1,Home:0,End:items.length-1}[event.key];
     if(target===undefined)return;
     event.preventDefault();choose(target,{focus:true});
   };
-  const userScroll=()=>{programmatic=false;clearTimeout(settleTimer)};
-  track.addEventListener('pointerdown',userScroll,{passive:true});
-  track.addEventListener('wheel',userScroll,{passive:true});
   track.addEventListener('scroll',()=>{
     clearTimeout(settleTimer);
     settleTimer=setTimeout(settle,160);
   },{passive:true});
+  // Browsers with scrollend report the stop directly; the timer above covers the rest.
+  track.addEventListener('scrollend',()=>{clearTimeout(settleTimer);settle()},{passive:true});
   new ResizeObserver(()=>reveal('instant')).observe(track);
   return {update};
 }

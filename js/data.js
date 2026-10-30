@@ -19,8 +19,8 @@ T.th.rng="ช่วงราคาแสดงผล";
 T.en.rng="Display range";
 T.th.credits="เครดิตภาพ";
 T.en.credits="Image credits";
-Object.assign(T.th,{brandStep:"01",chooseBrand:"แบรนด์",modelStep:"02",chooseModel:"รุ่น",modelList:"เลือกจากรายชื่อรุ่น",previousModel:"รุ่นก่อนหน้า",nextModel:"รุ่นถัดไป",selectedModel:"เลือกแล้ว",noModels:"ไม่พบรุ่นรถ",noImage:"ยังไม่มีภาพรุ่นนี้",detailsStep:"03",formSub:"กรอกข้อมูลรถของคุณเพื่อประมาณราคา",go:"ประเมินราคา"});
-Object.assign(T.en,{brandStep:"01",chooseBrand:"Brand",modelStep:"02",chooseModel:"Model",modelList:"Choose from the model list",previousModel:"Previous model",nextModel:"Next model",selectedModel:"Selected",noModels:"No models available",noImage:"Image unavailable",detailsStep:"03",formSub:"Enter your car details to estimate its price",go:"Estimate price"});
+Object.assign(T.th,{previousBrand:"แบรนด์ก่อนหน้า",nextBrand:"แบรนด์ถัดไป",noBrands:"ไม่พบแบรนด์",brandList:"เลือกจากรายชื่อแบรนด์",brandStep:"01",chooseBrand:"แบรนด์",modelStep:"02",chooseModel:"รุ่น",modelList:"เลือกจากรายชื่อรุ่น",previousModel:"รุ่นก่อนหน้า",nextModel:"รุ่นถัดไป",selectedModel:"เลือกแล้ว",noModels:"ไม่พบรุ่นรถ",noImage:"ยังไม่มีภาพรุ่นนี้",detailsStep:"03",formSub:"กรอกข้อมูลรถของคุณเพื่อประมาณราคา",go:"ประเมินราคา"});
+Object.assign(T.en,{previousBrand:"Previous brand",nextBrand:"Next brand",noBrands:"No brands available",brandList:"Choose from the brand list",brandStep:"01",chooseBrand:"Brand",modelStep:"02",chooseModel:"Model",modelList:"Choose from the model list",previousModel:"Previous model",nextModel:"Next model",selectedModel:"Selected",noModels:"No models available",noImage:"Image unavailable",detailsStep:"03",formSub:"Enter your car details to estimate its price",go:"Estimate price"});
 T.th.specHint="สเปคของรุ่นนี้ในปีนี้ที่มีในข้อมูลเทรน (กดเพื่อกรอก):";
 T.en.specHint="Specs for this model and year in the training data (tap to fill):";
 export async function predictPrices(xs){

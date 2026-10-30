@@ -4,24 +4,59 @@ import {modelReady} from "./model.js";
 import {SPEC,BODY,BODY_MODEL,COLORS,SRC} from "./specs.js";
 
 import {initUI,scrollToEl,scramble,refresh} from "./ui.js";
-import {createModelCarousel} from "./model-carousel.js";
+import {createCarousel} from "./carousel.js";
+import {findCarImage} from "./car-images.js";
 
 const $=id=>document.getElementById(id);
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const store=(k,v)=>{try{localStorage[k]=v}catch(e){}};
 let lang,theme;
 try{lang=localStorage.lang;theme=localStorage.theme}catch(e){}
-if(lang!=="th"&&lang!=="en")lang="th"; // ค่าที่เก็บไว้อาจเสีย/ถูกแก้ ต้องไม่ทำให้ทั้งหน้าพัง
-if(theme!=="dark"&&theme!=="light")theme="light";
+if(lang!=="th"&&lang!=="en")lang="en"; // ครั้งแรกเป็นภาษาอังกฤษ ธีมมืด; ค่าที่เก็บไว้อาจเสีย/ถูกแก้ ต้องไม่ทำให้ทั้งหน้าพัง
+if(theme!=="dark"&&theme!=="light")theme="dark";
 let cur=null,pinned=null,seq=0,typed=null,tw=0,tt=0,failed=false,modelLoaded=false;
 // รายการยี่ห้อและรุ่นต้องตรงกับคู่ที่โมเดลรู้จัก ไม่ใช่ทุกคู่ในฐานสเปกรถ
 let trainedModels={};
 let carImages=[];
-const carousel=createModelCarousel({track:$("modelTrack"),previous:$("modelPrev"),next:$("modelNext"),status:$("modelStatus"),
-  onSelect:model=>{$("model").value=model;fillYears()}});
+// โลโก้ยี่ห้อจาก Simple Icons (CC0) ใน data/brand-logos/ ยี่ห้อที่ไม่มีโลโก้แสดงเป็นตัวอักษรแทน
+const LOGOS={BMW:"bmw",CHEVROLET:"chevrolet",FORD:"ford",HONDA:"honda",HYUNDAI:"hyundai",KIA:"kia",MAZDA:"mazda",MG:"mg",MINI:"mini",
+  MITSUBISHI:"mitsubishi",NISSAN:"nissan",PORSCHE:"porsche",SUBARU:"subaru",SUZUKI:"suzuki",TOYOTA:"toyota",VOLKSWAGEN:"volkswagen",VOLVO:"volvo"};
+function renderLogo(visual,brand){
+  if(visual.firstChild)return;
+  const mark=document.createElement("span");
+  if(LOGOS[brand]){mark.className="brand-logo";mark.style.setProperty("--logo",`url("${new URL(`../data/brand-logos/${LOGOS[brand]}.svg`,import.meta.url).href}")`)}
+  else{mark.className="brand-wordmark";mark.textContent=brand}
+  visual.append(mark);
+}
+function renderCarImage(visual,model){
+  let img=visual.querySelector("img"),fallback=visual.querySelector(".model-image-fallback");
+  if(!img){
+    img=Object.assign(document.createElement("img"),{alt:"",loading:"lazy",decoding:"async",width:600,height:450});
+    fallback=Object.assign(document.createElement("span"),{className:"model-image-fallback",hidden:true});
+    img.onerror=()=>{img.hidden=true;fallback.hidden=false};
+    visual.append(img,fallback);
+  }
+  const photo=findCarImage(carImages,$("brand").value,model,Number($("year").value))?.photo;
+  fallback.textContent=T[lang].noImage;
+  fallback.hidden=!!photo;
+  img.hidden=!photo;
+  if(!photo){img.removeAttribute("src");return}
+  const url=new URL(`../data/car-images/${photo.illustration_file||photo.file}`,import.meta.url).href;
+  if(img.src!==url)img.src=url;
+}
+const brandCarousel=createCarousel({track:$("brandTrack"),previous:$("brandPrev"),next:$("brandNext"),status:$("brandStatus"),
+  onSelect:brand=>{$("brand").value=brand;fillModels()},render:renderLogo});
+const modelCarousel=createCarousel({track:$("modelTrack"),previous:$("modelPrev"),next:$("modelNext"),status:$("modelStatus"),
+  onSelect:model=>{$("model").value=model;fillYears()},render:renderCarImage});
+function paintBrands(){
+  const t=T[lang];
+  brandCarousel.update({items:Object.keys(trainedModels).sort(),selected:$("brand").value,
+    labels:{selected:t.selectedModel,previous:t.previousBrand,next:t.nextBrand,none:t.noBrands}});
+}
 function paintCarPhoto(){
-  carousel.update({brand:$("brand").value,models:trainedModels[$("brand").value]||[],selected:$("model").value,
-    year:Number($("year").value),cars:carImages,labels:T[lang]});
+  const t=T[lang],brand=$("brand").value;
+  modelCarousel.update({items:trainedModels[brand]||[],selected:$("model").value,name:model=>`${brand} ${model}`,
+    labels:{selected:t.selectedModel,previous:t.previousModel,next:t.nextModel,none:t.noModels}});
 }
 const SVG=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
 const SUN=SVG('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>');
@@ -70,7 +105,7 @@ function render(){
   document.title=T[lang].brandName+" - "+T[lang].title;
 
 
-  fillYears(true);fillColors(); // ป้ายใน dropdown เปลี่ยนตามภาษา
+  paintBrands();fillYears(true);fillColors(); // ป้ายใน dropdown เปลี่ยนตามภาษา
   if(document.querySelector("input[aria-invalid=true]"))check();
   if(failed)showErr();
   if(cur&&!failed)paint(false);else paintCmp();
@@ -116,7 +151,7 @@ function fillSpec(keepValue){
 // แสดงลิงก์แหล่งอ้างอิงของสเปครุ่นนี้
 function showSeen(){$("seen").replaceChildren(T[lang].src+" ",...SRC[$("brand").value][$("model").value].flatMap((u,i)=>{const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";a.textContent=new URL(u).hostname.replace(/^www\./,"");return i?[" · ",a]:[a]}))}
 function fillYears(keepSpec){sel("year",Object.keys(SPEC[$("brand").value][$("model").value]).sort((a,b)=>b-a).map(y=>[y,y]),true);fillSpec(keepSpec)}
-function fillModels(){sel("model",trainedModels[$("brand").value].map(m=>[m,m]));fillYears()}
+function fillModels(){sel("model",trainedModels[$("brand").value].map(m=>[m,m]));paintBrands();fillYears()}
 function fillColors(){sel("color",COLORS.map(c=>[c,T[lang].colors[c]||c]),true)}
 function fillBrands(){
   sel("brand",Object.keys(trainedModels).sort().map(b=>[b,b]));

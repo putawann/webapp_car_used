@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +9,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=0.3.4">
+<link rel="stylesheet" href="css/style.css?v=0.3.5">
 <!-- ทุกไฟล์มีเลขเวอร์ชัน (?v=) ให้มือถือโหลด JS/CSS ชุดใหม่พร้อม HTML เสมอ ไม่ใช้ไฟล์เก่าจากแคชปนกับหน้าใหม่
      อัปเดตเว็บเมื่อไหร่ให้เปลี่ยนเลขทุกจุดพร้อมกัน (tests/cache-version.mjs ตรวจให้) -->
-<script type="importmap">{"imports":{"./js/app.js":"./js/app.js?v=0.3.4","./js/car-images.js":"./js/car-images.js?v=0.3.4","./js/data.js":"./js/data.js?v=0.3.4","./js/model-carousel.js":"./js/model-carousel.js?v=0.3.4","./js/model.js":"./js/model.js?v=0.3.4","./js/specs.js":"./js/specs.js?v=0.3.4","./js/ui.js":"./js/ui.js?v=0.3.4"}}</script>
-<script type="module" src="js/app.js?v=0.3.4"></script>
+<script type="importmap">{"imports":{"./js/app.js":"./js/app.js?v=0.3.5","./js/carousel.js":"./js/carousel.js?v=0.3.5","./js/car-images.js":"./js/car-images.js?v=0.3.5","./js/data.js":"./js/data.js?v=0.3.5","./js/model.js":"./js/model.js?v=0.3.5","./js/specs.js":"./js/specs.js?v=0.3.5","./js/ui.js":"./js/ui.js?v=0.3.5"}}</script>
+<script type="module" src="js/app.js?v=0.3.5"></script>
 </head>
 <body>
 
@@ -36,12 +36,20 @@
 
 <main>
   <form id="f" class="appraisal-form" novalidate>
-    <section class="brand-picker" aria-labelledby="brandTitle">
-      <div>
-        <p class="step-label" data-i="brandStep"></p>
-        <h2 id="brandTitle" data-i="chooseBrand"></h2>
+    <section class="model-picker brand-picker" aria-labelledby="brandTitle">
+      <div class="model-heading">
+        <div>
+          <p class="step-label" data-i="brandStep"></p>
+          <h2 id="brandTitle" data-i="chooseBrand"></h2>
+        </div>
+        <label class="model-field"><select id="brand" data-al="brandList"></select></label>
       </div>
-      <label class="brand-field"><select id="brand" data-al="brand"></select></label>
+      <div class="model-track brand-track" id="brandTrack" role="group" data-al="chooseBrand" tabindex="-1"></div>
+      <div class="model-navigation">
+        <button class="model-arrow" id="brandPrev" type="button" data-i="previousBrand"></button>
+        <p id="brandStatus" class="model-status" role="status"></p>
+        <button class="model-arrow" id="brandNext" type="button" data-i="nextBrand"></button>
+      </div>
     </section>
 
     <section class="model-picker" aria-labelledby="modelsTitle">

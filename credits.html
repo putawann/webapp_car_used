@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=0.3.4">
+<link rel="stylesheet" href="css/style.css?v=0.3.5">
 <style>
 .credits{width:min(1120px,100% - 64px);margin:32px auto 64px}
 .credits h1{font-size:clamp(26px,4vw,36px);margin:0 0 8px}
@@ -38,9 +38,9 @@ const L={
   en:{title:"Image credits",back:"← Back to CarPrice",lead:"Car images on this site are illustrations adapted from the photographs credited below. Adaptations of CC BY-SA originals are shared under the same license as the original.",car:"Car",author:"Original image",license:"License",changes:"Changes",photo:"Photo (resized)",err:"Could not load the image list."}
 };
 let lang;try{lang=localStorage.lang}catch(e){}
-if(lang!=="th"&&lang!=="en")lang="th";
+if(lang!=="th"&&lang!=="en")lang="en";
 let theme;try{theme=localStorage.theme}catch(e){}
-document.documentElement.dataset.theme=theme==="dark"?"dark":"light";
+document.documentElement.dataset.theme=theme==="light"?"light":"dark";
 document.documentElement.lang=lang;
 const t=L[lang],$=id=>document.getElementById(id);
 document.title="CarPrice - "+t.title;

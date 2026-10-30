@@ -18,10 +18,12 @@
 /* Brand → three-car model rail → details, sharing the existing paper palette. */
 .appraisal-form{display:block;margin-bottom:28px;min-width:0}
 .step-label{font-size:11px;font-weight:600;letter-spacing:.09em;color:var(--accent);margin:0 0 8px}
-.brand-picker{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
-.brand-picker h2{margin:0;font-size:24px}
-.brand-field,.model-field{width:280px;flex-shrink:0}
-.brand-field select{font-weight:600;background:var(--card)}
+.brand-picker{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.model-field{width:280px;flex-shrink:0}
+.brand-picker .model-field select{font-weight:600;background:var(--card)}
+.brand-track .model-visual{aspect-ratio:2/1;color:var(--paper-ink)}
+.brand-logo{width:46%;height:56%;background:currentColor;-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat}
+.brand-wordmark{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(13px,2.4vw,24px);letter-spacing:.06em;text-align:center;padding:0 8px;overflow-wrap:anywhere;line-height:1.2}
 .model-picker{padding:32px 0 28px;min-width:0}
 .model-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:22px}
 .model-heading .sub{margin:6px 0 0}
@@ -48,4 +50,4 @@
 .details-card #specs{margin-bottom:0}
 .details-grid>.full:has(#mileage){max-width:520px}
 @media(max-width:900px){.details-grid{grid-template-columns:1fr}.details-grid>.pair{grid-column:1;grid-template-columns:repeat(4,minmax(0,1fr))}.details-grid>label:first-child{max-width:280px}.model-card{padding:10px}.model-name{font-size:16px}}
-@media(max-width:600px){.brand-picker{align-items:stretch;flex-direction:column;gap:16px;padding:20px 0}.brand-picker h2{font-size:21px}.brand-field,.model-field{width:100%}.model-picker{padding:24px 0 20px}.model-heading{align-items:stretch;flex-direction:column;gap:16px;margin-bottom:16px}.model-heading .sub{font-size:12px}.model-track{--model-gap:8px;padding-bottom:10px}.model-card{border-radius:9px;padding:5px;gap:7px}.model-visual{border-radius:5px}.model-name{font-size:12px}.model-selected{font-size:10px}.model-status{font-size:10px}.model-navigation{gap:8px}.model-arrow{font-size:11px;padding:8px 10px}.details-grid{gap:14px}.details-grid>.pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.details-grid>label:first-child{max-width:none}.step-label{font-size:10px}.appraisal-form{margin-bottom:18px}}
+@media(max-width:600px){.model-field{width:100%}.model-picker{padding:24px 0 20px}.model-heading{align-items:stretch;flex-direction:column;gap:16px;margin-bottom:16px}.model-heading .sub{font-size:12px}.model-track{--model-gap:8px;padding-bottom:10px}.model-card{border-radius:9px;padding:5px;gap:7px}.model-visual{border-radius:5px}.model-name{font-size:12px}.model-selected{font-size:10px}.model-status{font-size:10px}.model-navigation{gap:8px}.model-arrow{font-size:11px;padding:8px 10px}.details-grid{gap:14px}.details-grid>.pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.details-grid>label:first-child{max-width:none}.step-label{font-size:10px}.appraisal-form{margin-bottom:18px}}
