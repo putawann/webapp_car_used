@@ -1,5 +1,5 @@
 // ===== ตัวหน้าเว็บ: ฟอร์ม ทำนายราคา แสดงผล ภาษา/ธีม =====
-import {T,NOW,predictPrices,EX} from "./data.js";
+import {T,NOW,predictPrices} from "./data.js";
 import {modelReady} from "./model.js";
 import {SPEC,BODY,BODY_MODEL,COLORS,SRC} from "./specs.js";
 
@@ -121,15 +121,6 @@ function fillColors(){sel("color",COLORS.map(c=>[c,T[lang].colors[c]||c]),true)}
 function fillBrands(){
   sel("brand",Object.keys(trainedModels).sort().map(b=>[b,b]));
   fillModels();fillColors();
-  EX.filter(([brand,model,year])=>trainedModels[brand]?.includes(model)&&SPEC[brand][model][year]).forEach(([brand,model,year,mileage])=>{
-    const b=document.createElement("button");
-    b.type="button";b.className="chip";b.textContent=model+" "+year;
-    b.onclick=()=>{
-      $("brand").value=brand;fillModels();$("model").value=model;fillYears();$("year").value=year;fillSpec();
-      $("mileage").value=mileage;syncR();$("f").requestSubmit();
-    };
-    $("chips").append(b);
-  });
 }
 const syncR=()=>{$("mileageR").value=$("mileage").value};
 
@@ -222,7 +213,6 @@ async function start(){
   }catch(err){
     document.querySelectorAll("[data-i]").forEach(e=>e.textContent=T[lang][e.dataset.i]);
     $("f").hidden=true;
-    $("chips").hidden=true;
     $("out").textContent=T[lang].err;
     const retry=document.createElement("button");
     retry.type="button";retry.className="ghost";retry.textContent=T[lang].retry;
