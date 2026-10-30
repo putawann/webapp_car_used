@@ -2,8 +2,9 @@
 // With more than three items the rail loops: the cards are rendered three times and the
 // scroll position is moved back to the middle copy whenever it settles in an outer copy.
 // render(visual,item) fills a card's picture area; it runs on every update so it must be repeatable.
+// label(item) is the card caption and name(item) the status line text (both default to the item itself).
 export function createCarousel({track,previous,next,status,onSelect,render}){
-  let items=[],selected='',labels={},name=item=>item,buttons=[],loop=false;
+  let items=[],selected='',labels={},name=item=>item,label=item=>item,buttons=[],loop=false;
   // expected: the card the code itself is scrolling to; a scroll that settles anywhere else came from the user.
   let settleTimer,expected=null;
   const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -101,19 +102,20 @@ export function createCarousel({track,previous,next,status,onSelect,render}){
     button.type='button';button.className='model-card';button.dataset.item=item;
     if(clone)button.setAttribute('aria-hidden','true');
     const visual=document.createElement('span');visual.className='model-visual';
-    const label=document.createElement('span');label.className='model-name';label.textContent=item;
+    const caption=document.createElement('span');caption.className='model-name';
     const badge=document.createElement('span');badge.className='model-selected';
-    button.append(visual,label,badge);
+    button.append(visual,caption,badge);
     button.onclick=()=>choose(items.indexOf(item));
     return button;
   }
 
-  // state: {items, selected, labels:{selected,previous,next,none}, name: item => text for the status line}
+  // state: {items, selected, labels:{selected,previous,next,none}, name?, label?}
   function update(state){
     const rebuild=items.join('|')!==state.items.join('|');
     const changed=selected!==state.selected;
     ({items,selected,labels}=state);
     name=state.name||(item=>item);
+    label=state.label||(item=>item);
     if(rebuild){
       loop=items.length>3;
       const copy=clone=>items.map(item=>card(item,clone));
@@ -121,7 +123,11 @@ export function createCarousel({track,previous,next,status,onSelect,render}){
       track.replaceChildren(...buttons);
       track.scrollLeft=0;
     }
-    buttons.forEach((button,i)=>render(button.querySelector('.model-visual'),items[i%items.length]));
+    buttons.forEach((button,i)=>{
+      const item=items[i%items.length];
+      render(button.querySelector('.model-visual'),item);
+      button.querySelector('.model-name').textContent=label(item);
+    });
     paintSelection();
     if(rebuild||changed)reveal('instant');
   }

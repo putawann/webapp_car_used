@@ -9,11 +9,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=0.3.6">
+<link rel="stylesheet" href="css/style.css?v=0.3.7">
 <!-- ทุกไฟล์มีเลขเวอร์ชัน (?v=) ให้มือถือโหลด JS/CSS ชุดใหม่พร้อม HTML เสมอ ไม่ใช้ไฟล์เก่าจากแคชปนกับหน้าใหม่
      อัปเดตเว็บเมื่อไหร่ให้เปลี่ยนเลขทุกจุดพร้อมกัน (tests/cache-version.mjs ตรวจให้) -->
-<script type="importmap">{"imports":{"./js/app.js":"./js/app.js?v=0.3.6","./js/carousel.js":"./js/carousel.js?v=0.3.6","./js/car-images.js":"./js/car-images.js?v=0.3.6","./js/data.js":"./js/data.js?v=0.3.6","./js/model.js":"./js/model.js?v=0.3.6","./js/specs.js":"./js/specs.js?v=0.3.6","./js/ui.js":"./js/ui.js?v=0.3.6"}}</script>
-<script type="module" src="js/app.js?v=0.3.6"></script>
+<script type="importmap">{"imports":{"./js/app.js":"./js/app.js?v=0.3.7","./js/car-types.js":"./js/car-types.js?v=0.3.7","./js/carousel.js":"./js/carousel.js?v=0.3.7","./js/car-images.js":"./js/car-images.js?v=0.3.7","./js/data.js":"./js/data.js?v=0.3.7","./js/model.js":"./js/model.js?v=0.3.7","./js/specs.js":"./js/specs.js?v=0.3.7","./js/ui.js":"./js/ui.js?v=0.3.7"}}</script>
+<script type="module" src="js/app.js?v=0.3.7"></script>
 </head>
 <body>
 
@@ -36,6 +36,22 @@
 
 <main>
   <form id="f" class="appraisal-form" novalidate>
+    <section class="model-picker brand-picker" aria-labelledby="typeTitle">
+      <div class="model-heading">
+        <div>
+          <p class="step-label" data-i="typeStep"></p>
+          <h2 id="typeTitle" data-i="chooseType"></h2>
+        </div>
+        <label class="model-field"><select id="type" data-al="typeList"></select></label>
+      </div>
+      <div class="model-track brand-track" id="typeTrack" role="group" data-al="chooseType" tabindex="-1"></div>
+      <div class="model-navigation">
+        <button class="model-arrow" id="typePrev" type="button" data-i="previousType"></button>
+        <p id="typeStatus" class="model-status" role="status"></p>
+        <button class="model-arrow" id="typeNext" type="button" data-i="nextType"></button>
+      </div>
+    </section>
+
     <section class="model-picker brand-picker" aria-labelledby="brandTitle">
       <div class="model-heading">
         <div>

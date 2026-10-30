@@ -68,7 +68,8 @@ js/data.js  predictPrices()  >  js/model.js  predictCars()
 | `tools/image_inventory.mjs`, `tests/car-images.mjs` | สร้างรายการค้นคว้าเริ่มต้นและตรวจความครบถ้วนของ metadata ภาพ |
 | `tools/merge_car_images.mjs` | รวมรายการภาพจากไฟล์ค้นคว้าเข้า inventory ก่อนตรวจด้วย `tests/car-images.mjs` |
 | `data/brand-logos/*.svg` | โลโก้ยี่ห้อจาก [Simple Icons](https://simpleicons.org) v16.36.0 (CC0, ไฟล์ต้นฉบับไม่แก้) แสดงด้วย CSS mask ให้สีตามธีม ยกเว้น `mercedes-benz.svg` ที่วาดเองเป็นดาวสามแฉกในวงแหวน ยี่ห้อที่ยังไม่มีโลโก้ (HAVAL, ISUZU) แสดงเป็นตัวอักษร โลโก้เป็นเครื่องหมายการค้าของเจ้าของ ใช้เพื่อระบุยี่ห้อเท่านั้น |
-| `js/carousel.js` | แถวการ์ดเลือกยี่ห้อ/รุ่นแบบวน ใช้ร่วมกับ dropdown |
+| `js/carousel.js` | แถวการ์ดเลือกประเภทรถ/ยี่ห้อ/รุ่นแบบวน ใช้ร่วมกับ dropdown |
+| `js/car-types.js` | ภาพเงา SVG ของรถ 7 ประเภทในข้อมูลเทรน (ขั้นแรกของฟอร์ม เลือกแล้วกรองยี่ห้อ/รุ่น/ปี/สเปคให้เหลือเฉพาะประเภทนั้น) สร้างด้วย `python tools/build_car_types.py` |
 | `tests/cache-version.mjs` | ตรวจว่า JS/CSS ทุกไฟล์ใน `index.html` (import map) และ `credits.html` ใช้เลข `?v=` เดียวกัน ทุกครั้งที่อัปเดตเว็บให้เปลี่ยนเลขนี้ ไม่งั้นมือถืออาจใช้ JS เก่าจากแคชกับ HTML ใหม่จนฟอร์มหาย |
 | `handoffs/` | บันทึกส่งต่องานเก่า (9 ต.ค. 2026) พาธและเวอร์ชันในนั้นล้าสมัยแล้ว |
 

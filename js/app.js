@@ -5,6 +5,7 @@ import {SPEC,BODY,BODY_MODEL,COLORS,SRC} from "./specs.js";
 
 import {initUI,scrollToEl,scramble,refresh} from "./ui.js";
 import {createCarousel} from "./carousel.js";
+import {TYPES,SILHOUETTE} from "./car-types.js";
 import {findCarImage} from "./car-images.js";
 
 const $=id=>document.getElementById(id);
@@ -44,18 +45,30 @@ function renderCarImage(visual,model){
   const url=new URL(`../data/car-images/${photo.illustration_file||photo.file}`,import.meta.url).href;
   if(img.src!==url)img.src=url;
 }
+function renderType(visual,type){
+  if(visual.firstChild)return;
+  visual.append(Object.assign(document.createElement("span"),{className:"type-silhouette",innerHTML:SILHOUETTE[type]}));
+}
+const typeName=type=>T[lang].bodies[type]||type;
+const typeCarousel=createCarousel({track:$("typeTrack"),previous:$("typePrev"),next:$("typeNext"),status:$("typeStatus"),
+  onSelect:type=>{$("type").value=type;fillBrandList()},render:renderType});
 const brandCarousel=createCarousel({track:$("brandTrack"),previous:$("brandPrev"),next:$("brandNext"),status:$("brandStatus"),
   onSelect:brand=>{$("brand").value=brand;fillModels()},render:renderLogo});
 const modelCarousel=createCarousel({track:$("modelTrack"),previous:$("modelPrev"),next:$("modelNext"),status:$("modelStatus"),
   onSelect:model=>{$("model").value=model;fillYears()},render:renderCarImage});
+function paintTypes(){
+  const t=T[lang];
+  typeCarousel.update({items:TYPES,selected:$("type").value,name:typeName,label:typeName,
+    labels:{selected:t.selectedModel,previous:t.previousType,next:t.nextType,none:t.noTypes}});
+}
 function paintBrands(){
   const t=T[lang];
-  brandCarousel.update({items:Object.keys(trainedModels).sort(),selected:$("brand").value,
+  brandCarousel.update({items:brandsOf(),selected:$("brand").value,
     labels:{selected:t.selectedModel,previous:t.previousBrand,next:t.nextBrand,none:t.noBrands}});
 }
 function paintCarPhoto(){
   const t=T[lang],brand=$("brand").value;
-  modelCarousel.update({items:trainedModels[brand]||[],selected:$("model").value,name:model=>`${brand} ${model}`,
+  modelCarousel.update({items:modelsOf(brand),selected:$("model").value,name:model=>`${brand} ${model}`,
     labels:{selected:t.selectedModel,previous:t.previousModel,next:t.nextModel,none:t.noModels}});
 }
 const SVG=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
@@ -105,7 +118,7 @@ function render(){
   document.title=T[lang].brandName+" - "+T[lang].title;
 
 
-  paintBrands();fillYears(true);fillColors(); // ป้ายใน dropdown เปลี่ยนตามภาษา
+  fillTypes();paintBrands();fillYears(true);fillColors(); // ป้ายใน dropdown เปลี่ยนตามภาษา
   if(document.querySelector("input[aria-invalid=true]"))check();
   if(failed)showErr();
   if(cur&&!failed)paint(false);else paintCmp();
@@ -115,7 +128,13 @@ function render(){
 // (specs.js เก็บเฉพาะสเปคที่มีในข้อมูลเทรน ฟอร์มจึงกรอกได้เฉพาะชุดที่โมเดลเคยเห็น) =====
 const FUELS=["gas","diesel","hybrid","ev"],GEARS=["AT","MT"]; // ลำดับตรงกับ tools/build_specs.py
 const sel=(id,items,keepValue)=>{const el=$(id),old=el.value;el.replaceChildren(...items.map(([v,l])=>new Option(l,v)));if(keepValue&&items.some(([v])=>v===old))el.value=old};
-const variants=()=>SPEC[$("brand").value][$("model").value][$("year").value];
+// ประเภทรถของสเปค = หมวดตัวถังในข้อมูลเทรน (คูเป้/เปิดประทุน → Sedan, แวกอน → Hatchback)
+// ยี่ห้อ รุ่น ปี และสเปคที่เลือกได้ มีเฉพาะที่เป็นประเภทรถที่เลือกไว้
+const ofType=list=>list.filter(v=>(BODY_MODEL[BODY[v[3]]]||BODY[v[3]])===$("type").value);
+const yearsOf=(brand,model)=>Object.keys(SPEC[brand][model]).filter(y=>ofType(SPEC[brand][model][y]).length);
+const modelsOf=brand=>(trainedModels[brand]||[]).filter(model=>yearsOf(brand,model).length);
+const brandsOf=()=>Object.keys(trainedModels).sort().filter(brand=>modelsOf(brand).length);
+const variants=()=>ofType(SPEC[$("brand").value][$("model").value][$("year").value]);
 const narrow=matchMedia("(max-width:480px)"); // จอมือถือ: ใช้ AT/MT แทนคำเต็ม ไม่ให้ป้ายสเปคถูกตัด
 narrow.addEventListener("change",()=>fillSpec(true));
 const vLabel=([cc,f,g,b])=>{const t=T[lang];return `${cc?(cc/1000).toFixed(1)+"L":t.motor} · ${t[FUELS[f]]} · ${narrow.matches?GEARS[g]:t[GEARS[g]==="AT"?"at":"mt"]} · ${t.bodies[BODY[b]]||BODY[b]}`};
@@ -150,12 +169,14 @@ function fillSpec(keepValue){
 }
 // แสดงลิงก์แหล่งอ้างอิงของสเปครุ่นนี้
 function showSeen(){$("seen").replaceChildren(T[lang].src+" ",...SRC[$("brand").value][$("model").value].flatMap((u,i)=>{const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";a.textContent=new URL(u).hostname.replace(/^www\./,"");return i?[" · ",a]:[a]}))}
-function fillYears(keepSpec){sel("year",Object.keys(SPEC[$("brand").value][$("model").value]).sort((a,b)=>b-a).map(y=>[y,y]),true);fillSpec(keepSpec)}
-function fillModels(){sel("model",trainedModels[$("brand").value].map(m=>[m,m]));paintBrands();fillYears()}
+function fillYears(keepSpec){sel("year",yearsOf($("brand").value,$("model").value).sort((a,b)=>b-a).map(y=>[y,y]),true);fillSpec(keepSpec)}
+function fillModels(){sel("model",modelsOf($("brand").value).map(m=>[m,m]),true);paintBrands();fillYears(true)}
+// เปลี่ยนประเภทรถ: คงยี่ห้อ/รุ่น/ปีเดิมไว้ถ้ายังมีรถประเภทนี้ ไม่งั้นใช้ตัวแรก
+function fillBrandList(){sel("brand",brandsOf().map(b=>[b,b]),true);paintTypes();fillModels()}
+function fillTypes(){sel("type",TYPES.map(k=>[k,typeName(k)]),true);paintTypes()}
 function fillColors(){sel("color",COLORS.map(c=>[c,T[lang].colors[c]||c]),true)}
 function fillBrands(){
-  sel("brand",Object.keys(trainedModels).sort().map(b=>[b,b]));
-  fillModels();fillColors();
+  fillTypes();fillBrandList();fillColors();
 }
 const syncR=()=>{$("mileageR").value=$("mileage").value};
 
@@ -175,6 +196,7 @@ function check(){
 
 $("mileageR").oninput=()=>{$("mileage").value=$("mileageR").value;setErr("mileage","")};
 $("mileage").oninput=()=>{$("mileageR").value=$("mileage").value;setErr("mileage","")};
+$("type").onchange=fillBrandList;
 $("brand").onchange=fillModels;
 $("model").onchange=()=>fillYears();
 $("year").onchange=()=>fillSpec();
@@ -239,7 +261,7 @@ async function start(){
       if(imagesResponse.ok){const images=await imagesResponse.json();if(images.model_id===encoder.model_id&&Array.isArray(images.cars))carImages=images.cars}
     }catch(e){ /* ฟอร์มยังทำงานได้เมื่อข้อมูลภาพไม่พร้อม */ }
     fillBrands();
-    if(trainedModels.TOYOTA?.includes("CAMRY")){$("brand").value="TOYOTA";fillModels();$("model").value="CAMRY";fillYears();if(SPEC.TOYOTA.CAMRY[2018])$("year").value="2018";fillSpec()}
+    if(trainedModels.TOYOTA?.includes("CAMRY")){$("type").value="Sedan";fillBrandList();$("brand").value="TOYOTA";fillModels();$("model").value="CAMRY";fillYears();if(SPEC.TOYOTA.CAMRY[2018])$("year").value="2018";fillSpec()}
     syncR();
     render();               // ตั้งธีมก่อน ให้ฉาก 3D อ่านสีได้
 
