@@ -67,6 +67,7 @@ js/data.js  predictPrices()  >  js/model.js  predictCars()
 | `data/car-images/inventory.json` | รายการรุ่น ปี และภาพที่แสดงได้ พร้อมที่มาและใบอนุญาต ภาพที่ยังรอตรวจอยู่ใน `research-*.json` |
 | `tools/image_inventory.mjs`, `tests/car-images.mjs` | สร้างรายการค้นคว้าเริ่มต้นและตรวจความครบถ้วนของ metadata ภาพ |
 | `tools/merge_car_images.mjs` | รวมรายการภาพจากไฟล์ค้นคว้าเข้า inventory ก่อนตรวจด้วย `tests/car-images.mjs` |
+| `tests/cache-version.mjs` | ตรวจว่า JS/CSS ทุกไฟล์ใน `index.html` (import map) และ `credits.html` ใช้เลข `?v=` เดียวกัน ทุกครั้งที่อัปเดตเว็บให้เปลี่ยนเลขนี้ ไม่งั้นมือถืออาจใช้ JS เก่าจากแคชกับ HTML ใหม่จนฟอร์มหาย |
 | `handoffs/` | บันทึกส่งต่องานเก่า (9 ต.ค. 2026) พาธและเวอร์ชันในนั้นล้าสมัยแล้ว |
 
 ## 3. รันในเครื่อง
@@ -183,6 +184,7 @@ TOYOTA,ALPHARD,2003-2008,2400|3000,gas,AT,Van,wiki:Toyota_Alphard,AH10 นำเ
 ```bash
 node tests/parity.mjs
 node tests/car-images.mjs
+node tests/cache-version.mjs
 ```
 
 ต้องการ Node ที่รองรับ ES modules (ทดสอบกับ Node 24) ไม่ต้องติดตั้งแพ็กเกจ

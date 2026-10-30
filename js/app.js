@@ -211,6 +211,7 @@ async function start(){
 
     initUI();
   }catch(err){
+    console.error(err);
     document.querySelectorAll("[data-i]").forEach(e=>e.textContent=T[lang][e.dataset.i]);
     $("f").hidden=true;
     $("out").textContent=T[lang].err;
